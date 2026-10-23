@@ -45,7 +45,7 @@ export function SubmitButton({ pending, children }: { pending: boolean; children
     <button
       type="submit"
       disabled={pending}
-      className="w-full rounded-2xl bg-accent px-4 py-3 font-medium text-white transition hover:opacity-90 disabled:opacity-60"
+      className="w-full rounded-2xl bg-accent px-4 py-3 font-medium text-on-accent transition hover:opacity-90 disabled:opacity-60"
     >
       {pending ? "One moment…" : children}
     </button>

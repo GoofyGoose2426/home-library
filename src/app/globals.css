@@ -9,6 +9,7 @@
   --border: #eadfd2;
   --accent: #c0573e;
   --accent-soft: #f6e1d6;
+  --on-accent: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@
     --border: #3a312b;
     --accent: #e48a6f;
     --accent-soft: #3d2a23;
+    --on-accent: #1d1916;
   }
 }
 
@@ -31,6 +33,7 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-fraunces);
 }
