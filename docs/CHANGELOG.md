@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-23 · Phase 1, step 6: Import review and save
+
+- A "Check your import" screen for the 53 uncertain items. Choices save as you go.
+- You decided all 53 and saved: **1,059 books and 1,100 copies** are now in your library (733 read, 326 unread), with 607 people, 193 series and rough genres from the shelf photos.
+- 10 uncertain books were left out, including Mars Vol. 3. 11 are kept with a "check later" flag. Libro.fm: 15 read, 15 unread. "Burnout" is Read. The Janell Cannon picture book is one book.
+- Saving is protected: an interrupted save resumes without duplicates, and a finished import can't run again and bring back books you've removed.
+
 ## 2026-10-23 · Phase 1, step 5: Reading your photos
 
 - Read all 36 shelf photos, 32 Kobo ebook screenshots, 14 audiobook screenshots and the Libro.fm list. Your originals in `Books/` were only read, never changed.
