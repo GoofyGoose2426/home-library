@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-23 · Phase 1, step 4: Login
+
+- Real sign-in with email and password. Only actheroux@live.ca can get in, and there's exactly one account in Supabase.
+- "Forgot your password?" emails a link to a "Choose a new password" page. Passwords need at least 10 characters. The email itself is Supabase's standard one; the free plan doesn't allow changing its wording.
+- A Sign out button, and the sign-in page skips straight to your library when you're already signed in.
+- Tested by you on your phone and laptop: sign-in works, a wrong password is refused, and sign out works.
+- Dark-mode buttons now use dark text so they're easy to read.
+
 ## 2026-10-23 · Phase 1, step 3: Database
 
 - Built the whole library database in Supabase: 14 tables covering titles, copies, series, people and credits, collection pieces, author identity, character representation, tags, reviews, field sources, saved reports and the import review list. There's also a private place for cover images.
