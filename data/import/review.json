@@ -1,0 +1,625 @@
+[
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-87",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 87,
+   "title": "second Kristen Britain hardcover behind Winterlight",
+   "author": "Kristen Britain"
+  },
+  "suggested": {},
+  "title_key": "seed-87"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-114",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 114,
+   "title": "The Companion",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-114"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-134",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 134,
+   "title": "Unravelling Canada",
+   "author": "Olsen"
+  },
+  "suggested": {},
+  "title_key": "seed-134"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-143",
+  "note": "Bilingual anthology; contributors read from the spine",
+  "raw": {
+   "seed_row": 143,
+   "title": "Lisbon Poets",
+   "author": "Luís de Camões, Cesário Verde, Mário de Sá-Carneiro, Fernando Pessoa"
+  },
+  "suggested": {},
+  "title_key": "seed-143"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-144",
+  "note": "Author first name not on the spine (Fitzpatrick, Nimbus)",
+  "raw": {
+   "seed_row": 144,
+   "title": "Meditations for Makers",
+   "author": "Fitzpatrick"
+  },
+  "suggested": {},
+  "title_key": "seed-144"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-154",
+  "note": "Author isn't on the spine",
+  "raw": {
+   "seed_row": 154,
+   "title": "Who Was Betty?",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-154"
+ },
+ {
+  "kind": "match_uncertain",
+  "item_key": "seed-dup-173",
+  "note": "The photo shows one Janell Cannon book, 'Trupp: A Fuzzhead Tale'. The seed may list it twice.",
+  "raw": {
+   "seed_row": 173,
+   "title": "Trupp picture book",
+   "author": "Unknown"
+  },
+  "suggested": {
+   "action": "merge",
+   "into_seed_row": 172
+  },
+  "title_key": null
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-209",
+  "note": "Title is partly hidden on the spine",
+  "raw": {
+   "seed_row": 209,
+   "title": "The Darkness…",
+   "author": "Eliot Schrefer"
+  },
+  "suggested": {},
+  "title_key": "seed-209"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-231",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 231,
+   "title": "small pink \"I'm the...\" book",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-231"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "manga-mars-3",
+  "note": "The shelf photo shows Mars Vols. 1–2 and 4–15. Vol. 3 isn't visible: is it missing or elsewhere?",
+  "raw": {},
+  "suggested": {},
+  "title_key": "mars-vol-3"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-348",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 348,
+   "title": "hidden book behind Bromance series, \"Pro...\"",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-348"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-387",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 387,
+   "title": "Lisa Kleypas title, far left, blurry",
+   "author": "Lisa Kleypas"
+  },
+  "suggested": {},
+  "title_key": "seed-387"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-388",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 388,
+   "title": "romance, far left, blurry",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-388"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-390",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 390,
+   "title": "Amanda Quick title, blue spine",
+   "author": "Amanda Quick"
+  },
+  "suggested": {},
+  "title_key": "seed-390"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-391",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 391,
+   "title": "Amanda Quick title, lilac spine",
+   "author": "Amanda Quick"
+  },
+  "suggested": {},
+  "title_key": "seed-391"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-404",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 404,
+   "title": "How Your Body Works",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-404"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-420",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 420,
+   "title": "Girl Moments",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-420"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-421",
+  "note": "Spine reads 'A Million Cats'; may be 'Millions of Cats' (Wanda Gág)",
+  "raw": {
+   "seed_row": 421,
+   "title": "A Million Cats",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-421"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-422",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 422,
+   "title": "thin picture books between Anatomy for the Artist and O Canada",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-422"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-425",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 425,
+   "title": "Familiars",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-425"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "seed-check-426",
+  "note": "Title or author uncertain in the shelf photo",
+  "raw": {
+   "seed_row": 426,
+   "title": "Law Cooper title",
+   "author": "Unknown"
+  },
+  "suggested": {},
+  "title_key": "seed-426"
+ },
+ {
+  "kind": "title_uncertain",
+  "item_key": "shelf-check-shelf-chaos-elizabeth-stephens",
+  "note": "Spine partly hidden or blurry in the photo",
+  "raw": {
+   "photo": "Read/Media (10)",
+   "reading": "Chaos… / Elizabeth Stephens?"
+  },
+  "suggested": {},
+  "title_key": "shelf-chaos-elizabeth-stephens"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781668649954",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Undercutting of Rosie and Adam",
+   "author": "Megan Bannen"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-undercutting-of-rosie-and-adam-megan-bannen"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9798217338306",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Dearly Departed",
+   "author": "Chip Pons"
+  },
+  "suggested": {},
+  "title_key": "audiobook-dearly-departed-chip-pons"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781668658116",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Knave and the Moon",
+   "author": "Rachel Gillig"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-knave-and-the-moon-rachel-gillig"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9798228466975",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Bookshop and the Barbarian",
+   "author": "Morgan Stang"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-bookshop-and-the-barbarian-morgan-stang"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781668147634",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "An Academic Affair",
+   "author": "Jodi McAlister"
+  },
+  "suggested": {},
+  "title_key": "audiobook-an-academic-affair-jodi-mcalister"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781250447043",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Sea of Charms",
+   "author": "Sarah Beth Durst"
+  },
+  "suggested": {},
+  "title_key": "audiobook-sea-of-charms-sarah-beth-durst"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780063459434",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Nemesis Mine",
+   "author": "Amy Archer"
+  },
+  "suggested": {},
+  "title_key": "audiobook-nemesis-mine-amy-archer"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9798217338122",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Bromantasy",
+   "author": "Máire Roche"
+  },
+  "suggested": {},
+  "title_key": "audiobook-bromantasy-maire-roche"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781666697384",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Charlie Method",
+   "author": "Elle Kennedy"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-charlie-method-elle-kennedy"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9798349109232",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Goat in the Bedroom",
+   "author": "Amy Award"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-goat-in-the-bedroom-amy-award"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781549149795",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Friend Zone",
+   "author": "Abby Jimenez"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-friend-zone-abby-jimenez"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9798217344635",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Game On",
+   "author": "Navessa Allen"
+  },
+  "suggested": {},
+  "title_key": "audiobook-game-on-navessa-allen"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781666672138",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Lights Out",
+   "author": "Navessa Allen"
+  },
+  "suggested": {},
+  "title_key": "audiobook-lights-out-navessa-allen"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781250395665",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Hemlock & Silver",
+   "author": "T. Kingfisher"
+  },
+  "suggested": {},
+  "title_key": "audiobook-hemlock-silver-t-kingfisher"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781668647776",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Knight and the Moth",
+   "author": "Rachel Gillig"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-knight-and-the-moth-rachel-gillig"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781666621396",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Mixed Signals",
+   "author": "B.K. Borison"
+  },
+  "suggested": {},
+  "title_key": "audiobook-mixed-signals-b-k-borison"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780063312722",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Annie Bot",
+   "author": "Sierra Greer"
+  },
+  "suggested": {},
+  "title_key": "audiobook-annie-bot-sierra-greer"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781666692570",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Of Monsters and Mainframes",
+   "author": "Barbara Truelove"
+  },
+  "suggested": {},
+  "title_key": "audiobook-of-monsters-and-mainframes-barbara-truelove"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780063307575",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Ride of Her Life",
+   "author": "Jennifer Dugan"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-ride-of-her-life-jennifer-dugan"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780063430440",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Good Spirits",
+   "author": "B.K. Borison"
+  },
+  "suggested": {},
+  "title_key": "audiobook-good-spirits-b-k-borison"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781250402950",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Brigands & Breadknives",
+   "author": "Travis Baldree"
+  },
+  "suggested": {},
+  "title_key": "audiobook-brigands-breadknives-travis-baldree"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9798217163090",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Violet Thistlewaite Is Not a Villain Anymore",
+   "author": "Emily Krempholtz"
+  },
+  "suggested": {},
+  "title_key": "audiobook-violet-thistlewaite-is-not-a-villain-anymore-emily-krempholtz"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781250402738",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Girl Dinner",
+   "author": "Olivie Blake"
+  },
+  "suggested": {},
+  "title_key": "audiobook-girl-dinner-olivie-blake"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780063418844",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Starving Saints",
+   "author": "Caitlin Starling"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-starving-saints-caitlin-starling"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9798217072453",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Empire of AI",
+   "author": "Karen Hao"
+  },
+  "suggested": {},
+  "title_key": "audiobook-empire-of-ai-karen-hao"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781250402257",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Enchanted Greenhouse",
+   "author": "Sarah Beth Durst"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-enchanted-greenhouse-sarah-beth-durst"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780593791486",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Emily Wilde's Compendium of Lost Tales",
+   "author": "Heather Fawcett"
+  },
+  "suggested": {},
+  "title_key": "audiobook-emily-wilde-s-compendium-of-lost-tales-heather-fawcett"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780593790625",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Emily Wilde's Map of the Otherlands",
+   "author": "Heather Fawcett"
+  },
+  "suggested": {},
+  "title_key": "audiobook-emily-wilde-s-map-of-the-otherlands-heather-fawcett"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9780593633144",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "Emily Wilde's Encyclopaedia of Faeries",
+   "author": "Heather Fawcett"
+  },
+  "suggested": {},
+  "title_key": "audiobook-emily-wilde-s-encyclopaedia-of-faeries-heather-fawcett"
+ },
+ {
+  "kind": "status_needed",
+  "item_key": "librofm-9781668642153",
+  "note": "Libro.fm doesn't record whether you've finished it. Read or Unread?",
+  "raw": {
+   "title": "The Honey Witch",
+   "author": "Sydney J. Shields"
+  },
+  "suggested": {},
+  "title_key": "audiobook-the-honey-witch-sydney-j-shields"
+ },
+ {
+  "kind": "status_conflict",
+  "item_key": "status-seed-130",
+  "note": "The print copy is in your Unread photos, but kobo says Finished. Read or Unread?",
+  "raw": {
+   "title": "Burnout",
+   "read": [
+    "kobo"
+   ],
+   "unread": [
+    "shelf"
+   ]
+  },
+  "suggested": {
+   "read_status": "read"
+  },
+  "title_key": "seed-130"
+ },
+ {
+  "kind": "status_conflict",
+  "item_key": "status-note-audiobook-how-my-neighbor-stole-christmas-meghan-quinn-audible-in-progress-",
+  "note": "Audible shows this as not finished (in progress (10h 36m left)). It's set to Unread. Change it?",
+  "raw": {
+   "title": "How My Neighbor Stole Christmas",
+   "note": "audible: in progress (10h 36m left)"
+  },
+  "suggested": {
+   "read_status": "unread"
+  },
+  "title_key": "audiobook-how-my-neighbor-stole-christmas-meghan-quinn"
+ }
+]

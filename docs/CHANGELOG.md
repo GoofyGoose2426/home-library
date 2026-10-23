@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-23 · Phase 1, step 5: Reading your photos
+
+- Read all 36 shelf photos, 32 Kobo ebook screenshots, 14 audiobook screenshots and the Libro.fm list. Your originals in `Books/` were only read, never changed.
+- Found 1,069 titles and 1,110 copies (560 print, 375 ebooks, 175 audiobooks), including about 90 print books the earlier list missed.
+- Split the manga runs into single volumes, fixed a dozen uncertain titles from the photos, and matched ebooks and audiobooks to print books you already own (35 titles in more than one format).
+- 53 items are waiting for your review in step 6. Nothing is in the database yet. Details: `docs/import-summary.md`.
+
 ## 2026-10-23 · Phase 1, step 4: Login
 
 - Real sign-in with email and password. Only actheroux@live.ca can get in, and there's exactly one account in Supabase.
