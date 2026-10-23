@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Warm, soft palette. Light first, dark under prefers-color-scheme. */
+:root {
+  --background: #fbf6ef;
+  --surface: #fffdf9;
+  --foreground: #2f2620;
+  --muted: #7a6a5d;
+  --border: #eadfd2;
+  --accent: #c0573e;
+  --accent-soft: #f6e1d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1d1916;
+    --surface: #27211d;
+    --foreground: #f3ebe2;
+    --muted: #b3a394;
+    --border: #3a312b;
+    --accent: #e48a6f;
+    --accent-soft: #3d2a23;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-fraunces);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
