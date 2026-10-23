@@ -7,7 +7,9 @@ import {
 } from "@/lib/supabase/env";
 
 // Pages anyone can open. Everything else needs Alexandra's login.
-const PUBLIC_PATHS = ["/login"];
+const PUBLIC_PATHS = ["/login", "/forgot-password", "/auth/confirm"];
+// Pages that make no sense once signed in.
+const SIGNED_OUT_ONLY = ["/login", "/forgot-password"];
 
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
@@ -43,13 +45,23 @@ export async function proxy(request: NextRequest) {
   );
 
   if (!signedIn && !isPublic) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/login";
-    url.search = "";
-    return NextResponse.redirect(url);
+    return redirectWithCookies(request, response, "/login");
+  }
+  if (signedIn && SIGNED_OUT_ONLY.includes(request.nextUrl.pathname)) {
+    return redirectWithCookies(request, response, "/");
   }
 
   return response;
+}
+
+// Redirect while keeping any refreshed session cookies.
+function redirectWithCookies(request: NextRequest, response: NextResponse, pathname: string) {
+  const url = request.nextUrl.clone();
+  url.pathname = pathname;
+  url.search = "";
+  const redirect = NextResponse.redirect(url);
+  response.cookies.getAll().forEach((cookie) => redirect.cookies.set(cookie));
+  return redirect;
 }
 
 export const config = {

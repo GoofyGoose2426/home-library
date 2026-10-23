@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { signOut } from "@/app/auth/actions";
 import { createClient } from "@/lib/supabase/server";
 
 export default function Home() {
@@ -24,5 +25,17 @@ async function SignedInAs() {
   const { data } = await supabase.auth.getClaims();
   const email = data?.claims?.email;
   if (typeof email !== "string") return null;
-  return <p className="text-sm text-muted">Signed in as {email}</p>;
+  return (
+    <div className="mt-4 flex flex-col items-center gap-3">
+      <p className="text-sm text-muted">Signed in as {email}</p>
+      <form action={signOut}>
+        <button
+          type="submit"
+          className="rounded-2xl border border-border px-4 py-2 text-sm hover:bg-accent-soft"
+        >
+          Sign out
+        </button>
+      </form>
+    </div>
+  );
 }
