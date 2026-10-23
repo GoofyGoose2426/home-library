@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-23 · Phase 1, step 3: Database
+
+- Built the whole library database in Supabase: 14 tables covering titles, copies, series, people and credits, collection pieces, author identity, character representation, tags, reviews, field sources, saved reports and the import review list. There's also a private place for cover images.
+- Every table is locked to your account. Tested live: a logged-out visitor is refused on all 14 tables and can't add anything. Supabase's security advisor finds no problems.
+- Built-in rules: one title can hold several formats; ratings go in quarter stars; author identity can't be saved without a link to the author's own words; once you've set a value, AI fill-in can't overwrite it.
+- Database changes are saved as "migrations" in `supabase/migrations/`, so they can be re-applied the same way every time.
+
 ## 2026-10-23 · Phase 1, step 2: Empty app online
 
 - The app is live at https://home-library-mocha.vercel.app. Every page sends visitors to a private sign-in screen; the real sign-in form arrives in step 4.
