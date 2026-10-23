@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Suspense } from "react";
 import { signOut } from "@/app/auth/actions";
 import { createClient } from "@/lib/supabase/server";
@@ -27,6 +28,12 @@ async function SignedInAs() {
   if (typeof email !== "string") return null;
   return (
     <div className="mt-4 flex flex-col items-center gap-3">
+      <Link
+        href="/import"
+        className="rounded-2xl bg-accent px-5 py-3 font-medium text-on-accent"
+      >
+        Check your import
+      </Link>
       <p className="text-sm text-muted">Signed in as {email}</p>
       <form action={signOut}>
         <button

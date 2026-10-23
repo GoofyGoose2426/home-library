@@ -65,7 +65,7 @@ SEED_FIXES = {
 SEED_READ_OVERRIDE = {157: "read", 421: "read", 87: "unread"}
 
 # Seed rows that look like the same physical book listed twice.
-SEED_DUPLICATES = {173: (172, "The photo shows one Janell Cannon book, 'Trupp: A Fuzzhead Tale'. The seed may list it twice.")}
+SEED_DUPLICATES = {173: (172, "The photo shows one Janell Cannon book, 'Trupp: A Fuzzhead Tale'. My earlier list may have it twice.")}
 
 MANGA_RUNS = {
     245: ("Bastard!!", 10),
@@ -94,6 +94,7 @@ EXTRA_PRINT_COPIES = {
 # --------------------------------------------------------------------------
 # Matching helpers
 # --------------------------------------------------------------------------
+SOURCE_NAMES = {"kobo": "Kobo", "audible": "Audible", "librofm": "Libro.fm", "shelf": "your shelf"}
 ARTICLES = re.compile(r"^(the|a|an)\s+")
 
 
@@ -197,8 +198,9 @@ def main():
         if i in SEED_DUPLICATES:
             keep, note = SEED_DUPLICATES[i]
             add_review("match_uncertain", f"seed-dup-{i}", note,
-                       raw=dict(seed_row=i, title=row["title"], author=row["author"]),
-                       suggested=dict(action="merge", into_seed_row=keep))
+                       raw=dict(seed_row=i, title=row["title"], author=row["author"], location=row["location"],
+                                read_status="read" if seed_folder.get(i) == "read" else "unread"),
+                       suggested=dict(action="merge", into_seed_row=keep), title_key=f"seed-{keep}")
             continue
         row = {**row, **SEED_FIXES.get(i, {})}
         folder = SEED_READ_OVERRIDE.get(i) or seed_folder.get(i)
@@ -312,7 +314,7 @@ def main():
                     break
 
         copy = dict(format=d["format"], source=d["source"],
-                    external_id=slug(d["title"]),
+                    external_id=f"{d['format']}:{slug(d['title'])}",
                     edition_type="omnibus" if is_omnibus else None,
                     evidence=f"{d['source']} screenshot {d['file']}" if d["source"] != "librofm"
                     else "librofm-audiobook-library.csv")
@@ -372,7 +374,7 @@ def main():
         t["status_sources"] = dict(read=sources_read, unread=sources_unread)
         if "shelf" in sources_unread and sources_read:
             add_review("status_conflict", f"status-{t['key']}",
-                       f"The print copy is in your Unread photos, but {', '.join(sources_read)} says Finished. Read or Unread?",
+                       f"The print copy is in your Unread photos, but {' and '.join(SOURCE_NAMES[s] for s in sources_read)} says Finished. Read or Unread?",
                        raw=dict(title=t["title"], read=sources_read, unread=sources_unread),
                        suggested=dict(read_status="read"), title_key=t["key"])
         for note in t.pop("status_notes", []):

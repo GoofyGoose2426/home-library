@@ -74,17 +74,19 @@
  {
   "kind": "match_uncertain",
   "item_key": "seed-dup-173",
-  "note": "The photo shows one Janell Cannon book, 'Trupp: A Fuzzhead Tale'. The seed may list it twice.",
+  "note": "The photo shows one Janell Cannon book, 'Trupp: A Fuzzhead Tale'. My earlier list may have it twice.",
   "raw": {
    "seed_row": 173,
    "title": "Trupp picture book",
-   "author": "Unknown"
+   "author": "Unknown",
+   "location": "Pine bookcase · bottom shelf",
+   "read_status": "read"
   },
   "suggested": {
    "action": "merge",
    "into_seed_row": 172
   },
-  "title_key": null
+  "title_key": "seed-172"
  },
  {
   "kind": "title_uncertain",
@@ -594,7 +596,7 @@
  {
   "kind": "status_conflict",
   "item_key": "status-seed-130",
-  "note": "The print copy is in your Unread photos, but kobo says Finished. Read or Unread?",
+  "note": "The print copy is in your Unread photos, but Kobo says Finished. Read or Unread?",
   "raw": {
    "title": "Burnout",
    "read": [

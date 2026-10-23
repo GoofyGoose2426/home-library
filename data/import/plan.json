@@ -613,7 +613,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-false-start",
+    "external_id": "audiobook:a-false-start",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -2420,7 +2420,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "too-like-the-lightning",
+    "external_id": "ebook:too-like-the-lightning",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -4073,7 +4073,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "burnout",
+    "external_id": "audiobook:burnout",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -6555,7 +6555,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "pride-and-prejudice",
+    "external_id": "ebook:pride-and-prejudice",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -7150,7 +7150,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "little-women",
+    "external_id": "ebook:little-women",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -9450,7 +9450,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "hench",
+    "external_id": "audiobook:hench",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -9986,7 +9986,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "my-uncle-oswald",
+    "external_id": "ebook:my-uncle-oswald",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -10305,7 +10305,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "vicious",
+    "external_id": "ebook:vicious",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -12403,7 +12403,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "get-a-life-chloe-brown",
+    "external_id": "ebook:get-a-life-chloe-brown",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -12566,14 +12566,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "ransom",
+    "external_id": "ebook:ransom",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "ransom",
+    "external_id": "audiobook:ransom",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -12767,7 +12767,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-damning-stone",
+    "external_id": "ebook:the-damning-stone",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -12868,7 +12868,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-burns",
+    "external_id": "ebook:magic-burns",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -12907,7 +12907,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "kushiel-s-dart",
+    "external_id": "audiobook:kushiel-s-dart",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -13194,14 +13194,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "dreaming-of-you",
+    "external_id": "ebook:dreaming-of-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "dreaming-of-you",
+    "external_id": "audiobook:dreaming-of-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -13240,7 +13240,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "worth-any-price",
+    "external_id": "ebook:worth-any-price",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -13310,7 +13310,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "someone-to-watch-over-me",
+    "external_id": "ebook:someone-to-watch-over-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -13349,7 +13349,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "marrying-winterborne",
+    "external_id": "ebook:marrying-winterborne",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -13479,7 +13479,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-bride-and-the-beast",
+    "external_id": "ebook:the-bride-and-the-beast",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -13611,7 +13611,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "honor-s-splendour",
+    "external_id": "ebook:honor-s-splendour",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -13681,14 +13681,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "i-can-see-you",
+    "external_id": "ebook:i-can-see-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "i-can-see-you",
+    "external_id": "audiobook:i-can-see-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -13727,7 +13727,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "nothing-to-fear",
+    "external_id": "ebook:nothing-to-fear",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -13766,14 +13766,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "i-m-watching-you",
+    "external_id": "ebook:i-m-watching-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "i-m-watching-you",
+    "external_id": "audiobook:i-m-watching-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -14848,7 +14848,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-roommate-risk",
+    "external_id": "audiobook:the-roommate-risk",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -15516,7 +15516,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-deal",
+    "external_id": "ebook:the-deal",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -15584,7 +15584,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "when-grumpy-met-sunshine",
+    "external_id": "audiobook:when-grumpy-met-sunshine",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -15652,7 +15652,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-wall-of-winnipeg-and-me",
+    "external_id": "audiobook:the-wall-of-winnipeg-and-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -16321,7 +16321,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "paladin-s-strength",
+    "external_id": "ebook:paladin-s-strength",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -16430,7 +16430,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "song-of-blood-stone",
+    "external_id": "audiobook:song-of-blood-stone",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -17128,7 +17128,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "under-the-whispering-door",
+    "external_id": "audiobook:under-the-whispering-door",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -17521,7 +17521,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-baby-dragon-cafe",
+    "external_id": "ebook:the-baby-dragon-cafe",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17552,7 +17552,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "spellfire",
+    "external_id": "ebook:spellfire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17583,7 +17583,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "you-made-a-fool-of-death-with-your-beauty",
+    "external_id": "ebook:you-made-a-fool-of-death-with-your-beauty",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17614,7 +17614,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "son-of-the-morning",
+    "external_id": "ebook:son-of-the-morning",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17645,7 +17645,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-whisper-man",
+    "external_id": "ebook:the-whisper-man",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17676,7 +17676,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-fiancee-farce",
+    "external_id": "ebook:the-fiancee-farce",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17707,7 +17707,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "rosaline-palmer-takes-the-cake",
+    "external_id": "ebook:rosaline-palmer-takes-the-cake",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17738,7 +17738,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-lady-for-a-duke",
+    "external_id": "ebook:a-lady-for-a-duke",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17769,7 +17769,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-unidentified-redhead",
+    "external_id": "ebook:the-unidentified-redhead",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17800,7 +17800,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "fractured-fables",
+    "external_id": "ebook:fractured-fables",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17831,7 +17831,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-phoenix-king",
+    "external_id": "ebook:the-phoenix-king",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17863,7 +17863,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "sister-outsider",
+    "external_id": "ebook:sister-outsider",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.37"
    }
@@ -17894,7 +17894,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "field-guide-for-the-formerly-villainous",
+    "external_id": "ebook:field-guide-for-the-formerly-villainous",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -17925,7 +17925,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-wolf-and-the-woodsman",
+    "external_id": "ebook:the-wolf-and-the-woodsman",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -17956,7 +17956,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "offside",
+    "external_id": "ebook:offside",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -17987,7 +17987,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "i-medusa",
+    "external_id": "ebook:i-medusa",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18018,7 +18018,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-dreadful-splendour",
+    "external_id": "ebook:a-dreadful-splendour",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18049,7 +18049,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "to-be-taught-if-fortunate",
+    "external_id": "ebook:to-be-taught-if-fortunate",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18080,7 +18080,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-unbroken",
+    "external_id": "ebook:the-unbroken",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18111,7 +18111,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "sea-of-rust",
+    "external_id": "ebook:sea-of-rust",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18142,7 +18142,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-goddess-of-nothing-at-all",
+    "external_id": "ebook:the-goddess-of-nothing-at-all",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18173,7 +18173,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "you-should-be-so-lucky",
+    "external_id": "ebook:you-should-be-so-lucky",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18204,7 +18204,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "wild-dark-shore",
+    "external_id": "ebook:wild-dark-shore",
     "edition_type": null,
     "evidence": "kobo screenshot 1.10.49"
    }
@@ -18235,7 +18235,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "migrations",
+    "external_id": "ebook:migrations",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18266,7 +18266,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-girl-in-red",
+    "external_id": "ebook:the-girl-in-red",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18297,7 +18297,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "notorious-sorcerer",
+    "external_id": "ebook:notorious-sorcerer",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18328,7 +18328,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "guillotine",
+    "external_id": "ebook:guillotine",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18359,7 +18359,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-keeper-of-lonely-spirits",
+    "external_id": "ebook:the-keeper-of-lonely-spirits",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18390,7 +18390,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "son-of-a-trickster",
+    "external_id": "ebook:son-of-a-trickster",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18421,7 +18421,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "damsel",
+    "external_id": "ebook:damsel",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18452,7 +18452,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "desperate-duchesses",
+    "external_id": "ebook:desperate-duchesses",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18483,7 +18483,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "some-desperate-glory",
+    "external_id": "ebook:some-desperate-glory",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18514,7 +18514,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-starless-sea",
+    "external_id": "ebook:the-starless-sea",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18545,7 +18545,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "foul-days",
+    "external_id": "ebook:foul-days",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18576,7 +18576,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-virtuoso",
+    "external_id": "ebook:the-virtuoso",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18607,7 +18607,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-memory-of-summer",
+    "external_id": "ebook:a-memory-of-summer",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.01"
    }
@@ -18638,7 +18638,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-light-within",
+    "external_id": "ebook:the-light-within",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18669,7 +18669,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "godkiller",
+    "external_id": "ebook:godkiller",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18700,7 +18700,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-dreams",
+    "external_id": "ebook:magic-dreams",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18731,7 +18731,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "charming",
+    "external_id": "ebook:charming",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18762,7 +18762,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "chlorine",
+    "external_id": "ebook:chlorine",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18793,7 +18793,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "just-one-damned-thing-after-another",
+    "external_id": "ebook:just-one-damned-thing-after-another",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18824,7 +18824,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "when-the-moon-hits-your-eye",
+    "external_id": "ebook:when-the-moon-hits-your-eye",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18855,7 +18855,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "someone-in-time",
+    "external_id": "ebook:someone-in-time",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18886,7 +18886,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "my-season-of-scandal",
+    "external_id": "ebook:my-season-of-scandal",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18917,7 +18917,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "say-goodbye",
+    "external_id": "ebook:say-goodbye",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18948,7 +18948,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "say-no-more",
+    "external_id": "ebook:say-no-more",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.09"
    }
@@ -18979,7 +18979,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "cold-blooded-liar",
+    "external_id": "ebook:cold-blooded-liar",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19010,7 +19010,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-white-picket-fence",
+    "external_id": "ebook:the-white-picket-fence",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19041,7 +19041,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "cheater",
+    "external_id": "ebook:cheater",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19072,7 +19072,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-last-dragon-of-the-east",
+    "external_id": "ebook:the-last-dragon-of-the-east",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19103,7 +19103,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "these-silent-woods",
+    "external_id": "ebook:these-silent-woods",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19134,7 +19134,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-change",
+    "external_id": "ebook:the-change",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19165,7 +19165,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "if-you-dare",
+    "external_id": "ebook:if-you-dare",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19196,7 +19196,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-lovers",
+    "external_id": "ebook:the-lovers",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19227,7 +19227,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-empress",
+    "external_id": "ebook:the-empress",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19258,7 +19258,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "fortune",
+    "external_id": "ebook:fortune",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19289,7 +19289,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "how-to-summon-a-fairy-godmother",
+    "external_id": "ebook:how-to-summon-a-fairy-godmother",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19320,7 +19320,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "house-of-frost-and-feathers",
+    "external_id": "ebook:house-of-frost-and-feathers",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19351,7 +19351,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "hexes-go-well-with-tequila",
+    "external_id": "ebook:hexes-go-well-with-tequila",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.20"
    }
@@ -19382,7 +19382,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "rapport-friendship-solidarity-communion-empathy",
+    "external_id": "ebook:rapport-friendship-solidarity-communion-empathy",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19413,7 +19413,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "witch-king",
+    "external_id": "ebook:witch-king",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19444,7 +19444,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-dirty-billionaire-trilogy",
+    "external_id": "ebook:the-dirty-billionaire-trilogy",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19476,7 +19476,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-obsidian-mountain-trilogy",
+    "external_id": "ebook:the-obsidian-mountain-trilogy",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19507,7 +19507,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "mistakes-were-made",
+    "external_id": "ebook:mistakes-were-made",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19538,7 +19538,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "house-of-the-beast",
+    "external_id": "ebook:house-of-the-beast",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19569,7 +19569,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "rouge",
+    "external_id": "ebook:rouge",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19600,7 +19600,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "to-shape-a-dragon-s-breath",
+    "external_id": "ebook:to-shape-a-dragon-s-breath",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19631,7 +19631,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-killing-moon",
+    "external_id": "ebook:the-killing-moon",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19662,7 +19662,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "snowed-in",
+    "external_id": "ebook:snowed-in",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19693,7 +19693,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "death-of-the-author",
+    "external_id": "ebook:death-of-the-author",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.27"
    }
@@ -19724,7 +19724,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "storm-cursed",
+    "external_id": "ebook:storm-cursed",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19755,7 +19755,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "totally-folked",
+    "external_id": "ebook:totally-folked",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19786,7 +19786,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bananapants",
+    "external_id": "ebook:bananapants",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19817,7 +19817,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "game-changer",
+    "external_id": "ebook:game-changer",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19848,7 +19848,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "black-sun",
+    "external_id": "ebook:black-sun",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19879,7 +19879,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "silver-under-nightfall",
+    "external_id": "ebook:silver-under-nightfall",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19910,7 +19910,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "virgin-river-collection-volume-1",
+    "external_id": "ebook:virgin-river-collection-volume-1",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19941,7 +19941,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "my-kind-of-christmas",
+    "external_id": "ebook:my-kind-of-christmas",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -19972,7 +19972,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "til-death-do-us-bard",
+    "external_id": "ebook:til-death-do-us-bard",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -20003,7 +20003,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "cat-dragon",
+    "external_id": "ebook:cat-dragon",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -20034,7 +20034,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "breaking-out",
+    "external_id": "ebook:breaking-out",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -20065,7 +20065,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "hero",
+    "external_id": "ebook:hero",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.37"
    }
@@ -20096,7 +20096,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-lost",
+    "external_id": "ebook:the-lost",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20127,7 +20127,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "have-you-eaten-the-full-series",
+    "external_id": "ebook:have-you-eaten-the-full-series",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20158,7 +20158,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "enjoy-the-view",
+    "external_id": "ebook:enjoy-the-view",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20189,7 +20189,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "kill-the-beast",
+    "external_id": "ebook:kill-the-beast",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20220,7 +20220,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-adventures-of-amina-al-sirafi",
+    "external_id": "ebook:the-adventures-of-amina-al-sirafi",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20251,7 +20251,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-poet-empress",
+    "external_id": "ebook:the-poet-empress",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20282,7 +20282,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "certain-dark-things",
+    "external_id": "ebook:certain-dark-things",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20313,7 +20313,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "nightstrider",
+    "external_id": "ebook:nightstrider",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20344,7 +20344,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "rescuing-rayne",
+    "external_id": "ebook:rescuing-rayne",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20375,7 +20375,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "remedial-rocket-science",
+    "external_id": "ebook:remedial-rocket-science",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20406,7 +20406,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "son-of-the-storm",
+    "external_id": "ebook:son-of-the-storm",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.47"
    }
@@ -20437,7 +20437,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-twisted-ones",
+    "external_id": "ebook:the-twisted-ones",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20468,7 +20468,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "what-feasts-at-night",
+    "external_id": "ebook:what-feasts-at-night",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20499,7 +20499,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-hollow-places",
+    "external_id": "ebook:the-hollow-places",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20530,7 +20530,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "nettle-bone",
+    "external_id": "ebook:nettle-bone",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20561,7 +20561,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-raven-and-the-reindeer",
+    "external_id": "ebook:the-raven-and-the-reindeer",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20592,7 +20592,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-co-op",
+    "external_id": "ebook:the-co-op",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20623,7 +20623,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-isle-in-the-silver-sea",
+    "external_id": "ebook:the-isle-in-the-silver-sea",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20654,7 +20654,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-matchmaking",
+    "external_id": "ebook:magic-matchmaking",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20685,7 +20685,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "slash-or-pass",
+    "external_id": "ebook:slash-or-pass",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20716,7 +20716,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "rakesfall",
+    "external_id": "ebook:rakesfall",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20747,7 +20747,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "death-by-dumpling",
+    "external_id": "ebook:death-by-dumpling",
     "edition_type": null,
     "evidence": "kobo screenshot 1.11.57"
    }
@@ -20778,7 +20778,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-shadows",
+    "external_id": "ebook:the-shadows",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -20809,7 +20809,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-count-of-monte-cristo",
+    "external_id": "ebook:the-count-of-monte-cristo",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -20840,7 +20840,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "hang-the-moon",
+    "external_id": "ebook:hang-the-moon",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -20871,7 +20871,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "what-the-hex",
+    "external_id": "ebook:what-the-hex",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -20902,7 +20902,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "screwdrivered",
+    "external_id": "ebook:screwdrivered",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -20933,7 +20933,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "hate-to-want-you",
+    "external_id": "ebook:hate-to-want-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -20964,7 +20964,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "partners-in-crime",
+    "external_id": "ebook:partners-in-crime",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -20995,7 +20995,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-shapeshifters",
+    "external_id": "ebook:the-shapeshifters",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -21026,7 +21026,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-hate-u-give",
+    "external_id": "ebook:the-hate-u-give",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -21057,7 +21057,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "agnes-grey",
+    "external_id": "ebook:agnes-grey",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -21088,7 +21088,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-perfect-rake",
+    "external_id": "ebook:the-perfect-rake",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -21119,7 +21119,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-little-prince",
+    "external_id": "ebook:the-little-prince",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -21150,7 +21150,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bound",
+    "external_id": "ebook:bound",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.13"
    }
@@ -21181,7 +21181,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "heart-of-fire",
+    "external_id": "ebook:heart-of-fire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21212,7 +21212,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "dracula",
+    "external_id": "ebook:dracula",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21243,7 +21243,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "captive-prince",
+    "external_id": "ebook:captive-prince",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21274,7 +21274,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "prince-s-gambit",
+    "external_id": "ebook:prince-s-gambit",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21305,7 +21305,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "kings-rising",
+    "external_id": "ebook:kings-rising",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21336,7 +21336,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "belle",
+    "external_id": "ebook:belle",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21367,7 +21367,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "once",
+    "external_id": "ebook:once",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21398,7 +21398,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "beauty-sleep",
+    "external_id": "ebook:beauty-sleep",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21429,7 +21429,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "once-a-gentleman",
+    "external_id": "ebook:once-a-gentleman",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21460,7 +21460,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-witch-collector",
+    "external_id": "ebook:the-witch-collector",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21491,7 +21491,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-wolf-at-the-door",
+    "external_id": "ebook:the-wolf-at-the-door",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.21"
    }
@@ -21522,7 +21522,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-wolf-at-bay",
+    "external_id": "ebook:the-wolf-at-bay",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21553,14 +21553,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "unbound",
+    "external_id": "ebook:unbound",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    },
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "unbound",
+    "external_id": "audiobook:unbound",
     "edition_type": null,
     "evidence": "audible screenshot Audible Library 1"
    }
@@ -21593,7 +21593,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "just-like-this",
+    "external_id": "ebook:just-like-this",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21624,7 +21624,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "brooklyn",
+    "external_id": "ebook:brooklyn",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21655,7 +21655,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "hot-head",
+    "external_id": "ebook:hot-head",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21686,7 +21686,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "shattered-glass",
+    "external_id": "ebook:shattered-glass",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21717,7 +21717,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "midnight-pearls",
+    "external_id": "ebook:midnight-pearls",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21748,7 +21748,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "violet-eyes",
+    "external_id": "ebook:violet-eyes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21779,7 +21779,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "kiss-of-fire",
+    "external_id": "ebook:kiss-of-fire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21810,7 +21810,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-curse-giver",
+    "external_id": "ebook:the-curse-giver",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21841,7 +21841,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-tarzan-series-volumes-1-8-illustrated-edition",
+    "external_id": "ebook:the-tarzan-series-volumes-1-8-illustrated-edition",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21872,7 +21872,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "john-carter-adventures-on-mars-collection-illustrated",
+    "external_id": "ebook:john-carter-adventures-on-mars-collection-illustrated",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21903,7 +21903,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "to-taste-temptation",
+    "external_id": "ebook:to-taste-temptation",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.33"
    }
@@ -21934,7 +21934,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "to-beguile-a-beast",
+    "external_id": "ebook:to-beguile-a-beast",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -21965,7 +21965,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "to-seduce-a-sinner",
+    "external_id": "ebook:to-seduce-a-sinner",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -21996,7 +21996,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-chase",
+    "external_id": "ebook:the-chase",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22027,7 +22027,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-kiss-at-midnight",
+    "external_id": "ebook:a-kiss-at-midnight",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22058,7 +22058,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-ugly-duchess",
+    "external_id": "ebook:the-ugly-duchess",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22089,7 +22089,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "born-to-be-wilde",
+    "external_id": "ebook:born-to-be-wilde",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22120,7 +22120,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "much-ado-about-you",
+    "external_id": "ebook:much-ado-about-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22151,7 +22151,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "too-wilde-to-wed",
+    "external_id": "ebook:too-wilde-to-wed",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22182,7 +22182,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "wilde-in-love",
+    "external_id": "ebook:wilde-in-love",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22213,7 +22213,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "when-beauty-tamed-the-beast",
+    "external_id": "ebook:when-beauty-tamed-the-beast",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.42"
    }
@@ -22244,7 +22244,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "wuthering-heights",
+    "external_id": "ebook:wuthering-heights",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22275,7 +22275,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-royally-series-collection",
+    "external_id": "ebook:the-royally-series-collection",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22306,7 +22306,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "tandem-unit",
+    "external_id": "ebook:tandem-unit",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22337,7 +22337,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "wicked-nights",
+    "external_id": "ebook:wicked-nights",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22368,7 +22368,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "too-scot-to-handle",
+    "external_id": "ebook:too-scot-to-handle",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22399,7 +22399,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "no-other-duke-will-do",
+    "external_id": "ebook:no-other-duke-will-do",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22430,7 +22430,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-rogue-of-her-own",
+    "external_id": "ebook:a-rogue-of-her-own",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22461,7 +22461,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-captive",
+    "external_id": "ebook:the-captive",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22492,7 +22492,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "christmas-ladies",
+    "external_id": "ebook:christmas-ladies",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22523,7 +22523,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-trouble-with-dukes",
+    "external_id": "ebook:the-trouble-with-dukes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22554,7 +22554,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-ippos-king",
+    "external_id": "ebook:the-ippos-king",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22585,7 +22585,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "eidolon",
+    "external_id": "ebook:eidolon",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22616,7 +22616,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "entreat-me",
+    "external_id": "ebook:entreat-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.52"
    }
@@ -22647,7 +22647,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "phoenix-unbound",
+    "external_id": "ebook:phoenix-unbound",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22678,7 +22678,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "radiance",
+    "external_id": "ebook:radiance",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22709,7 +22709,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "madame-bovary",
+    "external_id": "ebook:madame-bovary",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22740,7 +22740,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-classic-works-of-h-g-wells-the-time-machine-the-invisible-man-the-war-of-the",
+    "external_id": "ebook:the-classic-works-of-h-g-wells-the-time-machine-the-invisible-man-the-war-of-the",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22771,7 +22771,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "highland-warrior",
+    "external_id": "ebook:highland-warrior",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22802,7 +22802,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-steals",
+    "external_id": "ebook:magic-steals",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22833,7 +22833,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "alphas-origins",
+    "external_id": "ebook:alphas-origins",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22864,7 +22864,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-triumphs",
+    "external_id": "ebook:magic-triumphs",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22895,7 +22895,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-slays",
+    "external_id": "ebook:magic-slays",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22926,7 +22926,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-bleeds",
+    "external_id": "ebook:magic-bleeds",
     "edition_type": null,
     "evidence": "kobo screenshot 1.12.59"
    }
@@ -22957,7 +22957,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-breaks",
+    "external_id": "ebook:magic-breaks",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -22988,7 +22988,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-binds",
+    "external_id": "ebook:magic-binds",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23019,7 +23019,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "gunmetal-magic",
+    "external_id": "ebook:gunmetal-magic",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23050,7 +23050,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-gifts",
+    "external_id": "ebook:magic-gifts",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23081,7 +23081,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-bites",
+    "external_id": "ebook:magic-bites",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23112,7 +23112,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-strikes",
+    "external_id": "ebook:magic-strikes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23143,7 +23143,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-shifts",
+    "external_id": "ebook:magic-shifts",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23174,7 +23174,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "magic-rises",
+    "external_id": "ebook:magic-rises",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23205,7 +23205,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-last-of-the-mohicans",
+    "external_id": "ebook:the-last-of-the-mohicans",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23236,7 +23236,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "leviathan-wakes",
+    "external_id": "ebook:leviathan-wakes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23267,7 +23267,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "mansfield-park",
+    "external_id": "ebook:mansfield-park",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23298,7 +23298,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "emma",
+    "external_id": "ebook:emma",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.11"
    }
@@ -23329,7 +23329,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "northanger-abbey",
+    "external_id": "ebook:northanger-abbey",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23360,7 +23360,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "sense-and-sensibility",
+    "external_id": "ebook:sense-and-sensibility",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23391,7 +23391,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-many-sins-of-lord-cameron",
+    "external_id": "ebook:the-many-sins-of-lord-cameron",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23422,7 +23422,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-pirate-next-door",
+    "external_id": "ebook:the-pirate-next-door",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23453,14 +23453,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "rules-for-a-proper-governess",
+    "external_id": "ebook:rules-for-a-proper-governess",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "rules-for-a-proper-governess",
+    "external_id": "audiobook:rules-for-a-proper-governess",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -23491,7 +23491,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-untamed-mackenzie",
+    "external_id": "ebook:the-untamed-mackenzie",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23522,14 +23522,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-madness-of-lord-ian-mackenzie",
+    "external_id": "ebook:the-madness-of-lord-ian-mackenzie",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-madness-of-lord-ian-mackenzie",
+    "external_id": "audiobook:the-madness-of-lord-ian-mackenzie",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -23560,7 +23560,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-duke-s-perfect-wife",
+    "external_id": "ebook:the-duke-s-perfect-wife",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23591,7 +23591,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "lady-isabella-s-scandalous-marriage",
+    "external_id": "ebook:lady-isabella-s-scandalous-marriage",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23622,7 +23622,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "highlander-ever-after",
+    "external_id": "ebook:highlander-ever-after",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23653,7 +23653,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-queen-s-wing",
+    "external_id": "ebook:the-queen-s-wing",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.18"
    }
@@ -23684,7 +23684,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "harry-s-trees",
+    "external_id": "ebook:harry-s-trees",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23715,7 +23715,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bridgerton-collection-volume-1",
+    "external_id": "ebook:bridgerton-collection-volume-1",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23746,7 +23746,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bridgerton-collection-volume-3",
+    "external_id": "ebook:bridgerton-collection-volume-3",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23777,7 +23777,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bridgerton-collection-volume-2",
+    "external_id": "ebook:bridgerton-collection-volume-2",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23808,7 +23808,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "slow-burn",
+    "external_id": "ebook:slow-burn",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23839,7 +23839,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "heartbreaker",
+    "external_id": "ebook:heartbreaker",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23870,7 +23870,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "mercy",
+    "external_id": "ebook:mercy",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23901,7 +23901,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "fast-track",
+    "external_id": "ebook:fast-track",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23932,7 +23932,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-belated-bride",
+    "external_id": "ebook:a-belated-bride",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23963,7 +23963,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "scream-for-me",
+    "external_id": "ebook:scream-for-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    }
@@ -23994,14 +23994,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "alone-in-the-dark",
+    "external_id": "ebook:alone-in-the-dark",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.28"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "alone-in-the-dark",
+    "external_id": "audiobook:alone-in-the-dark",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -24032,7 +24032,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "closer-than-you-think",
+    "external_id": "ebook:closer-than-you-think",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24063,7 +24063,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "you-can-t-hide",
+    "external_id": "ebook:you-can-t-hide",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24094,7 +24094,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "you-belong-to-me",
+    "external_id": "ebook:you-belong-to-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24125,7 +24125,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "have-you-seen-her",
+    "external_id": "ebook:have-you-seen-her",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24156,7 +24156,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "every-dark-corner",
+    "external_id": "ebook:every-dark-corner",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24187,7 +24187,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "broken-silence",
+    "external_id": "ebook:broken-silence",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24218,7 +24218,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "beneath-dark-waters",
+    "external_id": "ebook:beneath-dark-waters",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24249,7 +24249,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "kill-for-me",
+    "external_id": "ebook:kill-for-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24280,7 +24280,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "die-for-me",
+    "external_id": "ebook:die-for-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24311,7 +24311,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "dirty-secrets",
+    "external_id": "ebook:dirty-secrets",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.35"
    }
@@ -24342,7 +24342,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "into-the-dark",
+    "external_id": "ebook:into-the-dark",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24373,7 +24373,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "silent-scream",
+    "external_id": "ebook:silent-scream",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24404,7 +24404,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "edge-of-darkness",
+    "external_id": "ebook:edge-of-darkness",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24435,7 +24435,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "count-to-ten",
+    "external_id": "ebook:count-to-ten",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24466,7 +24466,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "no-one-left-to-tell",
+    "external_id": "ebook:no-one-left-to-tell",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24497,7 +24497,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "monster-in-the-closet",
+    "external_id": "ebook:monster-in-the-closet",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24528,14 +24528,14 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "watch-your-back",
+    "external_id": "ebook:watch-your-back",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    },
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "watch-your-back",
+    "external_id": "audiobook:watch-your-back",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -24566,7 +24566,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "did-you-miss-me",
+    "external_id": "ebook:did-you-miss-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24597,7 +24597,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "death-is-not-enough",
+    "external_id": "ebook:death-is-not-enough",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24628,7 +24628,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "don-t-tell",
+    "external_id": "ebook:don-t-tell",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24659,7 +24659,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "stone-heart",
+    "external_id": "ebook:stone-heart",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.45"
    }
@@ -24690,7 +24690,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bitten",
+    "external_id": "ebook:bitten",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24721,7 +24721,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "wanted-a-gentleman",
+    "external_id": "ebook:wanted-a-gentleman",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24752,7 +24752,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "kiss-of-a-demon-king",
+    "external_id": "ebook:kiss-of-a-demon-king",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24783,7 +24783,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "if-you-deceive",
+    "external_id": "ebook:if-you-deceive",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24814,7 +24814,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "warlord-wants-forever",
+    "external_id": "ebook:warlord-wants-forever",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24845,7 +24845,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "sweet-ruin",
+    "external_id": "ebook:sweet-ruin",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24876,7 +24876,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-hunger-like-no-other",
+    "external_id": "ebook:a-hunger-like-no-other",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24907,7 +24907,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "no-rest-for-the-wicked",
+    "external_id": "ebook:no-rest-for-the-wicked",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24938,7 +24938,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "passion-unleashed",
+    "external_id": "ebook:passion-unleashed",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -24969,7 +24969,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "desire-unchained",
+    "external_id": "ebook:desire-unchained",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -25000,7 +25000,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "pleasure-unbound",
+    "external_id": "ebook:pleasure-unbound",
     "edition_type": null,
     "evidence": "kobo screenshot 1.13.52"
    }
@@ -25031,7 +25031,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "in-your-eyes",
+    "external_id": "ebook:in-your-eyes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25062,7 +25062,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "one-time-only",
+    "external_id": "ebook:one-time-only",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25093,7 +25093,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "war-and-peace",
+    "external_id": "ebook:war-and-peace",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25124,7 +25124,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "devil-in-spring",
+    "external_id": "ebook:devil-in-spring",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25155,7 +25155,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "suddenly-you",
+    "external_id": "ebook:suddenly-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25186,7 +25186,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "love-in-the-afternoon",
+    "external_id": "ebook:love-in-the-afternoon",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25217,7 +25217,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "tempt-me-at-twilight",
+    "external_id": "ebook:tempt-me-at-twilight",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25248,7 +25248,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "then-came-you",
+    "external_id": "ebook:then-came-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25279,7 +25279,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "i-will",
+    "external_id": "ebook:i-will",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.03"
    }
@@ -25310,7 +25310,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "chasing-cassandra",
+    "external_id": "ebook:chasing-cassandra",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25341,7 +25341,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "cold-hearted-rake",
+    "external_id": "ebook:cold-hearted-rake",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25372,7 +25372,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "beauty-tempts-the-beast",
+    "external_id": "ebook:beauty-tempts-the-beast",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25403,7 +25403,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "married-to-the-mafia",
+    "external_id": "ebook:married-to-the-mafia",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25434,7 +25434,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "vampire-interrupted",
+    "external_id": "ebook:vampire-interrupted",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25465,7 +25465,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-accidental-vampire",
+    "external_id": "ebook:the-accidental-vampire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25496,7 +25496,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-quick-bite",
+    "external_id": "ebook:a-quick-bite",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25527,7 +25527,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bite-me-if-you-can",
+    "external_id": "ebook:bite-me-if-you-can",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25558,7 +25558,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "love-bites",
+    "external_id": "ebook:love-bites",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25589,7 +25589,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "devil-of-the-highlands",
+    "external_id": "ebook:devil-of-the-highlands",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.11"
    }
@@ -25620,7 +25620,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-bite-to-remember",
+    "external_id": "ebook:a-bite-to-remember",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25651,7 +25651,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "tall-dark-hungry",
+    "external_id": "ebook:tall-dark-hungry",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25682,7 +25682,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "single-white-vampire",
+    "external_id": "ebook:single-white-vampire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25713,7 +25713,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "vampires-are-forever",
+    "external_id": "ebook:vampires-are-forever",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25744,7 +25744,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "gone-with-the-wind",
+    "external_id": "ebook:gone-with-the-wind",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25775,7 +25775,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-winner-s-crime",
+    "external_id": "ebook:the-winner-s-crime",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25806,7 +25806,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-winner-s-kiss",
+    "external_id": "ebook:the-winner-s-kiss",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25837,7 +25837,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-winner-s-curse",
+    "external_id": "ebook:the-winner-s-curse",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25868,7 +25868,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "all-systems-red",
+    "external_id": "ebook:all-systems-red",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25899,7 +25899,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "compulsory",
+    "external_id": "ebook:compulsory",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25930,7 +25930,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "home-habitat-range-niche-territory",
+    "external_id": "ebook:home-habitat-range-niche-territory",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25961,7 +25961,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-kiss-of-deception",
+    "external_id": "ebook:the-kiss-of-deception",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -25992,7 +25992,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-heart-of-betrayal",
+    "external_id": "ebook:the-heart-of-betrayal",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.22"
    }
@@ -26023,7 +26023,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-beauty-of-darkness",
+    "external_id": "ebook:the-beauty-of-darkness",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26054,7 +26054,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "lord-mouse",
+    "external_id": "ebook:lord-mouse",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26085,7 +26085,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "pillow-talk",
+    "external_id": "ebook:pillow-talk",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26116,7 +26116,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "overheard",
+    "external_id": "ebook:overheard",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26147,7 +26147,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-wicked-wallflower",
+    "external_id": "ebook:the-wicked-wallflower",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26178,7 +26178,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "hunted",
+    "external_id": "ebook:hunted",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26209,7 +26209,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-high-king-s-golden-tongue",
+    "external_id": "ebook:the-high-king-s-golden-tongue",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26240,7 +26240,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-stable-boy",
+    "external_id": "ebook:the-stable-boy",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26271,7 +26271,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "tournament-of-losers",
+    "external_id": "ebook:tournament-of-losers",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26302,7 +26302,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "dirty-together",
+    "external_id": "ebook:dirty-together",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26333,7 +26333,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "dirty-pleasures",
+    "external_id": "ebook:dirty-pleasures",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.30"
    }
@@ -26364,7 +26364,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "defiant-queen",
+    "external_id": "ebook:defiant-queen",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26395,7 +26395,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "dirty-billionaire",
+    "external_id": "ebook:dirty-billionaire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26426,7 +26426,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "beneath-this-mask",
+    "external_id": "ebook:beneath-this-mask",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26457,7 +26457,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-worst-best-man",
+    "external_id": "ebook:the-worst-best-man",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26488,7 +26488,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "onyx-ivory",
+    "external_id": "ebook:onyx-ivory",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26519,7 +26519,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "shadow-flame",
+    "external_id": "ebook:shadow-flame",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26550,7 +26550,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "witches-get-stuff-done",
+    "external_id": "ebook:witches-get-stuff-done",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26581,7 +26581,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "how-long-til-black-future-month",
+    "external_id": "ebook:how-long-til-black-future-month",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26612,7 +26612,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "love-at-first-fright",
+    "external_id": "ebook:love-at-first-fright",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26643,7 +26643,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "chained-in-darkness-season-one",
+    "external_id": "ebook:chained-in-darkness-season-one",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26674,7 +26674,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "wicked-passions",
+    "external_id": "ebook:wicked-passions",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26705,7 +26705,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "scandalous-passions",
+    "external_id": "ebook:scandalous-passions",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26736,7 +26736,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "binti",
+    "external_id": "ebook:binti",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.40"
    }
@@ -26767,7 +26767,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "mad-dog",
+    "external_id": "ebook:mad-dog",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -26798,7 +26798,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-black-god-s-drums",
+    "external_id": "ebook:the-black-god-s-drums",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -26829,7 +26829,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "silence-fallen",
+    "external_id": "ebook:silence-fallen",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -26860,7 +26860,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "laird-of-the-mist",
+    "external_id": "ebook:laird-of-the-mist",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -26891,7 +26891,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "neanderthal-seeks-human",
+    "external_id": "ebook:neanderthal-seeks-human",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -26922,7 +26922,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-suitable-captive",
+    "external_id": "ebook:a-suitable-captive",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -26953,7 +26953,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "medium-sweet-extra-shot-of-geek",
+    "external_id": "ebook:medium-sweet-extra-shot-of-geek",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -26984,7 +26984,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-rival-most-vial-potioneering-for-love-and-profit",
+    "external_id": "ebook:a-rival-most-vial-potioneering-for-love-and-profit",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -27015,7 +27015,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "if-the-boot-fits",
+    "external_id": "ebook:if-the-boot-fits",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -27046,7 +27046,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "drag-me-up",
+    "external_id": "ebook:drag-me-up",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -27077,7 +27077,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "switch-bitch",
+    "external_id": "ebook:switch-bitch",
     "edition_type": null,
     "evidence": "kobo screenshot 1.14.46"
    }
@@ -27108,7 +27108,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "spindle-s-end",
+    "external_id": "ebook:spindle-s-end",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27139,7 +27139,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "rose-daughter",
+    "external_id": "ebook:rose-daughter",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27170,7 +27170,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bad-feminist",
+    "external_id": "ebook:bad-feminist",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27201,7 +27201,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "stormswept",
+    "external_id": "ebook:stormswept",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27232,7 +27232,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "sold-to-the-mc-men",
+    "external_id": "ebook:sold-to-the-mc-men",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27263,7 +27263,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "empire-of-storms",
+    "external_id": "ebook:empire-of-storms",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27294,7 +27294,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "house-of-earth-and-blood",
+    "external_id": "ebook:house-of-earth-and-blood",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27325,7 +27325,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-assassin-s-blade",
+    "external_id": "ebook:the-assassin-s-blade",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27356,7 +27356,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "crown-of-midnight",
+    "external_id": "ebook:crown-of-midnight",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27387,7 +27387,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "queen-of-shadows",
+    "external_id": "ebook:queen-of-shadows",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27418,7 +27418,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "kingdom-of-ash",
+    "external_id": "ebook:kingdom-of-ash",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27449,7 +27449,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "heir-of-fire",
+    "external_id": "ebook:heir-of-fire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27480,7 +27480,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "bombshell",
+    "external_id": "ebook:bombshell",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.01"
    }
@@ -27511,7 +27511,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "never-judge-a-lady-by-her-cover",
+    "external_id": "ebook:never-judge-a-lady-by-her-cover",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27542,7 +27542,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "one-good-earl-deserves-a-lover",
+    "external_id": "ebook:one-good-earl-deserves-a-lover",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27573,7 +27573,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-day-of-the-duchess",
+    "external_id": "ebook:the-day-of-the-duchess",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27604,7 +27604,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "a-rogue-by-any-other-name",
+    "external_id": "ebook:a-rogue-by-any-other-name",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27635,7 +27635,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "no-good-duke-goes-unpunished",
+    "external_id": "ebook:no-good-duke-goes-unpunished",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27666,7 +27666,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "mistletoe-and-mr-right",
+    "external_id": "ebook:mistletoe-and-mr-right",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27697,7 +27697,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-rakess",
+    "external_id": "ebook:the-rakess",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27728,7 +27728,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "her-wicked-marquess",
+    "external_id": "ebook:her-wicked-marquess",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27759,7 +27759,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "my-darling-duke",
+    "external_id": "ebook:my-darling-duke",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27790,7 +27790,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-night-dance",
+    "external_id": "ebook:the-night-dance",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27821,7 +27821,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "water-song",
+    "external_id": "ebook:water-song",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.08"
    }
@@ -27852,7 +27852,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "clockwork-boys",
+    "external_id": "ebook:clockwork-boys",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -27883,7 +27883,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-wonder-engine",
+    "external_id": "ebook:the-wonder-engine",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -27914,7 +27914,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "damaged-goods",
+    "external_id": "ebook:damaged-goods",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -27945,7 +27945,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "guarding-temptation",
+    "external_id": "ebook:guarding-temptation",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -27976,7 +27976,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "protector-of-the-small-quartet",
+    "external_id": "ebook:protector-of-the-small-quartet",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -28007,7 +28007,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-devil-wears-plaid",
+    "external_id": "ebook:the-devil-wears-plaid",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -28038,7 +28038,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "reborn-yesterday",
+    "external_id": "ebook:reborn-yesterday",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -28069,7 +28069,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "happenstance",
+    "external_id": "ebook:happenstance",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -28100,7 +28100,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "risking-it-all",
+    "external_id": "ebook:risking-it-all",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -28131,7 +28131,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "protecting-what-s-his",
+    "external_id": "ebook:protecting-what-s-his",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.18"
    }
@@ -28162,7 +28162,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "my-killer-vacation",
+    "external_id": "ebook:my-killer-vacation",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28193,7 +28193,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "say-yes-to-the-marquess",
+    "external_id": "ebook:say-yes-to-the-marquess",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28224,7 +28224,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-duchess-deal",
+    "external_id": "ebook:the-duchess-deal",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28255,7 +28255,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-wallflower-wager",
+    "external_id": "ebook:the-wallflower-wager",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28286,7 +28286,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "when-a-scot-ties-the-knot",
+    "external_id": "ebook:when-a-scot-ties-the-knot",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28317,7 +28317,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "romancing-the-duke",
+    "external_id": "ebook:romancing-the-duke",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28348,7 +28348,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "the-governess-game",
+    "external_id": "ebook:the-governess-game",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28379,7 +28379,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "grimms-fairy-tales",
+    "external_id": "ebook:grimms-fairy-tales",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28410,7 +28410,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "tess-of-the-d-urbervilles",
+    "external_id": "ebook:tess-of-the-d-urbervilles",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28441,7 +28441,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "until-you",
+    "external_id": "ebook:until-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.25"
    }
@@ -28472,7 +28472,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "ellie-hayes-and-the-himbos",
+    "external_id": "ebook:ellie-hayes-and-the-himbos",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.31"
    }
@@ -28503,7 +28503,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "dead-serious-case-1-miz-dusty-le-frey",
+    "external_id": "ebook:dead-serious-case-1-miz-dusty-le-frey",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.31"
    }
@@ -28534,7 +28534,7 @@
    {
     "format": "ebook",
     "source": "kobo",
-    "external_id": "vanity-fair",
+    "external_id": "ebook:vanity-fair",
     "edition_type": null,
     "evidence": "kobo screenshot 1.15.31"
    }
@@ -28565,7 +28565,7 @@
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "a-love-song-for-ricki-wilde",
+    "external_id": "audiobook:a-love-song-for-ricki-wilde",
     "edition_type": null,
     "evidence": "audible screenshot Audible Library 1"
    }
@@ -28596,7 +28596,7 @@
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "how-my-neighbor-stole-christmas",
+    "external_id": "audiobook:how-my-neighbor-stole-christmas",
     "edition_type": null,
     "evidence": "audible screenshot Audible Library 1"
    }
@@ -28627,7 +28627,7 @@
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "come-as-you-are",
+    "external_id": "audiobook:come-as-you-are",
     "edition_type": null,
     "evidence": "audible screenshot Audible Library 1"
    }
@@ -28659,7 +28659,7 @@
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "wrath",
+    "external_id": "audiobook:wrath",
     "edition_type": null,
     "evidence": "audible screenshot Audible Library 1"
    }
@@ -28690,7 +28690,7 @@
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "i-ran-away-to-evil",
+    "external_id": "audiobook:i-ran-away-to-evil",
     "edition_type": null,
     "evidence": "audible screenshot Audible library 2"
    }
@@ -28721,7 +28721,7 @@
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "triple-duty-bodyguards",
+    "external_id": "audiobook:triple-duty-bodyguards",
     "edition_type": null,
     "evidence": "audible screenshot Audible library 2"
    }
@@ -28752,7 +28752,7 @@
    {
     "format": "audiobook",
     "source": "audible",
-    "external_id": "daydream",
+    "external_id": "audiobook:daydream",
     "edition_type": null,
     "evidence": "audible screenshot Audible library 2"
    }
@@ -28783,7 +28783,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "blacktop-wasteland",
+    "external_id": "audiobook:blacktop-wasteland",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -28814,7 +28814,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "nuts",
+    "external_id": "audiobook:nuts",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -28845,7 +28845,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "3in1-off-the-grid-collection",
+    "external_id": "audiobook:3in1-off-the-grid-collection",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -28876,7 +28876,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "heart-on-fire",
+    "external_id": "audiobook:heart-on-fire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -28907,7 +28907,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "breath-of-fire",
+    "external_id": "audiobook:breath-of-fire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -28938,7 +28938,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-promise-of-fire",
+    "external_id": "audiobook:a-promise-of-fire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -28969,7 +28969,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-bird-and-the-sword",
+    "external_id": "audiobook:the-bird-and-the-sword",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -29000,7 +29000,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-mactaggart-brothers-trilogy",
+    "external_id": "audiobook:the-mactaggart-brothers-trilogy",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -29031,7 +29031,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "blood-and-chocolate",
+    "external_id": "audiobook:blood-and-chocolate",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -29063,7 +29063,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "when-they-call-you-a-terrorist",
+    "external_id": "audiobook:when-they-call-you-a-terrorist",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -29094,7 +29094,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "girl-woman-other",
+    "external_id": "audiobook:girl-woman-other",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -29125,7 +29125,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-way-of-kings",
+    "external_id": "audiobook:the-way-of-kings",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.19"
    }
@@ -29156,7 +29156,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-serpent-and-the-wings-of-night",
+    "external_id": "audiobook:the-serpent-and-the-wings-of-night",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29187,7 +29187,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "one-last-stop",
+    "external_id": "audiobook:one-last-stop",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29218,7 +29218,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "red-white-royal-blue",
+    "external_id": "audiobook:red-white-royal-blue",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29249,7 +29249,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "always-only-you",
+    "external_id": "audiobook:always-only-you",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29280,7 +29280,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "only-when-it-s-us",
+    "external_id": "audiobook:only-when-it-s-us",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29311,7 +29311,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "bury-your-gays",
+    "external_id": "audiobook:bury-your-gays",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29342,7 +29342,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "bluebird",
+    "external_id": "audiobook:bluebird",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29373,7 +29373,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "shadow-of-night",
+    "external_id": "audiobook:shadow-of-night",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29404,7 +29404,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-discovery-of-witches",
+    "external_id": "audiobook:a-discovery-of-witches",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29435,7 +29435,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-book-of-life",
+    "external_id": "audiobook:the-book-of-life",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.28"
    }
@@ -29466,7 +29466,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-highwayman",
+    "external_id": "audiobook:the-highwayman",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29497,7 +29497,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-skin-we-re-in",
+    "external_id": "audiobook:the-skin-we-re-in",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29528,7 +29528,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-seed-keeper",
+    "external_id": "audiobook:the-seed-keeper",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29559,7 +29559,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-sorceress-of-his-own",
+    "external_id": "audiobook:a-sorceress-of-his-own",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29590,7 +29590,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "out-of-the-gate",
+    "external_id": "audiobook:out-of-the-gate",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29621,7 +29621,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "royally-matched",
+    "external_id": "audiobook:royally-matched",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29652,7 +29652,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-ex-hex",
+    "external_id": "audiobook:the-ex-hex",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29683,7 +29683,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-kiss-curse",
+    "external_id": "audiobook:the-kiss-curse",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29714,7 +29714,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "butter-honey-pig-bread",
+    "external_id": "audiobook:butter-honey-pig-bread",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29745,7 +29745,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-blacksmith-queen",
+    "external_id": "audiobook:the-blacksmith-queen",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29776,7 +29776,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-truth-about-dukes",
+    "external_id": "audiobook:the-truth-about-dukes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.37"
    }
@@ -29807,7 +29807,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-winter-king",
+    "external_id": "audiobook:the-winter-king",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -29838,7 +29838,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "ruby-fever",
+    "external_id": "audiobook:ruby-fever",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -29869,7 +29869,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "sapphire-flames",
+    "external_id": "audiobook:sapphire-flames",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -29900,7 +29900,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "emerald-blaze",
+    "external_id": "audiobook:emerald-blaze",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -29931,7 +29931,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "burn-for-me",
+    "external_id": "audiobook:burn-for-me",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -29962,7 +29962,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "white-hot",
+    "external_id": "audiobook:white-hot",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -29993,7 +29993,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "wildfire",
+    "external_id": "audiobook:wildfire",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -30024,7 +30024,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "on-the-edge",
+    "external_id": "audiobook:on-the-edge",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -30055,7 +30055,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "bayou-moon",
+    "external_id": "audiobook:bayou-moon",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -30086,7 +30086,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "kushiel-s-chosen",
+    "external_id": "audiobook:kushiel-s-chosen",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.43"
    }
@@ -30117,7 +30117,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "kushiel-s-avatar",
+    "external_id": "audiobook:kushiel-s-avatar",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30148,7 +30148,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "godslayer",
+    "external_id": "audiobook:godslayer",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30179,7 +30179,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "banewreaker",
+    "external_id": "audiobook:banewreaker",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30210,7 +30210,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "cassiel-s-servant",
+    "external_id": "audiobook:cassiel-s-servant",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30241,7 +30241,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "sugar-daddies",
+    "external_id": "audiobook:sugar-daddies",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30272,7 +30272,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "jane-austen-collection-the-complete-novels",
+    "external_id": "audiobook:jane-austen-collection-the-complete-novels",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30303,7 +30303,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "nevernight",
+    "external_id": "audiobook:nevernight",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30334,7 +30334,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "darkdawn",
+    "external_id": "audiobook:darkdawn",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30365,7 +30365,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "godsgrave",
+    "external_id": "audiobook:godsgrave",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30396,7 +30396,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "canadian-boyfriend",
+    "external_id": "audiobook:canadian-boyfriend",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30427,7 +30427,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-duke-undone",
+    "external_id": "audiobook:the-duke-undone",
     "edition_type": null,
     "evidence": "kobo screenshot 1.16.51"
    }
@@ -30459,7 +30459,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "out-there-screaming",
+    "external_id": "audiobook:out-there-screaming",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -30490,7 +30490,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "romancing-mister-bridgerton",
+    "external_id": "audiobook:romancing-mister-bridgerton",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -30522,7 +30522,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-merry-little-meet-cute",
+    "external_id": "audiobook:a-merry-little-meet-cute",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -30553,7 +30553,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "fierce-femmes-and-notorious-liars",
+    "external_id": "audiobook:fierce-femmes-and-notorious-liars",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -30584,7 +30584,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "say-you-re-sorry",
+    "external_id": "audiobook:say-you-re-sorry",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -30615,7 +30615,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-polar-expedition-and-other-stimulating-research-opportunities",
+    "external_id": "audiobook:a-polar-expedition-and-other-stimulating-research-opportunities",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.00"
    }
@@ -30646,7 +30646,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-rake-or-the-orca-who-met-his-match-in-a-selkie-desiring-revenge",
+    "external_id": "audiobook:the-rake-or-the-orca-who-met-his-match-in-a-selkie-desiring-revenge",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30677,7 +30677,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "one-to-watch",
+    "external_id": "audiobook:one-to-watch",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30708,7 +30708,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "wicked-pursuit",
+    "external_id": "audiobook:wicked-pursuit",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30739,7 +30739,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "radiant-sin",
+    "external_id": "audiobook:radiant-sin",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30770,7 +30770,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "neon-gods",
+    "external_id": "audiobook:neon-gods",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30801,7 +30801,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "how-to-love-a-duke-in-ten-days",
+    "external_id": "audiobook:how-to-love-a-duke-in-ten-days",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30832,7 +30832,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-emperor-s-arrow",
+    "external_id": "audiobook:the-emperor-s-arrow",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30863,7 +30863,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "devil-in-winter",
+    "external_id": "audiobook:devil-in-winter",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30894,7 +30894,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "meetings-with-the-minotaur",
+    "external_id": "audiobook:meetings-with-the-minotaur",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30925,7 +30925,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-song-of-achilles",
+    "external_id": "audiobook:the-song-of-achilles",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.08"
    }
@@ -30956,7 +30956,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "highlander-s-captive",
+    "external_id": "audiobook:highlander-s-captive",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -30987,7 +30987,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "never-seduce-a-scot",
+    "external_id": "audiobook:never-seduce-a-scot",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31018,7 +31018,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-undertaking-of-hart-and-mercy",
+    "external_id": "audiobook:the-undertaking-of-hart-and-mercy",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31049,7 +31049,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-undermining-of-twyla-and-frank",
+    "external_id": "audiobook:the-undermining-of-twyla-and-frank",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31080,7 +31080,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "real-dirty-duet",
+    "external_id": "audiobook:real-dirty-duet",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31111,7 +31111,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "dirty-girl-duet",
+    "external_id": "audiobook:dirty-girl-duet",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31142,7 +31142,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "gideon-the-ninth",
+    "external_id": "audiobook:gideon-the-ninth",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31174,7 +31174,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "good-omens",
+    "external_id": "audiobook:good-omens",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31205,7 +31205,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "one-for-my-enemy",
+    "external_id": "audiobook:one-for-my-enemy",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31236,7 +31236,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "beard-science",
+    "external_id": "audiobook:beard-science",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31267,7 +31267,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "friends-without-benefits",
+    "external_id": "audiobook:friends-without-benefits",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.14"
    }
@@ -31298,7 +31298,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-neanderthal-box-set",
+    "external_id": "audiobook:the-neanderthal-box-set",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31329,7 +31329,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "beauty-and-the-mustache",
+    "external_id": "audiobook:beauty-and-the-mustache",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31360,7 +31360,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "dating-ish",
+    "external_id": "audiobook:dating-ish",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31391,7 +31391,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "love-hacked",
+    "external_id": "audiobook:love-hacked",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31422,7 +31422,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "truth-or-beard",
+    "external_id": "audiobook:truth-or-beard",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31454,7 +31454,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-cad-and-the-co-ed",
+    "external_id": "audiobook:the-cad-and-the-co-ed",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31486,7 +31486,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-varlet-and-the-voyeur",
+    "external_id": "audiobook:the-varlet-and-the-voyeur",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31517,7 +31517,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "marriage-of-inconvenience",
+    "external_id": "audiobook:marriage-of-inconvenience",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31548,7 +31548,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "policing-black-lives",
+    "external_id": "audiobook:policing-black-lives",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31579,7 +31579,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-sky-beyond-the-storm",
+    "external_id": "audiobook:a-sky-beyond-the-storm",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31610,7 +31610,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "an-ember-in-the-ashes",
+    "external_id": "audiobook:an-ember-in-the-ashes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31641,7 +31641,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-torch-against-the-night",
+    "external_id": "audiobook:a-torch-against-the-night",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31672,7 +31672,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-reaper-at-the-gates",
+    "external_id": "audiobook:a-reaper-at-the-gates",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.25"
    }
@@ -31703,7 +31703,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "seven-blades-in-black",
+    "external_id": "audiobook:seven-blades-in-black",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31734,7 +31734,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "we-have-always-been-here",
+    "external_id": "audiobook:we-have-always-been-here",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31765,7 +31765,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-very-secret-society-of-irregular-witches",
+    "external_id": "audiobook:the-very-secret-society-of-irregular-witches",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31796,7 +31796,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "magic-for-liars",
+    "external_id": "audiobook:magic-for-liars",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31827,7 +31827,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "our-rogue-fates",
+    "external_id": "audiobook:our-rogue-fates",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31858,7 +31858,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "bluebeard-s-secret-the-complete-series",
+    "external_id": "audiobook:bluebeard-s-secret-the-complete-series",
     "edition_type": "omnibus",
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31889,7 +31889,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-scot-in-the-dark",
+    "external_id": "audiobook:a-scot-in-the-dark",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31920,7 +31920,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-touch-of-darkness",
+    "external_id": "audiobook:a-touch-of-darkness",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31951,7 +31951,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "i-kissed-a-rogue",
+    "external_id": "audiobook:i-kissed-a-rogue",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -31982,7 +31982,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "sticking-to-the-script",
+    "external_id": "audiobook:sticking-to-the-script",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -32013,7 +32013,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-body-is-not-an-apology-second-edition",
+    "external_id": "audiobook:the-body-is-not-an-apology-second-edition",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.33"
    }
@@ -32044,7 +32044,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-phoenix-keeper",
+    "external_id": "audiobook:the-phoenix-keeper",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32075,7 +32075,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-boyfriend-subscription",
+    "external_id": "audiobook:the-boyfriend-subscription",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32106,7 +32106,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "some-like-it-scot",
+    "external_id": "audiobook:some-like-it-scot",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32137,7 +32137,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "here-be-sexist-vampires",
+    "external_id": "audiobook:here-be-sexist-vampires",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32168,7 +32168,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "harrow-the-ninth",
+    "external_id": "audiobook:harrow-the-ninth",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32199,7 +32199,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "tools-of-engagement",
+    "external_id": "audiobook:tools-of-engagement",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32230,7 +32230,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-week-to-be-wicked",
+    "external_id": "audiobook:a-week-to-be-wicked",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32261,7 +32261,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "a-night-to-surrender",
+    "external_id": "audiobook:a-night-to-surrender",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32295,7 +32295,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "how-the-dukes-stole-christmas",
+    "external_id": "audiobook:how-the-dukes-stole-christmas",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32326,7 +32326,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "the-inconvenient-indian",
+    "external_id": "audiobook:the-inconvenient-indian",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32357,7 +32357,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "legendborn",
+    "external_id": "audiobook:legendborn",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.42"
    }
@@ -32388,7 +32388,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "legends-lattes",
+    "external_id": "audiobook:legends-lattes",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.54"
    }
@@ -32419,7 +32419,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "wild-irish-heart",
+    "external_id": "audiobook:wild-irish-heart",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.54"
    }
@@ -32450,7 +32450,7 @@
    {
     "format": "audiobook",
     "source": "kobo",
-    "external_id": "all-her-little-secrets",
+    "external_id": "audiobook:all-her-little-secrets",
     "edition_type": null,
     "evidence": "kobo screenshot 1.17.54"
    }
