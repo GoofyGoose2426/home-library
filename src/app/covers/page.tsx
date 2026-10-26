@@ -30,12 +30,14 @@ async function Covers() {
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
       .from("titles")
-      .select("id, title, credits(role, position, people(name)), copies(cover_url, cover_confirmed)")
+      .select("id, title, credits(role, position, people(name)), copies(cover_url, cover_confirmed, gone_at)")
       .order("title")
       .range(from, from + 999);
     if (error) throw new Error(error.message);
     for (const t of data ?? []) {
-      const cover = t.copies.find((c) => c.cover_url);
+      const owned = t.copies.filter((c) => !c.gone_at);
+      if (!owned.length) continue; // on the Gone list
+      const cover = owned.find((c) => c.cover_url);
       rows.push({
         id: t.id,
         title: t.title,

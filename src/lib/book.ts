@@ -28,6 +28,8 @@ export type BookCopy = {
   onLoanTo: string | null;
   narrators: string[];
   sources: Record<string, FieldSource>;
+  goneAt: string | null;
+  goneReason: "sold" | "donated" | "gave_away" | "lost" | "other" | null;
 };
 
 export type SeriesBook = {
@@ -58,7 +60,9 @@ export type Book = {
   rating: number | null;
   pieces: { id: string; title: string; kind: string; isRead: boolean }[];
   genres: { name: string; kind: string; source: string; confirmed: boolean }[];
+  // Copies she owns now; ones she's parted with are in goneCopies.
   copies: BookCopy[];
+  goneCopies: BookCopy[];
   sources: Record<string, FieldSource>;
   // Existing names, offered as suggestions when editing.
   seriesNames: string[];
@@ -94,7 +98,7 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
        title_tags(source, confirmed, tags(kind, name)),
        copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_path, cover_confirmed,
               pages, audio_minutes, est_words, contains_from, contains_to, bonus_notes, keepsake_notes,
-              on_loan_to, credits(role, position, people(name)))`,
+              on_loan_to, gone_at, gone_reason, credits(role, position, people(name)))`,
     )
     .eq("id", id)
     .maybeSingle();
@@ -119,7 +123,7 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
   if (seriesRow) {
     const { data: siblings, error: siblingError } = await supabase
       .from("titles")
-      .select("id, title, series_number, read_status, copies(format)")
+      .select("id, title, series_number, read_status, copies(format, gone_at)")
       .eq("series_id", seriesRow.id);
     if (siblingError) throw new Error(siblingError.message);
     series = {
@@ -127,12 +131,14 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
       name: seriesRow.name,
       number: t.series_number,
       books: (siblings ?? [])
+        .map((s) => ({ ...s, copies: (s.copies as { format: CopyFormat; gone_at: string | null }[]).filter((c) => !c.gone_at) }))
+        .filter((s) => s.copies.length > 0 || s.id === t.id)
         .map((s) => ({
           id: s.id,
           title: s.title,
           number: s.series_number,
           readStatus: s.read_status,
-          formats: [...new Set((s.copies as { format: CopyFormat }[]).map((c) => c.format))],
+          formats: [...new Set(s.copies.map((c) => c.format))],
         }))
         .sort((a, b) => (a.number ?? 999) - (b.number ?? 999) || a.title.localeCompare(b.title)),
     };
@@ -150,6 +156,43 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
       (t.copies as unknown as { cover_path: string | null }[]).flatMap((c) => (c.cover_path ? [c.cover_path] : [])),
     ),
   ]);
+
+  const allCopies: BookCopy[] = (t.copies as unknown as Record<string, unknown>[])
+    .map((c) => ({
+      id: c.id as string,
+      format: c.format as CopyFormat,
+      source: c.source as CopySource,
+      publisher: c.publisher as string | null,
+      edition: c.edition as string | null,
+      editionType: c.edition_type as string | null,
+      isbn13: c.isbn13 as string | null,
+      isbn10: c.isbn10 as string | null,
+      coverUrl: c.cover_path ? (signed.get(c.cover_path as string) ?? null) : (c.cover_url as string | null),
+      coverKind: (c.cover_path
+        ? "photo"
+        : !c.cover_url
+          ? null
+          : String(c.cover_url).startsWith("https://covers.openlibrary.org/")
+            ? "openlibrary"
+            : "other") as BookCopy["coverKind"],
+      coverConfirmed: c.cover_confirmed as boolean,
+      pages: c.pages as number | null,
+      audioMinutes: c.audio_minutes as number | null,
+      estWords: c.est_words as number | null,
+      containsFrom: c.contains_from as number | null,
+      containsTo: c.contains_to as number | null,
+      bonusNotes: c.bonus_notes as string | null,
+      keepsakeNotes: c.keepsake_notes as string | null,
+      onLoanTo: c.on_loan_to as string | null,
+      narrators: (c.credits as { role: string; position: number; people: Person }[])
+        .filter((cr) => cr.role === "narrator")
+        .sort((a, b) => a.position - b.position)
+        .flatMap((cr) => (cr.people ? [cr.people.name] : [])),
+      sources: sourcesFor(c.id as string),
+      goneAt: c.gone_at as string | null,
+      goneReason: c.gone_reason as BookCopy["goneReason"],
+    }))
+    .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format));
 
   return {
     seriesNames,
@@ -178,40 +221,8 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
       .map((p) => ({ id: p.id, title: p.piece_title, kind: p.kind, isRead: p.is_read })),
     genres: (t.title_tags as unknown as { source: string; confirmed: boolean; tags: { kind: string; name: string } | null }[])
       .flatMap((tt) => (tt.tags ? [{ ...tt.tags, source: tt.source, confirmed: tt.confirmed }] : [])),
-    copies: (t.copies as unknown as Record<string, unknown>[])
-      .map((c) => ({
-        id: c.id as string,
-        format: c.format as CopyFormat,
-        source: c.source as CopySource,
-        publisher: c.publisher as string | null,
-        edition: c.edition as string | null,
-        editionType: c.edition_type as string | null,
-        isbn13: c.isbn13 as string | null,
-        isbn10: c.isbn10 as string | null,
-        coverUrl: c.cover_path ? (signed.get(c.cover_path as string) ?? null) : (c.cover_url as string | null),
-        coverKind: (c.cover_path
-          ? "photo"
-          : !c.cover_url
-            ? null
-            : String(c.cover_url).startsWith("https://covers.openlibrary.org/")
-              ? "openlibrary"
-              : "other") as BookCopy["coverKind"],
-        coverConfirmed: c.cover_confirmed as boolean,
-        pages: c.pages as number | null,
-        audioMinutes: c.audio_minutes as number | null,
-        estWords: c.est_words as number | null,
-        containsFrom: c.contains_from as number | null,
-        containsTo: c.contains_to as number | null,
-        bonusNotes: c.bonus_notes as string | null,
-        keepsakeNotes: c.keepsake_notes as string | null,
-        onLoanTo: c.on_loan_to as string | null,
-        narrators: (c.credits as { role: string; position: number; people: Person }[])
-          .filter((cr) => cr.role === "narrator")
-          .sort((a, b) => a.position - b.position)
-          .flatMap((cr) => (cr.people ? [cr.people.name] : [])),
-        sources: sourcesFor(c.id as string),
-      }))
-      .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format)),
+    copies: allCopies.filter((c) => !c.goneAt),
+    goneCopies: allCopies.filter((c) => c.goneAt),
     sources: sourcesFor(t.id),
   };
 }

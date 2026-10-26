@@ -4,6 +4,8 @@ import { BookCover } from "@/components/book-cover";
 import { CoverPicker } from "@/components/cover-picker";
 import { EditDetails } from "@/components/edit-details";
 import { QuickEdit } from "@/components/quick-edit";
+import { RemoveCopy, UndoGone } from "@/components/remove-copy";
+import { GONE_LABEL } from "@/lib/gone";
 import { starLabel } from "@/lib/ratings";
 import type { Book, BookCopy, FieldSource } from "@/lib/book";
 
@@ -94,7 +96,7 @@ function seriesNumber(n: number | null) {
 }
 
 export function BookDetail({ book }: { book: Book }) {
-  const cover = book.copies.find((c) => c.coverKind === "photo" && c.coverUrl) ?? book.copies.find((c) => c.coverUrl);
+  const cover = [...book.copies, ...book.goneCopies].find((c) => c.coverKind === "photo" && c.coverUrl) ?? [...book.copies, ...book.goneCopies].find((c) => c.coverUrl);
   const authors = book.credits.filter((c) => c.role !== "narrator");
   const story = [
     book.romanticSubplot != null && ["Romantic subplot", book.romanticSubplot ? "Yes" : "No"],
@@ -163,6 +165,13 @@ export function BookDetail({ book }: { book: Book }) {
           </div>
           <Source s={book.sources.read_status} />
 
+          {book.copies.length === 0 && (
+            <p className="mt-4 rounded-2xl bg-accent-soft px-4 py-3 text-sm">
+              <strong>On your Gone list.</strong> You don&apos;t own a copy now, so this book is left out of your
+              library and stats. Undo below, or add a copy, to bring it back.
+            </p>
+          )}
+
           {book.needsCheck && (
             <p className="mt-4 rounded-2xl bg-accent-soft px-4 py-3 text-sm">
               <strong>Needs checking:</strong> {book.checkNote ?? "The title or author was uncertain in the photos."}
@@ -201,7 +210,7 @@ export function BookDetail({ book }: { book: Book }) {
       </div>
 
       <Section
-        title={book.copies.length === 1 ? "Your copy" : `Your ${book.copies.length} copies`}
+        title={book.copies.length === 1 ? "Your copy" : book.copies.length ? `Your ${book.copies.length} copies` : "Your copies"}
         action={
           <Link href={`/add?to=${book.id}`} className="rounded-full border border-border px-4 py-1.5 text-sm hover:bg-accent-soft">
             + Add a copy
@@ -211,11 +220,30 @@ export function BookDetail({ book }: { book: Book }) {
         <ul className="grid gap-3 sm:grid-cols-2">
           {book.copies.map((c) => (
             <li key={c.id}>
-              <CopyCard copy={c} title={book.title} author={authors[0]?.name ?? ""} />
+              <CopyCard copy={c} title={book.title} author={authors[0]?.name ?? ""} isLastCopy={book.copies.length === 1} />
             </li>
           ))}
         </ul>
+        {book.copies.length === 0 && <p className="text-sm text-muted">You don&apos;t own a copy right now.</p>}
       </Section>
+
+      {book.goneCopies.length > 0 && (
+        <Section title="Gone">
+          <ul className="divide-y divide-border rounded-2xl border border-border bg-surface">
+            {book.goneCopies.map((c) => (
+              <li key={c.id} className="flex items-center justify-between gap-3 px-4 py-3 text-sm">
+                <span>
+                  {FORMAT[c.format]} <span className="text-muted">· {WHERE[c.source] ?? c.source}</span>
+                  <span className="block text-xs text-muted">
+                    {GONE_LABEL[c.goneReason!]} · {new Date(c.goneAt!).toLocaleDateString("en-CA", { dateStyle: "medium" })}
+                  </span>
+                </span>
+                <UndoGone copyId={c.id} />
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       <Section title="Update">
         <div className="rounded-2xl border border-border bg-surface p-4">
@@ -293,7 +321,7 @@ export function BookDetail({ book }: { book: Book }) {
   );
 }
 
-function CopyCard({ copy: c, title, author }: { copy: BookCopy; title: string; author: string }) {
+function CopyCard({ copy: c, title, author, isLastCopy }: { copy: BookCopy; title: string; author: string; isLastCopy: boolean }) {
   const details = [
     c.edition && ["Edition", c.edition],
     c.editionType === "omnibus" && ["Edition type", "Omnibus / collected edition"],
@@ -332,6 +360,11 @@ function CopyCard({ copy: c, title, author }: { copy: BookCopy; title: string; a
       )}
       {ADDED_FROM[c.source] && <p className="mt-3 text-[11px] text-muted">Added from {ADDED_FROM[c.source]}</p>}
       <CoverPicker copyId={c.id} title={title} author={author} hasCover={!!c.coverUrl} isPhoto={c.coverKind === "photo"} />
+      <RemoveCopy
+        copyId={c.id}
+        label={c.format === "ebook" || c.format === "audiobook" ? `${WHERE[c.source] ?? "other"} ${c.format}` : "bookshelf copy"}
+        isLastCopy={isLastCopy}
+      />
     </div>
   );
 }

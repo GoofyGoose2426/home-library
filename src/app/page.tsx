@@ -42,6 +42,12 @@ export default function Home() {
           </a>
         </p>
         <p className="mt-1 text-xs">Keep a copy somewhere safe now and then. The free database plan has no automatic backups.</p>
+        <p className="mt-3">
+          <Link href="/gone" className="text-accent underline-offset-4 hover:underline">
+            Gone list
+          </Link>{" "}
+          · books you&apos;ve sold, donated, given away or lost
+        </p>
       </footer>
     </main>
   );

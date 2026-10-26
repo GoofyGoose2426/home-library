@@ -20,6 +20,8 @@ export type LibraryBook = {
   copies: { id: string; format: CopyFormat; source: CopySource; onLoanTo: string | null; keepsakeNotes: string | null }[];
   rating: number | null;
   pieceCount: number;
+  // False when every copy is on the Gone list (only loaded with includeGone).
+  owned: boolean;
   onLoanTo: string[];
   sources: string[];
   genres: string[];
@@ -50,14 +52,20 @@ type Row = {
     cover_path: string | null;
     cover_confirmed: boolean;
     on_loan_to: string | null;
+    gone_at: string | null;
   }[];
 };
 
 const FORMAT_ORDER: CopyFormat[] = ["hardcover", "trade_paperback", "mass_market", "print_unknown", "ebook", "audiobook"];
 
-// Every title Alexandra owns, with what the grid and table show. RLS limits
+// Every title Alexandra owns, with what the grid and table show. Copies on the
+// Gone list are left out, and so are books with no owned copies, unless
+// includeGone (used by Add, to recognise a book she's had before). RLS limits
 // this to her rows; PostgREST returns at most 1,000 rows, so read in pages.
-export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook[]> {
+export async function loadLibrary(
+  supabase: SupabaseClient,
+  { includeGone = false }: { includeGone?: boolean } = {},
+): Promise<LibraryBook[]> {
   const books: LibraryBook[] = [];
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
@@ -69,13 +77,16 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
          title_tags(tags(kind, name)),
          reviews(rating),
          pieces(count),
-         copies(id, format, source, keepsake_notes, cover_url, cover_path, cover_confirmed, on_loan_to)`,
+         copies(id, format, source, keepsake_notes, cover_url, cover_path, cover_confirmed, on_loan_to, gone_at)`,
       )
       .order("title")
       .range(from, from + 999)
       .returns<Row[]>();
     if (error) throw new Error(error.message);
-    for (const t of data ?? []) {
+    for (const row of data ?? []) {
+      const ownedCopies = row.copies.filter((c) => !c.gone_at);
+      if (!ownedCopies.length && !includeGone) continue;
+      const t = { ...row, copies: ownedCopies };
       const cover = t.copies.find((c) => c.cover_path) ?? t.copies.find((c) => c.cover_url);
       books.push({
         id: t.id,
@@ -102,6 +113,7 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
         hasKeepsake: t.copies.some((c) => !!c.keepsake_notes?.trim()),
         rating: t.reviews[0]?.rating != null ? Number(t.reviews[0].rating) : null,
         pieceCount: t.pieces[0]?.count ?? 0,
+        owned: ownedCopies.length > 0,
         coverUrl: cover?.cover_path ? `photo:${cover.cover_path}` : (cover?.cover_url ?? null),
         coverConfirmed: cover?.cover_path ? true : (cover?.cover_confirmed ?? false),
       });

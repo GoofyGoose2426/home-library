@@ -24,11 +24,13 @@ async function AddData({ searchParams }: Pick<PageProps<"/add">, "searchParams">
   const { to } = await searchParams;
   const supabase = await createClient();
   const [books, seriesNames, peopleNames] = await Promise.all([
-    loadLibrary(supabase),
+    loadLibrary(supabase, { includeGone: true }),
     namesOf(supabase, "series"),
     namesOf(supabase, "people"),
   ]);
   const target = typeof to === "string" ? books.find((b) => b.id === to) : undefined;
+  // Books whose copies are all on the Gone list come along so a re-bought
+  // book is recognised; their copy list is empty.
   return (
     <AddBook
       library={books.map((b) => ({ id: b.id, title: b.title, authors: b.authors, copies: b.copies, series: b.series, seriesNumber: b.seriesNumber }))}

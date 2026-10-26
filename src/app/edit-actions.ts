@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { ownerClient } from "@/lib/supabase/owner";
+import type { GoneReason } from "@/lib/gone";
 import { isQuarterStar } from "@/lib/ratings";
 
 // Quick edits. Each one records Alexandra as the source of the value, which
@@ -357,5 +358,57 @@ export async function addBook(
     return { ok: true, titleId: data as string };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't add the book." };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Removing copies. "No longer own" moves a copy to the Gone list (with Undo);
+// "Added by mistake" deletes it for good, and the book too if it was the last.
+
+const GONE_REASONS: GoneReason[] = ["sold", "donated", "gave_away", "lost", "other"];
+
+async function setGone(copyId: string, reason: GoneReason | null): Promise<Result> {
+  try {
+    check(UUID.test(copyId) && (reason === null || GONE_REASONS.includes(reason)));
+    const { supabase } = await ownerClient();
+    const titleId = await titleOfCopy(supabase, copyId);
+    await must(
+      supabase
+        .from("copies")
+        .update({ gone_at: reason ? new Date().toISOString() : null, gone_reason: reason })
+        .eq("id", copyId),
+    );
+    refresh(titleId);
+    revalidatePath("/gone");
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
+  }
+}
+
+export async function markCopyGone(copyId: string, reason: GoneReason) {
+  return setGone(copyId, reason);
+}
+
+export async function undoCopyGone(copyId: string) {
+  return setGone(copyId, null);
+}
+
+export async function deleteCopy(
+  copyId: string,
+): Promise<{ ok: true; titleDeleted: boolean } | { ok: false; error: string }> {
+  try {
+    check(UUID.test(copyId));
+    const { supabase } = await ownerClient();
+    const titleId = await titleOfCopy(supabase, copyId);
+    const { data, error } = await supabase.rpc("delete_copy", { p_copy_id: copyId });
+    if (error) throw new Error(error.message);
+    const row = (data as { cover_path: string | null; title_deleted: boolean }[])[0];
+    if (row?.cover_path) await supabase.storage.from("covers").remove([row.cover_path]);
+    refresh(titleId);
+    revalidatePath("/gone");
+    return { ok: true, titleDeleted: !!row?.title_deleted };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't remove that copy." };
   }
 }

@@ -344,7 +344,9 @@ function Search({
                     </span>
                     {owned && (
                       <span className="mt-1 inline-block rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium">
-                        In your library: {[...new Set(owned.copies.map(copyLabel))].join(", ")}
+                        {owned.copies.length
+                          ? `In your library: ${[...new Set(owned.copies.map(copyLabel))].join(", ")}`
+                          : "On your Gone list"}
                       </span>
                     )}
                   </span>
@@ -464,7 +466,16 @@ function BookForm({
       {owned && (
         <div className="rounded-2xl bg-accent-soft p-4 text-sm">
           <p>
-            <strong>You already have {owned.title}</strong> ({[...new Set(owned.copies.map(copyLabel))].join(", ")}).
+            {owned.copies.length ? (
+              <>
+                <strong>You already have {owned.title}</strong> ({[...new Set(owned.copies.map(copyLabel))].join(", ")}).
+              </>
+            ) : (
+              <>
+                <strong>You&apos;ve had {owned.title} before.</strong> It&apos;s on your Gone list; adding it as a
+                copy brings it back with its rating and details.
+              </>
+            )}
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <Toggle on={asCopy} onClick={() => setAsCopy(true)}>

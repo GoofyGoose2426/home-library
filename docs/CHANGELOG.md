@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Phase 1b, step 4: Remove a copy, and the Gone list
+
+- **Remove this copy** on every copy card of a book page gives two choices:
+  - **I no longer own it:** tap Sold, Donated, Gave away, Lost or Other. The copy moves to your **Gone list**, with the date. Nothing is deleted.
+  - **It was added by mistake:** for a copy you never had. After a "Delete it for good?" check, it's deleted, along with its cover photo. If it was the book's only copy, the whole book is deleted and you go back to your library.
+- **A book with no copies left** drops out of your library, the "Do I own it?" lookup, Check covers and (later) stats. Its page still opens and says it's on your Gone list.
+- **Undo:** each gone copy has an Undo button, on the book page (a new "Gone" section) and on the **Gone list** page (link at the bottom of your library).
+- Adding a book you used to own says "On your Gone list" and adds it as a copy, so the book comes back with all its details.
+- The spreadsheet download has a new **Gone** column (e.g. "Donated 2026-10-27").
+- Tested against a throwaway database (10 checks: delete rules, privacy, last-copy handling), plus a phone-width check in light and dark.
+
 ## 2026-10-27 · Scan to add, and Add another / Finish
 
 - **Scan the barcode:** the big button at the top of + Add opens your phone's back camera. Line up the barcode on the back of the book; when it reads the ISBN, the phone buzzes and Open Library is searched for that exact edition. It uses Chrome's built-in barcode reader, with the ZXing library as a backup in other browsers. Non-book barcodes and a blocked camera each get a clear message.

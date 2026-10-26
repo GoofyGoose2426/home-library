@@ -52,6 +52,8 @@ const BOOK_TYPE: Record<string, string> = {
   poetry: "Poetry",
 };
 
+const GONE: Record<string, string> = { sold: "Sold", donated: "Donated", gave_away: "Gave away", lost: "Lost", other: "Other" };
+
 function csvCell(v: unknown) {
   const s = v == null ? "" : String(v);
   return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
@@ -82,7 +84,7 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
   const header = [
     "Title", "Authors", "Series", "Series #", "Read status", "Rating", "Book type", "Reference",
     "Needs checking", "Genres", "Format", "Where it lives", "Edition", "Publisher", "ISBN",
-    "Narrators", "On loan to", "Keepsake notes",
+    "Narrators", "On loan to", "Keepsake notes", "Gone",
   ];
   const lines = [header.map(csvCell).join(",")];
   const titles = [...t.titles].sort((a, b) => String(a.title).localeCompare(String(b.title)));
@@ -108,6 +110,7 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
           (narrators.get(c.id) ?? []).join("; "),
           c.on_loan_to ?? "",
           c.keepsake_notes ?? "",
+          c.gone_at ? `${GONE[c.gone_reason as string] ?? c.gone_reason} ${String(c.gone_at).slice(0, 10)}` : "",
         ]
           .map(csvCell)
           .join(","),
