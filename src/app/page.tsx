@@ -8,9 +8,12 @@ import { createClient } from "@/lib/supabase/server";
 export default function Home() {
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-6">
-      <header className="flex items-center justify-between gap-3">
+      <header className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
         <h1 className="font-serif text-2xl font-semibold">Home Library</h1>
-        <nav className="flex items-center gap-1 text-sm">
+        <nav className="flex flex-wrap items-center gap-1 text-sm">
+          <Link href="/lookup" className="rounded-full bg-accent px-4 py-2 font-medium text-on-accent">
+            Do I own it?
+          </Link>
           <Link href="/covers" className="rounded-full px-3 py-2 hover:bg-accent-soft">
             Check covers
           </Link>

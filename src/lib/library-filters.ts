@@ -68,7 +68,7 @@ export function activeCount(f: Filters) {
   return LIST_KEYS.reduce((n, k) => n + f[k].length, 0);
 }
 
-function fold(text: string) {
+export function fold(text: string) {
   return text.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 

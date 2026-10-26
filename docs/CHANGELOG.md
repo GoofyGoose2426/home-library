@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1, step 12: Bookstore lookup
+
+- A **Do I own it?** button at the top of the library opens one big search box, ready to type.
+- Answers at a glance as you type: **✓ You own it**, **✓ You own books in this series**, or **✗ Not in your library**. Typing the first letters of each word is enough ("dream of y").
+- Each match shows every copy you own ("Bookshelf + Kobo ebook + Kobo audiobook"), read status and loans. Books with no print copy are marked "No print copy yet".
+- **Series:** the volumes you own in order, **missing volumes** in between, volumes with no print copy, and, once print types are set, which print type to buy to match your shelf (with any mismatches flagged). Prequels and novellas (#0, #1.5) are listed separately.
+- Gaps count up to the highest volume you own. Later volumes appear once series details are filled in (Phase 2). Barcode scanning also comes in Phase 2.
+- The home page header now wraps onto two rows on a phone, so all its buttons fit.
+
 ## 2026-10-26 · Phase 1, step 11: Quick edits
 
 - A **✎** button on every cover and table row opens a quick-edit panel without leaving your list. The same panel is in the **Update** section of each book page.

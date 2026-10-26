@@ -8,6 +8,7 @@ import { LibraryFilterBar } from "@/components/library-filter-bar";
 import { QuickEdit, type EditableBook } from "@/components/quick-edit";
 import { setPrintType } from "@/app/edit-actions";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
+import { copyList } from "@/lib/copy-labels";
 import { applyFilters, filterOptions, readFilters, writeFilters, type Filters } from "@/lib/library-filters";
 
 type View = "grid" | "table";
@@ -28,24 +29,6 @@ const STATUS_LABEL: Record<LibraryBook["readStatus"], string> = {
   unread: "Unread",
 };
 
-const APP_LABEL: Record<string, string> = { kobo: "Kobo", audible: "Audible", librofm: "Libro.fm" };
-const PRINT_TYPE: Partial<Record<CopyFormat, string>> = {
-  hardcover: "hardcover",
-  trade_paperback: "trade paperback",
-  mass_market: "mass-market",
-};
-
-// Where each copy lives: print copies are "Bookshelf", digital ones name the app.
-function copyLabel(c: LibraryBook["copies"][number]) {
-  if (c.format === "ebook" || c.format === "audiobook") {
-    return `${APP_LABEL[c.source] ?? "Other"} ${c.format}`;
-  }
-  return PRINT_TYPE[c.format] ? `Bookshelf (${PRINT_TYPE[c.format]})` : "Bookshelf";
-}
-
-function copyList(book: LibraryBook) {
-  return [...new Set(book.copies.map(copyLabel))].join(" + ");
-}
 
 function seriesLabel(book: LibraryBook) {
   if (!book.series) return null;
