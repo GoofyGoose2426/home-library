@@ -48,6 +48,12 @@ export default function Home() {
           </Link>{" "}
           · books you&apos;ve sold, donated, given away or lost
         </p>
+        <p className="mt-1">
+          <Link href="/fill" className="text-accent underline-offset-4 hover:underline">
+            Fill in details
+          </Link>{" "}
+          · descriptions, years and length from Open Library
+        </p>
       </footer>
     </main>
   );

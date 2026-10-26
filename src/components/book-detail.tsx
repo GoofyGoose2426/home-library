@@ -169,7 +169,21 @@ export function BookDetail({ book }: { book: Book }) {
 
           <Ratings book={book} />
 
-          {book.description && <p className="mt-4 leading-relaxed">{book.description}</p>}
+          {(book.firstPublished || book.typicalPages) && (
+            <p className="mt-3 text-sm text-muted">
+              {[book.firstPublished && `First published ${book.firstPublished}`, book.typicalPages && `Typically ${book.typicalPages} pages`]
+                .filter(Boolean)
+                .join(" · ")}
+              <Source s={book.sources.first_published ?? book.sources.typical_pages} />
+            </p>
+          )}
+
+          {book.description && (
+            <div className="mt-4">
+              <p className="whitespace-pre-line leading-relaxed">{book.description}</p>
+              <Source s={book.sources.description} />
+            </div>
+          )}
 
           <div className="mt-5">
             <EditDetails
@@ -306,17 +320,24 @@ export function BookDetail({ book }: { book: Book }) {
   );
 }
 
+// " (Open Library, not confirmed)" after a value that was filled in for her.
+function from(s: FieldSource | undefined) {
+  if (!s || s.source === "alexandra" || s.confirmed) return "";
+  const name = { openlibrary: "Open Library", googlebooks: "Google Books", import: "your photos" }[s.source] ?? s.source;
+  return ` (${name}, not confirmed)`;
+}
+
 function CopyCard({ copy: c, title, author, isLastCopy }: { copy: BookCopy; title: string; author: string; isLastCopy: boolean }) {
   const details = [
     c.edition && ["Edition", c.edition],
     c.editionType === "omnibus" && ["Edition type", "Omnibus / collected edition"],
     c.containsFrom != null && ["Contains", `Vols. ${Number(c.containsFrom)}–${Number(c.containsTo ?? c.containsFrom)}`],
-    c.publisher && ["Publisher", c.publisher],
+    c.publisher && ["Publisher", c.publisher + from(c.sources.publisher)],
     c.isbn13 && ["ISBN", c.isbn13],
     !c.isbn13 && c.isbn10 && ["ISBN-10", c.isbn10],
-    c.pages && ["Length", `${c.pages} pages`],
+    c.pages && ["Length", `${c.pages} pages${from(c.sources.pages)}`],
     c.audioMinutes && ["Length", audioLength(c.audioMinutes)],
-    c.estWords && ["Words (est.)", c.estWords.toLocaleString()],
+    c.estWords && ["Words (est.)", `~${c.estWords.toLocaleString()}${from(c.sources.est_words)}`],
     c.narrators.length > 0 && ["Narrated by", c.narrators.join(", ")],
     c.audioPerformance && ["Narration", `${c.audioPerformance} · ${find(AUDIO, c.audioPerformance)?.label}`],
     c.audioNote && ["Narration note", c.audioNote],

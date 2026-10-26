@@ -56,6 +56,8 @@ export type Book = {
   needsCheck: boolean;
   checkNote: string | null;
   description: string | null;
+  firstPublished: number | null;
+  typicalPages: number | null;
   romanticSubplot: boolean | null;
   spice: string | null;
   storyFocus: string | null;
@@ -115,6 +117,7 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     .from("titles")
     .select(
       `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description, audience,
+       first_published, typical_pages,
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
        reviews(rating, writing_quality, recommendation),
@@ -242,6 +245,8 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     needsCheck: t.needs_check,
     checkNote: t.check_note,
     description: t.description,
+    firstPublished: t.first_published,
+    typicalPages: t.typical_pages,
     romanticSubplot: t.romantic_subplot,
     spice: t.spice,
     storyFocus: t.story_focus,

@@ -2,6 +2,28 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-29 · Phase 2, step 3: Fill in details from Open Library
+
+- **Fill in details** (link at the bottom of your library) looks up each book on Open Library by title and author and fills in:
+  - the description
+  - the first published year
+  - a typical length ("Typically 384 pages")
+  - a word estimate for print and ebook copies
+  - a series, only where the book has none (with your existing spelling of the series name)
+
+  Copies with an ISBN also get their own publisher and page count.
+- **Careful by design:**
+  - A book is filled only when the title *and* an author surname match; otherwise it's skipped, not guessed.
+  - Only empty fields are filled. Anything you set or cleared is never touched.
+  - Everything arrives **unconfirmed**, and the book page says where it came from ("Open Library, not confirmed").
+- **The run:** about 2 seconds a book. A progress bar, **Pause** and **Carry on**, even another day: books already checked are skipped. Each book shows what it got, or "No sure match. Skipped". You can check the already-checked books again later.
+- **Google Books:** turns on automatically once you add the free key. It fills only what Open Library didn't have, and is credited as Google Books.
+- **Book page:** shows "First published · Typically N pages" and the description, each with its source. Copy details from a lookup say "(Open Library, not confirmed)".
+- **Tested:**
+  - 9 database checks on the fill rules (never overwrite yours, unconfirmed, private).
+  - A full run on six of your real books against live Open Library: 4 matched. Your own note on Devil in Winter stayed. Mars Vol. 4 and Dating & Dismemberment were skipped as uncertain.
+  - A phone-width check in light and dark mode.
+
 ## 2026-10-29 · Phase 2, step 2: Classification on the book page
 
 - **Classification** section on every book page. It shows audience, genre, subgenres and their deeper levels, tropes, subjects, vibe, romantic subplot, spice, story focus, reasons for reading, and the graphic-novel fields. Values from the shelf photos have a dashed outline until you confirm them.
