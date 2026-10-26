@@ -16,6 +16,9 @@ export type LibraryBook = {
   formats: CopyFormat[];
   locations: string[];
   onLoanTo: string[];
+  sources: string[];
+  genres: string[];
+  hasKeepsake: boolean;
   coverUrl: string | null;
   coverConfirmed: boolean;
 };
@@ -30,8 +33,11 @@ type Row = {
   series_number: number | null;
   series: { name: string } | null;
   credits: { role: string; position: number; people: { name: string } | null }[];
+  title_tags: { tags: { kind: string; name: string } | null }[];
   copies: {
     format: CopyFormat;
+    source: string;
+    keepsake_notes: string | null;
     location: string | null;
     cover_url: string | null;
     cover_confirmed: boolean;
@@ -52,7 +58,8 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
         `id, title, read_status, book_type, is_reference, needs_check, series_number,
          series(name),
          credits(role, position, people(name)),
-         copies(format, location, cover_url, cover_confirmed, on_loan_to)`,
+         title_tags(tags(kind, name)),
+         copies(format, source, keepsake_notes, location, cover_url, cover_confirmed, on_loan_to)`,
       )
       .order("title")
       .range(from, from + 999)
@@ -78,6 +85,9 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
         ),
         locations: [...new Set(t.copies.flatMap((c) => (c.location ? [c.location] : [])))],
         onLoanTo: t.copies.flatMap((c) => (c.on_loan_to ? [c.on_loan_to] : [])),
+        sources: [...new Set(t.copies.map((c) => c.source))],
+        genres: t.title_tags.flatMap((tt) => (tt.tags?.kind === "genre" ? [tt.tags.name] : [])),
+        hasKeepsake: t.copies.some((c) => !!c.keepsake_notes?.trim()),
         coverUrl: cover?.cover_url ?? null,
         coverConfirmed: cover?.cover_confirmed ?? false,
       });

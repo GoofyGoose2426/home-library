@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1, step 9: Sort and filter
+
+- A search box on the home page that finds titles, authors and series as you type (accents don't matter).
+- **Sort** by title (ignoring "The"/"A"), author surname, series order, shelf or read status.
+- **Filters** panel: read status, format (including "Print, type not set" for step 11), rough genre, shelf, where it came from (shelf photos, Kobo, Audible, Libro.fm), series, on loan, keepsake, reference/left out of stats, and needs checking. Each choice shows how many books it has.
+- Choices in one group widen the list (Romance *or* Fantasy). Choices across groups narrow it (Unread *and* Fantasy). Applied filters show as chips you can tap off one at a time.
+- Filters live in the page address, so reloading or coming back keeps them.
+- Tested with your real library: "Unread + Fantasy & paranormal + Pine bookcase · fantasy & literary" gives 20 books, matching a direct count.
+
 ## 2026-10-26 · Phase 1, step 8: Cover grid and table
 
 - The home page now shows your whole library: 1,058 books, A to Z.

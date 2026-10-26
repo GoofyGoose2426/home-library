@@ -1,8 +1,11 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useDeferredValue, useMemo, useSyncExternalStore } from "react";
+import { useSearchParams } from "next/navigation";
 import { BookCover } from "@/components/book-cover";
+import { LibraryFilterBar } from "@/components/library-filter-bar";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
+import { applyFilters, filterOptions, readFilters, writeFilters, type Filters } from "@/lib/library-filters";
 
 type View = "grid" | "table";
 const VIEW_KEY = "library-view";
@@ -58,12 +61,26 @@ function subscribeView(listener: () => void) {
 export function LibraryView({ books }: { books: LibraryBook[] }) {
   const view = useSyncExternalStore(subscribeView, readView, () => "grid" as View);
 
+  // Filters live in the address bar, so Back and reloads keep them.
+  const params = useSearchParams();
+  const filters = useMemo(() => readFilters(new URLSearchParams(params.toString())), [params]);
+  const deferred = useDeferredValue(filters);
+  const shown = useMemo(() => applyFilters(books, deferred), [books, deferred]);
+  const options = useMemo(() => filterOptions(books), [books]);
+
+  // Each change builds on the address bar as it is now, so quick taps
+  // never overwrite each other.
+  function updateFilters(change: (current: Filters) => Filters) {
+    const current = readFilters(new URLSearchParams(window.location.search));
+    window.history.replaceState(null, "", `${window.location.pathname}${writeFilters(change(current))}`);
+  }
+
   return (
     <>
       <div className="mt-5 flex items-center justify-between gap-3">
         <p className="text-sm text-muted">
-          {books.length.toLocaleString()} books ·{" "}
-          {books.filter((b) => b.readStatus === "read").length.toLocaleString()} read
+          {books.filter((b) => b.readStatus === "read").length.toLocaleString()} of{" "}
+          {books.length.toLocaleString()} read
         </p>
         <div className="flex rounded-full border border-border bg-surface p-1" role="tablist" aria-label="View">
           {(["grid", "table"] as const).map((v) => (
@@ -80,7 +97,20 @@ export function LibraryView({ books }: { books: LibraryBook[] }) {
           ))}
         </div>
       </div>
-      {view === "grid" ? <Grid books={books} /> : <Table books={books} />}
+      <LibraryFilterBar
+        filters={filters}
+        options={options}
+        shown={shown.length}
+        total={books.length}
+        onChange={updateFilters}
+      />
+      {shown.length === 0 ? (
+        <p className="mt-10 text-center text-muted">No books match. Try removing a filter.</p>
+      ) : view === "grid" ? (
+        <Grid books={shown} />
+      ) : (
+        <Table books={shown} />
+      )}
     </>
   );
 }
