@@ -25,8 +25,23 @@ const STATUS_LABEL: Record<LibraryBook["readStatus"], string> = {
   unread: "Unread",
 };
 
-function formatList(formats: CopyFormat[]) {
-  return formats.map((f) => FORMAT_LABEL[f]).join(" + ");
+const APP_LABEL: Record<string, string> = { kobo: "Kobo", audible: "Audible", librofm: "Libro.fm" };
+const PRINT_TYPE: Partial<Record<CopyFormat, string>> = {
+  hardcover: "hardcover",
+  trade_paperback: "trade paperback",
+  mass_market: "mass-market",
+};
+
+// Where each copy lives: print copies are "Bookshelf", digital ones name the app.
+function copyLabel(c: LibraryBook["copies"][number]) {
+  if (c.format === "ebook" || c.format === "audiobook") {
+    return `${APP_LABEL[c.source] ?? "Other"} ${c.format}`;
+  }
+  return PRINT_TYPE[c.format] ? `Bookshelf (${PRINT_TYPE[c.format]})` : "Bookshelf";
+}
+
+function copyList(book: LibraryBook) {
+  return [...new Set(book.copies.map(copyLabel))].join(" + ");
 }
 
 function seriesLabel(book: LibraryBook) {
@@ -129,7 +144,7 @@ function Grid({ books }: { books: LibraryBook[] }) {
                 {b.readStatus === "read" ? "✓ Read" : "Partly read"} ·{" "}
               </span>
             )}
-            {formatList(b.formats)}
+            {copyList(b)}
             {b.onLoanTo.length > 0 && ` · On loan to ${b.onLoanTo.join(", ")}`}
           </p>
         </li>
@@ -147,8 +162,7 @@ function Table({ books }: { books: LibraryBook[] }) {
             <th scope="col" className="px-3 py-2 font-medium">Title</th>
             <th scope="col" className="hidden w-[18%] px-3 py-2 font-medium md:table-cell">Author</th>
             <th scope="col" className="w-24 px-3 py-2 font-medium sm:w-28">Status</th>
-            <th scope="col" className="hidden w-[16%] px-3 py-2 font-medium sm:table-cell">Format</th>
-            <th scope="col" className="hidden w-[18%] px-3 py-2 font-medium lg:table-cell">Shelf</th>
+            <th scope="col" className="hidden w-[24%] px-3 py-2 font-medium sm:table-cell">Copies</th>
           </tr>
         </thead>
         <tbody>
@@ -162,7 +176,7 @@ function Table({ books }: { books: LibraryBook[] }) {
                     {seriesLabel(b) && <p className="text-xs text-muted">{seriesLabel(b)}</p>}
                     {/* On narrow screens the hidden columns fold in here. */}
                     <p className="text-xs text-muted md:hidden">{b.authors.join(", ")}</p>
-                    <p className="text-xs text-muted sm:hidden">{formatList(b.formats)}</p>
+                    <p className="text-xs text-muted sm:hidden">{copyList(b)}</p>
                     {b.onLoanTo.length > 0 && (
                       <p className="text-xs text-accent">On loan to {b.onLoanTo.join(", ")}</p>
                     )}
@@ -173,8 +187,7 @@ function Table({ books }: { books: LibraryBook[] }) {
               <td className="px-3 py-2 align-top">
                 <span className={b.readStatus === "unread" ? "text-muted" : ""}>{STATUS_LABEL[b.readStatus]}</span>
               </td>
-              <td className="hidden px-3 py-2 align-top sm:table-cell">{formatList(b.formats)}</td>
-              <td className="hidden px-3 py-2 align-top text-muted lg:table-cell">{b.locations.join(", ")}</td>
+              <td className="hidden px-3 py-2 align-top sm:table-cell">{copyList(b)}</td>
             </tr>
           ))}
         </tbody>

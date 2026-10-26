@@ -60,7 +60,7 @@ export function applyDecisions(items: ItemRow[]) {
         check_note: "Kept as a separate book during import review",
         genre_guess: "Children's & YA",
         read_status: raw.read_status === "read" ? "read" : "unread",
-        copies: [{ format: "print_unknown", source: "shelf", location: String(raw.location) }],
+        copies: [{ format: "print_unknown", source: "shelf" }],
         edited: false,
         statusByAlexandra: false,
       });
@@ -221,7 +221,6 @@ export async function saveImport(supabase: SupabaseClient, ownerId: string): Pro
       title_id: titleIds.get(t.key)!,
       format: c.format,
       source: c.source,
-      location: c.location ?? null,
       edition: c.edition ?? null,
       edition_type: c.edition_type ?? null,
       isbn13: c.isbn13 ?? null,

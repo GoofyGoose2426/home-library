@@ -64,7 +64,7 @@ Reading your photos and screenshots for the Phase 1 import happens here in Claud
 │ authors,     │ (author,  │ one per book │            │ one per      │
 │ writers,     │  writer,  │ status,      │            │ format owned │
 │ artists,     │  artist,  │ classifica-  │            │ ISBN, cover, │
-│ editors,     │  editor,  │ tion, spice, │            │ length, shelf│
+│ editors,     │  editor,  │ tion, spice, │            │ length,      │
 │ narrators    │ narrator) │ vibe, rating │            │ loan, notes  │
 └──────┬───────┘           └──┬────┬───┬──┘            └──────────────┘
        │                      │    │   │
@@ -97,7 +97,7 @@ Reading your photos and screenshots for the Phase 1 import happens here in Claud
 
 **Titles** are the heart of it: one row per book, however many formats you own. A title holds what's true of the *story*: read status (Unread / Partly read / Read), book type (Prose, Graphic novel, Manga, Comic collection, Picture book, Poetry), the **Reference** switch that leaves a book out of stats, romantic subplot yes/no, spice (green pepper → 5 red peppers, or none), story focus (Plot-led / Balanced / Spice-led), main and second vibe, own-voices flag, graphic-novel style, manga demographic and franchise, and its place in a series (number, which can be 1.5 for novellas).
 
-**Copies** sit inside a title, one per format you own: hardcover, trade paperback, mass-market, ebook or audiobook. Each copy has its own publisher, edition, ISBN, cover, length (pages, or hours and minutes), estimated word count, where it came from (shelf photo, Kobo, Audible, Libro.fm), which shelf it's on, keepsake notes and **On loan to** (just a name, cleared on return). Omnibus copies list which volumes they contain, so the app knows "you already have Vols. 1–2 in the omnibus."
+**Copies** sit inside a title, one per format you own: hardcover, trade paperback, mass-market, ebook or audiobook. Each copy has its own publisher, edition, ISBN, cover, length (pages, or hours and minutes), estimated word count, where it lives (Bookshelf for print; Kobo, Audible or Libro.fm for digital), keepsake notes and **On loan to** (just a name, cleared on return). Omnibus copies list which volumes they contain, so the app knows "you already have Vols. 1–2 in the omnibus."
 
 **Series** link titles in reading order and hold the series review. The app works out owned vs. missing volumes and flags mismatched print formats.
 
@@ -137,9 +137,9 @@ Each step ends with something you can check. I'll stop after each one for your O
 | 6 | **Import review screen.** One list on your phone: uncertain titles and authors (including the 35 flagged seed rows), uncertain ebook/audio matches, Read/Unread conflicts, and the 33 Libro.fm books to tick. Nothing is saved until you finish. Saving can be safely re-run. | You go through the list. Your library appears. |
 | 7 | **Best-guess covers.** Each title gets a cover from Open Library or Google Books, labelled "unconfirmed" until it has an ISBN. Books with no match get a warm placeholder card. | Most covers look right. Wrong ones are easy to spot. |
 | 8 | **Cover grid and table.** Toggle between the two, at phone width and on desktop, in light and dark mode. | Scroll your whole library on your phone. |
-| 9 | **Sort and filter.** Title, author, format, read status, genre (rough, until Phase 2), series, shelf/source, on loan, keepsake, Reference, needs-check. Every other field joins the filters as it gets filled in Phase 2. | "Unread fantasy on the black bookcase" works in two taps. |
+| 9 | **Sort and filter.** Title, author, format, read status, genre (rough, until Phase 2), series, where it lives (Bookshelf / Kobo / Audible / Libro.fm), on loan, keepsake, Reference, needs-check. Every other field joins the filters as it gets filled in Phase 2. | "Unread fantasy I own in print" works in a few taps. |
 | 10 | **Book page.** All fields, every copy, series position, and the source of each value. | Open a book you own in two formats. |
-| 11 | **Quick edits.** Without leaving the view: mark read, tick collection pieces, rate (quarter stars with your labels), set or clear On loan to, keepsake notes, Reference switch, and a fast format picker (hardcover / trade / mass-market) so you can fix the 428 "unknown print" books shelf by shelf. | Lend a book, then clear the loan. Set formats for one shelf. |
+| 11 | **Quick edits.** Without leaving the view: mark read, tick collection pieces, rate (quarter stars with your labels), set or clear On loan to, keepsake notes, Reference switch, and a fast format picker (hardcover / trade / mass-market) so you can fix the "Print, type not set" books a batch at a time. | Lend a book, then clear the loan. Set formats for a batch of books. |
 | 12 | **Bookstore lookup.** One big search box that says **Own it / Don't own it** at a glance: every format you own ("audiobook + ebook, no print" is flagged), and series volumes owned vs. missing wherever series data exists (the manga runs at first; the rest fills in during Phase 2). | Search five books standing at your shelf. |
 | 13 | **Phone app and safety nets.** "Add to Home Screen" app icon, "Download my library" backup (CSV + JSON), daily database check-in, and `docs/CHANGELOG.md` in plain language. | Install the icon. Download a backup. |
 | 14 | **Demo.** A walkthrough of everything above at 390 px wide, in light and dark mode. | You say Phase 1 is done. |

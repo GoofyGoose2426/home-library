@@ -1,6 +1,8 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
+export type CopySource = "shelf" | "kobo" | "audible" | "librofm" | "other";
+
 export type CopyFormat = "hardcover" | "trade_paperback" | "mass_market" | "print_unknown" | "ebook" | "audiobook";
 
 export type LibraryBook = {
@@ -14,7 +16,7 @@ export type LibraryBook = {
   isReference: boolean;
   needsCheck: boolean;
   formats: CopyFormat[];
-  locations: string[];
+  copies: { format: CopyFormat; source: CopySource }[];
   onLoanTo: string[];
   sources: string[];
   genres: string[];
@@ -36,9 +38,8 @@ type Row = {
   title_tags: { tags: { kind: string; name: string } | null }[];
   copies: {
     format: CopyFormat;
-    source: string;
+    source: CopySource;
     keepsake_notes: string | null;
-    location: string | null;
     cover_url: string | null;
     cover_confirmed: boolean;
     on_loan_to: string | null;
@@ -59,7 +60,7 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
          series(name),
          credits(role, position, people(name)),
          title_tags(tags(kind, name)),
-         copies(format, source, keepsake_notes, location, cover_url, cover_confirmed, on_loan_to)`,
+         copies(format, source, keepsake_notes, cover_url, cover_confirmed, on_loan_to)`,
       )
       .order("title")
       .range(from, from + 999)
@@ -83,7 +84,9 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
         formats: [...new Set(t.copies.map((c) => c.format))].sort(
           (a, b) => FORMAT_ORDER.indexOf(a) - FORMAT_ORDER.indexOf(b),
         ),
-        locations: [...new Set(t.copies.flatMap((c) => (c.location ? [c.location] : [])))],
+        copies: t.copies
+          .map((c) => ({ format: c.format, source: c.source }))
+          .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format)),
         onLoanTo: t.copies.flatMap((c) => (c.on_loan_to ? [c.on_loan_to] : [])),
         sources: [...new Set(t.copies.map((c) => c.source))],
         genres: t.title_tags.flatMap((tt) => (tt.tags?.kind === "genre" ? [tt.tags.name] : [])),

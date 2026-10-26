@@ -66,7 +66,7 @@ async function ReviewData() {
         note: item.note,
         title: title?.title ?? String(item.raw.title ?? item.raw.reading ?? ""),
         authors: title?.authors ?? [],
-        where: title?.copies.find((c) => c.location)?.location ?? (item.raw.location as string) ?? null,
+        where: null,
         decision: item.decision,
         value: item.decided_value as DecidedValue | null,
       };

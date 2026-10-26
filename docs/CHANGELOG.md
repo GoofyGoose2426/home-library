@@ -2,6 +2,12 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · No more bookcase locations
+
+- At your request, the app no longer tracks which bookcase a book is on. Print copies now just say **Bookshelf**. Ebooks and audiobooks say which app they're in, e.g. "Kobo ebook", "Libro.fm audiobook".
+- Removed the Shelf filter, Shelf sort and Shelf column, and deleted the bookcase names from the database. The "Where it lives" filter (Bookshelf, Kobo, Audible, Libro.fm) stays.
+- The photo transcriptions in `data/import/` still mention bookcases, because that's where each photo was taken.
+
 ## 2026-10-26 · Phase 1, step 9: Sort and filter
 
 - A search box on the home page that finds titles, authors and series as you type (accents don't matter).

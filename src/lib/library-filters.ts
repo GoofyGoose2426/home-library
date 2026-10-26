@@ -7,7 +7,6 @@ export const SORTS = {
   title: "Title A–Z",
   author: "Author A–Z",
   series: "Series",
-  shelf: "Shelf",
   status: "Read status",
 } as const;
 export type SortKey = keyof typeof SORTS;
@@ -26,17 +25,16 @@ export type Filters = {
   status: LibraryBook["readStatus"][];
   format: CopyFormat[];
   genre: string[];
-  shelf: string[];
   source: string[];
   series: string[];
   flag: FlagKey[];
 };
 
-export const LIST_KEYS = ["status", "format", "genre", "shelf", "source", "series", "flag"] as const;
+export const LIST_KEYS = ["status", "format", "genre", "source", "series", "flag"] as const;
 export type ListKey = (typeof LIST_KEYS)[number];
 
 export const SOURCE_LABEL: Record<string, string> = {
-  shelf: "Shelf photos",
+  shelf: "Bookshelf",
   kobo: "Kobo",
   audible: "Audible",
   librofm: "Libro.fm",
@@ -51,7 +49,6 @@ export function readFilters(params: URLSearchParams): Filters {
     status: params.getAll("status") as Filters["status"],
     format: params.getAll("format") as CopyFormat[],
     genre: params.getAll("genre"),
-    shelf: params.getAll("shelf"),
     source: params.getAll("source"),
     series: params.getAll("series"),
     flag: params.getAll("flag").filter((f): f is FlagKey => f in FLAGS),
@@ -98,7 +95,6 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
     if (f.status.length && !f.status.includes(b.readStatus)) return false;
     if (f.format.length && !b.formats.some((x) => f.format.includes(x))) return false;
     if (f.genre.length && !b.genres.some((x) => f.genre.includes(x))) return false;
-    if (f.shelf.length && !b.locations.some((x) => f.shelf.includes(x))) return false;
     if (f.source.length && !b.sources.some((x) => f.source.includes(x))) return false;
     if (f.series.length && !(b.series && f.series.includes(b.series))) return false;
     for (const flag of f.flag) {
@@ -118,7 +114,6 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
       (a.series ?? "￿").localeCompare(b.series ?? "￿") ||
       (a.seriesNumber ?? 999) - (b.seriesNumber ?? 999) ||
       byTitle(a, b),
-    shelf: (a, b) => (a.locations[0] ?? "￿").localeCompare(b.locations[0] ?? "￿") || byTitle(a, b),
     status: (a, b) => STATUS_ORDER[a.readStatus] - STATUS_ORDER[b.readStatus] || byTitle(a, b),
   };
 
@@ -134,7 +129,6 @@ export function filterOptions(books: LibraryBook[]) {
   };
   return {
     genre: count(books.flatMap((b) => b.genres)),
-    shelf: count(books.flatMap((b) => b.locations)),
     source: count(books.flatMap((b) => b.sources)),
     series: count(books.flatMap((b) => (b.series ? [b.series] : []))),
     format: count(books.flatMap((b) => b.formats)),

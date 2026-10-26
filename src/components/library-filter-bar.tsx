@@ -53,14 +53,13 @@ export function LibraryFilterBar({
       return { ...f, [key]: list.includes(value) ? list.filter((v) => v !== value) : [...list, value] };
     });
   const clearAll = () =>
-    onChange((f) => ({ ...f, status: [], format: [], genre: [], shelf: [], source: [], series: [], flag: [] }));
+    onChange((f) => ({ ...f, status: [], format: [], genre: [], source: [], series: [], flag: [] }));
 
   // Chips for what's currently applied, each removable with one tap.
   const applied: { key: ListKey; value: string; label: string }[] = [
     ...filters.status.map((v) => ({ key: "status" as const, value: v, label: STATUS.find((s) => s[0] === v)?.[1] ?? v })),
     ...filters.format.map((v) => ({ key: "format" as const, value: v, label: FORMAT_FILTER_LABEL[v] ?? v })),
     ...filters.genre.map((v) => ({ key: "genre" as const, value: v, label: v })),
-    ...filters.shelf.map((v) => ({ key: "shelf" as const, value: v, label: v })),
     ...filters.source.map((v) => ({ key: "source" as const, value: v, label: SOURCE_LABEL[v] ?? v })),
     ...filters.series.map((v) => ({ key: "series" as const, value: v, label: `Series: ${v}` })),
     ...filters.flag.map((v) => ({ key: "flag" as const, value: v, label: FLAGS[v] })),
@@ -160,14 +159,7 @@ export function LibraryFilterBar({
               </Chip>
             ))}
           </Group>
-          <Group title="Shelf">
-            {options.shelf.map(([v, n]) => (
-              <Chip key={v} on={filters.shelf.includes(v)} onClick={() => toggle("shelf", v)} count={n}>
-                {v}
-              </Chip>
-            ))}
-          </Group>
-          <Group title="Where it came from">
+          <Group title="Where it lives">
             {options.source.map(([v, n]) => (
               <Chip key={v} on={filters.source.includes(v)} onClick={() => toggle("source", v)} count={n}>
                 {SOURCE_LABEL[v] ?? v}
