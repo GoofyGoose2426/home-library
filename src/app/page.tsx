@@ -27,6 +27,19 @@ export default function Home() {
       <Suspense fallback={<LibrarySkeleton />}>
         <Library />
       </Suspense>
+      <footer className="mt-12 border-t border-border pt-4 text-sm text-muted">
+        <p>
+          <strong className="font-medium text-foreground">Download my library:</strong>{" "}
+          <a href="/backup" className="text-accent underline-offset-4 hover:underline">
+            spreadsheet (CSV)
+          </a>{" "}
+          ·{" "}
+          <a href="/backup?format=json" className="text-accent underline-offset-4 hover:underline">
+            full backup (JSON)
+          </a>
+        </p>
+        <p className="mt-1 text-xs">Keep a copy somewhere safe now and then. The free database plan has no automatic backups.</p>
+      </footer>
     </main>
   );
 }

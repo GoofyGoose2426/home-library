@@ -6,8 +6,11 @@ import {
   supabaseUrl,
 } from "@/lib/supabase/env";
 
-// Pages anyone can open. Everything else needs Alexandra's login.
-const PUBLIC_PATHS = ["/login", "/forgot-password", "/auth/confirm"];
+// Pages anyone can open. Everything else needs Alexandra's login. The app
+// manifest is public because phones fetch it without the login cookie; it
+// only holds the app's name, colours and icon. The daily keep-alive checks
+// its own secret (CRON_SECRET) and returns no data.
+const PUBLIC_PATHS = ["/login", "/forgot-password", "/auth/confirm", "/manifest.webmanifest", "/api/keepalive"];
 // Pages that make no sense once signed in.
 const SIGNED_OUT_ONLY = ["/login", "/forgot-password"];
 

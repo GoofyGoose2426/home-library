@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1, step 13: Phone app and safety nets
+
+- **Add to Home Screen:** the app now has its own icon (three books on a terracotta shelf) and the name "Library", and opens full-screen like an app.
+- **Download my library**, at the bottom of the home page:
+  - **Spreadsheet (CSV):** one row per copy with title, authors, series, status, rating, genres, format, where it lives, edition, ISBN, narrators, loans and keepsake notes. Opens in Numbers or Excel.
+  - **Full backup (JSON):** every table, for a complete restore.
+  - Tested on your real library: 1,099 rows in the spreadsheet, and every table in the backup.
+- **Daily check-in:** once a day, Vercel pings the database so the free Supabase plan never pauses it. The ping reads no data and only works with a private value (`CRON_SECRET`) that you set in Vercel.
+
 ## 2026-10-26 · Phase 1, step 12: Bookstore lookup
 
 - A **Do I own it?** button at the top of the library opens one big search box, ready to type.
