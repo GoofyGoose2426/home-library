@@ -100,6 +100,61 @@ export async function setKeepsake(copyId: string, notes: string | null) {
   refresh(await titleOfCopy(supabase, copyId));
 }
 
+const CREDIT_ROLES = ["author", "writer", "artist", "editor", "translator"] as const;
+const BOOK_TYPES = ["prose", "graphic_novel", "manga", "comic_collection", "picture_book", "poetry"] as const;
+
+export type DetailsInput = {
+  title: string;
+  subtitle: string;
+  bookType: (typeof BOOK_TYPES)[number];
+  series: string;
+  seriesNumber: number | null;
+  credits: { name: string; role: (typeof CREDIT_ROLES)[number] }[];
+  narrators: { copyId: string; names: string[] }[];
+  clearCheck: boolean;
+};
+
+// Saves a book's own details in one all-or-nothing database call. Returns
+// the problem as text, because thrown errors are hidden in production.
+export async function saveDetails(titleId: string, d: DetailsInput): Promise<{ ok: true } | { ok: false; error: string }> {
+  try {
+    await saveDetailsOrThrow(titleId, d);
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save the details." };
+  }
+}
+
+async function saveDetailsOrThrow(titleId: string, d: DetailsInput) {
+  const short = (s: unknown, max: number) => typeof s === "string" && s.length <= max;
+  check(
+    UUID.test(titleId) &&
+      short(d.title, 300) && d.title.trim().length > 0 &&
+      short(d.subtitle, 300) && short(d.series, 200) &&
+      BOOK_TYPES.includes(d.bookType) &&
+      (d.seriesNumber === null || (Number.isFinite(d.seriesNumber) && d.seriesNumber >= 0 && d.seriesNumber < 10000)) &&
+      Array.isArray(d.credits) && d.credits.length <= 50 &&
+      d.credits.every((c) => short(c.name, 200) && CREDIT_ROLES.includes(c.role)) &&
+      Array.isArray(d.narrators) && d.narrators.length <= 10 &&
+      d.narrators.every((n) => UUID.test(n.copyId) && Array.isArray(n.names) && n.names.length <= 20 && n.names.every((x) => short(x, 200))) &&
+      typeof d.clearCheck === "boolean",
+  );
+  const { supabase } = await ownerClient();
+  const { error } = await supabase.rpc("save_title_details", {
+    p_title_id: titleId,
+    p_title: d.title,
+    p_subtitle: d.subtitle,
+    p_book_type: d.bookType,
+    p_series: d.series,
+    p_series_number: d.series.trim() ? d.seriesNumber : null,
+    p_credits: d.credits,
+    p_narrators: d.narrators.map((n) => ({ copy_id: n.copyId, names: n.names })),
+    p_clear_check: d.clearCheck,
+  });
+  if (error) throw new Error(error.message);
+  refresh(titleId);
+}
+
 // Sets the print type on print copies only; ebooks and audiobooks are left alone.
 export async function setPrintType(copyIds: string[], format: PrintType) {
   check(

@@ -57,11 +57,24 @@ export type Book = {
   genres: { name: string; kind: string; source: string; confirmed: boolean }[];
   copies: BookCopy[];
   sources: Record<string, FieldSource>;
+  // Existing names, offered as suggestions when editing.
+  seriesNames: string[];
+  peopleNames: string[];
 };
 
 const FORMAT_ORDER: CopyFormat[] = ["hardcover", "trade_paperback", "mass_market", "print_unknown", "ebook", "audiobook"];
 
 type Person = { name: string } | null;
+
+async function namesOf(supabase: SupabaseClient, table: "series" | "people") {
+  const names: string[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase.from(table).select("name").order("name").range(from, from + 999);
+    if (error) throw new Error(error.message);
+    names.push(...(data ?? []).map((r) => r.name as string));
+    if ((data ?? []).length < 1000) return names;
+  }
+}
 
 export async function loadBook(supabase: SupabaseClient, id: string): Promise<Book | null> {
   if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
@@ -126,7 +139,11 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     .sort((a, b) => a.position - b.position)
     .flatMap((c) => (c.people ? [{ name: c.people.name, role: c.role }] : []));
 
+  const [seriesNames, peopleNames] = await Promise.all([namesOf(supabase, "series"), namesOf(supabase, "people")]);
+
   return {
+    seriesNames,
+    peopleNames,
     id: t.id,
     title: t.title,
     subtitle: t.subtitle,

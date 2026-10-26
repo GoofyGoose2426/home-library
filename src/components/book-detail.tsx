@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- hotlinked covers, see book-cover.tsx */
 import Link from "next/link";
 import { BookCover } from "@/components/book-cover";
+import { EditDetails } from "@/components/edit-details";
 import { QuickEdit } from "@/components/quick-edit";
 import { starLabel } from "@/lib/ratings";
 import type { Book, BookCopy, FieldSource } from "@/lib/book";
@@ -172,6 +173,27 @@ export function BookDetail({ book }: { book: Book }) {
           )}
 
           {book.description && <p className="mt-4 leading-relaxed">{book.description}</p>}
+
+          <div className="mt-5">
+            <EditDetails
+              key={`${book.title}|${book.credits.map((c) => c.name).join(",")}|${book.series?.name ?? ""}`}
+              seriesNames={book.seriesNames}
+              peopleNames={book.peopleNames}
+              book={{
+                id: book.id,
+                title: book.title,
+                subtitle: book.subtitle,
+                bookType: book.bookType,
+                series: book.series?.name ?? null,
+                seriesNumber: book.series?.number ?? null,
+                needsCheck: book.needsCheck,
+                credits: authors,
+                audiobooks: book.copies
+                  .filter((c) => c.format === "audiobook")
+                  .map((c) => ({ id: c.id, label: `${WHERE[c.source] ?? "Other"} audiobook`, narrators: c.narrators })),
+              }}
+            />
+          </div>
         </div>
       </div>
 

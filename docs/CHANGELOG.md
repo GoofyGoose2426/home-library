@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1b, step 1: Edit details
+
+- **Edit details** button on every book page: title, subtitle, the people on the book with their role (author, writer, artist, editor, translator) in the order you choose, series and number, book type, and narrators on each audiobook copy.
+- Names and series you already have are suggested as you type, so "Amanda Quick" stays one person and "Kate Daniels" one series.
+- Tick **"These details are right now"** to remove a book's "Needs checking" flag.
+- Saving is all-or-nothing: if anything is wrong (e.g. an empty title), nothing changes and you see why. Your edits are marked "Set by you" so no later fill-in overwrites them. Tested against a throwaway database: 11 checks, all passing.
+
 ## 2026-10-26 · Phase 1 complete (step 14 demo)
 
 - Walked through every screen with your real library at phone and desktop size, in light and dark mode, and re-ran the privacy, security and data checks. Everything passes. The full review and tidy-up list is in `docs/phase-1-review.md`.
