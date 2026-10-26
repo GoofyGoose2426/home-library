@@ -1,6 +1,6 @@
 # Starter lists (Phase 2, step 1)
 
-Draft for Alexandra's approval · 2026-10-28
+Draft for Alexandra's approval · 2026-10-28 · rev. 2 (your notes on genres and subgenres)
 
 These are the choices the app offers when you, or a Claude suggestion, classify a book. I based them on what's on your shelves and in your apps. Nothing gets filled in until you approve them, and you can add to any list later from the book page.
 
@@ -14,8 +14,7 @@ The broad shelf. A book can have more than one (e.g. Romance + Fantasy).
 
 | Genre | Notes |
 |---|---|
-| Romance | |
-| Smut | Set automatically when story focus is **Spice-led**; replaces Romance as the primary genre |
+| Romance | Includes the **Smut** subgenre (see section 2) |
 | Fantasy | |
 | Sci-fi | |
 | Horror | |
@@ -34,7 +33,7 @@ The broad shelf. A book can have more than one (e.g. Romance + Fantasy).
 |---|---|
 | Romance | Romance |
 | Historical romance | Romance + subgenre **Historical romance** |
-| Fantasy & paranormal | Fantasy (and a paranormal subgenre where it fits) |
+| Fantasy & paranormal | Fantasy, or Romance + **Paranormal romance**, with supernatural beings where they fit |
 | Sci-fi & speculative | Sci-fi |
 | Thriller & mystery | Thriller & suspense, or Mystery |
 | Literary & general fiction | Literary fiction, or Contemporary fiction |
@@ -50,38 +49,58 @@ These changes will be suggestions for you to check, like everything else.
 
 ## 2. Subgenres
 
-The kind of story within a genre. Subgenres can cross genres (e.g. *Annihilation* = Sci-fi + Weird fiction).
+The kind of story within a genre. Some subgenres go one or two levels deeper (marked ↳). Subgenres can cross genres: *Fantasy romance* sits under both Romance and Fantasy, and *Retelling* can go on any fiction genre.
 
 **Romance**
 - Contemporary romance
 - Historical romance (Regency, Victorian, Highland/Scottish)
 - Romantic comedy
 - Romantic suspense
-- Paranormal romance (vampire, shifter, witch, demon)
+- **Smut**: suggested when a book's story focus is **Spice-led** (sex scenes are most of the story). A 5-pepper book with a strong plot stays plain Romance.
+- **Fantasy romance** ↳ supernatural beings
+- **Paranormal romance** ↳ supernatural beings
 - Monster romance
-- Romantasy
 - Sci-fi romance
 - Dark romance
 - Sports romance (hockey, other sports)
 - Small-town romance
 - Holiday romance
 - Queer romance (M/M, F/F, other)
-- Erotic romance
 
 **Fantasy**
 - Epic / high fantasy
-- Urban fantasy
+- **Urban fantasy** ↳ supernatural beings
 - Cozy fantasy
-- Romantasy
-- Fairy-tale retelling
-- Myth retelling
-- Fae / faerie
+- **Fantasy romance** ↳ supernatural beings
 - Dark fantasy
 - Grimdark
 - Historical fantasy
 - Portal fantasy
 - Sword & sorcery
 - Gaslamp / gaslight
+
+**↳ Supernatural beings** (pick any, on Fantasy romance, Paranormal romance and Urban fantasy):
+- **Shifters** ↳ shifter type
+- Vampires
+- Fae
+- Witches / wizards / warlocks
+- Deities
+
+**↳↳ Shifter type** (pick any, on Shifters):
+- Dragons
+- Wolves
+- Bears
+- Big cats
+- Various real animals
+- Various mythological animals
+
+**Any fiction genre**
+- **Retelling** ↳ retelling type
+
+**↳ Retelling type** (pick any):
+- Greek / Roman myths
+- Celtic / Norse myths
+- Grimm's fairy tales
 
 **Sci-fi**
 - Space opera
@@ -125,7 +144,13 @@ The kind of story within a genre. Subgenres can cross genres (e.g. *Annihilation
 - Book club fiction
 - Epistolary
 
----
+What changed from the first draft:
+- **Smut** moved from a genre to a subgenre of Romance.
+- **Romantasy** is now **Fantasy romance**, in both lists.
+- **Fae / faerie** moved from a Fantasy subgenre into Supernatural beings.
+- Paranormal romance's examples (vampire, shifter, witch, demon) are replaced by the Supernatural beings list.
+- **Fairy-tale retelling** and **Myth retelling** merged into **Retelling**, with a type.
+- **Erotic romance** was removed, because Smut covers it.
 
 ## 3. Tropes
 
@@ -282,8 +307,14 @@ New ones get added as you add books.
 
 ## Questions for you
 
-**A. Audience.** "Children's & YA" isn't really a genre. Should books get a separate **Audience** field: Adult / Young adult / Middle grade / Children's? Kids/YA books still count in your stats either way, as you decided.
+**A. Audience.** "Children's & YA" isn't really a genre. Should books get a separate **Audience** field (Adult / Young adult / Middle grade / Children's)? Kids/YA books still count in your stats either way, as you decided.
 
 **B. Queer romance.** Keep it as one subgenre with M/M, F/F and other inside it, or make three separate subgenres?
 
-**C. Missing anything?** Subgenres or tropes you look for when choosing a book that aren't here?
+**C. Supernatural beings: anything to add?** Your shelves also have **demons** (Kresley Cole, Larissa Ione), **ghosts** (*Taproot*, *Good Spirits*) and **angels**. Add any of them, or leave them under Monster romance and the main subgenres?
+
+**D. Retelling types: anything to add?** Some retellings on your shelves aren't Greek/Roman, Celtic/Norse or Grimm, e.g. *Beauty and the Beast* (French), Hans Christian Andersen, and Jane Austen or Shakespeare retellings. Add **Other fairy tales & folklore** and **Classic literature**, or keep the three?
+
+**E. Supernatural beings on other subgenres?** Right now they go on Fantasy romance, Paranormal romance and Urban fantasy. Should Dark fantasy, Monster romance or Horror books (e.g. a vampire horror novel) get them too?
+
+**F. Missing anything?** Any subgenres or tropes you look for when choosing a book that aren't here?

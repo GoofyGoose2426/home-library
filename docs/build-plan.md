@@ -1,6 +1,6 @@
 # Home Library Catalog — Build Plan
 
-Owner: Alexandra Theroux · Last updated 2026-10-28 (rev. 3: rating scales, Gone list, Phase 1b)
+Owner: Alexandra Theroux · Last updated 2026-10-28 (rev. 4: Smut is a Romance subgenre; fantasy romance, supernatural beings, retellings)
 
 ## Purpose and principles
 
@@ -45,7 +45,7 @@ Word counts are estimates from page count and trim size, or from audio length (a
 Every title gets genre, subgenre, tropes, vibe and a romantic-subplot flag. All are pre-filled and editable, and Alexandra can add new values to every list.
 
 - **Genre(s):** the broad shelf. A book can have more than one (e.g. Romance + Fantasy).
-- **Subgenre(s):** the kind of story within a genre. Subgenres can apply across genres (e.g. *Annihilation* = Sci-fi + cosmic horror), from a starter list that Alexandra approves before bulk prefill. Examples: paranormal, shifter, monster, hockey/sports, Regency romance; urban, cozy, epic fantasy, romantasy; slasher, folk, haunted-house, body, cosmic horror; space opera, solarpunk. Ask Alexandra about unclear cases.
+- **Subgenre(s):** the kind of story within a genre. Subgenres can apply across genres (e.g. *Annihilation* = Sci-fi + cosmic horror), from a starter list that Alexandra approves before bulk prefill. Examples: paranormal, monster, hockey/sports, Regency romance, smut; urban, cozy, epic fantasy, fantasy romance (never "romantasy"); retelling; slasher, folk, haunted-house, body, cosmic horror; space opera, solarpunk. Some subgenres go deeper: Fantasy romance, Paranormal romance and Urban fantasy take **supernatural beings** (shifters, vampires, fae, witches/wizards/warlocks, deities), shifters take a **shifter type** (dragons, wolves, bears, big cats, various real animals, various mythological animals), and Retelling takes a **retelling type** (Greek/Roman myths, Celtic/Norse myths, Grimm's fairy tales). The approved lists live in `docs/starter-lists.md`. Ask Alexandra about unclear cases.
 - **Tropes:** for all genres, from a curated list Alexandra can extend (enemies to lovers, grumpy/sunshine, forced proximity, found family, chosen one, final girl…).
 - **Vibe:** on every book, fiction and nonfiction (no formal content warnings). A main vibe and an optional second one: Cozy/feel-good → Light/fun → Dramatic/heavy → Intense/dark.
 - **Romantic subplot:** yes/no on every book.
@@ -66,7 +66,7 @@ Every title gets genre, subgenre, tropes, vibe and a romantic-subplot flag. All 
 
 ### Romance vs. smut
 
-A separate **story focus** field: *Plot-led*, *Balanced* or *Spice-led*. Spice-led books (sex scenes are most of the story and the plot mainly connects them) get **Smut** as their primary genre in place of Romance, followed by their other genres or subgenres (e.g. *Smut + Monster*, *Smut + Fantasy*). Story focus is separate from spice: a 5-pepper book with a strong plot stays Romance. Pre-filled from reader reports and descriptions; Alexandra can override.
+A separate **story focus** field: *Plot-led*, *Balanced* or *Spice-led*. Spice-led books (sex scenes are most of the story and the plot mainly connects them) get the **Smut** subgenre under Romance, alongside their other subgenres (e.g. Romance › Smut + Monster romance). Story focus is separate from spice: a 5-pepper book with a strong plot stays plain Romance. Pre-filled from reader reports and descriptions; Alexandra can override.
 
 ## Graphic novels and manga
 
