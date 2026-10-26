@@ -2,6 +2,21 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-28 · Phase 1b, step 6: Wrap-up. Phase 1b is complete
+
+- **Build plan updated** (`docs/build-plan.md`, rev. 3):
+  - all four rating scales with your labels and descriptions
+  - the Gone list and "Added by mistake"
+  - editing, covers and adding books
+  - a Phase 1b line in the build phases
+  - open items brought up to date: manga runs split, digital books imported, 4 "needs checking" titles left
+- **Grid tweak:** on the cover grid, the star rating now has its own line, so the label isn't cut off on your phone (e.g. "★ 4.50 Adored it").
+- **Final checks:**
+  - All the throwaway-database tests pass: add a book, edit details, Gone list, rating rules, saving ratings, quick edits.
+  - The spreadsheet download, run on a copy of your real data: 1,068 books, 1,111 copies, your 6 ratings with labels.
+  - Live database: every table is private (Row Level Security on), there's 1 login, and no books are left without a copy.
+  - Phone-width check of the library, filters and sorts in light and dark mode, using a copy of your real data.
+
 ## 2026-10-28 · Phase 1b, step 5: Your rating scales
 
 Your four scales from rating-scales.xlsx replace the old single star scale. You set them in the **Update** section of a book page, or the ✎ pop-up in your library.

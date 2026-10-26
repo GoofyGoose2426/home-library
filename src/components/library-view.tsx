@@ -347,10 +347,14 @@ function Grid({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
                   {b.readStatus === "read" ? "✓ Read" : "Partly read"} ·{" "}
                 </span>
               )}
-              {b.rating != null && <span className="text-foreground">★ {starText(b.rating)} {starLabel(b.rating)} · </span>}
               {copyList(b)}
               {b.onLoanTo.length > 0 && ` · On loan to ${b.onLoanTo.join(", ")}`}
             </p>
+            {b.rating != null && (
+              <p className="line-clamp-1 text-[11px]">
+                ★ {starText(b.rating)} {starLabel(b.rating)}
+              </p>
+            )}
             <ReviewNote book={b} compact />
           </>
         );

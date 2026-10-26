@@ -1,12 +1,12 @@
 # Home Library Catalog — Build Plan
 
-Owner: Alexandra Theroux · Last updated 2026-10-23 (rev. 2)
+Owner: Alexandra Theroux · Last updated 2026-10-28 (rev. 3: rating scales, Gone list, Phase 1b)
 
 ## Purpose and principles
 
 A private catalog of every book Alexandra owns in print, ebook and audio. It helps her read more diverse authors and stories, avoid duplicate purchases, complete series in matching editions, and pick her next read by mood.
 
-- **Owned books only.** Books leave the catalog when they're sold, donated or given away. DNF books are removed, not tracked.
+- **Owned books only.** A copy that's sold, donated, given away or lost moves to the **Gone list** (with the reason and date, and Undo). A title with no owned copies left drops out of the library, lookup and stats. A copy added by mistake is deleted outright. DNF books are removed, not tracked.
 - **Prefill, then edit.** Metadata, classification and representation are pre-filled from public sources. Alexandra can add to, correct or override any field. Each pre-filled field records where it came from.
 - **Owner-only.** Only Alexandra can view or edit. No public pages, no sharing links.
 - **The catalog is the system of record.** Ratings and reviews are written here. StoryGraph and Goodreads aren't connected.
@@ -16,7 +16,7 @@ A private catalog of every book Alexandra owns in print, ebook and audio. It hel
 Each title appears once, and every format owned sits inside that one entry.
 
 - **Title (work):** one entry per book. Holds classification, representation, status and the overall review.
-  - **Copies:** one per format owned (hardcover, trade paperback, mass-market paperback, ebook, audiobook). Each copy holds edition, ISBN, cover, length, source (shelf, Kobo, Audible, Libro.fm), keepsake notes, loan status and a format review.
+  - **Copies:** one per format owned (hardcover, trade paperback, mass-market paperback, ebook, audiobook). Each copy holds edition, ISBN, cover, length, source (shelf, Kobo, Audible, Libro.fm), keepsake notes, loan status, Gone status (reason and date) and a format review.
 - **Series:** links titles in reading order (name + number). Has its own overall review and shows owned vs. missing volumes, plus the print format and edition of each.
 - **Collections** (anthologies, short story collections, essay collections, poetry collections): a title with a table of contents of individual pieces. Each piece has its own author(s), a read checkbox and an optional review.
 - **Excluded category:** colouring books, art/craft references, picture books, and reference books (cookbooks, home guides like *Safe and Sound*) stay in the catalog but are left out of read/unread stats. A **reference** toggle on each title lets Alexandra decide per book.
@@ -102,32 +102,83 @@ Representation data exists to make reading more intentional.
 ## Reading status, ratings and reviews
 
 - **Status:** Unread / Read. Collections can also be **Partly read** (e.g. 6 of 14 pieces) and become Read only when every piece is ticked. The excluded category has no status in stats. No dates are tracked.
-- **Rating:** quarter stars (0.25 steps), shown with the scale label below.
-- **Review prompts:** free-text review, plus structured prompts: broke my brain / challenged my worldview, mood reactions (funny, cried, page-turner…), would re-read, favourite quote, who I'd recommend it to, confirmed spice level.
-- **Format review:** per copy, e.g. narrator performance for audio, print or edition quality for physical.
+- **Ratings:** four scales, from Alexandra's `rating-scales.xlsx` (v2). Labels and descriptions are her wording; don't change them without asking.
+  - **Stars** (the main rating): 1.00–5.00 in quarter steps. Each value has its own label and description. The label shows beside the stars everywhere; the description shows in the picker and on the book page. Picker: tap 1–5 stars, then choose among that star's quarters. No slider.
+  - **Writing quality** (optional, one tap): 1–5.
+  - **Would I recommend it?** (optional): No / Yes, to everyone / Yes, to specific people. Replaces the free-text "who I'd recommend it to" prompt.
+  - Writing quality and the recommendation go with a star rating: they can't be set without stars, and clearing the stars clears them.
+  - **Audio performance** (optional, audiobook copies only): 1–5, plus an optional note. Part of the format review.
+  - All four are filterable, sortable, included in the spreadsheet export, and available to Ask your library.
+  - Example: *Beloved* — Stars 3.50 · Writing 5 · Recommend: Yes, to specific people.
+- **Review prompts:** free-text review, plus structured prompts: broke my brain / challenged my worldview, mood reactions (funny, cried, page-turner…), would re-read, favourite quote, confirmed spice level.
+- **Format review:** per copy: audio performance for audiobooks (above); print or edition quality for physical copies (later).
 - **Series review:** an overall review on the series page, alongside each book's review.
 - **Collection reviews:** an overall review plus an optional review for each story or essay.
 
-| Stars | Means |
-|---|---|
-| 5 | I'd tell everyone to read this |
-| 4 | Loved it, but it's not for everyone |
-| 3 | Fun, I liked it, but I wouldn't necessarily recommend it |
-| 2 | It wasn't great |
-| 1 | I hated it |
+### Stars
+
+| Stars | Label | Description |
+|---|---|---|
+| 5.00 | All-time favourite | It got under my skin and I'll always own it. Made me cry, made me laugh, made me feel all the feels. Comfort-read territory. |
+| 4.75 | Almost perfect | Loved it. I'd only change a few small things to make it perfect. |
+| 4.50 | Adored it | Wonderful and moving. A few things I'd change, or it's a bit niche. |
+| 4.25 | A great book | Enjoyed it a lot. High quality throughout. |
+| 4.00 | Loved it | A genuinely great reading experience. |
+| 3.75 | Almost loved it | Really good, with a couple of things holding it back. |
+| 3.50 | Really enjoyed it | Entertaining and a good time, not a waste of time. Can be light, fluffy or predictable. |
+| 3.25 | Enjoyed it | It was good, but it didn't meet my needs or break my brain. Not one I'd go out of my way to recommend. |
+| 3.00 | Liked it | Enjoyable and fun. It did its job. |
+| 2.75 | Mixed feelings | Parts worked, parts really didn't. |
+| 2.50 | Meh | Didn't love it. |
+| 2.25 | It wasn't great | Glad it's over. |
+| 2.00 | Struggled with it | More frustrating than enjoyable. |
+| 1.75 | Disappointing | A few good bits in a book I mostly didn't like. |
+| 1.50 | Really didn't like it | I kept going, but I regret it a bit. |
+| 1.25 | Almost hated it | Very little worked for me, but I didn't hate it enough to quit. |
+| 1.00 | Hated it | Not for me at all. Couldn't (or barely) finish it. I want my time back. |
+
+### Writing quality
+
+| Score | Label | Description |
+|---|---|---|
+| 5 | Masterful | Beautiful prose; the words stuck with me. Clearly very well thought out, with great world-building and all that jazz. |
+| 4 | Strong | Well written and confident. A good-quality book. |
+| 3 | Fine | It was okay. Not groundbreaking. |
+| 2 | Rough | Maybe a good premise, but bad follow-through. |
+| 1 | Yikes | Very poorly written. A third grader could've done better. |
+
+### Would I recommend it?
+
+| Value | Label | Description |
+|---|---|---|
+| no | No | I wouldn't recommend it. |
+| everyone | Yes, to everyone | I'd recommend it to anyone. |
+| specific | Yes, to specific people | Only to the right reader. |
+
+### Audio performance (audiobook copies)
+
+| Score | Label | Description |
+|---|---|---|
+| 5 | Elevated the book | The narration made it better than reading it myself. |
+| 4 | Great narration | Engaging voices and pacing; easy to listen to. |
+| 3 | Fine | Did the job; nothing stood out. |
+| 2 | Distracting | Voices, pacing or production pulled me out of the story. |
+| 1 | Unlistenable | The narration ruined it for me. |
 
 ## Views and interactions
 
 Used on a phone in a bookstore, on the couch and at a desk. All adding and editing happens in the app.
 
 - **Browse:** toggle between a cover grid and a sortable table.
-- **Sort and filter by every field:** author, artist, publisher, book type, graphic-novel classifications, nonfiction subject, reasons for reading, each representation field, genre, subgenre, trope, vibe, spice, story focus, romantic subplot, read status, format, series, shelf/source, rating, on loan, keepsake.
-- **Book page:** all fields, every copy owned, reviews, series position, and the source of each pre-filled value.
+- **Sort and filter by every field:** author, artist, publisher, book type, graphic-novel classifications, nonfiction subject, reasons for reading, each representation field, genre, subgenre, trope, vibe, spice, story focus, romantic subplot, read status, format, series, shelf/source, stars, writing quality, recommendation, audio performance, on loan, keepsake, needs review (missing cover, missing author, or a guessed title).
+- **Book page:** all fields, every copy owned, reviews, series position, and the source of each pre-filled value. Edit the title, subtitle, contributors, series and book type; change each copy's cover (photo, Open Library, or remove); add a copy; remove a copy.
+- **Remove a copy:** "I no longer own it" (Sold / Donated / Gave away / Lost / Other) moves it to the Gone list; "It was added by mistake" deletes it after confirmation, and the whole title if it was the last copy.
+- **Gone list:** every copy she's parted with, newest first, each with Undo. Adding a book that's on the Gone list adds it back as a copy of the same title.
 - **Bookstore lookup:** one big search box (plus barcode scan) that answers "own it / don't own it" at a glance and shows:
   - every format owned ("audiobook + ebook, no print" flags a collecting candidate)
   - series status: volumes owned and missing, plus the print format and edition of each, with mismatches flagged and the matching format to buy
 - **Add a book:** type a title or ISBN, or scan/upload a barcode or cover photo. The app pre-fills the record; Alexandra reviews and saves.
-- **Quick edits:** mark read, tick anthology pieces, rate, set or clear a loan, add tropes or keepsake notes without leaving the view.
+- **Quick edits:** mark read, tick anthology pieces, rate (all four scales), set or clear a loan, add tropes or keepsake notes without leaving the view.
 - **Bulk import:** CSV import for batches of ISBNs and digital library exports (Kobo, Audible, Libro.fm).
 
 ## Stats and reports
@@ -151,15 +202,16 @@ Fable's warmth with StoryGraph's information.
 
 ## Build phases
 
-1. **Foundation:** private login, database, data model, seed import of the 428 shelf titles, grid and table views, sort/filter, bookstore lookup, quick edits, loans.
-2. **Enrichment:** ISBN/metadata lookup, AI prefill of series, publisher, length, genres, subgenres (starter list approved first), tropes, vibe, spice, story focus and author representation with sources; add-a-book flow with barcode scan.
-3. **Reviews and stats:** ratings and review prompts; format, series and collection reviews; read/unread dashboard; Ask your library.
-4. **Ongoing:** digital library imports, ISBNs and exact editions a shelf at a time, cover uploads.
+1. **Foundation:** private login, database, data model, seed import of the 428 shelf titles, grid and table views, sort/filter, bookstore lookup, quick edits, loans. Done 2026-10-26.
+1b. **Edit, add, remove, rate** (brought forward from later phases): edit details, per-copy covers (photo upload or Open Library), needs-review filter, add a book or copy (Open Library search, ISBN barcode scan), Gone list and Added by mistake, the four rating scales. Done 2026-10-28.
+2. **Enrichment:** ISBN/metadata lookup, AI prefill of series, publisher, length, genres, subgenres (starter list approved first), tropes, vibe, spice, story focus and author representation with sources; AI fill-in on top of the add-a-book flow (the basic flow and barcode scan shipped in 1b).
+3. **Reviews and stats:** review prompts (the rating scales shipped in 1b); format, series and collection reviews; read/unread dashboard; Ask your library.
+4. **Ongoing:** digital library imports, ISBNs and exact editions a shelf at a time.
 
 ## Open items
 
-- [ ] Resolve the 35 seed entries marked `needs_check`
+- [ ] Resolve the seed entries marked `needs_check` (4 left as of 2026-10-28; the Needs review filter finds them)
 - [ ] Approve the starter subgenre and trope lists
-- [ ] Send Kobo, Audible and Libro.fm exports
+- [x] Kobo, Audible and Libro.fm books imported from app screenshots (Phase 1)
 - [x] Confirm whether children's/YA novels (e.g. Harry Potter) stay in read/unread stats (only picture books are excluded). Decided 2026-10-23: yes, they stay in stats.
-- [ ] Split manga runs (Bastard!!, Mars, Ouran) into one entry per volume
+- [x] Split manga runs (Bastard!!, Mars, Ouran) into one entry per volume (done on import)
