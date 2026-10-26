@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Phase 1b, step 3: Add a book and add a copy
+
+- **+ Add** at the top of the library. Search Open Library by title, author or **ISBN** (the ISBN finds your exact edition, with its publisher and page count), pick the right result, check the details, and save. **Can't find it? Enter it yourself** opens a blank form.
+- For your copy, choose:
+  - **Format:** hardcover, trade paperback, mass-market, print (not sure), ebook or audiobook. Print copies live on your Bookshelf; ebooks and audiobooks say which app (Kobo, Audible, Libro.fm, Other).
+  - Optionally: ISBN, pages, publisher, narrators (audiobooks), and **On loan to** if it's already lent out.
+  - Whether to use the search result's cover.
+- **No duplicates:** search results you already own say "In your library: …". Picking one offers **Add as another copy** (the default) or **It's a different book**.
+- **+ Add a copy** on every book page adds a new format of a book you already have (e.g. the print edition of an ebook).
+- Saving is all-or-nothing. Every value is marked "Set by you", and you land on the book's page afterwards. Tested against a throwaway database: 14 checks, all passing.
+
 ## 2026-10-26 · Needs review
 
 - Books with something to fix are tagged **⚑ Needs review**: no cover, no author, or a title or author that was a guess from the shelf photos.

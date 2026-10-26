@@ -69,7 +69,7 @@ const FORMAT_ORDER: CopyFormat[] = ["hardcover", "trade_paperback", "mass_market
 
 type Person = { name: string } | null;
 
-async function namesOf(supabase: SupabaseClient, table: "series" | "people") {
+export async function namesOf(supabase: SupabaseClient, table: "series" | "people") {
   const names: string[] = [];
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase.from(table).select("name").order("name").range(from, from + 999);

@@ -200,7 +200,14 @@ export function BookDetail({ book }: { book: Book }) {
         </div>
       </div>
 
-      <Section title={book.copies.length === 1 ? "Your copy" : `Your ${book.copies.length} copies`}>
+      <Section
+        title={book.copies.length === 1 ? "Your copy" : `Your ${book.copies.length} copies`}
+        action={
+          <Link href={`/add?to=${book.id}`} className="rounded-full border border-border px-4 py-1.5 text-sm hover:bg-accent-soft">
+            + Add a copy
+          </Link>
+        }
+      >
         <ul className="grid gap-3 sm:grid-cols-2">
           {book.copies.map((c) => (
             <li key={c.id}>
@@ -329,10 +336,13 @@ function CopyCard({ copy: c, title, author }: { copy: BookCopy; title: string; a
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, action, children }: { title: string; action?: React.ReactNode; children: React.ReactNode }) {
   return (
     <section className="mt-8">
-      <h2 className="mb-3 font-serif text-xl font-semibold">{title}</h2>
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <h2 className="font-serif text-xl font-semibold">{title}</h2>
+        {action}
+      </div>
       {children}
     </section>
   );

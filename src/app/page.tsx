@@ -14,6 +14,9 @@ export default function Home() {
           <Link href="/lookup" className="rounded-full bg-accent px-4 py-2 font-medium text-on-accent">
             Do I own it?
           </Link>
+          <Link href="/add" className="rounded-full border border-accent px-4 py-2 font-medium text-accent">
+            + Add
+          </Link>
           <Link href="/covers" className="rounded-full px-3 py-2 hover:bg-accent-soft">
             Check covers
           </Link>

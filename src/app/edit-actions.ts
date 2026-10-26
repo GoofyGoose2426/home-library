@@ -264,3 +264,98 @@ export async function removeCopyCover(copyId: string): Promise<Result> {
     await replaceCover(copyId, { cover_url: null, cover_path: null, confirmed: false });
   });
 }
+
+// ---------------------------------------------------------------------------
+// Adding books and copies (one all-or-nothing database call).
+
+const FORMATS = ["hardcover", "trade_paperback", "mass_market", "print_unknown", "ebook", "audiobook"] as const;
+const SOURCES = ["shelf", "kobo", "audible", "librofm", "other"] as const;
+
+export type NewCopy = {
+  format: (typeof FORMATS)[number];
+  source: (typeof SOURCES)[number];
+  isbn13: string;
+  publisher: string;
+  pages: number | null;
+  coverUrl: string;
+  onLoanTo: string;
+  narrators: string[];
+};
+
+export type NewBook = {
+  title: string;
+  subtitle: string;
+  bookType: DetailsInput["bookType"];
+  readStatus: "read" | "unread";
+  series: string;
+  seriesNumber: number | null;
+  credits: DetailsInput["credits"];
+};
+
+// Adds a new book with its first copy, or (with titleId) a copy of a book
+// she already has. Returns the book's id to open its page.
+export async function addBook(
+  titleId: string | null,
+  book: NewBook | null,
+  copy: NewCopy,
+): Promise<{ ok: true; titleId: string } | { ok: false; error: string }> {
+  try {
+    const short = (s: unknown, max: number) => typeof s === "string" && s.length <= max;
+    check(
+      FORMATS.includes(copy.format) &&
+        SOURCES.includes(copy.source) &&
+        (copy.isbn13 === "" || /^97[89]\d{10}$/.test(copy.isbn13)) &&
+        short(copy.publisher, 200) &&
+        (copy.pages === null || (Number.isInteger(copy.pages) && copy.pages > 0 && copy.pages < 20000)) &&
+        (copy.coverUrl === "" || /^https:\/\/covers\.openlibrary\.org\/b\/id\/\d+-[SML]\.jpg$/.test(copy.coverUrl)) &&
+        short(copy.onLoanTo, 80) &&
+        Array.isArray(copy.narrators) && copy.narrators.length <= 20 && copy.narrators.every((n) => short(n, 200)),
+      "Some of the copy's details aren't valid. Check the ISBN (13 digits) and page count.",
+    );
+    if (titleId) {
+      check(UUID.test(titleId));
+    } else {
+      check(
+        !!book &&
+          short(book.title, 300) && book.title.trim().length > 0 &&
+          short(book.subtitle, 300) && short(book.series, 200) &&
+          ["read", "unread"].includes(book.readStatus) &&
+          BOOK_TYPES.includes(book.bookType) &&
+          (book.seriesNumber === null || (Number.isFinite(book.seriesNumber) && book.seriesNumber >= 0 && book.seriesNumber < 10000)) &&
+          Array.isArray(book.credits) && book.credits.length <= 50 &&
+          book.credits.every((c) => short(c.name, 200) && CREDIT_ROLES.includes(c.role)),
+        "A title is required.",
+      );
+    }
+    const { supabase } = await ownerClient();
+    const { data, error } = await supabase.rpc("add_book", {
+      p_title_id: titleId,
+      p_book: book && {
+        title: book.title,
+        subtitle: book.subtitle,
+        book_type: book.bookType,
+        read_status: book.readStatus,
+        series: book.series,
+        series_number: book.series.trim() ? book.seriesNumber : null,
+        credits: book.credits.filter((c) => c.name.trim()),
+      },
+      p_copy: {
+        format: copy.format,
+        source: copy.source,
+        isbn13: copy.isbn13,
+        publisher: copy.publisher,
+        pages: copy.pages,
+        cover_url: copy.coverUrl,
+        on_loan_to: copy.onLoanTo,
+        narrators: copy.narrators,
+      },
+    });
+    if (error) {
+      throw new Error(/copies_isbn13_key/.test(error.message) ? "A copy with that ISBN is already in your library." : error.message);
+    }
+    refresh(data as string);
+    return { ok: true, titleId: data as string };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't add the book." };
+  }
+}
