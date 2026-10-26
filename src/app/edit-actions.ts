@@ -196,3 +196,71 @@ export async function setPieceRead(pieceId: string, isRead: boolean) {
   refresh(piece!.title_id);
   return status;
 }
+
+// ---------------------------------------------------------------------------
+// Covers, per copy. Each choice is marked as Alexandra's, so the cover finder
+// never replaces it. A photo she replaces or removes is deleted from storage.
+
+type Result = { ok: true } | { ok: false; error: string };
+
+async function asResult(work: () => Promise<void>): Promise<Result> {
+  try {
+    await work();
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save the cover." };
+  }
+}
+
+async function replaceCover(copyId: string, cover: { cover_url: string | null; cover_path: string | null; confirmed: boolean }) {
+  const { supabase } = await ownerClient();
+  const { data: before, error } = await supabase
+    .from("copies")
+    .select("title_id, cover_path")
+    .eq("id", copyId)
+    .maybeSingle();
+  if (error) throw new Error(error.message);
+  check(!!before, "That copy wasn't found.");
+  await must(
+    supabase
+      .from("copies")
+      .update({ cover_url: cover.cover_url, cover_path: cover.cover_path, cover_confirmed: cover.confirmed })
+      .eq("id", copyId),
+  );
+  await markMine(supabase, "copies", [copyId], "cover_url");
+  if (before!.cover_path && before!.cover_path !== cover.cover_path) {
+    await supabase.storage.from("covers").remove([before!.cover_path as string]);
+  }
+  refresh(before!.title_id as string);
+}
+
+// A cover chosen from Open Library's images (by its cover number).
+export async function setCoverFromOpenLibrary(copyId: string, coverId: number): Promise<Result> {
+  return asResult(async () => {
+    check(UUID.test(copyId) && Number.isInteger(coverId) && coverId > 0 && coverId < 1e10);
+    await replaceCover(copyId, {
+      cover_url: `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`,
+      cover_path: null,
+      confirmed: true,
+    });
+  });
+}
+
+// A photo she uploaded to her own folder: <her id>/<copy id>/<time>.jpg
+export async function setCoverPhoto(copyId: string, path: string): Promise<Result> {
+  return asResult(async () => {
+    const { ownerId } = await ownerClient();
+    check(
+      UUID.test(copyId) && new RegExp(`^${ownerId}/${copyId}/\\d{10,16}\\.jpg$`).test(path),
+      "That photo wasn't saved in the right place.",
+    );
+    await replaceCover(copyId, { cover_url: null, cover_path: path, confirmed: true });
+  });
+}
+
+export async function removeCopyCover(copyId: string): Promise<Result> {
+  return asResult(async () => {
+    check(UUID.test(copyId));
+    await replaceCover(copyId, { cover_url: null, cover_path: null, confirmed: false });
+  });
+}

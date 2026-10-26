@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- hotlinked covers, see book-cover.tsx */
 import Link from "next/link";
 import { BookCover } from "@/components/book-cover";
+import { CoverPicker } from "@/components/cover-picker";
 import { EditDetails } from "@/components/edit-details";
 import { QuickEdit } from "@/components/quick-edit";
 import { starLabel } from "@/lib/ratings";
@@ -93,7 +94,7 @@ function seriesNumber(n: number | null) {
 }
 
 export function BookDetail({ book }: { book: Book }) {
-  const cover = book.copies.find((c) => c.coverUrl);
+  const cover = book.copies.find((c) => c.coverKind === "photo" && c.coverUrl) ?? book.copies.find((c) => c.coverUrl);
   const authors = book.credits.filter((c) => c.role !== "narrator");
   const story = [
     book.romanticSubplot != null && ["Romantic subplot", book.romanticSubplot ? "Yes" : "No"],
@@ -115,7 +116,9 @@ export function BookDetail({ book }: { book: Book }) {
           )}
           {cover?.coverUrl && (
             <p className="mt-2 text-center text-[11px] text-muted">
-              {cover.sources.cover_url?.source === "alexandra"
+              {cover.coverKind === "photo"
+                ? "Your photo"
+                : cover.sources.cover_url?.source === "alexandra"
                 ? "Cover chosen by you"
                 : cover.coverConfirmed
                   ? "Cover matched by ISBN"
@@ -201,7 +204,7 @@ export function BookDetail({ book }: { book: Book }) {
         <ul className="grid gap-3 sm:grid-cols-2">
           {book.copies.map((c) => (
             <li key={c.id}>
-              <CopyCard copy={c} />
+              <CopyCard copy={c} title={book.title} author={authors[0]?.name ?? ""} />
             </li>
           ))}
         </ul>
@@ -283,7 +286,7 @@ export function BookDetail({ book }: { book: Book }) {
   );
 }
 
-function CopyCard({ copy: c }: { copy: BookCopy }) {
+function CopyCard({ copy: c, title, author }: { copy: BookCopy; title: string; author: string }) {
   const details = [
     c.edition && ["Edition", c.edition],
     c.editionType === "omnibus" && ["Edition type", "Omnibus / collected edition"],
@@ -300,9 +303,14 @@ function CopyCard({ copy: c }: { copy: BookCopy }) {
 
   return (
     <div className="h-full rounded-2xl border border-border bg-surface p-4">
-      <p className="font-medium">
-        {FORMAT[c.format]} <span className="text-muted">· {WHERE[c.source] ?? c.source}</span>
-      </p>
+      <div className="flex items-start gap-3">
+        {c.coverUrl && (
+          <img src={c.coverUrl} alt="" className="aspect-[2/3] w-12 shrink-0 rounded-md bg-accent-soft object-cover" />
+        )}
+        <p className="font-medium">
+          {FORMAT[c.format]} <span className="text-muted">· {WHERE[c.source] ?? c.source}</span>
+        </p>
+      </div>
       {c.onLoanTo && <p className="mt-1 text-sm text-accent">On loan to {c.onLoanTo}</p>}
       {c.keepsakeNotes && <p className="mt-1 text-sm">Keepsake: {c.keepsakeNotes}</p>}
       {details.length > 0 && (
@@ -316,6 +324,7 @@ function CopyCard({ copy: c }: { copy: BookCopy }) {
         </dl>
       )}
       {ADDED_FROM[c.source] && <p className="mt-3 text-[11px] text-muted">Added from {ADDED_FROM[c.source]}</p>}
+      <CoverPicker copyId={c.id} title={title} author={author} hasCover={!!c.coverUrl} isPhoto={c.coverKind === "photo"} />
     </div>
   );
 }

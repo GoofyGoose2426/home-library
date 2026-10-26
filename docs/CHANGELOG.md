@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1b, step 2: Change a cover
+
+- Every copy on a book page now has **Add a cover** or **Change cover**, with three choices:
+  - **Take or choose a photo:** your phone offers the camera or your photos. The app turns it the right way up, shrinks it, and saves it in your private Supabase folder. Only your account can add to that folder or see what's in it; other accounts and logged-out visitors are refused (tested).
+  - **Find covers:** search Open Library (the book's title is filled in) and tap the cover that matches the edition you own. Other editions of the best match are included.
+  - **Remove** the cover. A removed photo is deleted from storage.
+- Your choice is marked "Set by you", so the cover finder never replaces it. Your own photos show first, in the grid, table, lookup and on the book page ("Your photo").
+- Each copy card shows its own small cover, so a hardcover and an audiobook can have different ones.
+
 ## 2026-10-26 · Phase 1b, step 1: Edit details
 
 - **Edit details** button on every book page: title, subtitle, the people on the book with their role (author, writer, artist, editor, translator) in the order you choose, series and number, book type, and narrators on each audiobook copy.

@@ -1,5 +1,6 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { signCoverPaths } from "./covers";
 
 export type CopySource = "shelf" | "kobo" | "audible" | "librofm" | "other";
 
@@ -46,6 +47,7 @@ type Row = {
     source: CopySource;
     keepsake_notes: string | null;
     cover_url: string | null;
+    cover_path: string | null;
     cover_confirmed: boolean;
     on_loan_to: string | null;
   }[];
@@ -67,14 +69,14 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
          title_tags(tags(kind, name)),
          reviews(rating),
          pieces(count),
-         copies(id, format, source, keepsake_notes, cover_url, cover_confirmed, on_loan_to)`,
+         copies(id, format, source, keepsake_notes, cover_url, cover_path, cover_confirmed, on_loan_to)`,
       )
       .order("title")
       .range(from, from + 999)
       .returns<Row[]>();
     if (error) throw new Error(error.message);
     for (const t of data ?? []) {
-      const cover = t.copies.find((c) => c.cover_url);
+      const cover = t.copies.find((c) => c.cover_path) ?? t.copies.find((c) => c.cover_url);
       books.push({
         id: t.id,
         title: t.title,
@@ -100,11 +102,18 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
         hasKeepsake: t.copies.some((c) => !!c.keepsake_notes?.trim()),
         rating: t.reviews[0]?.rating != null ? Number(t.reviews[0].rating) : null,
         pieceCount: t.pieces[0]?.count ?? 0,
-        coverUrl: cover?.cover_url ?? null,
-        coverConfirmed: cover?.cover_confirmed ?? false,
+        coverUrl: cover?.cover_path ? `photo:${cover.cover_path}` : (cover?.cover_url ?? null),
+        coverConfirmed: cover?.cover_path ? true : (cover?.cover_confirmed ?? false),
       });
     }
     if ((data ?? []).length < 1000) break;
+  }
+  const signed = await signCoverPaths(
+    supabase,
+    books.flatMap((b) => (b.coverUrl?.startsWith("photo:") ? [b.coverUrl.slice(6)] : [])),
+  );
+  for (const b of books) {
+    if (b.coverUrl?.startsWith("photo:")) b.coverUrl = signed.get(b.coverUrl.slice(6)) ?? null;
   }
   return books;
 }

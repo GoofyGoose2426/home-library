@@ -1,5 +1,6 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { signCoverPaths } from "./covers";
 import type { CopyFormat, CopySource } from "./library";
 
 export type FieldSource = { source: string; confirmed: boolean };
@@ -14,6 +15,8 @@ export type BookCopy = {
   isbn13: string | null;
   isbn10: string | null;
   coverUrl: string | null;
+  // "photo" when it's Alexandra's own photo, otherwise where the image is hosted.
+  coverKind: "photo" | "openlibrary" | "other" | null;
   coverConfirmed: boolean;
   pages: number | null;
   audioMinutes: number | null;
@@ -89,7 +92,7 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
        pieces(id, position, piece_title, kind, is_read),
        credits(role, position, people(name)),
        title_tags(source, confirmed, tags(kind, name)),
-       copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_confirmed,
+       copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_path, cover_confirmed,
               pages, audio_minutes, est_words, contains_from, contains_to, bonus_notes, keepsake_notes,
               on_loan_to, credits(role, position, people(name)))`,
     )
@@ -139,7 +142,14 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     .sort((a, b) => a.position - b.position)
     .flatMap((c) => (c.people ? [{ name: c.people.name, role: c.role }] : []));
 
-  const [seriesNames, peopleNames] = await Promise.all([namesOf(supabase, "series"), namesOf(supabase, "people")]);
+  const [seriesNames, peopleNames, signed] = await Promise.all([
+    namesOf(supabase, "series"),
+    namesOf(supabase, "people"),
+    signCoverPaths(
+      supabase,
+      (t.copies as unknown as { cover_path: string | null }[]).flatMap((c) => (c.cover_path ? [c.cover_path] : [])),
+    ),
+  ]);
 
   return {
     seriesNames,
@@ -178,7 +188,14 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
         editionType: c.edition_type as string | null,
         isbn13: c.isbn13 as string | null,
         isbn10: c.isbn10 as string | null,
-        coverUrl: c.cover_url as string | null,
+        coverUrl: c.cover_path ? (signed.get(c.cover_path as string) ?? null) : (c.cover_url as string | null),
+        coverKind: (c.cover_path
+          ? "photo"
+          : !c.cover_url
+            ? null
+            : String(c.cover_url).startsWith("https://covers.openlibrary.org/")
+              ? "openlibrary"
+              : "other") as BookCopy["coverKind"],
         coverConfirmed: c.cover_confirmed as boolean,
         pages: c.pages as number | null,
         audioMinutes: c.audio_minutes as number | null,
