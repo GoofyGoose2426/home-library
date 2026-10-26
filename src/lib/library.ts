@@ -81,7 +81,7 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
         id: t.id,
         title: t.title,
         authors: t.credits
-          .filter((c) => c.role === "author" || c.role === "writer" || c.role === "editor")
+          .filter((c) => c.role !== "narrator")
           .sort((a, b) => a.position - b.position)
           .flatMap((c) => (c.people ? [c.people.name] : [])),
         series: t.series?.name ?? null,

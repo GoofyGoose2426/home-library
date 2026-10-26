@@ -9,7 +9,14 @@ import { QuickEdit, type EditableBook } from "@/components/quick-edit";
 import { setPrintType } from "@/app/edit-actions";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
 import { copyList } from "@/lib/copy-labels";
-import { applyFilters, filterOptions, readFilters, writeFilters, type Filters } from "@/lib/library-filters";
+import {
+  applyFilters,
+  filterOptions,
+  readFilters,
+  reviewReasons,
+  writeFilters,
+  type Filters,
+} from "@/lib/library-filters";
 
 type View = "grid" | "table";
 const VIEW_KEY = "library-view";
@@ -121,6 +128,7 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
   }
 
   const editingBook = editing ? books.find((b) => b.id === editing) : undefined;
+  const toReview = useMemo(() => books.filter((b) => reviewReasons(b).length > 0).length, [books]);
   const recordEdit = (e: EditableBook) => setEdits((all) => ({ ...all, [e.id]: e }));
 
   function toggleSelected(id: string) {
@@ -164,10 +172,24 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
   return (
     <>
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-muted">
-          {books.filter((b) => b.readStatus === "read").length.toLocaleString()} of{" "}
-          {books.length.toLocaleString()} read
-        </p>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+          <p className="text-muted">
+            {books.filter((b) => b.readStatus === "read").length.toLocaleString()} of{" "}
+            {books.length.toLocaleString()} read
+          </p>
+          {toReview > 0 && (
+            <button
+              type="button"
+              onClick={() =>
+                updateFilters((f) => ({ ...f, review: f.review.includes("any") ? f.review.filter((r) => r !== "any") : [...f.review, "any"] }))
+              }
+              aria-pressed={filters.review.includes("any")}
+              className={`rounded-full px-3 py-1 text-xs font-medium ${filters.review.includes("any") ? "bg-accent text-on-accent" : "bg-accent-soft"}`}
+            >
+              ⚑ {toReview.toLocaleString()} need review
+            </button>
+          )}
+        </div>
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -323,6 +345,7 @@ function Grid({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
               {copyList(b)}
               {b.onLoanTo.length > 0 && ` · On loan to ${b.onLoanTo.join(", ")}`}
             </p>
+            <ReviewNote book={b} compact />
           </>
         );
         const isSelected = selected.has(b.id);
@@ -407,6 +430,7 @@ function Table({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
                       {/* On narrow screens the hidden columns fold in here. */}
                       <p className="text-xs text-muted md:hidden">{b.authors.join(", ")}</p>
                       <p className="text-xs text-muted sm:hidden">{copyList(b)}</p>
+                      <ReviewNote book={b} />
                       {b.onLoanTo.length > 0 && (
                         <p className="text-xs text-accent">On loan to {b.onLoanTo.join(", ")}</p>
                       )}
@@ -426,5 +450,18 @@ function Table({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
         </tbody>
       </table>
     </div>
+  );
+}
+
+const REVIEW_SHORT = { cover: "no cover", author: "no author", guess: "guessed title" } as const;
+
+// In the grid there's only room for the flag; the table lists the reasons.
+function ReviewNote({ book, compact = false }: { book: LibraryBook; compact?: boolean }) {
+  const reasons = reviewReasons(book);
+  if (!reasons.length) return null;
+  return (
+    <p className={`${compact ? "line-clamp-1" : ""} text-[11px] font-medium text-accent`} title={reasons.map((r) => REVIEW_SHORT[r]).join(", ")}>
+      ⚑ Needs review{compact ? "" : `: ${reasons.map((r) => REVIEW_SHORT[r]).join(", ")}`}
+    </p>
   );
 }

@@ -4,10 +4,12 @@ import { useState } from "react";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
 import {
   FLAGS,
+  REVIEW,
   SORTS,
   SOURCE_LABEL,
   activeCount,
   type FlagKey,
+  type ReviewKey,
   type Filters,
   type ListKey,
   type SortKey,
@@ -53,7 +55,7 @@ export function LibraryFilterBar({
       return { ...f, [key]: list.includes(value) ? list.filter((v) => v !== value) : [...list, value] };
     });
   const clearAll = () =>
-    onChange((f) => ({ ...f, status: [], format: [], genre: [], source: [], series: [], flag: [] }));
+    onChange((f) => ({ ...f, status: [], format: [], genre: [], source: [], series: [], flag: [], review: [] }));
 
   // Chips for what's currently applied, each removable with one tap.
   const applied: { key: ListKey; value: string; label: string }[] = [
@@ -63,6 +65,7 @@ export function LibraryFilterBar({
     ...filters.source.map((v) => ({ key: "source" as const, value: v, label: SOURCE_LABEL[v] ?? v })),
     ...filters.series.map((v) => ({ key: "series" as const, value: v, label: `Series: ${v}` })),
     ...filters.flag.map((v) => ({ key: "flag" as const, value: v, label: FLAGS[v] })),
+    ...filters.review.map((v) => ({ key: "review" as const, value: v, label: v === "any" ? "Needs review" : REVIEW[v] })),
   ];
 
   return (
@@ -138,6 +141,18 @@ export function LibraryFilterBar({
 
       {open && (
         <div className="space-y-5 rounded-3xl border border-border bg-surface p-4">
+          <Group title="Needs review" note="Books with something to fix. Tap one to see what it needs.">
+            {(Object.keys(REVIEW) as ReviewKey[]).map((v) => (
+              <Chip
+                key={v}
+                on={filters.review.includes(v)}
+                onClick={() => toggle("review", v)}
+                count={options.review.find(([k]) => k === v)?.[1] ?? 0}
+              >
+                {REVIEW[v]}
+              </Chip>
+            ))}
+          </Group>
           <Group title="Read status">
             {STATUS.map(([v, label]) => (
               <Chip key={v} on={filters.status.includes(v)} onClick={() => toggle("status", v)}>

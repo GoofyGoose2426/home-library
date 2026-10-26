@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Needs review
+
+- Books with something to fix are tagged **⚑ Needs review**: no cover, no author, or a title or author that was a guess from the shelf photos.
+- A **⚑ 456 need review** button at the top of the library shows just those books with one tap (tap again to undo). The number goes down as you fix them.
+- A new **Needs review** group in Filters: Anything to review, Missing cover, Missing author, Title or author is a guess, each with its count. Plus a **Needs review first** sort.
+- The grid shows the flag; the table lists the reasons ("no cover, no author, guessed title").
+- Counts checked against the database: 453 missing a cover, 8 missing an author, 11 guessed titles, 456 books in all.
+- Books credited only to an artist, editor or translator now count as having an author.
+
 ## 2026-10-26 · Phase 1b, step 2: Change a cover
 
 - Every copy on a book page now has **Add a cover** or **Change cover**, with three choices:

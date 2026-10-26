@@ -8,6 +8,7 @@ export const SORTS = {
   author: "Author A–Z",
   series: "Series",
   status: "Read status",
+  review: "Needs review first",
 } as const;
 export type SortKey = keyof typeof SORTS;
 
@@ -15,9 +16,26 @@ export const FLAGS = {
   loan: "On loan",
   keepsake: "Keepsake",
   reference: "Reference (left out of stats)",
-  check: "Needs checking",
 } as const;
 export type FlagKey = keyof typeof FLAGS;
+
+// Books with something to fix: no cover, no author, or a title or author that
+// was a guess from the shelf photos.
+export const REVIEW = {
+  any: "Anything to review",
+  cover: "Missing cover",
+  author: "Missing author",
+  guess: "Title or author is a guess",
+} as const;
+export type ReviewKey = keyof typeof REVIEW;
+
+export function reviewReasons(b: LibraryBook): Exclude<ReviewKey, "any">[] {
+  const reasons: Exclude<ReviewKey, "any">[] = [];
+  if (!b.coverUrl) reasons.push("cover");
+  if (!b.authors.length) reasons.push("author");
+  if (b.needsCheck) reasons.push("guess");
+  return reasons;
+}
 
 export type Filters = {
   q: string;
@@ -28,9 +46,10 @@ export type Filters = {
   source: string[];
   series: string[];
   flag: FlagKey[];
+  review: ReviewKey[];
 };
 
-export const LIST_KEYS = ["status", "format", "genre", "source", "series", "flag"] as const;
+export const LIST_KEYS = ["status", "format", "genre", "source", "series", "flag", "review"] as const;
 export type ListKey = (typeof LIST_KEYS)[number];
 
 export const SOURCE_LABEL: Record<string, string> = {
@@ -52,6 +71,11 @@ export function readFilters(params: URLSearchParams): Filters {
     source: params.getAll("source"),
     series: params.getAll("series"),
     flag: params.getAll("flag").filter((f): f is FlagKey => f in FLAGS),
+    review: [
+      ...params.getAll("review").filter((r): r is ReviewKey => r in REVIEW),
+      // Older links used flag=check for guessed titles.
+      ...(params.getAll("flag").includes("check") ? (["guess"] as const) : []),
+    ],
   };
 }
 
@@ -101,7 +125,10 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
       if (flag === "loan" && !b.onLoanTo.length) return false;
       if (flag === "keepsake" && !b.hasKeepsake) return false;
       if (flag === "reference" && !(b.isReference || b.bookType === "picture_book")) return false;
-      if (flag === "check" && !b.needsCheck) return false;
+    }
+    if (f.review.length) {
+      const reasons = reviewReasons(b);
+      if (!f.review.some((r) => (r === "any" ? reasons.length > 0 : reasons.includes(r)))) return false;
     }
     return true;
   };
@@ -115,6 +142,7 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
       (a.seriesNumber ?? 999) - (b.seriesNumber ?? 999) ||
       byTitle(a, b),
     status: (a, b) => STATUS_ORDER[a.readStatus] - STATUS_ORDER[b.readStatus] || byTitle(a, b),
+    review: (a, b) => reviewReasons(b).length - reviewReasons(a).length || byTitle(a, b),
   };
 
   return books.filter(matches).sort(compare[f.sort]);
@@ -132,5 +160,9 @@ export function filterOptions(books: LibraryBook[]) {
     source: count(books.flatMap((b) => b.sources)),
     series: count(books.flatMap((b) => (b.series ? [b.series] : []))),
     format: count(books.flatMap((b) => b.formats)),
+    review: count(books.flatMap((b) => {
+      const reasons = reviewReasons(b);
+      return reasons.length ? ["any", ...reasons] : [];
+    })),
   };
 }
