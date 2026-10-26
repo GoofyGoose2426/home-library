@@ -1,0 +1,289 @@
+# Starter lists (Phase 2, step 1)
+
+Draft for Alexandra's approval · 2026-10-28
+
+These are the choices the app offers when you, or a Claude suggestion, classify a book. I based them on what's on your shelves and in your apps. Nothing gets filled in until you approve them, and you can add to any list later from the book page.
+
+**How to give feedback:** reply in chat with what to add, remove or rename, e.g. "remove Billionaire, add Sports: figure skating, rename Cozy fantasy to Cosy fantasy". Anything you don't mention stays as written.
+
+---
+
+## 1. Genres
+
+The broad shelf. A book can have more than one (e.g. Romance + Fantasy).
+
+| Genre | Notes |
+|---|---|
+| Romance | |
+| Smut | Set automatically when story focus is **Spice-led**; replaces Romance as the primary genre |
+| Fantasy | |
+| Sci-fi | |
+| Horror | |
+| Thriller & suspense | |
+| Mystery | |
+| Literary fiction | |
+| Contemporary fiction | |
+| Historical fiction | |
+| Classics | |
+| Nonfiction | Its subgenre is the type (Memoir, Essays…), see section 4 |
+| Poetry | |
+
+**Your current rough genres change like this** (from the shelf photos, 458 books):
+
+| Now | Becomes |
+|---|---|
+| Romance | Romance |
+| Historical romance | Romance + subgenre **Historical romance** |
+| Fantasy & paranormal | Fantasy (and a paranormal subgenre where it fits) |
+| Sci-fi & speculative | Sci-fi |
+| Thriller & mystery | Thriller & suspense, or Mystery |
+| Literary & general fiction | Literary fiction, or Contemporary fiction |
+| Classics, Horror, Nonfiction, Poetry | Same |
+| Children's & YA | Its real genre + **Audience** (see question A) |
+| Graphic novels & manga | Its real genre. Graphic novel and Manga are already **book types**, so they don't need to be a genre |
+| Short stories & anthologies | Its real genre. Collections are a book structure, not a genre |
+| Art, craft & colouring | No genre; these use the **Reference** switch so they stay out of stats |
+
+These changes will be suggestions for you to check, like everything else.
+
+---
+
+## 2. Subgenres
+
+The kind of story within a genre. Subgenres can cross genres (e.g. *Annihilation* = Sci-fi + Weird fiction).
+
+**Romance**
+- Contemporary romance
+- Historical romance (Regency, Victorian, Highland/Scottish)
+- Romantic comedy
+- Romantic suspense
+- Paranormal romance (vampire, shifter, witch, demon)
+- Monster romance
+- Romantasy
+- Sci-fi romance
+- Dark romance
+- Sports romance (hockey, other sports)
+- Small-town romance
+- Holiday romance
+- Queer romance (M/M, F/F, other)
+- Erotic romance
+
+**Fantasy**
+- Epic / high fantasy
+- Urban fantasy
+- Cozy fantasy
+- Romantasy
+- Fairy-tale retelling
+- Myth retelling
+- Fae / faerie
+- Dark fantasy
+- Grimdark
+- Historical fantasy
+- Portal fantasy
+- Sword & sorcery
+- Gaslamp / gaslight
+
+**Sci-fi**
+- Space opera
+- Military sci-fi
+- Dystopian
+- Post-apocalyptic
+- Cyberpunk
+- Solarpunk / hopepunk
+- Time travel
+- First contact
+- Robots & AI
+- Weird fiction
+- Climate fiction
+
+**Horror**
+- Cosmic horror
+- Folk horror
+- Body horror
+- Gothic
+- Haunted house
+- Slasher
+- Psychological horror
+- Monster horror
+- Comedic horror
+- Queer horror
+
+**Thriller & suspense, and Mystery**
+- Psychological thriller
+- Crime thriller
+- Serial killer
+- Cozy mystery
+- Amateur sleuth
+- Detective / police procedural
+- Domestic thriller
+
+**Literary, contemporary and historical fiction**
+- Coming of age
+- Family saga
+- Magical realism
+- Satire
+- Book club fiction
+- Epistolary
+
+---
+
+## 3. Tropes
+
+For all genres except nonfiction.
+
+**Relationship**
+- Enemies to lovers
+- Rivals to lovers
+- Friends to lovers
+- Second chance
+- Grumpy / sunshine
+- Forced proximity
+- Fake dating
+- Marriage of convenience
+- Arranged marriage
+- Only one bed
+- Slow burn
+- Instalove
+- Forbidden love
+- Age gap
+- Boss / employee
+- Bodyguard
+- Brother's best friend
+- Single parent
+- Secret identity
+- Mutual pining
+- Love triangle
+- Why choose / reverse harem
+- Morally grey love interest
+- Touch her and die
+- He falls first
+- Soulmates / fated mates
+- Opposites attract
+- Rake / reformed rake
+- Wallflower
+- Ugly duckling
+- Beauty and the beast
+- Captor / captive
+- Billionaire
+- Royalty
+- Workplace romance
+- Road trip
+- Holiday / Christmas
+
+**Story**
+- Found family
+- Chosen one
+- Villain origin
+- Villain gets the girl
+- Heist
+- Quest
+- Revenge
+- Redemption arc
+- Hidden heir / lost royalty
+- Magic school / academy
+- Trials / competition
+- Court intrigue
+- Assassin
+- Dragons
+- Time loop
+- Locked room
+- Unreliable narrator
+- Final girl
+- Cabin in the woods
+- Cursed / haunted object
+- Survival
+- Small town secrets
+- Fish out of water
+- Underdog
+- Mentor / apprentice
+
+---
+
+## 4. Nonfiction
+
+**Type** (works as the subgenre):
+- Memoir
+- Essays
+- History
+- Guide / how-to
+- Self-help
+- Popular science
+- Business & leadership
+- Cultural criticism
+- Reference
+
+**Subjects** (pick any):
+- Social justice & anti-racism
+- Indigenous history & Canada
+- Leadership & work
+- Health, bodies & sexuality
+- Wellbeing & rest
+- Feminism
+- Queer & trans lives
+- Celebrity
+- First voice
+- Activism & organizing
+- Technology & AI
+- Home & DIY
+- Creativity & making
+- Nature & environment
+- Relationships & love
+
+---
+
+## 5. Reasons for reading
+
+From your build plan, on every book, pick any:
+- Work / professional development
+- Personal growth
+- Activism & unlearning
+- Curiosity
+- Research for a project
+- Comfort / escape
+- Book club
+- Gift / recommended to me
+
+---
+
+## 6. Graphic novels and manga
+
+**Origin / style:**
+- Manga
+- Western comics
+- Webcomic / Webtoon collection
+- Graphic memoir
+- Adaptation
+
+**Manga demographic:**
+- Shōjo
+- Shōnen
+- Seinen
+- Josei
+- BL
+
+**Universe / franchise:** from your shelves.
+- Batman / DC
+- Marvel
+- Serenity / Firefly
+- Standalone
+
+New ones get added as you add books.
+
+---
+
+## 7. Already set (no approval needed)
+
+- **Vibe:** Cozy/feel-good → Light/fun → Dramatic/heavy → Intense/dark (a main vibe and an optional second)
+- **Spice:** the Scoville Smut Scale (green pepper → 5 red peppers)
+- **Story focus:** Plot-led / Balanced / Spice-led
+- **Romantic subplot:** yes / no
+
+---
+
+## Questions for you
+
+**A. Audience.** "Children's & YA" isn't really a genre. Should books get a separate **Audience** field: Adult / Young adult / Middle grade / Children's? Kids/YA books still count in your stats either way, as you decided.
+
+**B. Queer romance.** Keep it as one subgenre with M/M, F/F and other inside it, or make three separate subgenres?
+
+**C. Missing anything?** Subgenres or tropes you look for when choosing a book that aren't here?

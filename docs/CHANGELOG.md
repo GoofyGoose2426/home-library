@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-28 · Phase 2 plan approved; step 1 starter lists drafted
+
+- Phase 2 (Enrichment) approved with your answers:
+  - Claude API with a $60 first-month limit, then $10/month
+  - Opus 5.5
+  - author lookups as you go
+  - a free Google Books key
+
+  See `docs/phase-2-plan.md`.
+- **Starter lists** drafted for your approval in `docs/starter-lists.md`: genres, subgenres, tropes, nonfiction types and subjects, reasons for reading, and graphic-novel lists. It also shows how your current rough genres from the shelf photos would change. No code yet.
+
 ## 2026-10-28 · Phase 1b, step 6: Wrap-up. Phase 1b is complete
 
 - **Build plan updated** (`docs/build-plan.md`, rev. 3):

@@ -1,17 +1,19 @@
 # Phase 2 plan: Enrichment
 
-Draft for Alexandra's approval · 2026-10-28 · No code until approved.
+Approved by Alexandra · 2026-10-28.
 
 Phase 2 fills in what your books don't have yet: publisher and length, then genre, subgenre, tropes, vibe, spice and story focus, then author and character representation. Each filled-in value is a **suggestion** with its source ("Open Library", "Google Books", "Claude", or a web link). You check it before it counts. Your own edits always win and are never overwritten.
 
-## Decisions I need from you
+## Your decisions
 
-| # | Question | My suggestion |
-|---|---|---|
-| 1 | **Use the Claude API?** It's a paid service, billed per use (costs below). You'd create an Anthropic account, add a card, and set a monthly spending limit. | Yes, with a **$60 limit for the first month** (the one-time catch-up), then **$10/month** |
-| 2 | **Which Claude model?** Opus 5.5 is the most accurate. Sonnet 5.5 costs about half and is a little less sharp on niche books. | **Opus 5.5** for accuracy. You can switch later. |
-| 3 | **Author representation: all at once, or as you go?** Looking up roughly 550 authors costs about $80 once. "As you go" looks up an author only when you tap a button on their page. | **As you go**, starting with authors of books you've read. A bulk run stays available later. |
-| 4 | **Google Books key?** It's free and fills gaps Open Library misses (descriptions, page counts). You'd make a Google Cloud account and copy a key; I'll walk you through it. | Yes |
+| Question | Your answer |
+|---|---|
+| Use the Claude API? | **Yes.** Spending limit **$60** for the first month, then **$10/month** |
+| Which Claude model? | **Opus 5.5** |
+| Author representation | **As you go**, starting with authors of books you've read |
+| Google Books key | **Yes** (free) |
+
+You'll set up the Anthropic account before step 5 and the Google Books key before step 3. I'll walk you through each when we get there.
 
 ## Steps (each ends with something you can check)
 
