@@ -52,6 +52,8 @@ export type Book = {
   storyFocus: string | null;
   vibeMain: string | null;
   vibeSecond: string | null;
+  rating: number | null;
+  pieces: { id: string; title: string; kind: string; isRead: boolean }[];
   genres: { name: string; kind: string; source: string; confirmed: boolean }[];
   copies: BookCopy[];
   sources: Record<string, FieldSource>;
@@ -70,6 +72,8 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
       `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description,
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
+       reviews(rating),
+       pieces(id, position, piece_title, kind, is_read),
        credits(role, position, people(name)),
        title_tags(source, confirmed, tags(kind, name)),
        copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_confirmed,
@@ -139,6 +143,12 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     storyFocus: t.story_focus,
     vibeMain: t.vibe_main,
     vibeSecond: t.vibe_second,
+    rating: (t.reviews as unknown as { rating: number | null }[])[0]?.rating != null
+      ? Number((t.reviews as unknown as { rating: number }[])[0].rating)
+      : null,
+    pieces: (t.pieces as unknown as { id: string; position: number; piece_title: string; kind: string; is_read: boolean }[])
+      .sort((a, b) => a.position - b.position)
+      .map((p) => ({ id: p.id, title: p.piece_title, kind: p.kind, isRead: p.is_read })),
     genres: (t.title_tags as unknown as { source: string; confirmed: boolean; tags: { kind: string; name: string } | null }[])
       .flatMap((tt) => (tt.tags ? [{ ...tt.tags, source: tt.source, confirmed: tt.confirmed }] : [])),
     copies: (t.copies as unknown as Record<string, unknown>[])

@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element -- hotlinked covers, see book-cover.tsx */
 import Link from "next/link";
 import { BookCover } from "@/components/book-cover";
+import { QuickEdit } from "@/components/quick-edit";
+import { starLabel } from "@/lib/ratings";
 import type { Book, BookCopy, FieldSource } from "@/lib/book";
 
 const STATUS = { read: "Read", partly_read: "Partly read", unread: "Unread" } as const;
@@ -163,6 +165,12 @@ export function BookDetail({ book }: { book: Book }) {
             </p>
           )}
 
+          {book.rating != null && (
+            <p className="mt-3 text-sm">
+              <span className="text-accent">★</span> <strong>{book.rating}</strong> · {starLabel(book.rating)}
+            </p>
+          )}
+
           {book.description && <p className="mt-4 leading-relaxed">{book.description}</p>}
         </div>
       </div>
@@ -175,6 +183,29 @@ export function BookDetail({ book }: { book: Book }) {
             </li>
           ))}
         </ul>
+      </Section>
+
+      <Section title="Update">
+        <div className="rounded-2xl border border-border bg-surface p-4">
+          <QuickEdit
+            book={{
+              id: book.id,
+              title: book.title,
+              readStatus: book.readStatus,
+              rating: book.rating,
+              isReference: book.isReference,
+              pieces: book.pieces,
+              pieceCount: book.pieces.length,
+              copies: book.copies.map((c) => ({
+                id: c.id,
+                format: c.format,
+                source: c.source,
+                onLoanTo: c.onLoanTo,
+                keepsakeNotes: c.keepsakeNotes,
+              })),
+            }}
+          />
+        </div>
       </Section>
 
       {book.series && book.series.books.length > 1 && (

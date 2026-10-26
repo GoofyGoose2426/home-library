@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1, step 11: Quick edits
+
+- A **✎** button on every cover and table row opens a quick-edit panel without leaving your list. The same panel is in the **Update** section of each book page.
+- **Read / Unread** in one tap. Collections get a tick list of their stories or essays instead, and become Partly read or Read as you tick.
+- **Rating** in quarter stars: tap a star or slide for quarters, with your label underneath (e.g. "4 · Loved it, but it's not for everyone"). Ratings show in the grid, the table and on the book page.
+- **On loan to** (print copies only): type a name and tap Lend; tap **Returned** to clear it.
+- **Keepsake notes** on any copy, and the **Reference** switch that leaves a book out of stats.
+- **Print type** per Bookshelf copy, or in batches: tap **Select**, pick books (tip: filter by "Print (type not set)" first, or "Select all"), then tap Hardcover, Trade paperback or Mass-market. Ebooks and audiobooks are never changed.
+- Every edit is saved straight away and marked **Set by you**, so no later fill-in can overwrite it. If saving fails, the change is undone and you see a message.
+- Tested against a throwaway copy of the database: 10 checks, all passing.
+
 ## 2026-10-26 · Phase 1, step 10: Book page
 
 - Tap any cover or table row to open the book's own page. **← Library** takes you back to the list as you left it, with search and filters kept.

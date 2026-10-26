@@ -16,7 +16,9 @@ export type LibraryBook = {
   isReference: boolean;
   needsCheck: boolean;
   formats: CopyFormat[];
-  copies: { format: CopyFormat; source: CopySource }[];
+  copies: { id: string; format: CopyFormat; source: CopySource; onLoanTo: string | null; keepsakeNotes: string | null }[];
+  rating: number | null;
+  pieceCount: number;
   onLoanTo: string[];
   sources: string[];
   genres: string[];
@@ -36,7 +38,10 @@ type Row = {
   series: { name: string } | null;
   credits: { role: string; position: number; people: { name: string } | null }[];
   title_tags: { tags: { kind: string; name: string } | null }[];
+  reviews: { rating: number | null }[];
+  pieces: { count: number }[];
   copies: {
+    id: string;
     format: CopyFormat;
     source: CopySource;
     keepsake_notes: string | null;
@@ -60,7 +65,9 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
          series(name),
          credits(role, position, people(name)),
          title_tags(tags(kind, name)),
-         copies(format, source, keepsake_notes, cover_url, cover_confirmed, on_loan_to)`,
+         reviews(rating),
+         pieces(count),
+         copies(id, format, source, keepsake_notes, cover_url, cover_confirmed, on_loan_to)`,
       )
       .order("title")
       .range(from, from + 999)
@@ -85,12 +92,14 @@ export async function loadLibrary(supabase: SupabaseClient): Promise<LibraryBook
           (a, b) => FORMAT_ORDER.indexOf(a) - FORMAT_ORDER.indexOf(b),
         ),
         copies: t.copies
-          .map((c) => ({ format: c.format, source: c.source }))
+          .map((c) => ({ id: c.id, format: c.format, source: c.source, onLoanTo: c.on_loan_to, keepsakeNotes: c.keepsake_notes }))
           .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format)),
         onLoanTo: t.copies.flatMap((c) => (c.on_loan_to ? [c.on_loan_to] : [])),
         sources: [...new Set(t.copies.map((c) => c.source))],
         genres: t.title_tags.flatMap((tt) => (tt.tags?.kind === "genre" ? [tt.tags.name] : [])),
         hasKeepsake: t.copies.some((c) => !!c.keepsake_notes?.trim()),
+        rating: t.reviews[0]?.rating != null ? Number(t.reviews[0].rating) : null,
+        pieceCount: t.pieces[0]?.count ?? 0,
         coverUrl: cover?.cover_url ?? null,
         coverConfirmed: cover?.cover_confirmed ?? false,
       });
