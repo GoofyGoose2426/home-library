@@ -29,10 +29,10 @@ async function SignedInAs() {
   return (
     <div className="mt-4 flex flex-col items-center gap-3">
       <Link
-        href="/import"
+        href="/covers"
         className="rounded-2xl bg-accent px-5 py-3 font-medium text-on-accent"
       >
-        Check your import
+        Check covers
       </Link>
       <p className="text-sm text-muted">Signed in as {email}</p>
       <form action={signOut}>

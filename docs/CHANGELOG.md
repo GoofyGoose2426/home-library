@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1, step 7: Best-guess covers
+
+- Looked up every book on Open Library (free). **781 books now have a cover**, labelled "unconfirmed" until the copy has an ISBN. The 3 Libro.fm audiobooks found by ISBN are confirmed. 277 books show a warm colour card with the title and author instead.
+- I dropped 12 matches that looked like the wrong book or edition (e.g. the Hobbit graphic novel matched the novel) rather than show a wrong cover.
+- New **Check covers** page: tap a wrong cover to remove it. Removed covers are remembered, so a later lookup won't put them back.
+- Google Books needs a free API key to fill the remaining gaps. Not set up yet.
+- Fixed two mistakes from step 5: a fake book called "87" (a note of mine that slipped into the book list) is gone, and "Notes to Myself" now shows Hugh Prather as its author. Your library has 1,058 books.
+
 ## 2026-10-23 · Phase 1, step 6: Import review and save
 
 - A "Check your import" screen for the 53 uncertain items. Choices save as you go.

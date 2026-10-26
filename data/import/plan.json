@@ -14709,37 +14709,11 @@
   }
  },
  {
-  "key": "shelf-87-",
-  "title": "87",
-  "authors": [],
-  "series": null,
-  "series_no": null,
-  "book_type": "prose",
-  "is_reference": false,
-  "needs_check": false,
-  "check_note": null,
-  "subtitle": null,
-  "genre_guess": null,
-  "copies": [
-   {
-    "format": "print_unknown",
-    "source": "shelf",
-    "location": "Pine bookcase · fantasy & literary",
-    "evidence": "Unread Media (15) (not in earlier list)"
-   }
+  "key": "shelf-notes-to-myself-hugh-prather",
+  "title": "Notes to Myself",
+  "authors": [
+   "Hugh Prather"
   ],
-  "read_status": "unread",
-  "status_sources": {
-   "read": [],
-   "unread": [
-    "shelf"
-   ]
-  }
- },
- {
-  "key": "shelf-notes-to-myself-hugh-prather-",
-  "title": "Notes to Myself (Hugh Prather)",
-  "authors": [],
   "series": null,
   "series_no": null,
   "book_type": "prose",
