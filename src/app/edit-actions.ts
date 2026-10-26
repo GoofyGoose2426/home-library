@@ -4,12 +4,13 @@ import { revalidatePath } from "next/cache";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { ownerClient } from "@/lib/supabase/owner";
 import type { GoneReason } from "@/lib/gone";
-import { isQuarterStar } from "@/lib/ratings";
+import { isQuarterStar, type Recommendation } from "@/lib/ratings";
 
 // Quick edits. Each one records Alexandra as the source of the value, which
 // stops any later prefill from overwriting it (see field_sources_protect).
 
 const UUID = /^[0-9a-f-]{36}$/i;
+const RECOMMENDATIONS: Recommendation[] = ["no", "everyone", "specific"];
 const PRINT_TYPES = ["hardcover", "trade_paperback", "mass_market", "print_unknown"] as const;
 type PrintType = (typeof PRINT_TYPES)[number];
 
@@ -58,19 +59,62 @@ export async function setReadStatus(titleId: string, status: "read" | "unread") 
   refresh(titleId);
 }
 
-export async function setRating(titleId: string, rating: number | null) {
-  check(UUID.test(titleId) && (rating === null || isQuarterStar(rating)));
+export type ReviewPatch = {
+  rating?: number | null;
+  writingQuality?: number | null;
+  recommendation?: Recommendation | null;
+};
+
+// Her ratings for a book. Writing quality and the recommendation go with a
+// star rating, so clearing the stars clears them too.
+export async function setReview(titleId: string, patch: ReviewPatch) {
+  check(
+    UUID.test(titleId) &&
+      (patch.rating === undefined || patch.rating === null || isQuarterStar(patch.rating)) &&
+      (patch.writingQuality == null || (Number.isInteger(patch.writingQuality) && patch.writingQuality >= 1 && patch.writingQuality <= 5)) &&
+      (patch.recommendation == null || RECOMMENDATIONS.includes(patch.recommendation)),
+  );
   const { supabase } = await ownerClient();
   const { data: existing, error } = await supabase
     .from("reviews")
-    .select("id")
+    .select("id, rating, writing_quality, recommendation")
     .eq("title_id", titleId)
     .maybeSingle();
   if (error) throw new Error(error.message);
+  const next = {
+    rating: patch.rating !== undefined ? patch.rating : (existing?.rating ?? null),
+    writing_quality: patch.writingQuality !== undefined ? patch.writingQuality : (existing?.writing_quality ?? null),
+    recommendation: patch.recommendation !== undefined ? patch.recommendation : (existing?.recommendation ?? null),
+  };
+  if (next.rating === null) {
+    check(patch.writingQuality == null && patch.recommendation == null, "Choose a star rating first.");
+    next.writing_quality = null;
+    next.recommendation = null;
+  }
   if (existing) {
-    await must(supabase.from("reviews").update({ rating }).eq("id", existing.id));
-  } else if (rating !== null) {
-    await must(supabase.from("reviews").insert({ title_id: titleId, rating }));
+    await must(supabase.from("reviews").update(next).eq("id", existing.id));
+  } else if (next.rating !== null) {
+    await must(supabase.from("reviews").insert({ title_id: titleId, ...next }));
+  }
+  refresh(titleId);
+}
+
+// How an audiobook's narration was, with an optional note.
+export async function setAudioReview(copyId: string, performance: number | null, note: string | null) {
+  check(
+    UUID.test(copyId) &&
+      (performance === null || (Number.isInteger(performance) && performance >= 1 && performance <= 5)) &&
+      (note === null || (typeof note === "string" && note.length <= 2000)),
+  );
+  const { supabase } = await ownerClient();
+  const titleId = await titleOfCopy(supabase, copyId);
+  const { data: existing, error } = await supabase.from("reviews").select("id").eq("copy_id", copyId).maybeSingle();
+  if (error) throw new Error(error.message);
+  const values = { audio_performance: performance, body: note?.trim() || null };
+  if (existing) {
+    await must(supabase.from("reviews").update(values).eq("id", existing.id));
+  } else if (values.audio_performance !== null || values.body !== null) {
+    await must(supabase.from("reviews").insert({ copy_id: copyId, ...values }));
   }
   refresh(titleId);
 }

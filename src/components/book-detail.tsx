@@ -6,7 +6,7 @@ import { EditDetails } from "@/components/edit-details";
 import { QuickEdit } from "@/components/quick-edit";
 import { RemoveCopy, UndoGone } from "@/components/remove-copy";
 import { GONE_LABEL } from "@/lib/gone";
-import { starLabel } from "@/lib/ratings";
+import { AUDIO, RECOMMEND, STARS, WRITING, find, starText } from "@/lib/ratings";
 import type { Book, BookCopy, FieldSource } from "@/lib/book";
 
 const STATUS = { read: "Read", partly_read: "Partly read", unread: "Unread" } as const;
@@ -178,11 +178,7 @@ export function BookDetail({ book }: { book: Book }) {
             </p>
           )}
 
-          {book.rating != null && (
-            <p className="mt-3 text-sm">
-              <span className="text-accent">★</span> <strong>{book.rating}</strong> · {starLabel(book.rating)}
-            </p>
-          )}
+          <Ratings book={book} />
 
           {book.description && <p className="mt-4 leading-relaxed">{book.description}</p>}
 
@@ -253,6 +249,8 @@ export function BookDetail({ book }: { book: Book }) {
               title: book.title,
               readStatus: book.readStatus,
               rating: book.rating,
+              writingQuality: book.writingQuality,
+              recommendation: book.recommendation,
               isReference: book.isReference,
               pieces: book.pieces,
               pieceCount: book.pieces.length,
@@ -262,6 +260,8 @@ export function BookDetail({ book }: { book: Book }) {
                 source: c.source,
                 onLoanTo: c.onLoanTo,
                 keepsakeNotes: c.keepsakeNotes,
+                audioPerformance: c.audioPerformance,
+                audioNote: c.audioNote,
               })),
             }}
           />
@@ -333,6 +333,8 @@ function CopyCard({ copy: c, title, author, isLastCopy }: { copy: BookCopy; titl
     c.audioMinutes && ["Length", audioLength(c.audioMinutes)],
     c.estWords && ["Words (est.)", c.estWords.toLocaleString()],
     c.narrators.length > 0 && ["Narrated by", c.narrators.join(", ")],
+    c.audioPerformance && ["Narration", `${c.audioPerformance} · ${find(AUDIO, c.audioPerformance)?.label}`],
+    c.audioNote && ["Narration note", c.audioNote],
     c.bonusNotes && ["Bonus content", c.bonusNotes],
   ].filter(Boolean) as [string, string][];
 
@@ -366,6 +368,43 @@ function CopyCard({ copy: c, title, author, isLastCopy }: { copy: BookCopy; titl
         isLastCopy={isLastCopy}
       />
     </div>
+  );
+}
+
+// Her ratings, each with its label and description.
+function Ratings({ book }: { book: Book }) {
+  const stars = find(STARS, book.rating);
+  const writing = find(WRITING, book.writingQuality);
+  const recommend = find(RECOMMEND, book.recommendation);
+  if (!stars) return null;
+  return (
+    <dl className="mt-4 space-y-2 rounded-2xl border border-border bg-surface px-4 py-3 text-sm">
+      <div>
+        <dt className="sr-only">Stars</dt>
+        <dd>
+          <span className="text-accent">★</span> <strong>{starText(stars.value)}</strong> · {stars.label}
+          <span className="block text-xs text-muted">{stars.description}</span>
+        </dd>
+      </div>
+      {writing && (
+        <div>
+          <dt className="inline text-muted">Writing: </dt>
+          <dd className="inline">
+            {writing.value} · {writing.label}
+            <span className="block text-xs text-muted">{writing.description}</span>
+          </dd>
+        </div>
+      )}
+      {recommend && (
+        <div>
+          <dt className="inline text-muted">Recommend: </dt>
+          <dd className="inline">
+            {recommend.label}
+            <span className="block text-xs text-muted">{recommend.description}</span>
+          </dd>
+        </div>
+      )}
+    </dl>
   );
 }
 

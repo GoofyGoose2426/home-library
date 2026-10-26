@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { AUDIO, RECOMMEND, WRITING, find, starLabel, type Recommendation } from "@/lib/ratings";
 import { ownerClient } from "@/lib/supabase/owner";
 
 // "Download my library": a spreadsheet (one row per copy) or a full backup
@@ -77,18 +78,21 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
     const g = tags.get(tt.tag_id);
     if (g?.kind === "genre") genres.set(tt.title_id, [...(genres.get(tt.title_id) ?? []), g.name as string]);
   }
-  const ratings = new Map(t.reviews.filter((r) => r.title_id).map((r) => [r.title_id, r.rating]));
+  const reviews = new Map(t.reviews.filter((r) => r.title_id).map((r) => [r.title_id, r]));
+  const copyReviews = new Map(t.reviews.filter((r) => r.copy_id).map((r) => [r.copy_id, r]));
   const copies = new Map<unknown, Row[]>();
   for (const c of t.copies) copies.set(c.title_id, [...(copies.get(c.title_id) ?? []), c]);
 
   const header = [
-    "Title", "Authors", "Series", "Series #", "Read status", "Rating", "Book type", "Reference",
+    "Title", "Authors", "Series", "Series #", "Read status", "Stars", "Stars label", "Writing quality",
+    "Recommend", "Book type", "Reference",
     "Needs checking", "Genres", "Format", "Where it lives", "Edition", "Publisher", "ISBN",
-    "Narrators", "On loan to", "Keepsake notes", "Gone",
+    "Narrators", "Audio performance", "Narration note", "On loan to", "Keepsake notes", "Gone",
   ];
   const lines = [header.map(csvCell).join(",")];
   const titles = [...t.titles].sort((a, b) => String(a.title).localeCompare(String(b.title)));
   for (const title of titles) {
+    const review = reviews.get(title.id);
     for (const c of copies.get(title.id) ?? [{}]) {
       lines.push(
         [
@@ -97,7 +101,10 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
           series.get(title.series_id) ?? "",
           title.series_number ?? "",
           STATUS[title.read_status as string] ?? title.read_status,
-          ratings.get(title.id) ?? "",
+          review?.rating != null ? Number(review.rating).toFixed(2) : "",
+          starLabel(review?.rating != null ? Number(review.rating) : null) ?? "",
+          review?.writing_quality ? `${review.writing_quality} ${find(WRITING, Number(review.writing_quality))?.label}` : "",
+          find(RECOMMEND, review?.recommendation as Recommendation)?.label ?? "",
           BOOK_TYPE[title.book_type as string] ?? title.book_type,
           title.is_reference ? "Yes" : "",
           title.needs_check ? "Yes" : "",
@@ -108,6 +115,10 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
           c.publisher ?? "",
           c.isbn13 ?? c.isbn10 ?? "",
           (narrators.get(c.id) ?? []).join("; "),
+          copyReviews.get(c.id)?.audio_performance
+            ? `${copyReviews.get(c.id)!.audio_performance} ${find(AUDIO, Number(copyReviews.get(c.id)!.audio_performance))?.label}`
+            : "",
+          copyReviews.get(c.id)?.body ?? "",
           c.on_loan_to ?? "",
           c.keepsake_notes ?? "",
           c.gone_at ? `${GONE[c.gone_reason as string] ?? c.gone_reason} ${String(c.gone_at).slice(0, 10)}` : "",

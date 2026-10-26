@@ -9,6 +9,7 @@ import { QuickEdit, type EditableBook } from "@/components/quick-edit";
 import { setPrintType } from "@/app/edit-actions";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
 import { copyList } from "@/lib/copy-labels";
+import { starLabel, starText } from "@/lib/ratings";
 import {
   applyFilters,
   filterOptions,
@@ -74,6 +75,8 @@ function toEditable(b: LibraryBook): EditableBook {
     title: b.title,
     readStatus: b.readStatus,
     rating: b.rating,
+    writingQuality: b.writingQuality,
+    recommendation: b.recommendation,
     isReference: b.isReference,
     pieceCount: b.pieceCount,
     copies: b.copies,
@@ -89,8 +92,11 @@ function withEdit(b: LibraryBook, e: EditableBook | undefined): LibraryBook {
     ...b,
     readStatus: e.readStatus,
     rating: e.rating,
+    writingQuality: e.writingQuality,
+    recommendation: e.recommendation,
     isReference: e.isReference,
     copies,
+    audioPerformance: Math.max(0, ...copies.map((c) => c.audioPerformance ?? 0)) || null,
     formats: [...new Set(copies.map((c) => c.format))],
     onLoanTo: copies.flatMap((c) => (c.onLoanTo ? [c.onLoanTo] : [])),
     hasKeepsake: copies.some((c) => !!c.keepsakeNotes),
@@ -341,7 +347,7 @@ function Grid({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
                   {b.readStatus === "read" ? "✓ Read" : "Partly read"} ·{" "}
                 </span>
               )}
-              {b.rating != null && <span className="text-foreground">★ {b.rating} · </span>}
+              {b.rating != null && <span className="text-foreground">★ {starText(b.rating)} {starLabel(b.rating)} · </span>}
               {copyList(b)}
               {b.onLoanTo.length > 0 && ` · On loan to ${b.onLoanTo.join(", ")}`}
             </p>
@@ -440,7 +446,11 @@ function Table({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
                 <td className="hidden px-3 py-2 align-top md:table-cell">{b.authors.join(", ")}</td>
                 <td className="px-3 py-2 align-top">
                   <span className={b.readStatus === "unread" ? "text-muted" : ""}>{STATUS_LABEL[b.readStatus]}</span>
-                  {b.rating != null && <span className="block text-xs">★ {b.rating}</span>}
+                  {b.rating != null && (
+                    <span className="block text-xs">
+                      ★ {starText(b.rating)} · {starLabel(b.rating)}
+                    </span>
+                  )}
                 </td>
                 <td className="hidden px-3 py-2 align-top sm:table-cell">{copyList(b)}</td>
                 <td className="px-1 py-1 align-top">{!selecting && <EditButton book={b} onEdit={onEdit} />}</td>

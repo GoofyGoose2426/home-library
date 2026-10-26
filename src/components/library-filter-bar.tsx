@@ -4,10 +4,12 @@ import { useState } from "react";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
 import {
   FLAGS,
+  RATING_GROUPS,
   REVIEW,
   SORTS,
   SOURCE_LABEL,
   activeCount,
+  ratingFilterLabel,
   type FlagKey,
   type ReviewKey,
   type Filters,
@@ -55,7 +57,10 @@ export function LibraryFilterBar({
       return { ...f, [key]: list.includes(value) ? list.filter((v) => v !== value) : [...list, value] };
     });
   const clearAll = () =>
-    onChange((f) => ({ ...f, status: [], format: [], genre: [], source: [], series: [], flag: [], review: [] }));
+    onChange((f) => ({
+      ...f, status: [], format: [], genre: [], source: [], series: [], flag: [], review: [],
+      stars: [], writing: [], recommend: [], audio: [],
+    }));
 
   // Chips for what's currently applied, each removable with one tap.
   const applied: { key: ListKey; value: string; label: string }[] = [
@@ -66,6 +71,13 @@ export function LibraryFilterBar({
     ...filters.series.map((v) => ({ key: "series" as const, value: v, label: `Series: ${v}` })),
     ...filters.flag.map((v) => ({ key: "flag" as const, value: v, label: FLAGS[v] })),
     ...filters.review.map((v) => ({ key: "review" as const, value: v, label: v === "any" ? "Needs review" : REVIEW[v] })),
+    ...RATING_GROUPS.flatMap((g) =>
+      filters[g.key].map((v) => ({
+        key: g.key,
+        value: v,
+        label: `${g.key === "stars" ? "" : `${g.title.replace(/ \(.*\)$/, "").replace("Would I recommend it?", "Recommend")}: `}${ratingFilterLabel(g.key, v)}`,
+      })),
+    ),
   ];
 
   return (
@@ -167,6 +179,20 @@ export function LibraryFilterBar({
               </Chip>
             ))}
           </Group>
+          {RATING_GROUPS.map((g) => (
+            <Group key={g.key} title={g.title}>
+              {g.values.map((v) => (
+                <Chip
+                  key={v}
+                  on={filters[g.key].includes(v)}
+                  onClick={() => toggle(g.key, v)}
+                  count={options[g.key].find(([k]) => k === v)?.[1] ?? 0}
+                >
+                  {ratingFilterLabel(g.key, v)}
+                </Chip>
+              ))}
+            </Group>
+          ))}
           <Group title="Genre" note="Rough, from the shelf photos. Ebooks and audiobooks get genres in Phase 2.">
             {options.genre.map(([v, n]) => (
               <Chip key={v} on={filters.genre.includes(v)} onClick={() => toggle("genre", v)} count={n}>

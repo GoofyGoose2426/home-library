@@ -2,6 +2,7 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
 import type { CopyFormat, CopySource } from "./library";
+import type { Recommendation } from "./ratings";
 
 export type FieldSource = { source: string; confirmed: boolean };
 
@@ -30,6 +31,8 @@ export type BookCopy = {
   sources: Record<string, FieldSource>;
   goneAt: string | null;
   goneReason: "sold" | "donated" | "gave_away" | "lost" | "other" | null;
+  audioPerformance: number | null;
+  audioNote: string | null;
 };
 
 export type SeriesBook = {
@@ -58,6 +61,8 @@ export type Book = {
   vibeMain: string | null;
   vibeSecond: string | null;
   rating: number | null;
+  writingQuality: number | null;
+  recommendation: Recommendation | null;
   pieces: { id: string; title: string; kind: string; isRead: boolean }[];
   genres: { name: string; kind: string; source: string; confirmed: boolean }[];
   // Copies she owns now; ones she's parted with are in goneCopies.
@@ -92,13 +97,14 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
       `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description,
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
-       reviews(rating),
+       reviews(rating, writing_quality, recommendation),
        pieces(id, position, piece_title, kind, is_read),
        credits(role, position, people(name)),
        title_tags(source, confirmed, tags(kind, name)),
        copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_path, cover_confirmed,
               pages, audio_minutes, est_words, contains_from, contains_to, bonus_notes, keepsake_notes,
-              on_loan_to, gone_at, gone_reason, credits(role, position, people(name)))`,
+              on_loan_to, gone_at, gone_reason, credits(role, position, people(name)),
+              reviews(audio_performance, body))`,
     )
     .eq("id", id)
     .maybeSingle();
@@ -191,8 +197,14 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
       sources: sourcesFor(c.id as string),
       goneAt: c.gone_at as string | null,
       goneReason: c.gone_reason as BookCopy["goneReason"],
+      audioPerformance: (c.reviews as { audio_performance: number | null }[])[0]?.audio_performance ?? null,
+      audioNote: (c.reviews as { body: string | null }[])[0]?.body ?? null,
     }))
     .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format));
+
+  const review = (
+    t.reviews as unknown as { rating: number | null; writing_quality: number | null; recommendation: Recommendation | null }[]
+  )[0];
 
   return {
     seriesNames,
@@ -213,9 +225,9 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     storyFocus: t.story_focus,
     vibeMain: t.vibe_main,
     vibeSecond: t.vibe_second,
-    rating: (t.reviews as unknown as { rating: number | null }[])[0]?.rating != null
-      ? Number((t.reviews as unknown as { rating: number }[])[0].rating)
-      : null,
+    rating: review?.rating != null ? Number(review.rating) : null,
+    writingQuality: review?.writing_quality ?? null,
+    recommendation: review?.recommendation ?? null,
     pieces: (t.pieces as unknown as { id: string; position: number; piece_title: string; kind: string; is_read: boolean }[])
       .sort((a, b) => a.position - b.position)
       .map((p) => ({ id: p.id, title: p.piece_title, kind: p.kind, isRead: p.is_read })),

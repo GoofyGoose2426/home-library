@@ -1,6 +1,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
+import type { Recommendation } from "./ratings";
 
 export type CopySource = "shelf" | "kobo" | "audible" | "librofm" | "other";
 
@@ -17,8 +18,20 @@ export type LibraryBook = {
   isReference: boolean;
   needsCheck: boolean;
   formats: CopyFormat[];
-  copies: { id: string; format: CopyFormat; source: CopySource; onLoanTo: string | null; keepsakeNotes: string | null }[];
+  copies: {
+    id: string;
+    format: CopyFormat;
+    source: CopySource;
+    onLoanTo: string | null;
+    keepsakeNotes: string | null;
+    audioPerformance: number | null;
+    audioNote: string | null;
+  }[];
   rating: number | null;
+  writingQuality: number | null;
+  recommendation: Recommendation | null;
+  // The best narration score among its audiobook copies.
+  audioPerformance: number | null;
   pieceCount: number;
   // False when every copy is on the Gone list (only loaded with includeGone).
   owned: boolean;
@@ -41,7 +54,7 @@ type Row = {
   series: { name: string } | null;
   credits: { role: string; position: number; people: { name: string } | null }[];
   title_tags: { tags: { kind: string; name: string } | null }[];
-  reviews: { rating: number | null }[];
+  reviews: { rating: number | null; writing_quality: number | null; recommendation: Recommendation | null }[];
   pieces: { count: number }[];
   copies: {
     id: string;
@@ -53,6 +66,7 @@ type Row = {
     cover_confirmed: boolean;
     on_loan_to: string | null;
     gone_at: string | null;
+    reviews: { audio_performance: number | null; body: string | null }[];
   }[];
 };
 
@@ -75,9 +89,10 @@ export async function loadLibrary(
          series(name),
          credits(role, position, people(name)),
          title_tags(tags(kind, name)),
-         reviews(rating),
+         reviews(rating, writing_quality, recommendation),
          pieces(count),
-         copies(id, format, source, keepsake_notes, cover_url, cover_path, cover_confirmed, on_loan_to, gone_at)`,
+         copies(id, format, source, keepsake_notes, cover_url, cover_path, cover_confirmed, on_loan_to, gone_at,
+                reviews(audio_performance, body))`,
       )
       .order("title")
       .range(from, from + 999)
@@ -105,13 +120,25 @@ export async function loadLibrary(
           (a, b) => FORMAT_ORDER.indexOf(a) - FORMAT_ORDER.indexOf(b),
         ),
         copies: t.copies
-          .map((c) => ({ id: c.id, format: c.format, source: c.source, onLoanTo: c.on_loan_to, keepsakeNotes: c.keepsake_notes }))
+          .map((c) => ({
+            id: c.id,
+            format: c.format,
+            source: c.source,
+            onLoanTo: c.on_loan_to,
+            keepsakeNotes: c.keepsake_notes,
+            audioPerformance: c.reviews[0]?.audio_performance ?? null,
+            audioNote: c.reviews[0]?.body ?? null,
+          }))
           .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format)),
         onLoanTo: t.copies.flatMap((c) => (c.on_loan_to ? [c.on_loan_to] : [])),
         sources: [...new Set(t.copies.map((c) => c.source))],
         genres: t.title_tags.flatMap((tt) => (tt.tags?.kind === "genre" ? [tt.tags.name] : [])),
         hasKeepsake: t.copies.some((c) => !!c.keepsake_notes?.trim()),
         rating: t.reviews[0]?.rating != null ? Number(t.reviews[0].rating) : null,
+        writingQuality: t.reviews[0]?.writing_quality ?? null,
+        recommendation: t.reviews[0]?.recommendation ?? null,
+        audioPerformance:
+          Math.max(0, ...t.copies.flatMap((c) => (c.reviews[0]?.audio_performance ? [c.reviews[0].audio_performance] : []))) || null,
         pieceCount: t.pieces[0]?.count ?? 0,
         owned: ownedCopies.length > 0,
         coverUrl: cover?.cover_path ? `photo:${cover.cover_path}` : (cover?.cover_url ?? null),

@@ -1,4 +1,5 @@
 import type { CopyFormat, LibraryBook } from "./library";
+import { AUDIO, RECOMMEND, WRITING, find } from "./ratings";
 
 // Sort and filter for the library views. Within a group, any choice matches
 // (Romance or Fantasy); across groups, all must match (Unread and Fantasy).
@@ -9,6 +10,10 @@ export const SORTS = {
   series: "Series",
   status: "Read status",
   review: "Needs review first",
+  stars: "Stars, highest first",
+  writing: "Writing quality, highest first",
+  recommend: "Recommendation",
+  audio: "Audio performance, highest first",
 } as const;
 export type SortKey = keyof typeof SORTS;
 
@@ -47,9 +52,42 @@ export type Filters = {
   series: string[];
   flag: FlagKey[];
   review: ReviewKey[];
+  stars: string[];
+  writing: string[];
+  recommend: string[];
+  audio: string[];
 };
 
-export const LIST_KEYS = ["status", "format", "genre", "source", "series", "flag", "review"] as const;
+export const LIST_KEYS = [
+  "status", "format", "genre", "source", "series", "flag", "review", "stars", "writing", "recommend", "audio",
+] as const;
+
+// Rating filters. Stars group by whole star ("4" is 4.00–4.75); "none" is
+// not rated yet.
+export type RatingKey = "stars" | "writing" | "recommend" | "audio";
+export const RATING_GROUPS: { key: RatingKey; title: string; values: string[] }[] = [
+  { key: "stars", title: "Stars", values: ["5", "4", "3", "2", "1", "none"] },
+  { key: "writing", title: "Writing quality", values: ["5", "4", "3", "2", "1", "none"] },
+  { key: "recommend", title: "Would I recommend it?", values: ["everyone", "specific", "no", "none"] },
+  { key: "audio", title: "Audio performance (audiobooks)", values: ["5", "4", "3", "2", "1", "none"] },
+];
+
+export function ratingValue(b: LibraryBook, key: RatingKey): string {
+  const v =
+    key === "stars" ? (b.rating === null ? null : Math.floor(b.rating))
+    : key === "writing" ? b.writingQuality
+    : key === "recommend" ? b.recommendation
+    : b.audioPerformance;
+  return v === null ? "none" : String(v);
+}
+
+export function ratingFilterLabel(key: RatingKey, v: string) {
+  if (v === "none") return key === "audio" ? "Audiobook, not rated" : "Not rated";
+  if (key === "stars") return v === "5" ? "★ 5.00" : `★ ${v}.00–${v}.75`;
+  if (key === "writing") return `${v} ${find(WRITING, Number(v))?.label}`;
+  if (key === "audio") return `${v} ${find(AUDIO, Number(v))?.label}`;
+  return find(RECOMMEND, v as "no")?.label ?? v;
+}
 export type ListKey = (typeof LIST_KEYS)[number];
 
 export const SOURCE_LABEL: Record<string, string> = {
@@ -71,6 +109,10 @@ export function readFilters(params: URLSearchParams): Filters {
     source: params.getAll("source"),
     series: params.getAll("series"),
     flag: params.getAll("flag").filter((f): f is FlagKey => f in FLAGS),
+    stars: params.getAll("stars"),
+    writing: params.getAll("writing"),
+    recommend: params.getAll("recommend"),
+    audio: params.getAll("audio"),
     review: [
       ...params.getAll("review").filter((r): r is ReviewKey => r in REVIEW),
       // Older links used flag=check for guessed titles.
@@ -108,6 +150,12 @@ function surnameKey(book: LibraryBook) {
 }
 
 const STATUS_ORDER = { unread: 0, partly_read: 1, read: 2 };
+const RECOMMEND_RANK: Record<string, number> = { everyone: 3, specific: 2, no: 1 };
+
+// Highest first, with unrated books last.
+function highFirst(a: number | null | undefined, b: number | null | undefined) {
+  return (b ?? -1) - (a ?? -1);
+}
 
 export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
   const words = fold(f.q).split(/\s+/).filter(Boolean);
@@ -126,6 +174,12 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
       if (flag === "keepsake" && !b.hasKeepsake) return false;
       if (flag === "reference" && !(b.isReference || b.bookType === "picture_book")) return false;
     }
+    for (const g of RATING_GROUPS) {
+      if (!f[g.key].length) continue;
+      // Audio applies only to books with an audiobook copy.
+      if (g.key === "audio" && !b.formats.includes("audiobook")) return false;
+      if (!f[g.key].includes(ratingValue(b, g.key))) return false;
+    }
     if (f.review.length) {
       const reasons = reviewReasons(b);
       if (!f.review.some((r) => (r === "any" ? reasons.length > 0 : reasons.includes(r)))) return false;
@@ -143,6 +197,10 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
       byTitle(a, b),
     status: (a, b) => STATUS_ORDER[a.readStatus] - STATUS_ORDER[b.readStatus] || byTitle(a, b),
     review: (a, b) => reviewReasons(b).length - reviewReasons(a).length || byTitle(a, b),
+    stars: (a, b) => highFirst(a.rating, b.rating) || byTitle(a, b),
+    writing: (a, b) => highFirst(a.writingQuality, b.writingQuality) || byTitle(a, b),
+    recommend: (a, b) => highFirst(RECOMMEND_RANK[a.recommendation ?? ""], RECOMMEND_RANK[b.recommendation ?? ""]) || byTitle(a, b),
+    audio: (a, b) => highFirst(a.audioPerformance, b.audioPerformance) || byTitle(a, b),
   };
 
   return books.filter(matches).sort(compare[f.sort]);
@@ -160,6 +218,12 @@ export function filterOptions(books: LibraryBook[]) {
     source: count(books.flatMap((b) => b.sources)),
     series: count(books.flatMap((b) => (b.series ? [b.series] : []))),
     format: count(books.flatMap((b) => b.formats)),
+    ...(Object.fromEntries(
+      RATING_GROUPS.map((g) => [
+        g.key,
+        count(books.filter((b) => g.key !== "audio" || b.formats.includes("audiobook")).map((b) => ratingValue(b, g.key))),
+      ]),
+    ) as Record<RatingKey, [string, number][]>),
     review: count(books.flatMap((b) => {
       const reasons = reviewReasons(b);
       return reasons.length ? ["any", ...reasons] : [];

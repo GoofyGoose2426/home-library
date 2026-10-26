@@ -2,15 +2,16 @@
 
 import { useRef, useState } from "react";
 import type { CopyFormat, CopySource } from "@/lib/library";
-import { starLabel } from "@/lib/ratings";
+import { AUDIO, RECOMMEND, STARS, WRITING, find, starText, type Recommendation } from "@/lib/ratings";
 import {
+  setAudioReview,
   setKeepsake,
   setLoan,
   setPieceRead,
   setPrintType,
-  setRating,
   setReadStatus,
   setReference,
+  setReview,
 } from "@/app/edit-actions";
 
 export type EditableCopy = {
@@ -19,6 +20,8 @@ export type EditableCopy = {
   source: CopySource;
   onLoanTo: string | null;
   keepsakeNotes: string | null;
+  audioPerformance: number | null;
+  audioNote: string | null;
 };
 
 export type EditableBook = {
@@ -26,6 +29,8 @@ export type EditableBook = {
   title: string;
   readStatus: "unread" | "partly_read" | "read";
   rating: number | null;
+  writingQuality: number | null;
+  recommendation: Recommendation | null;
   isReference: boolean;
   pieces?: { id: string; title: string; isRead: boolean }[];
   pieceCount: number;
@@ -110,13 +115,42 @@ export function QuickEdit({
         )}
       </Row>
 
-      <Row label="Rating">
-        <StarRating
+      <Row label="Stars">
+        <StarPicker
           key={String(book.rating)}
           value={book.rating}
-          onChange={(rating) => apply((b) => ({ ...b, rating }), () => setRating(book.id, rating))}
+          onChange={(rating) =>
+            apply(
+              (b) => (rating === null ? { ...b, rating, writingQuality: null, recommendation: null } : { ...b, rating }),
+              () => setReview(book.id, { rating }),
+            )
+          }
         />
       </Row>
+
+      {book.rating !== null && (
+        <>
+          <Row label="Writing quality" note="optional">
+            <ScalePicker
+              scale={WRITING}
+              value={book.writingQuality}
+              numbered
+              onChange={(writingQuality) =>
+                apply((b) => ({ ...b, writingQuality }), () => setReview(book.id, { writingQuality }))
+              }
+            />
+          </Row>
+          <Row label="Would I recommend it?" note="optional">
+            <ScalePicker
+              scale={RECOMMEND}
+              value={book.recommendation}
+              onChange={(recommendation) =>
+                apply((b) => ({ ...b, recommendation }), () => setReview(book.id, { recommendation }))
+              }
+            />
+          </Row>
+        </>
+      )}
 
       {book.pieces && book.pieces.length > 0 && (
         <Row label={`Pieces (${book.pieces.filter((p) => p.isRead).length} of ${book.pieces.length} read)`}>
@@ -182,6 +216,30 @@ export function QuickEdit({
             />
           )}
 
+          {c.format === "audiobook" && (
+            <div className="space-y-2">
+              <p className="text-sm">
+                <span className="text-muted">Audio performance</span> <span className="text-xs text-muted">(optional)</span>
+              </p>
+              <ScalePicker
+                scale={AUDIO}
+                value={c.audioPerformance}
+                numbered
+                onChange={(audioPerformance) =>
+                  apply(updateCopy(c.id, { audioPerformance }), () => setAudioReview(c.id, audioPerformance, c.audioNote))
+                }
+              />
+              <TextField
+                label="Narration note"
+                placeholder="Voices, pacing, accents…"
+                value={c.audioNote}
+                onSave={(audioNote) =>
+                  apply(updateCopy(c.id, { audioNote }), () => setAudioReview(c.id, c.audioPerformance, audioNote))
+                }
+              />
+            </div>
+          )}
+
           <TextField
             label="Keepsake notes"
             placeholder="Signed, heirloom, gift from…"
@@ -212,10 +270,13 @@ export function QuickEdit({
   );
 }
 
-function Row({ label, children }: { label: string; children: React.ReactNode }) {
+function Row({ label, note, children }: { label: string; note?: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="mb-1.5 text-sm font-medium">{label}</p>
+      <p className="mb-1.5 text-sm font-medium">
+        {label}
+        {note && <span className="font-normal text-muted"> ({note})</span>}
+      </p>
       {children}
     </div>
   );
@@ -234,62 +295,124 @@ function Toggle({ on, onClick, children }: { on: boolean; onClick: () => void; c
   );
 }
 
-// Quarter-star rating. Tap a star for a whole number, or slide for quarters.
-function StarRating({ value, onChange }: { value: number | null; onChange: (v: number | null) => void }) {
-  const [draft, setDraft] = useState(value ?? 0);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const shown = draft;
+// Stars, in two taps: pick 1–5 stars, then the quarter within that star
+// (4.00 Loved it, 4.25 A great book…). Each choice shows her label and
+// description.
+function StarPicker({ value, onChange }: { value: number | null; onChange: (v: number | null) => void }) {
+  const [star, setStar] = useState<number | null>(value === null ? null : Math.floor(value));
+  const current = find(STARS, value);
+  const quarters = star === null ? [] : STARS.filter((s) => Math.floor(s.value) === star).reverse();
 
-  function commit(v: number) {
-    setDraft(v);
-    if (timer.current) clearTimeout(timer.current);
-    timer.current = setTimeout(() => onChange(v === 0 ? null : v), 400);
+  function pickStar(n: number) {
+    setStar(n);
+    // Tapping a star rates it a whole star; the quarters refine it.
+    if (value === null || Math.floor(value) !== n) onChange(n);
   }
 
   return (
     <div>
-      <div className="flex items-center gap-1" aria-hidden>
+      <div className="flex items-center gap-1" role="radiogroup" aria-label="Stars">
         {[1, 2, 3, 4, 5].map((n) => {
-          const fill = Math.max(0, Math.min(1, shown - (n - 1)));
+          const fill = value === null ? 0 : Math.max(0, Math.min(1, value - (n - 1)));
           return (
             <button
               key={n}
               type="button"
-              tabIndex={-1}
-              onClick={() => commit(n)}
-              className="relative size-9 text-3xl leading-9"
+              role="radio"
+              aria-checked={star === n}
+              aria-label={`${n} star${n > 1 ? "s" : ""}`}
+              onClick={() => pickStar(n)}
+              className="relative size-11 text-4xl leading-[2.75rem]"
             >
-              <span className="absolute inset-0 text-border">★</span>
-              <span className="absolute inset-0 overflow-hidden text-accent" style={{ width: `${fill * 100}%` }}>
+              <span aria-hidden className="absolute inset-0 text-border">★</span>
+              <span aria-hidden className="absolute inset-0 overflow-hidden text-accent" style={{ width: `${fill * 100}%` }}>
                 ★
               </span>
             </button>
           );
         })}
       </div>
-      <input
-        type="range"
-        min={0}
-        max={5}
-        step={0.25}
-        value={shown}
-        onChange={(e) => commit(Number(e.target.value))}
-        aria-label="Rating in quarter stars"
-        aria-valuetext={shown ? `${shown} stars` : "Not rated"}
-        className="mt-1 w-full max-w-xs accent-[var(--accent)]"
-      />
-      <p className="text-sm">
-        {shown ? (
-          <>
-            <strong>{shown}</strong> · {starLabel(shown)}
-            <button type="button" onClick={() => commit(0)} className="ml-3 text-xs text-accent underline-offset-4 hover:underline">
-              Clear
-            </button>
-          </>
-        ) : (
-          <span className="text-muted">Not rated</span>
-        )}
-      </p>
+
+      {current ? (
+        <p className="mt-1 text-sm">
+          <strong>{starText(current.value)}</strong> · {current.label}
+          <button
+            type="button"
+            onClick={() => {
+              setStar(null);
+              onChange(null);
+            }}
+            className="ml-3 text-xs text-accent underline-offset-4 hover:underline"
+          >
+            Clear
+          </button>
+        </p>
+      ) : (
+        <p className="mt-1 text-sm text-muted">Not rated. Tap a star.</p>
+      )}
+
+      {quarters.length > 1 && (
+        <ul className="mt-2 space-y-1.5" role="radiogroup" aria-label={`Within ${star} stars`}>
+          {quarters.map((q) => (
+            <li key={q.value}>
+              <button
+                type="button"
+                role="radio"
+                aria-checked={value === q.value}
+                onClick={() => value !== q.value && onChange(q.value)}
+                className={`w-full rounded-xl border px-3 py-2 text-left text-sm ${
+                  value === q.value ? "border-accent bg-accent-soft" : "border-border bg-background"
+                }`}
+              >
+                <span className="font-medium">
+                  {starText(q.value)} · {q.label}
+                </span>
+                <span className="block text-xs text-muted">{q.description}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+      {quarters.length === 1 && current && <p className="mt-1 text-xs text-muted">{current.description}</p>}
+    </div>
+  );
+}
+
+// One-tap scales (writing quality, recommendation, audio). Tapping the chosen
+// value again clears it. The chosen value's description shows underneath.
+function ScalePicker<K extends string | number>({
+  scale,
+  value,
+  numbered,
+  onChange,
+}: {
+  scale: { value: K; label: string; description: string }[];
+  value: K | null;
+  numbered?: boolean;
+  onChange: (v: K | null) => void;
+}) {
+  const options = numbered ? [...scale].reverse() : scale;
+  const chosen = scale.find((s) => s.value === value);
+  return (
+    <div>
+      <div className="flex flex-wrap gap-2" role="radiogroup">
+        {options.map((o) => (
+          <button
+            key={o.value}
+            type="button"
+            role="radio"
+            aria-checked={value === o.value}
+            onClick={() => onChange(value === o.value ? null : o.value)}
+            className={`min-h-10 rounded-full border px-3.5 text-sm ${
+              value === o.value ? "border-accent bg-accent text-on-accent" : "border-border bg-background"
+            }`}
+          >
+            {numbered && <span className="font-semibold">{o.value} </span>}
+            {o.label}
+          </button>
+        ))}
+      </div>
+      {chosen && <p className="mt-1.5 text-xs text-muted">{chosen.description}</p>}
     </div>
   );
 }

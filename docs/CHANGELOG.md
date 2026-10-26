@@ -2,6 +2,26 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-28 · Phase 1b, step 5: Your rating scales
+
+Your four scales from rating-scales.xlsx replace the old single star scale. You set them in the **Update** section of a book page, or the ✎ pop-up in your library.
+
+- **Stars** (1.00–5.00): tap 1–5 stars, and the book gets that whole star. That star's quarters then appear underneath, each with its label and description (e.g. 3.00 Liked it, 3.25 Enjoyed it, 3.50 Really enjoyed it, 3.75 Almost loved it). Tap one to choose it. No slider. **Clear** removes the rating.
+- **Writing quality** (optional, one tap): 1 Yikes, 2 Rough, 3 Fine, 4 Strong, 5 Masterful.
+- **Would I recommend it?** (optional): No, Yes to everyone, or Yes to specific people.
+  - These two appear once a book has stars. Clearing the stars clears them too.
+  - Tap the chosen answer again to clear it.
+- **Audio performance** (optional): shown only on audiobook copies, 1 Unlistenable → 5 Elevated the book, with a **Narration note**.
+- **Where they show:** the label sits beside the stars everywhere (e.g. "★ 3.50 Really enjoyed it"). The book page shows each rating with its description.
+- **Filters:** new groups for Stars (by whole star, or Not rated), Writing quality, Would I recommend it? and Audio performance.
+- **Sorts:** Stars, Writing quality, Recommendation and Audio performance, highest first. Unrated books come last.
+- **Spreadsheet download:** new columns for Stars, Stars label, Writing quality, Recommend, Audio performance and Narration note.
+- The free-text "who I'd recommend it to" field is gone; the recommendation replaces it. Your 2 existing ratings (4.25 and 5.00) carry over unchanged.
+- **Tested:**
+  - 12 database checks (allowed values, stars needed for the extras, audio only on audiobooks, privacy).
+  - 8 checks of the save logic.
+  - A phone-width check in light and dark mode.
+
 ## 2026-10-27 · Phase 1b, step 4: Remove a copy, and the Gone list
 
 - **Remove this copy** on every copy card of a book page gives two choices:
