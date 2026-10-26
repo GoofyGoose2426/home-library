@@ -2,12 +2,25 @@
 import Link from "next/link";
 import { BookCover } from "@/components/book-cover";
 import { CoverPicker } from "@/components/cover-picker";
+import { ClassificationEditor } from "@/components/classification-editor";
 import { EditDetails } from "@/components/edit-details";
 import { QuickEdit } from "@/components/quick-edit";
 import { RemoveCopy, UndoGone } from "@/components/remove-copy";
 import { GONE_LABEL } from "@/lib/gone";
 import { AUDIO, RECOMMEND, STARS, WRITING, find, starText } from "@/lib/ratings";
 import type { Book, BookCopy, FieldSource } from "@/lib/book";
+import {
+  AUDIENCE,
+  KIND_LABEL,
+  SPICE,
+  STORY_FOCUS,
+  VIBE,
+  labelOf,
+  type Spice,
+  type StoryFocus,
+  type TagKind,
+  type Vibe,
+} from "@/lib/classification";
 
 const STATUS = { read: "Read", partly_read: "Partly read", unread: "Unread" } as const;
 
@@ -38,24 +51,6 @@ const ADDED_FROM: Record<string, string> = {
 };
 
 const ROLE: Record<string, string> = { author: "", writer: "Writer", artist: "Artist", editor: "Editor", translator: "Translator" };
-
-const SPICE: Record<string, string> = {
-  green_pepper: "Green pepper",
-  yellow_pepper: "Yellow pepper",
-  orange_pepper: "Orange pepper",
-  red_pepper_1: "1 red pepper",
-  red_pepper_2: "2 red peppers",
-  red_pepper_3: "3 red peppers",
-  red_pepper_4: "4 red peppers",
-  red_pepper_5: "5 red peppers",
-};
-const FOCUS: Record<string, string> = { plot_led: "Plot-led", balanced: "Balanced", spice_led: "Spice-led" };
-const VIBE: Record<string, string> = {
-  cozy: "Cozy/feel-good",
-  light: "Light/fun",
-  dramatic: "Dramatic/heavy",
-  intense: "Intense/dark",
-};
 
 function sourceLabel(s: FieldSource | undefined) {
   if (!s) return null;
@@ -98,12 +93,6 @@ function seriesNumber(n: number | null) {
 export function BookDetail({ book }: { book: Book }) {
   const cover = [...book.copies, ...book.goneCopies].find((c) => c.coverKind === "photo" && c.coverUrl) ?? [...book.copies, ...book.goneCopies].find((c) => c.coverUrl);
   const authors = book.credits.filter((c) => c.role !== "narrator");
-  const story = [
-    book.romanticSubplot != null && ["Romantic subplot", book.romanticSubplot ? "Yes" : "No"],
-    book.spice && ["Spice", SPICE[book.spice]],
-    book.storyFocus && ["Story focus", FOCUS[book.storyFocus]],
-    book.vibeMain && ["Vibe", [VIBE[book.vibeMain], book.vibeSecond && VIBE[book.vibeSecond]].filter(Boolean).join(", then ")],
-  ].filter(Boolean) as [string, string][];
 
   return (
     <article className="mt-4">
@@ -289,32 +278,28 @@ export function BookDetail({ book }: { book: Book }) {
         </Section>
       )}
 
-      <Section title="Genre and story">
-        {book.genres.length > 0 ? (
-          <div className="flex flex-wrap gap-2">
-            {book.genres.map((g) => (
-              <span key={`${g.kind}-${g.name}`} className="rounded-full border border-border px-3 py-1 text-sm">
-                {g.name}
-                <Source s={{ source: g.source, confirmed: g.confirmed }} />
-              </span>
-            ))}
-          </div>
-        ) : (
-          <p className="text-sm text-muted">No genre yet.</p>
-        )}
-        {story.length > 0 && (
-          <dl className="mt-4 grid grid-cols-2 gap-3 text-sm sm:grid-cols-4">
-            {story.map(([k, v]) => (
-              <div key={k}>
-                <dt className="text-muted">{k}</dt>
-                <dd>{v}</dd>
-              </div>
-            ))}
-          </dl>
-        )}
+      <Section title="Classification">
+        <Classification book={book} />
+        <div className="mt-4">
+          <ClassificationEditor
+            key={book.tags.map((t) => t.id).join(",") + book.audience + book.spice + book.storyFocus + book.vibeMain + book.vibeSecond + book.romanticSubplot}
+            titleId={book.id}
+            bookType={book.bookType}
+            lists={book.lists}
+            initial={{
+              tagIds: book.tags.filter((t) => t.kind !== "rough_genre").map((t) => t.id),
+              audience: book.audience,
+              romanticSubplot: book.romanticSubplot,
+              spice: book.spice as Spice | null,
+              storyFocus: book.storyFocus as StoryFocus | null,
+              vibeMain: book.vibeMain as Vibe | null,
+              vibeSecond: book.vibeSecond as Vibe | null,
+            }}
+          />
+        </div>
         <p className="mt-4 rounded-2xl border border-dashed border-border px-4 py-3 text-sm text-muted">
-          Coming in Phase 2, each with its source for you to check: subgenres, tropes, vibe, romantic subplot,
-          spice, story focus, publisher, length, and author and character representation.
+          Coming later in Phase 2, each with its source for you to check: suggestions for all of this, publisher and
+          length, and author and character representation.
         </p>
       </Section>
     </article>
@@ -405,6 +390,66 @@ function Ratings({ book }: { book: Book }) {
         </div>
       )}
     </dl>
+  );
+}
+
+const SHOWN_KINDS: TagKind[] = [
+  "genre", "subgenre", "supernatural_being", "shifter_type", "queer_romance_type", "retelling_type",
+  "trope", "subject", "reason", "gn_style", "manga_demographic", "franchise",
+];
+
+// What the book is, as she's set it (or as it came from the photos, marked).
+function Classification({ book }: { book: Book }) {
+  const rows: [string, React.ReactNode][] = [];
+  const audience = labelOf(AUDIENCE, book.audience);
+  if (audience) rows.push(["Audience", audience]);
+  for (const k of SHOWN_KINDS) {
+    const tags = book.tags.filter((t) => t.kind === k);
+    if (!tags.length) continue;
+    rows.push([
+      KIND_LABEL[k],
+      <span key={k} className="flex flex-wrap gap-1.5">
+        {tags.map((t) => (
+          <span
+            key={t.id}
+            title={sourceLabel(t) ?? undefined}
+            className={`rounded-full px-2.5 py-0.5 ${t.confirmed ? "bg-accent-soft" : "border border-dashed border-border"}`}
+          >
+            {t.name}
+          </span>
+        ))}
+      </span>,
+    ]);
+  }
+  if (book.vibeMain) rows.push(["Vibe", [labelOf(VIBE, book.vibeMain as Vibe), labelOf(VIBE, book.vibeSecond as Vibe)].filter(Boolean).join(", then ")]);
+  if (book.romanticSubplot != null) rows.push(["Romantic subplot", book.romanticSubplot ? "Yes" : "No"]);
+  if (book.spice) rows.push(["Spice", labelOf(SPICE, book.spice as Spice)]);
+  if (book.storyFocus) rows.push(["Story focus", labelOf(STORY_FOCUS, book.storyFocus as StoryFocus)]);
+  const rough = book.tags.filter((t) => t.kind === "rough_genre");
+  const unconfirmed = book.tags.some((t) => t.kind !== "rough_genre" && !t.confirmed);
+
+  if (!rows.length && !rough.length) return <p className="text-sm text-muted">Nothing set yet.</p>;
+  return (
+    <>
+      {rows.length > 0 && (
+        <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
+          {rows.map(([k, v]) => (
+            <div key={k} className="contents">
+              <dt className="text-muted">{k}</dt>
+              <dd className="min-w-0">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+      {unconfirmed && (
+        <p className="mt-2 text-xs text-muted">Dashed values came from your shelf photos and aren&apos;t confirmed yet. Saving the classification confirms them.</p>
+      )}
+      {rough.length > 0 && (
+        <p className="mt-2 text-xs text-muted">
+          Rough genre from your shelf photos: {rough.map((t) => t.name).join(", ")}. It goes away once you set genres.
+        </p>
+      )}
+    </>
   );
 }
 

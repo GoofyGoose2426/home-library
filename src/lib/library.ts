@@ -1,6 +1,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
+import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "./classification";
 import type { Recommendation } from "./ratings";
 
 export type CopySource = "shelf" | "kobo" | "audible" | "librofm" | "other";
@@ -37,7 +38,8 @@ export type LibraryBook = {
   owned: boolean;
   onLoanTo: string[];
   sources: string[];
-  genres: string[];
+  // Classification values per filter group (see FACETS), as labels.
+  facets: Record<string, string[]>;
   hasKeepsake: boolean;
   coverUrl: string | null;
   coverConfirmed: boolean;
@@ -54,6 +56,12 @@ type Row = {
   series: { name: string } | null;
   credits: { role: string; position: number; people: { name: string } | null }[];
   title_tags: { tags: { kind: string; name: string } | null }[];
+  audience: Audience | null;
+  romantic_subplot: boolean | null;
+  spice: Spice | null;
+  story_focus: StoryFocus | null;
+  vibe_main: Vibe | null;
+  vibe_second: Vibe | null;
   reviews: { rating: number | null; writing_quality: number | null; recommendation: Recommendation | null }[];
   pieces: { count: number }[];
   copies: {
@@ -69,6 +77,21 @@ type Row = {
     reviews: { audio_performance: number | null; body: string | null }[];
   }[];
 };
+
+function facetsOf(t: Row): Record<string, string[]> {
+  const f: Record<string, string[]> = {};
+  const add = (key: string, value: string | null) => {
+    if (value) f[key] = [...(f[key] ?? []), value];
+  };
+  for (const tt of t.title_tags) if (tt.tags) add(tt.tags.kind, tt.tags.name);
+  add("audience", labelOf(AUDIENCE, t.audience));
+  add("vibe", labelOf(VIBE, t.vibe_main));
+  add("vibe", labelOf(VIBE, t.vibe_second));
+  add("romantic_subplot", t.romantic_subplot == null ? null : t.romantic_subplot ? "Yes" : "No");
+  add("spice", labelOf(SPICE, t.spice));
+  add("story_focus", labelOf(STORY_FOCUS, t.story_focus));
+  return f;
+}
 
 const FORMAT_ORDER: CopyFormat[] = ["hardcover", "trade_paperback", "mass_market", "print_unknown", "ebook", "audiobook"];
 
@@ -86,6 +109,7 @@ export async function loadLibrary(
       .from("titles")
       .select(
         `id, title, read_status, book_type, is_reference, needs_check, series_number,
+         audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second,
          series(name),
          credits(role, position, people(name)),
          title_tags(tags(kind, name)),
@@ -132,7 +156,7 @@ export async function loadLibrary(
           .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format)),
         onLoanTo: t.copies.flatMap((c) => (c.on_loan_to ? [c.on_loan_to] : [])),
         sources: [...new Set(t.copies.map((c) => c.source))],
-        genres: t.title_tags.flatMap((tt) => (tt.tags?.kind === "genre" ? [tt.tags.name] : [])),
+        facets: facetsOf(t),
         hasKeepsake: t.copies.some((c) => !!c.keepsake_notes?.trim()),
         rating: t.reviews[0]?.rating != null ? Number(t.reviews[0].rating) : null,
         writingQuality: t.reviews[0]?.writing_quality ?? null,

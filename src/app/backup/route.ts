@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "@/lib/classification";
 import { AUDIO, RECOMMEND, WRITING, find, starLabel, type Recommendation } from "@/lib/ratings";
 import { ownerClient } from "@/lib/supabase/owner";
 
@@ -20,6 +21,7 @@ const TABLES = [
   "reviews",
   "field_sources",
   "saved_reports",
+  "tag_parents",
 ] as const;
 
 type Row = Record<string, unknown>;
@@ -73,11 +75,17 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
   for (const c of t.credits) {
     if (c.role === "narrator" && c.copy_id) narrators.set(c.copy_id, [...(narrators.get(c.copy_id) ?? []), people.get(c.person_id) ?? ""]);
   }
-  const genres = new Map<unknown, string[]>();
+  // List values per book, by kind (genre, subgenre, trope…).
+  const listed = new Map<unknown, Map<string, string[]>>();
   for (const tt of t.title_tags) {
     const g = tags.get(tt.tag_id);
-    if (g?.kind === "genre") genres.set(tt.title_id, [...(genres.get(tt.title_id) ?? []), g.name as string]);
+    if (!g) continue;
+    const m = listed.get(tt.title_id) ?? new Map<string, string[]>();
+    m.set(g.kind as string, [...(m.get(g.kind as string) ?? []), g.name as string]);
+    listed.set(tt.title_id, m);
   }
+  const ofKind = (titleId: unknown, ...kinds: string[]) =>
+    kinds.flatMap((k) => listed.get(titleId)?.get(k) ?? []).join("; ");
   const reviews = new Map(t.reviews.filter((r) => r.title_id).map((r) => [r.title_id, r]));
   const copyReviews = new Map(t.reviews.filter((r) => r.copy_id).map((r) => [r.copy_id, r]));
   const copies = new Map<unknown, Row[]>();
@@ -86,7 +94,8 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
   const header = [
     "Title", "Authors", "Series", "Series #", "Read status", "Stars", "Stars label", "Writing quality",
     "Recommend", "Book type", "Reference",
-    "Needs checking", "Genres", "Format", "Where it lives", "Edition", "Publisher", "ISBN",
+    "Needs checking", "Genres", "Subgenres", "Tropes", "Audience", "Vibe", "Romantic subplot", "Spice",
+    "Story focus", "Subjects", "Reasons for reading", "Rough genre (photos)", "Format", "Where it lives", "Edition", "Publisher", "ISBN",
     "Narrators", "Audio performance", "Narration note", "On loan to", "Keepsake notes", "Gone",
   ];
   const lines = [header.map(csvCell).join(",")];
@@ -108,7 +117,17 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
           BOOK_TYPE[title.book_type as string] ?? title.book_type,
           title.is_reference ? "Yes" : "",
           title.needs_check ? "Yes" : "",
-          (genres.get(title.id) ?? []).join("; "),
+          ofKind(title.id, "genre"),
+          ofKind(title.id, "subgenre", "supernatural_being", "shifter_type", "queer_romance_type", "retelling_type"),
+          ofKind(title.id, "trope"),
+          labelOf(AUDIENCE, title.audience as Audience) ?? "",
+          [labelOf(VIBE, title.vibe_main as Vibe), labelOf(VIBE, title.vibe_second as Vibe)].filter(Boolean).join(", then "),
+          title.romantic_subplot == null ? "" : title.romantic_subplot ? "Yes" : "No",
+          labelOf(SPICE, title.spice as Spice) ?? "",
+          labelOf(STORY_FOCUS, title.story_focus as StoryFocus) ?? "",
+          ofKind(title.id, "subject"),
+          ofKind(title.id, "reason"),
+          ofKind(title.id, "rough_genre"),
           FORMAT[c.format as string] ?? "",
           WHERE[c.source as string] ?? "",
           c.edition ?? "",

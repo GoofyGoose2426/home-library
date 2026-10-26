@@ -2,6 +2,23 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-29 · Phase 2, step 2: Classification on the book page
+
+- **Classification** section on every book page. It shows audience, genre, subgenres and their deeper levels, tropes, subjects, vibe, romantic subplot, spice, story focus, reasons for reading, and the graphic-novel fields. Values from the shelf photos have a dashed outline until you confirm them.
+- **Edit classification** opens one editor for everything:
+  - Pick genres, and each genre's subgenres appear under it. Retelling sits under "Any genre".
+  - Deeper levels appear as you go: Paranormal romance → **Supernatural beings** → Shifters → **Shifter type**; Queer romance → Sapphic / Achillean / Poly; Retelling → retelling type. Untick a level and everything under it goes too.
+  - Tropes have a search box. Spice (with the Scoville Smut Scale descriptions) and story focus appear only for Romance or a romantic subplot. Choosing **Spice-led** ticks **Smut**; you can untick it.
+  - **+ Add** in any group adds a new value to that list for all books.
+  - **Save** confirms everything as set by you.
+- **Your approved lists are loaded:** 200 values. The rough genres from the shelf photos are kept as "Rough genre". Clear-cut ones carried over as unconfirmed genres (249 links, e.g. Historical romance → Romance + Historical romance). A rough genre goes away once you set that book's genres.
+- **Filters:** a group for every classification field, shown once at least one book uses it.
+- **Spreadsheet download:** new columns for subgenres, tropes, audience, vibe, romantic subplot, spice, story focus, subjects, reasons and rough genre.
+- **Tested:**
+  - 13 database checks (lists loading, re-running safely, deeper levels, spice rules, privacy).
+  - All earlier tests still pass.
+  - The editor and filters at phone width in light and dark mode, using a copy of your real data.
+
 ## 2026-10-28 · Phase 2, step 1 done: starter lists approved
 
 - You approved `docs/starter-lists.md` (rev. 3).

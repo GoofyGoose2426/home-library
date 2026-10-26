@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FACETS } from "@/lib/classification";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
 import {
   FLAGS,
@@ -58,7 +59,7 @@ export function LibraryFilterBar({
     });
   const clearAll = () =>
     onChange((f) => ({
-      ...f, status: [], format: [], genre: [], source: [], series: [], flag: [], review: [],
+      ...f, status: [], format: [], tag: [], source: [], series: [], flag: [], review: [],
       stars: [], writing: [], recommend: [], audio: [],
     }));
 
@@ -66,7 +67,11 @@ export function LibraryFilterBar({
   const applied: { key: ListKey; value: string; label: string }[] = [
     ...filters.status.map((v) => ({ key: "status" as const, value: v, label: STATUS.find((s) => s[0] === v)?.[1] ?? v })),
     ...filters.format.map((v) => ({ key: "format" as const, value: v, label: FORMAT_FILTER_LABEL[v] ?? v })),
-    ...filters.genre.map((v) => ({ key: "genre" as const, value: v, label: v })),
+    ...filters.tag.map((v) => {
+      const i = v.indexOf(":");
+      const group = FACETS.find((g) => g.key === v.slice(0, i));
+      return { key: "tag" as const, value: v, label: group?.key === "genre" ? v.slice(i + 1) : `${group?.title ?? v.slice(0, i)}: ${v.slice(i + 1)}` };
+    }),
     ...filters.source.map((v) => ({ key: "source" as const, value: v, label: SOURCE_LABEL[v] ?? v })),
     ...filters.series.map((v) => ({ key: "series" as const, value: v, label: `Series: ${v}` })),
     ...filters.flag.map((v) => ({ key: "flag" as const, value: v, label: FLAGS[v] })),
@@ -193,13 +198,15 @@ export function LibraryFilterBar({
               ))}
             </Group>
           ))}
-          <Group title="Genre" note="Rough, from the shelf photos. Ebooks and audiobooks get genres in Phase 2.">
-            {options.genre.map(([v, n]) => (
-              <Chip key={v} on={filters.genre.includes(v)} onClick={() => toggle("genre", v)} count={n}>
-                {v}
-              </Chip>
-            ))}
-          </Group>
+{FACETS.filter((g) => options.tag[g.key]?.length).map((g) => (
+            <Group key={g.key} title={g.title} note={g.note}>
+              {options.tag[g.key].map(([v, n]) => (
+                <Chip key={v} on={filters.tag.includes(`${g.key}:${v}`)} onClick={() => toggle("tag", `${g.key}:${v}`)} count={n}>
+                  {v}
+                </Chip>
+              ))}
+            </Group>
+          ))}
           <Group title="Where it lives">
             {options.source.map(([v, n]) => (
               <Chip key={v} on={filters.source.includes(v)} onClick={() => toggle("source", v)} count={n}>

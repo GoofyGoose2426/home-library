@@ -2,6 +2,7 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
 import type { CopyFormat, CopySource } from "./library";
+import type { Audience, ListTag, TagKind } from "./classification";
 import type { Recommendation } from "./ratings";
 
 export type FieldSource = { source: string; confirmed: boolean };
@@ -64,7 +65,9 @@ export type Book = {
   writingQuality: number | null;
   recommendation: Recommendation | null;
   pieces: { id: string; title: string; kind: string; isRead: boolean }[];
-  genres: { name: string; kind: string; source: string; confirmed: boolean }[];
+  // Every list value on the book (genres, subgenres, tropes…), with its source.
+  tags: { id: string; name: string; kind: TagKind; source: string; confirmed: boolean }[];
+  audience: Audience | null;
   // Copies she owns now; ones she's parted with are in goneCopies.
   copies: BookCopy[];
   goneCopies: BookCopy[];
@@ -72,6 +75,8 @@ export type Book = {
   // Existing names, offered as suggestions when editing.
   seriesNames: string[];
   peopleNames: string[];
+  // Every list, for the classification editor.
+  lists: ListTag[];
 };
 
 const FORMAT_ORDER: CopyFormat[] = ["hardcover", "trade_paperback", "mass_market", "print_unknown", "ebook", "audiobook"];
@@ -88,19 +93,34 @@ export async function namesOf(supabase: SupabaseClient, table: "series" | "peopl
   }
 }
 
+// Every list value (not the rough genres), in list order, with its parents.
+export async function loadLists(supabase: SupabaseClient): Promise<ListTag[]> {
+  const [tags, parents] = await Promise.all([
+    supabase.from("tags").select("id, kind, name, sort_order").neq("kind", "rough_genre").range(0, 4999),
+    supabase.from("tag_parents").select("tag_id, parent_id").range(0, 9999),
+  ]);
+  if (tags.error) throw new Error(tags.error.message);
+  if (parents.error) throw new Error(parents.error.message);
+  const parentsOf = new Map<string, string[]>();
+  for (const p of parents.data ?? []) parentsOf.set(p.tag_id, [...(parentsOf.get(p.tag_id) ?? []), p.parent_id]);
+  return (tags.data ?? [])
+    .sort((a, b) => (a.sort_order ?? 9999) - (b.sort_order ?? 9999) || a.name.localeCompare(b.name))
+    .map((t) => ({ id: t.id, kind: t.kind, name: t.name, parentIds: parentsOf.get(t.id) ?? [] }));
+}
+
 export async function loadBook(supabase: SupabaseClient, id: string): Promise<Book | null> {
   if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
 
   const { data: t, error } = await supabase
     .from("titles")
     .select(
-      `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description,
+      `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description, audience,
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
        reviews(rating, writing_quality, recommendation),
        pieces(id, position, piece_title, kind, is_read),
        credits(role, position, people(name)),
-       title_tags(source, confirmed, tags(kind, name)),
+       title_tags(source, confirmed, tags(id, kind, name)),
        copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_path, cover_confirmed,
               pages, audio_minutes, est_words, contains_from, contains_to, bonus_notes, keepsake_notes,
               on_loan_to, gone_at, gone_reason, credits(role, position, people(name)),
@@ -154,9 +174,10 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     .sort((a, b) => a.position - b.position)
     .flatMap((c) => (c.people ? [{ name: c.people.name, role: c.role }] : []));
 
-  const [seriesNames, peopleNames, signed] = await Promise.all([
+  const [seriesNames, peopleNames, lists, signed] = await Promise.all([
     namesOf(supabase, "series"),
     namesOf(supabase, "people"),
+    loadLists(supabase),
     signCoverPaths(
       supabase,
       (t.copies as unknown as { cover_path: string | null }[]).flatMap((c) => (c.cover_path ? [c.cover_path] : [])),
@@ -209,6 +230,7 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
   return {
     seriesNames,
     peopleNames,
+    lists,
     id: t.id,
     title: t.title,
     subtitle: t.subtitle,
@@ -231,8 +253,9 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
     pieces: (t.pieces as unknown as { id: string; position: number; piece_title: string; kind: string; is_read: boolean }[])
       .sort((a, b) => a.position - b.position)
       .map((p) => ({ id: p.id, title: p.piece_title, kind: p.kind, isRead: p.is_read })),
-    genres: (t.title_tags as unknown as { source: string; confirmed: boolean; tags: { kind: string; name: string } | null }[])
+    tags: (t.title_tags as unknown as { source: string; confirmed: boolean; tags: { id: string; kind: TagKind; name: string } | null }[])
       .flatMap((tt) => (tt.tags ? [{ ...tt.tags, source: tt.source, confirmed: tt.confirmed }] : [])),
+    audience: t.audience,
     copies: allCopies.filter((c) => !c.goneAt),
     goneCopies: allCopies.filter((c) => c.goneAt),
     sources: sourcesFor(t.id),

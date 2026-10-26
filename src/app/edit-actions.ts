@@ -4,6 +4,17 @@ import { revalidatePath } from "next/cache";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { ownerClient } from "@/lib/supabase/owner";
 import type { GoneReason } from "@/lib/gone";
+import {
+  AUDIENCE,
+  SPICE,
+  STORY_FOCUS,
+  VIBE,
+  type Audience,
+  type Spice,
+  type StoryFocus,
+  type TagKind,
+  type Vibe,
+} from "@/lib/classification";
 import { isQuarterStar, type Recommendation } from "@/lib/ratings";
 
 // Quick edits. Each one records Alexandra as the source of the value, which
@@ -454,5 +465,68 @@ export async function deleteCopy(
     return { ok: true, titleDeleted: !!row?.title_deleted };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't remove that copy." };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Classification: genres, subgenres and their deeper levels, tropes, story
+// fields. One all-or-nothing database call; everything is marked hers.
+
+export type ClassificationInput = {
+  tagIds: string[];
+  newTags: { kind: TagKind; name: string; parentIds: string[] }[];
+  audience: Audience | null;
+  romanticSubplot: boolean | null;
+  spice: Spice | null;
+  storyFocus: StoryFocus | null;
+  vibeMain: Vibe | null;
+  vibeSecond: Vibe | null;
+};
+
+const NEW_TAG_KINDS: TagKind[] = [
+  "genre", "subgenre", "supernatural_being", "shifter_type", "queer_romance_type", "retelling_type",
+  "trope", "subject", "reason", "gn_style", "manga_demographic", "franchise",
+];
+
+export async function saveClassification(titleId: string, c: ClassificationInput): Promise<Result> {
+  try {
+    const oneOf = (v: unknown, list: readonly unknown[]) => v === null || list.includes(v);
+    check(
+      UUID.test(titleId) &&
+        Array.isArray(c.tagIds) && c.tagIds.length <= 300 && c.tagIds.every((id) => UUID.test(id)) &&
+        Array.isArray(c.newTags) && c.newTags.length <= 30 &&
+        c.newTags.every(
+          (t) =>
+            NEW_TAG_KINDS.includes(t.kind) && typeof t.name === "string" && t.name.trim().length > 0 && t.name.length <= 80 &&
+            Array.isArray(t.parentIds) && t.parentIds.length <= 20 && t.parentIds.every((id) => UUID.test(id)),
+        ) &&
+        oneOf(c.audience, AUDIENCE.map((a) => a[0])) &&
+        oneOf(c.romanticSubplot, [true, false]) &&
+        oneOf(c.spice, SPICE.map((x) => x[0])) &&
+        oneOf(c.storyFocus, STORY_FOCUS.map((x) => x[0])) &&
+        oneOf(c.vibeMain, VIBE.map((x) => x[0])) &&
+        oneOf(c.vibeSecond, VIBE.map((x) => x[0])),
+      "Some of those choices aren't valid.",
+    );
+    const { supabase } = await ownerClient();
+    await must(
+      supabase.rpc("save_classification", {
+        p_title_id: titleId,
+        p_tag_ids: c.tagIds,
+        p_new_tags: c.newTags.map((t) => ({ kind: t.kind, name: t.name.trim(), parent_ids: t.parentIds })),
+        p_fields: {
+          audience: c.audience,
+          romantic_subplot: c.romanticSubplot,
+          spice: c.spice,
+          story_focus: c.storyFocus,
+          vibe_main: c.vibeMain,
+          vibe_second: c.vibeSecond,
+        },
+      }),
+    );
+    refresh(titleId);
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
   }
 }

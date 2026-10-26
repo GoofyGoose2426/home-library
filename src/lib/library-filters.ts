@@ -1,4 +1,5 @@
 import type { CopyFormat, LibraryBook } from "./library";
+import { FACETS } from "./classification";
 import { AUDIO, RECOMMEND, WRITING, find } from "./ratings";
 
 // Sort and filter for the library views. Within a group, any choice matches
@@ -47,7 +48,8 @@ export type Filters = {
   sort: SortKey;
   status: LibraryBook["readStatus"][];
   format: CopyFormat[];
-  genre: string[];
+  // Classification, as "group:value" (e.g. "subgenre:Fantasy romance").
+  tag: string[];
   source: string[];
   series: string[];
   flag: FlagKey[];
@@ -59,7 +61,7 @@ export type Filters = {
 };
 
 export const LIST_KEYS = [
-  "status", "format", "genre", "source", "series", "flag", "review", "stars", "writing", "recommend", "audio",
+  "status", "format", "tag", "source", "series", "flag", "review", "stars", "writing", "recommend", "audio",
 ] as const;
 
 // Rating filters. Stars group by whole star ("4" is 4.00–4.75); "none" is
@@ -105,7 +107,8 @@ export function readFilters(params: URLSearchParams): Filters {
     sort: sort && sort in SORTS ? (sort as SortKey) : "title",
     status: params.getAll("status") as Filters["status"],
     format: params.getAll("format") as CopyFormat[],
-    genre: params.getAll("genre"),
+    // Older links used genre=Romance.
+    tag: [...params.getAll("tag"), ...params.getAll("genre").map((g) => `genre:${g}`)],
     source: params.getAll("source"),
     series: params.getAll("series"),
     flag: params.getAll("flag").filter((f): f is FlagKey => f in FLAGS),
@@ -166,7 +169,14 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
     }
     if (f.status.length && !f.status.includes(b.readStatus)) return false;
     if (f.format.length && !b.formats.some((x) => f.format.includes(x))) return false;
-    if (f.genre.length && !b.genres.some((x) => f.genre.includes(x))) return false;
+    if (f.tag.length) {
+      const groups = new Map<string, string[]>();
+      for (const t of f.tag) {
+        const i = t.indexOf(":");
+        groups.set(t.slice(0, i), [...(groups.get(t.slice(0, i)) ?? []), t.slice(i + 1)]);
+      }
+      for (const [key, values] of groups) if (!(b.facets[key] ?? []).some((x) => values.includes(x))) return false;
+    }
     if (f.source.length && !b.sources.some((x) => f.source.includes(x))) return false;
     if (f.series.length && !(b.series && f.series.includes(b.series))) return false;
     for (const flag of f.flag) {
@@ -214,7 +224,9 @@ export function filterOptions(books: LibraryBook[]) {
     return [...m.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   };
   return {
-    genre: count(books.flatMap((b) => b.genres)),
+    tag: Object.fromEntries(
+      FACETS.map((g) => [g.key, count(books.flatMap((b) => b.facets[g.key] ?? []))]),
+    ) as Record<string, [string, number][]>,
     source: count(books.flatMap((b) => b.sources)),
     series: count(books.flatMap((b) => (b.series ? [b.series] : []))),
     format: count(books.flatMap((b) => b.formats)),
