@@ -2,6 +2,16 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Scan to add, and Add another / Finish
+
+- **Scan the barcode:** the big button at the top of + Add opens your phone's back camera. Line up the barcode on the back of the book; when it reads the ISBN, the phone buzzes and Open Library is searched for that exact edition. It uses Chrome's built-in barcode reader, with the ZXing library as a backup in other browsers. Non-book barcodes and a blocked camera each get a clear message.
+- **Or search by title, author or ISBN** in the box below it, as before.
+- **After saving**, you stay on the Add page and choose:
+  - **Add another book** (or **Add another copy**): opens a fresh, empty search.
+  - **Finish**: back to your library (or **Back to the book** when adding a copy).
+  - **Open its page**: to edit anything else.
+- Going back no longer reopens a finished search. The duplicate check refreshes after each save, so adding the same book twice is still caught.
+
 ## 2026-10-27 · Phase 1b, step 3: Add a book and add a copy
 
 - **+ Add** at the top of the library. Search Open Library by title, author or **ISBN** (the ISBN finds your exact edition, with its publisher and page count), pick the right result, check the details, and save. **Can't find it? Enter it yourself** opens a blank form.

@@ -2,8 +2,9 @@
 
 /* eslint-disable @next/next/no-img-element -- hotlinked Open Library covers */
 import { useRouter } from "next/navigation";
-import { useId, useMemo, useState, useTransition } from "react";
+import { useCallback, useId, useMemo, useState, useTransition } from "react";
 import { addBook, type NewBook, type NewCopy } from "@/app/edit-actions";
+import { BarcodeScanner } from "@/components/barcode-scanner";
 import { copyLabel } from "@/lib/copy-labels";
 import type { LibraryBook } from "@/lib/library";
 import { findBooks } from "@/lib/lookup";
@@ -108,8 +109,65 @@ export function AddBook({
   seriesNames: string[];
   peopleNames: string[];
 }) {
-  const [picked, setPicked] = useState<Result | null>(copyOf ? { key: "", title: copyOf.title, authors: copyOf.authors } : null);
+  const router = useRouter();
+  const [picked, setPicked] = useState<Result | null>(null);
   const [manual, setManual] = useState(false);
+  const [saved, setSaved] = useState<{ titleId: string; title: string; asCopy: boolean } | null>(null);
+  // Bumping this starts a fresh, empty form.
+  const [round, setRound] = useState(0);
+
+  function startOver() {
+    setSaved(null);
+    setPicked(null);
+    setManual(false);
+    setRound((r) => r + 1);
+    window.scrollTo({ top: 0 });
+  }
+
+  if (saved) {
+    return (
+      <div className="mt-6 rounded-3xl border border-border bg-surface p-6 text-center">
+        <p className="text-4xl" aria-hidden>
+          📚
+        </p>
+        <h1 className="mt-2 font-serif text-2xl font-semibold">
+          {saved.asCopy ? "Copy added" : "Added to your library"}
+        </h1>
+        <p className="mt-1 text-muted">{saved.title}</p>
+        <div className="mt-6 flex flex-col gap-2">
+          <button
+            type="button"
+            onClick={startOver}
+            className="min-h-12 rounded-2xl bg-accent px-5 font-medium text-on-accent"
+          >
+            {copyOf ? "Add another copy" : "Add another book"}
+          </button>
+          <button
+            type="button"
+            onClick={() => router.replace(copyOf ? `/books/${copyOf.id}` : "/")}
+            className="min-h-12 rounded-2xl border border-border px-5 font-medium"
+          >
+            {copyOf ? "Back to the book" : "Finish"}
+          </button>
+          {!copyOf && (
+            <button
+              type="button"
+              onClick={() => router.replace(`/books/${saved.titleId}`)}
+              className="mt-1 text-sm text-accent underline-offset-4 hover:underline"
+            >
+              Open its page
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  const onSaved = (titleId: string, title: string, asCopy: boolean) => {
+    setSaved({ titleId, title, asCopy });
+    // Reload the library behind the page so the next book's duplicate check sees this one.
+    router.refresh();
+  };
 
   if (copyOf) {
     return (
@@ -120,7 +178,15 @@ export function AddBook({
           {copyOf.authors.length > 0 && ` by ${copyOf.authors.join(", ")}`}. You have:{" "}
           {[...new Set(copyOf.copies.map(copyLabel))].join(", ")}.
         </p>
-        <BookForm result={picked!} copyOfId={copyOf.id} library={library} seriesNames={seriesNames} peopleNames={peopleNames} />
+        <BookForm
+          key={round}
+          result={{ key: "", title: copyOf.title, authors: copyOf.authors }}
+          copyOfId={copyOf.id}
+          library={library}
+          seriesNames={seriesNames}
+          peopleNames={peopleNames}
+          onSaved={onSaved}
+        />
       </>
     );
   }
@@ -141,15 +207,17 @@ export function AddBook({
             ← Search again
           </button>
           <BookForm
+            key={round}
             result={picked ?? { key: "", title: "", authors: [] }}
             copyOfId={null}
             library={library}
             seriesNames={seriesNames}
             peopleNames={peopleNames}
+            onSaved={onSaved}
           />
         </>
       ) : (
-        <Search library={library} onPick={setPicked} onManual={() => setManual(true)} />
+        <Search key={round} library={library} onPick={setPicked} onManual={() => setManual(true)} />
       )}
     </>
   );
@@ -177,30 +245,56 @@ function Search({
   const [results, setResults] = useState<Result[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, startBusy] = useTransition();
+  const [scanning, setScanning] = useState(false);
+
+  const run = useCallback((q: string) => {
+    setError(null);
+    startBusy(async () => {
+      try {
+        setResults(await searchOpenLibrary(q.trim()));
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Search didn't work.");
+      }
+    });
+  }, []);
+
+  const scanned = useCallback(
+    (isbn: string) => {
+      setScanning(false);
+      setQuery(isbn);
+      run(isbn);
+    },
+    [run],
+  );
 
   return (
     <div className="mt-4">
+      <button
+        type="button"
+        onClick={() => {
+          setResults(null);
+          setScanning(true);
+        }}
+        className="flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-accent px-5 text-lg font-medium text-on-accent"
+      >
+        <span aria-hidden>▥</span> Scan the barcode
+      </button>
+      {scanning && <BarcodeScanner onIsbn={scanned} onClose={() => setScanning(false)} />}
+
+      <p className="mt-5 text-sm font-medium">Or search by title, author or ISBN</p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setError(null);
-          startBusy(async () => {
-            try {
-              setResults(await searchOpenLibrary(query.trim()));
-            } catch (err) {
-              setError(err instanceof Error ? err.message : "Search didn't work.");
-            }
-          });
+          run(query);
         }}
-        className="flex gap-2"
+        className="mt-1 flex gap-2"
       >
         <input
-          autoFocus
           type="search"
           enterKeyHint="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Title, author or ISBN"
+          placeholder="e.g. Fourth Wing, or Yarros"
           className="min-w-0 flex-1 rounded-2xl border-2 border-border bg-surface px-4 py-3 text-lg outline-none focus:border-accent"
         />
         <button
@@ -214,7 +308,7 @@ function Search({
       <p className="mt-2 text-sm text-muted" aria-live="polite">
         {busy
           ? "Searching Open Library… this can take a few seconds."
-          : "The ISBN (on the back, above the barcode) finds your exact edition. Searches Open Library."}
+          : "Scanning or typing the ISBN finds your exact edition. Searches Open Library."}
       </p>
       {error && (
         <p role="alert" className="mt-3 rounded-2xl bg-accent-soft px-4 py-2 text-sm">
@@ -274,14 +368,15 @@ function BookForm({
   library,
   seriesNames,
   peopleNames,
+  onSaved,
 }: {
   result: Result;
   copyOfId: string | null;
   library: OwnedBook[];
   seriesNames: string[];
   peopleNames: string[];
+  onSaved: (titleId: string, title: string, asCopy: boolean) => void;
 }) {
-  const router = useRouter();
   const ids = useId();
   const [title, setTitle] = useState(result.title);
   const [subtitle, setSubtitle] = useState(result.subtitle ?? "");
@@ -354,7 +449,7 @@ function BookForm({
         setError(res.error);
         return;
       }
-      router.push(`/books/${res.titleId}`);
+      onSaved(res.titleId, addingCopyTo ? (owned?.title ?? result.title) : title.trim(), !!addingCopyTo);
     });
   }
 
