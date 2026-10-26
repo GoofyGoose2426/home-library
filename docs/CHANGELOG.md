@@ -2,6 +2,18 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-28 · Phase 2, step 1 done: starter lists approved
+
+- You approved `docs/starter-lists.md` (rev. 3).
+- **Smut** is a subgenre of Romance. **Romantasy** is called **Fantasy romance**.
+- Some subgenres go deeper:
+  - **Supernatural beings:** shifters, vampires, fae, witches/wizards/warlocks, deities, demons, ghosts and angels.
+  - **Shifter type:** dragons, wolves, bears, big cats, various real animals and various mythological animals.
+  - **Queer romance type:** Sapphic, Achillean and Poly.
+  - **Retelling type:** Greek/Roman myths, Celtic/Norse myths, Grimm's fairy tales, other fairy tales & folklore, and classic literature.
+- **Audience** (Adult / Young adult / Middle grade / Children's) is a new field, separate from genre.
+- Lists grow as you categorize. The build plan (rev. 5) and the Phase 2 plan are updated to match.
+
 ## 2026-10-28 · Phase 2 plan approved; step 1 starter lists drafted
 
 - Phase 2 (Enrichment) approved with your answers:
