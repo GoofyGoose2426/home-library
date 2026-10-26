@@ -2,6 +2,11 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1 complete (step 14 demo)
+
+- Walked through every screen with your real library at phone and desktop size, in light and dark mode, and re-ran the privacy, security and data checks. Everything passes. The full review and tidy-up list is in `docs/phase-1-review.md`.
+- Small fix: on colour cards, the ✎ button no longer covers the author's name.
+
 ## 2026-10-26 · Phase 1, step 13: Phone app and safety nets
 
 - **Add to Home Screen:** the app now has its own icon (three books on a terracotta shelf) and the name "Library", and opens full-screen like an app.

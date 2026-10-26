@@ -59,7 +59,8 @@ export function BookCover({
       aria-label={`${title} (no cover yet)`}
     >
       <p className="line-clamp-5 font-serif text-sm font-semibold leading-snug">{title}</p>
-      {authors.length > 0 && <p className="line-clamp-2 text-[11px] opacity-80">{authors.join(", ")}</p>}
+      {/* Right padding leaves room for the edit button in the grid. */}
+      {authors.length > 0 && <p className="line-clamp-2 pr-7 text-[11px] opacity-80">{authors.join(", ")}</p>}
     </div>
   );
 }
