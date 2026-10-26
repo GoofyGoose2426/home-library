@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1, step 10: Book page
+
+- Tap any cover or table row to open the book's own page. **← Library** takes you back to the list as you left it, with search and filters kept.
+- Shows a big cover (or colour card), title, authors, series with its number, read status, book type, and whether it's left out of stats. Any "Needs checking" note shows too.
+- **Your copies:** one card per format, saying where it lives (Bookshelf, Kobo, Audible, Libro.fm), plus edition, ISBN, narrators, length, keepsake notes and loans when known.
+- **Series:** every volume you own, in order, each one tappable. Tapping the series name shows the whole series in the library.
+- **Sources:** small grey text under each value says where it came from ("From your photos and screenshots · not confirmed yet", "Open Library", "Set by you").
+- A note lists what Phase 2 will fill in: subgenres, tropes, vibe, spice, story focus, publisher, length and representation.
+
 ## 2026-10-26 · No more bookcase locations
 
 - At your request, the app no longer tracks which bookcase a book is on. Print copies now just say **Bookshelf**. Ebooks and audiobooks say which app they're in, e.g. "Kobo ebook", "Libro.fm audiobook".

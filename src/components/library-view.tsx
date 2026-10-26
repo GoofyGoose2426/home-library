@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useMemo, useSyncExternalStore } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { BookCover } from "@/components/book-cover";
 import { LibraryFilterBar } from "@/components/library-filter-bar";
@@ -135,18 +136,20 @@ function Grid({ books }: { books: LibraryBook[] }) {
     <ul className="mt-5 grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7">
       {books.map((b) => (
         <li key={b.id} className="[content-visibility:auto] [contain-intrinsic-size:auto_260px]">
-          <BookCover title={b.title} authors={b.authors} url={b.coverUrl} />
-          <p className="mt-1.5 line-clamp-2 text-xs font-medium leading-snug">{b.title}</p>
-          {b.authors.length > 0 && <p className="line-clamp-1 text-[11px] text-muted">{b.authors.join(", ")}</p>}
-          <p className="line-clamp-1 text-[11px] text-muted">
-            {b.readStatus !== "unread" && (
-              <span className="font-medium text-foreground">
-                {b.readStatus === "read" ? "✓ Read" : "Partly read"} ·{" "}
-              </span>
-            )}
-            {copyList(b)}
-            {b.onLoanTo.length > 0 && ` · On loan to ${b.onLoanTo.join(", ")}`}
-          </p>
+          <Link href={`/books/${b.id}`} className="block rounded-xl focus-visible:outline-2 focus-visible:outline-accent">
+            <BookCover title={b.title} authors={b.authors} url={b.coverUrl} />
+            <p className="mt-1.5 line-clamp-2 text-xs font-medium leading-snug">{b.title}</p>
+            {b.authors.length > 0 && <p className="line-clamp-1 text-[11px] text-muted">{b.authors.join(", ")}</p>}
+            <p className="line-clamp-1 text-[11px] text-muted">
+              {b.readStatus !== "unread" && (
+                <span className="font-medium text-foreground">
+                  {b.readStatus === "read" ? "✓ Read" : "Partly read"} ·{" "}
+                </span>
+              )}
+              {copyList(b)}
+              {b.onLoanTo.length > 0 && ` · On loan to ${b.onLoanTo.join(", ")}`}
+            </p>
+          </Link>
         </li>
       ))}
     </ul>
@@ -167,12 +170,14 @@ function Table({ books }: { books: LibraryBook[] }) {
         </thead>
         <tbody>
           {books.map((b) => (
-            <tr key={b.id} className="border-b border-border last:border-0 [content-visibility:auto] [contain-intrinsic-size:auto_56px]">
+            <tr key={b.id} className="relative border-b border-border last:border-0 [content-visibility:auto] [contain-intrinsic-size:auto_56px]">
               <td className="px-3 py-2 align-top">
                 <div className="flex gap-3">
                   <BookCover title={b.title} authors={[]} url={b.coverUrl} className="w-9 shrink-0 !rounded-md !p-0.5 [&_p]:hidden" />
                   <div className="min-w-0">
-                    <p className="font-medium leading-snug">{b.title}</p>
+                    <Link href={`/books/${b.id}`} className="font-medium leading-snug underline-offset-4 hover:underline after:absolute after:inset-0">
+                      {b.title}
+                    </Link>
                     {seriesLabel(b) && <p className="text-xs text-muted">{seriesLabel(b)}</p>}
                     {/* On narrow screens the hidden columns fold in here. */}
                     <p className="text-xs text-muted md:hidden">{b.authors.join(", ")}</p>
