@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-26 · Phase 1, step 8: Cover grid and table
+
+- The home page now shows your whole library: 1,058 books, A to Z.
+- **Covers** view: the cover (or colour card), title, author, "✓ Read" and the formats you own. 3 across on a phone, up to 7 on a big screen.
+- **Table** view: title, series, author, read status, format and shelf. On a phone, author and format fold in under the title so nothing scrolls sideways.
+- The app remembers which view you used last on each device. Checked at phone width and on desktop, in light and dark mode.
+
 ## 2026-10-26 · Phase 1, step 7: Best-guess covers
 
 - Looked up every book on Open Library (free). **781 books now have a cover**, labelled "unconfirmed" until the copy has an ISBN. The 3 Libro.fm audiobooks found by ISBN are confirmed. 277 books show a warm colour card with the title and author instead.
