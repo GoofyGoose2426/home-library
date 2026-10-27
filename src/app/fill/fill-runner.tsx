@@ -147,7 +147,9 @@ export function FillRunner({
                 {r.title}
               </Link>
               <span className="block text-xs text-muted">
-                {r.source
+                {r.note
+                  ? r.note
+                  : r.source
                   ? r.filled.length
                     ? `${SOURCE[r.source]}: ${r.filled.join(", ")}`
                     : `${SOURCE[r.source]}: nothing new`

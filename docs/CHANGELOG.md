@@ -2,6 +2,12 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Fill in details keeps going when Open Library is slow
+
+- If Open Library doesn't answer for a book, that book is set aside ("It'll be checked next time") and the run carries on, instead of stopping.
+- If no book in a batch gets an answer, the run pauses with "Open Library isn't answering right now. Tap Carry on in a few minutes." Nothing is lost.
+- Tested against today's slow Open Library: one book timed out and was set aside; the other five were filled in as usual.
+
 ## 2026-10-27 · Share link (view only)
 
 - **Sharing** (in Tools): turn sharing on, copy the link, see what viewers see, reset the link (the old one stops working at once), or turn it off.

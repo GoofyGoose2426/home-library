@@ -24,6 +24,8 @@ export type FillResult = {
   title: string;
   source: "openlibrary" | "googlebooks" | "both" | null;
   filled: string[];
+  // Why a book couldn't be checked this time (it stays on the to-do list).
+  note?: string;
 };
 
 const seriesKey = (s: string) => fold(s).replace(/^the\s+/, "").replace(/\s+series$/, "").trim();
@@ -58,7 +60,15 @@ export async function fillBookDetails(
         .map((c) => c.people!.name);
       const copies = (t.copies as { id: string; format: string; isbn13: string | null; pages: number | null; gone_at: string | null }[])
         .filter((c) => !c.gone_at);
-      const found = await findDetails({ title: t.title, authors, copies }, process.env.GOOGLE_BOOKS_API_KEY || undefined);
+      let found;
+      try {
+        found = await findDetails({ title: t.title, authors, copies }, process.env.GOOGLE_BOOKS_API_KEY || undefined);
+      } catch {
+        // Open Library was too slow or down. Leave the book unchecked so a
+        // later run picks it up, and carry on with the next one.
+        results.push({ id: t.id, title: t.title, source: null, filled: [], note: "Open Library didn't answer. It'll be checked next time." });
+        continue;
+      }
       googleError ??= found.googleError;
 
       const filled = new Set<string>();
@@ -83,6 +93,9 @@ export async function fillBookDetails(
       });
     }
     revalidatePath("/");
+    if (results.length && results.every((r) => r.note)) {
+      return { ok: false, error: "Open Library isn't answering right now. Tap Carry on in a few minutes; nothing is lost." };
+    }
     return { ok: true, results, googleError };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't fill in those books." };
