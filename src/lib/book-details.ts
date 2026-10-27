@@ -22,6 +22,8 @@ type Source = "openlibrary" | "googlebooks";
 // really came from. The sets never share a field.
 export type Found = {
   titles: TitleDetails[];
+  // Why Google Books couldn't be used for this book, if it couldn't.
+  googleError?: string;
   copies: { id: string; source: Source; publisher?: string; pages?: number; est_words?: number }[];
 };
 
@@ -57,6 +59,26 @@ async function getJson(url: string): Promise<unknown | null> {
     }
   }
   throw new Error("The book service didn't answer. Try again in a few minutes.");
+}
+
+// Google answers errors (bad key, API not enabled, daily limit) with a
+// message; pass it on instead of quietly finding nothing.
+async function getGoogle(url: string): Promise<unknown> {
+  const res = await fetch(url, { signal: AbortSignal.timeout(12000), cache: "no-store" });
+  if (res.ok) return res.json();
+  let message = `Google Books answered ${res.status}`;
+  try {
+    const body = (await res.json()) as { error?: { message?: string } };
+    if (body.error?.message) message += `: ${body.error.message}`;
+  } catch {}
+  throw new Error(message);
+}
+
+export async function testGoogleBooks(key: string) {
+  const data = (await getGoogle(
+    `https://www.googleapis.com/books/v1/volumes?${new URLSearchParams({ q: "intitle:Kindred inauthor:Butler", maxResults: "3", key })}`,
+  )) as { totalItems?: number };
+  return data.totalItems ?? 0;
 }
 
 const VOLUME = /(?:\bvol(?:ume)?\.?|\bbook|#)\s*(\d+)/i;
@@ -149,7 +171,7 @@ type GVolume = { volumeInfo?: { title?: string; subtitle?: string; authors?: str
 async function fromGoogleBooks(book: DetailsInput, key: string): Promise<TitleDetails | null> {
   const clean = book.title.replace(/\(.*?\)/g, "").trim();
   const q = `intitle:${clean}${book.authors[0] ? ` inauthor:${book.authors[0]}` : ""}`;
-  const data = (await getJson(
+  const data = (await getGoogle(
     `https://www.googleapis.com/books/v1/volumes?${new URLSearchParams({ q, maxResults: "8", printType: "books", key })}`,
   )) as { items?: GVolume[] } | null;
   const vol = data?.items?.find((v) => sameBook(book, { title: v.volumeInfo?.title ?? "", authors: v.volumeInfo?.authors ?? [] }));
@@ -166,12 +188,18 @@ async function fromGoogleBooks(book: DetailsInput, key: string): Promise<TitleDe
 
 export async function findDetails(book: DetailsInput, googleKey?: string): Promise<Found> {
   const titles: TitleDetails[] = [];
+  let googleError: string | undefined;
   const ol = await fromOpenLibrary(book);
   if (ol) titles.push(ol);
   // Google Books fills only what Open Library didn't have.
   if (googleKey && (!ol?.description || !ol.typical_pages || !ol.series)) {
     await sleep(200);
-    const g = await fromGoogleBooks(book, googleKey);
+    let g: TitleDetails | null = null;
+    try {
+      g = await fromGoogleBooks(book, googleKey);
+    } catch (e) {
+      googleError = e instanceof Error ? e.message : "Google Books didn't answer.";
+    }
     if (g) {
       const extra: TitleDetails = { source: "googlebooks" };
       if (!ol?.description && g.description) extra.description = g.description;
@@ -200,5 +228,5 @@ export async function findDetails(book: DetailsInput, googleKey?: string): Promi
     }
     if (found.publisher || found.pages || found.est_words) copies.push(found);
   }
-  return { titles, copies };
+  return { titles, copies, googleError };
 }

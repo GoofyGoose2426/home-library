@@ -31,11 +31,11 @@ export default function FillPage() {
 
 async function Pending() {
   const supabase = await createClient();
-  const rows: { id: string; title: string; details_checked_at: string | null; copies: { gone_at: string | null }[] }[] = [];
+  const rows: { id: string; title: string; details_checked_at: string | null; description: string | null; copies: { gone_at: string | null }[] }[] = [];
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
       .from("titles")
-      .select("id, title, details_checked_at, copies(gone_at)")
+      .select("id, title, details_checked_at, description, copies(gone_at)")
       .order("title")
       .range(from, from + 999);
     if (error) throw new Error(error.message);
@@ -47,6 +47,7 @@ async function Pending() {
     <FillRunner
       unchecked={owned.filter((r) => !r.details_checked_at).map((r) => r.id)}
       checked={owned.filter((r) => r.details_checked_at).map((r) => r.id)}
+      missingDescription={owned.filter((r) => r.details_checked_at && !r.description).map((r) => r.id)}
       google={!!process.env.GOOGLE_BOOKS_API_KEY}
     />
   );

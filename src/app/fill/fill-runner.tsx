@@ -2,14 +2,26 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { fillBookDetails, type FillResult } from "./actions";
+import { checkGoogleBooks, fillBookDetails, type FillResult } from "./actions";
 
 const BATCH = 4;
 const SOURCE: Record<string, string> = { openlibrary: "Open Library", googlebooks: "Google Books", both: "Open Library + Google Books" };
 
-export function FillRunner({ unchecked, checked, google }: { unchecked: string[]; checked: string[]; google: boolean }) {
-  const [again, setAgain] = useState(false);
-  const queue = again ? [...unchecked, ...checked] : unchecked;
+export function FillRunner({
+  unchecked,
+  checked,
+  missingDescription,
+  google,
+}: {
+  unchecked: string[];
+  checked: string[];
+  missingDescription: string[];
+  google: boolean;
+}) {
+  const [again, setAgain] = useState<"none" | "missing" | "all">("none");
+  const queue = [...unchecked, ...(again === "all" ? checked : again === "missing" ? missingDescription : [])];
+  const [googleNote, setGoogleNote] = useState<{ ok: boolean; message: string } | null>(null);
+  const [testing, setTesting] = useState(false);
   const [running, setRunning] = useState(false);
   const [done, setDone] = useState(0);
   const [results, setResults] = useState<FillResult[]>([]);
@@ -31,6 +43,7 @@ export function FillRunner({ unchecked, checked, google }: { unchecked: string[]
       position.current += batch.length;
       setDone(position.current);
       setResults((prev) => [...r.results, ...prev].slice(0, 400));
+      if (r.googleError) setGoogleNote((n) => n ?? { ok: false, message: r.googleError! });
     }
     setRunning(false);
     if (position.current >= queue.length) setMessage("All done. Open any book to see what was filled in.");
@@ -52,17 +65,47 @@ export function FillRunner({ unchecked, checked, google }: { unchecked: string[]
           seconds a book, so the whole library takes 30–40 minutes. Keep this page open; you can pause and carry on
           later, even on another day.
         </p>
+        {google && (
+          <div className="mt-3">
+            <button
+              type="button"
+              disabled={testing}
+              onClick={async () => {
+                setTesting(true);
+                setGoogleNote(await checkGoogleBooks().catch(() => ({ ok: false, message: "Couldn't reach the app. Try again." })));
+                setTesting(false);
+              }}
+              className="min-h-9 rounded-full border border-border px-4 text-sm hover:bg-accent-soft disabled:opacity-50"
+            >
+              {testing ? "Testing…" : "Test Google Books"}
+            </button>
+          </div>
+        )}
+        {googleNote && (
+          <p role="status" className={`mt-2 rounded-xl px-3 py-2 text-sm ${googleNote.ok ? "bg-accent-soft" : "border border-accent"}`}>
+            {googleNote.ok ? googleNote.message : `Google Books isn't working: ${googleNote.message}. Open Library still runs.`}
+          </p>
+        )}
         {checked.length > 0 && (
-          <label className="mt-3 flex items-center gap-2 text-sm">
-            <input
-              type="checkbox"
-              checked={again}
-              disabled={running || done > 0}
-              onChange={(e) => setAgain(e.target.checked)}
-              className="size-5 accent-[var(--accent)]"
-            />
-            Also check the {checked.length.toLocaleString()} {checked.length === 1 ? "book" : "books"} checked before
-          </label>
+          <fieldset className="mt-3 space-y-1 text-sm" disabled={running || done > 0}>
+            <legend className="text-muted">Books checked before</legend>
+            {([
+              ["none", "Skip them"],
+              ["missing", `Check again the ${missingDescription.length.toLocaleString()} still missing a description`],
+              ["all", `Check all ${checked.length.toLocaleString()} again`],
+            ] as const).map(([value, label]) => (
+              <label key={value} className="flex min-h-9 items-center gap-2">
+                <input
+                  type="radio"
+                  name="again"
+                  checked={again === value}
+                  onChange={() => setAgain(value)}
+                  className="size-5 accent-[var(--accent)]"
+                />
+                {label}
+              </label>
+            ))}
+          </fieldset>
         )}
 
         <div className="mt-4 h-2 overflow-hidden rounded-full bg-accent-soft" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>

@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { findDetails } from "@/lib/book-details";
+import { findDetails, testGoogleBooks } from "@/lib/book-details";
 import { fold } from "@/lib/library-filters";
 import { ownerClient } from "@/lib/supabase/owner";
 
@@ -30,7 +30,7 @@ const seriesKey = (s: string) => fold(s).replace(/^the\s+/, "").replace(/\s+seri
 
 export async function fillBookDetails(
   titleIds: string[],
-): Promise<{ ok: true; results: FillResult[] } | { ok: false; error: string }> {
+): Promise<{ ok: true; results: FillResult[]; googleError?: string } | { ok: false; error: string }> {
   try {
     if (!Array.isArray(titleIds) || titleIds.length > 5 || !titleIds.every((id) => UUID.test(id))) {
       throw new Error("That request isn't valid.");
@@ -50,6 +50,7 @@ export async function fillBookDetails(
     const known = new Map((series ?? []).map((s) => [seriesKey(s.name), s.name as string]));
 
     const results: FillResult[] = [];
+    let googleError: string | undefined;
     for (const t of titles ?? []) {
       const authors = (t.credits as unknown as { role: string; position: number; people: { name: string } | null }[])
         .filter((c) => c.role !== "narrator" && c.people)
@@ -58,6 +59,7 @@ export async function fillBookDetails(
       const copies = (t.copies as { id: string; format: string; isbn13: string | null; pages: number | null; gone_at: string | null }[])
         .filter((c) => !c.gone_at);
       const found = await findDetails({ title: t.title, authors, copies }, process.env.GOOGLE_BOOKS_API_KEY || undefined);
+      googleError ??= found.googleError;
 
       const filled = new Set<string>();
       const parts = found.titles.length ? found.titles : [{ source: null }];
@@ -81,8 +83,21 @@ export async function fillBookDetails(
       });
     }
     revalidatePath("/");
-    return { ok: true, results };
+    return { ok: true, results, googleError };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't fill in those books." };
+  }
+}
+
+// One test search, to see whether Google Books accepts the key.
+export async function checkGoogleBooks(): Promise<{ ok: boolean; message: string }> {
+  try {
+    await ownerClient();
+    const key = process.env.GOOGLE_BOOKS_API_KEY;
+    if (!key) return { ok: false, message: "There's no Google Books key in Vercel yet." };
+    const n = await testGoogleBooks(key);
+    return { ok: true, message: `Google Books is working (${n.toLocaleString()} results for a test search).` };
+  } catch (e) {
+    return { ok: false, message: e instanceof Error ? e.message : "Google Books didn't answer." };
   }
 }
