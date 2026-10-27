@@ -29,7 +29,7 @@ function Row({ row: r, showTitle }: { row: ReviewRow; showTitle: boolean }) {
   const [more, setMore] = useState(false);
   const [busy, startBusy] = useTransition();
   const [message, setMessage] = useState<string | null>(null);
-  const canEdit = field.kind !== "tag" && field.kind !== "series";
+  const canEdit = field.kind !== "tag" && field.kind !== "series" && field.kind !== "choice";
 
   function act(action: "confirm" | "edit" | "reject", value: string | null, label: string) {
     setMessage(null);

@@ -1,5 +1,6 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "./classification";
 import { REVIEW_FIELDS } from "./review-fields";
 
 // What's waiting on the "To check" screen: values filled in for Alexandra
@@ -93,7 +94,12 @@ export async function withValues(supabase: SupabaseClient, items: ReviewItem[]):
   const tagIds = items.filter((i) => i.table === "tags").map((i) => i.id);
   const [titles, copies, tags] = await Promise.all([
     titleIds.length
-      ? supabase.from("titles").select("id, title, description, first_published, typical_pages, series_number, series(name)").in("id", titleIds)
+      ? supabase
+          .from("titles")
+          .select(
+            "id, title, description, first_published, typical_pages, series_number, series(name), audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second",
+          )
+          .in("id", titleIds)
       : { data: [], error: null },
     copyIds.length
       ? supabase.from("copies").select("id, format, publisher, pages, est_words").in("id", copyIds)
@@ -118,7 +124,13 @@ export async function withValues(supabase: SupabaseClient, items: ReviewItem[]):
     } else if (field === "series") {
       const s = title?.series as { name: string } | null;
       value = s ? `${s.name}${title?.series_number != null ? ` #${Number(title.series_number)}` : ""}` : null;
-    } else value = title?.[field];
+    } else if (field === "audience") value = labelOf(AUDIENCE, title?.audience as Audience);
+    else if (field === "spice") value = labelOf(SPICE, title?.spice as Spice);
+    else if (field === "story_focus") value = labelOf(STORY_FOCUS, title?.story_focus as StoryFocus);
+    else if (field === "romantic_subplot") value = title?.romantic_subplot == null ? null : title.romantic_subplot ? "Yes" : "No";
+    else if (field === "vibe")
+      value = [labelOf(VIBE, title?.vibe_main as Vibe), labelOf(VIBE, title?.vibe_second as Vibe)].filter(Boolean).join(", then ") || null;
+    else value = title?.[field];
     return {
       ...i,
       title: (title?.title as string) ?? "",

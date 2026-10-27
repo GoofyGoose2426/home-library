@@ -2,6 +2,23 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Phase 2, step 5 (Option A): first 25 Claude suggestions
+
+- **No extra cost:** you chose Option A. Claude suggestions are made in Claude Code sessions, under your existing Claude plan, instead of an in-app API. The Phase 2 plan is updated; the in-app API waits until you want one-tap suggestions or Ask your library.
+- **First batch: 25 books you've read**, spread across your genres. 208 suggestions, all marked "Claude" and unconfirmed:
+  - genres, subgenres, and supernatural beings and shifter types (e.g. *Magic Slays* → Urban fantasy → Shifters → Big cats, Wolves)
+  - queer romance types (e.g. *Boyfriend Material* → Achillean)
+  - tropes, audience, vibe, romantic subplot, spice and story focus
+- **To check** now also lists audience, vibe, romantic subplot, spice and story focus, to confirm or reject. To change one, use Edit classification on the book page.
+- **Safety rules** for every batch (`scripts/suggest/apply_suggestions.py`):
+  - only values on your approved lists
+  - nothing you set, confirmed or rejected is touched
+  - a deeper level is only added under its parent
+  - spice and story focus only for Romance or a romantic subplot
+  - re-running a batch adds nothing
+
+  Batches are kept in `data/suggestions/`.
+
 ## 2026-10-27 · Phase 2, step 4: To check
 
 - **To check** (first in Tools): everything filled in for you that you haven't confirmed. Right now that's about 3,460 values:
