@@ -2,6 +2,28 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Phase 2, step 4: To check
+
+- **To check** (first in Tools): everything filled in for you that you haven't confirmed. Right now that's about 3,460 values:
+  - 749 descriptions
+  - 848 first-published years
+  - 847 typical lengths
+  - 738 word estimates
+  - 11 series
+  - 248 genres and 20 subgenres from your shelf photos
+- **By field:** each field with its count and where the values came from, plus **Confirm all** (with an "Are you sure?" step) for a field you trust, such as years.
+- **By book:** every book with something waiting, its values together.
+- **On each value:**
+  - **✓ Confirm** keeps it, along with its source.
+  - **Edit** makes it yours (descriptions, numbers, publisher).
+  - **✕ Reject** clears it for good: a later look-up never brings it back, and a rejected genre is never suggested again.
+  - Series are changed with Edit details on the book page.
+- Your imported titles, authors and read statuses aren't listed: they came from your own photos and you reviewed them during the import. Covers keep their own **Check covers** page.
+- **Tested:**
+  - 13 database checks (confirm, edit, reject, never brought back, confirm all leaves your values alone, privacy).
+  - All earlier tests still pass, after one update: a viewer of the share link without a valid link now gets an empty answer rather than "permission denied", and still sees nothing.
+  - A phone-width check in light and dark mode.
+
 ## 2026-10-27 · Google Books key found
 
 - The app was looking for a key named `GOOGLE_BOOKS_API_KEY`, but yours in Vercel is `GOOGLE_BOOKS_KEY`, so Google Books was never used (every filled-in value so far came from Open Library). The app now accepts either name.

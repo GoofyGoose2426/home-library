@@ -46,6 +46,9 @@ export default function Home() {
           <strong className="font-medium text-foreground">Tools:</strong>
         </p>
         <nav aria-label="Tools" className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
+          <Link href="/check" className="text-accent underline-offset-4 hover:underline">
+            To check
+          </Link>
           <Link href="/gone" className="text-accent underline-offset-4 hover:underline">
             Gone list
           </Link>
