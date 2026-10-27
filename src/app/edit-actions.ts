@@ -530,3 +530,85 @@ export async function saveClassification(titleId: string, c: ClassificationInput
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
   }
 }
+
+// ---------------------------------------------------------------------------
+// Merging a duplicate entry into another (one entry per book).
+
+export async function mergeTitles(keepId: string, mergeId: string): Promise<Result> {
+  try {
+    check(UUID.test(keepId) && UUID.test(mergeId) && keepId !== mergeId, "Pick two different books.");
+    const { supabase } = await ownerClient();
+    await must(supabase.rpc("merge_titles", { p_keep: keepId, p_merge: mergeId }));
+    refresh(keepId);
+    revalidatePath(`/books/${mergeId}`);
+    revalidatePath("/duplicates");
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't merge those books." };
+  }
+}
+
+const APP_NAME: Record<string, string> = { kobo: "Kobo", audible: "Audible", librofm: "Libro.fm" };
+
+export type MergeCandidate = { id: string; title: string; authors: string[]; copies: string[] };
+
+// Books whose title contains the words typed, for "Merge another entry".
+export async function findMergeCandidates(
+  q: string,
+  exceptId: string,
+): Promise<{ ok: true; books: MergeCandidate[] } | { ok: false; error: string }> {
+  try {
+    check(typeof q === "string" && q.trim().length >= 2 && q.length <= 100 && UUID.test(exceptId));
+    const { supabase } = await ownerClient();
+    let query = supabase
+      .from("titles")
+      .select("id, title, credits(role, people(name)), copies(format, source, gone_at)")
+      .neq("id", exceptId)
+      .order("title")
+      .limit(8);
+    for (const word of q.trim().split(/\s+/).slice(0, 5)) query = query.ilike("title", `%${word.replace(/[%_\\]/g, "")}%`);
+    const { data, error } = await query;
+    if (error) throw new Error(error.message);
+    return {
+      ok: true,
+      books: (data ?? []).map((t) => ({
+        id: t.id,
+        title: t.title,
+        authors: (t.credits as unknown as { role: string; people: { name: string } | null }[])
+          .filter((c) => c.role !== "narrator" && c.people)
+          .map((c) => c.people!.name),
+        copies: (t.copies as { format: string; source: string; gone_at: string | null }[])
+          .filter((c) => !c.gone_at)
+          .map((c) => (c.format === "ebook" || c.format === "audiobook" ? `${APP_NAME[c.source] ?? "Other"} ${c.format}` : "Bookshelf")),
+      })),
+    };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't search." };
+  }
+}
+
+// Series check: put a book in a series (or confirm it isn't), with its number,
+// optionally tidying "(Series name)" out of its title.
+export async function setSeries(
+  titleId: string,
+  series: string | null,
+  number: number | null,
+  newTitle: string | null,
+): Promise<Result> {
+  try {
+    check(
+      UUID.test(titleId) &&
+        (series === null || (typeof series === "string" && series.trim().length > 0 && series.length <= 200)) &&
+        (number === null || (Number.isFinite(number) && number >= 0 && number < 10000)) &&
+        (newTitle === null || (typeof newTitle === "string" && newTitle.trim().length > 0 && newTitle.length <= 300)),
+      "Check the series name and number.",
+    );
+    const { supabase } = await ownerClient();
+    await must(supabase.rpc("set_series", { p_title_id: titleId, p_series: series, p_number: number, p_new_title: newTitle }));
+    refresh(titleId);
+    revalidatePath("/series-check");
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
+  }
+}

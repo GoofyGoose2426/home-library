@@ -4,6 +4,7 @@ import { BookCover } from "@/components/book-cover";
 import { CoverPicker } from "@/components/cover-picker";
 import { ClassificationEditor } from "@/components/classification-editor";
 import { EditDetails } from "@/components/edit-details";
+import { MergeEntry } from "@/components/merge-entry";
 import { QuickEdit } from "@/components/quick-edit";
 import { RemoveCopy, UndoGone } from "@/components/remove-copy";
 import { GONE_LABEL } from "@/lib/gone";
@@ -224,6 +225,9 @@ export function BookDetail({ book }: { book: Book }) {
           ))}
         </ul>
         {book.copies.length === 0 && <p className="text-sm text-muted">You don&apos;t own a copy right now.</p>}
+        <div className="mt-3">
+          <MergeEntry titleId={book.id} title={book.title} />
+        </div>
       </Section>
 
       {book.goneCopies.length > 0 && (

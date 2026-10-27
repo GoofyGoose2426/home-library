@@ -43,17 +43,25 @@ export default function Home() {
         </p>
         <p className="mt-1 text-xs">Keep a copy somewhere safe now and then. The free database plan has no automatic backups.</p>
         <p className="mt-3">
+          <strong className="font-medium text-foreground">Tools:</strong>
+        </p>
+        <nav aria-label="Tools" className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
           <Link href="/gone" className="text-accent underline-offset-4 hover:underline">
             Gone list
-          </Link>{" "}
-          · books you&apos;ve sold, donated, given away or lost
-        </p>
-        <p className="mt-1">
+          </Link>
           <Link href="/fill" className="text-accent underline-offset-4 hover:underline">
             Fill in details
-          </Link>{" "}
-          · descriptions, years and length from Open Library
-        </p>
+          </Link>
+          <Link href="/duplicates" className="text-accent underline-offset-4 hover:underline">
+            Possible duplicates
+          </Link>
+          <Link href="/series-check" className="text-accent underline-offset-4 hover:underline">
+            Series check
+          </Link>
+          <Link href="/formats" className="text-accent underline-offset-4 hover:underline">
+            Print formats
+          </Link>
+        </nav>
       </footer>
     </main>
   );

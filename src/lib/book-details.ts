@@ -96,7 +96,7 @@ export function titleKey(s: string) {
     .replace(/^(the|a|an) /, "");
 }
 
-function volumeOf(s: string) {
+export function volumeOf(s: string) {
   return s.match(VOLUME)?.[1] ?? null;
 }
 

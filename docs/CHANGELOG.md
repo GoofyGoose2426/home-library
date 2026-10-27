@@ -2,6 +2,29 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Merging, series check, print formats, author-series sort
+
+- **Author sort keeps series together.** "Author A–Z, series in order" shows each author's series in reading order (series A–Z), then their books that aren't in a series. Ilona Andrews: Hidden Legacy 1–6, Kate Daniels 1–10, … Books without a series number go at the end of their series.
+- **Merge duplicates.** On a book page: "Same book entered twice? Merge it into this one". Find the other entry, check, merge.
+  - Its copies, credits, genres, tags, rating and details move over.
+  - The kept entry's values win where both have one, and a field you cleared stays empty.
+  - Read in either means read.
+  - Each detail keeps its true source.
+- **Possible duplicates** page: same title (bracketed notes like "(Hathaways)" ignored) and a shared author. It found one: Love in the Afternoon. Tap **Keep this one** on the entry to keep.
+- **Series check** page:
+  - 135 books by authors with series that aren't in a series, grouped by author. The series is pre-picked when the title names it, e.g. "Married By Morning (Hathaways)", with an option to tidy the title too.
+  - The 69 series books with no number.
+  - **Not in a series** confirms a standalone.
+
+  Saved books leave the list.
+- **Print formats** page: every print copy grouped by type, with covers; change one and it moves to the right group.
+- **Fill in details:**
+  - A **Test Google Books** button shows Google's actual answer.
+  - Google errors now appear instead of being skipped silently. The first run found nothing from Google.
+  - A new choice to re-check only the books still missing a description.
+- The tools are grouped under **Tools** at the bottom of the library.
+- **Tested:** 15 new database checks (merging and series), all earlier tests still pass, and a phone-width check in light and dark mode.
+
 ## 2026-10-29 · Phase 2, step 3: Fill in details from Open Library
 
 - **Fill in details** (link at the bottom of your library) looks up each book on Open Library by title and author and fills in:

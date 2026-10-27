@@ -7,7 +7,7 @@ import { AUDIO, RECOMMEND, WRITING, find } from "./ratings";
 
 export const SORTS = {
   title: "Title A–Z",
-  author: "Author A–Z",
+  author: "Author A–Z, series in order",
   series: "Series",
   status: "Read status",
   review: "Needs review first",
@@ -200,7 +200,14 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
   const byTitle = (a: LibraryBook, b: LibraryBook) => titleKey(a.title).localeCompare(titleKey(b.title));
   const compare: Record<SortKey, (a: LibraryBook, b: LibraryBook) => number> = {
     title: byTitle,
-    author: (a, b) => surnameKey(a).localeCompare(surnameKey(b)) || byTitle(a, b),
+    // Within an author: each series in reading order (series A–Z), then
+    // the books that aren't in a series.
+    author: (a, b) =>
+      surnameKey(a).localeCompare(surnameKey(b)) ||
+      (a.series ? 0 : 1) - (b.series ? 0 : 1) ||
+      (a.series && b.series ? fold(a.series).localeCompare(fold(b.series)) : 0) ||
+      (a.seriesNumber ?? 999) - (b.seriesNumber ?? 999) ||
+      byTitle(a, b),
     series: (a, b) =>
       (a.series ?? "￿").localeCompare(b.series ?? "￿") ||
       (a.seriesNumber ?? 999) - (b.seriesNumber ?? 999) ||
