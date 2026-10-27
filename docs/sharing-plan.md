@@ -1,6 +1,6 @@
 # Sharing plan: a secret view-only link
 
-Draft for Alexandra's approval · 2026-10-27 · No code until approved.
+Approved by Alexandra · 2026-10-27.
 
 You want co-workers and friends to browse your library. You chose **a secret link**: no sign-in, view only. Anyone with the link can look; nobody can change anything.
 
@@ -32,7 +32,7 @@ A **Sharing** page (in Tools) with:
 ## Safety
 
 - The link holds a long random code, about as hard to guess as a strong password. Only a scrambled version is stored, so even the database doesn't hold the link itself.
-- Viewers never touch your database directly. One read-only database function checks the code and returns only the "Shown" fields above. Your Row Level Security stays exactly as it is for everything else.
+- The privacy rules live in the database itself. A viewer's request carries the link's code, and the database then lets it **read** your library only. Loans and keepsake notes are blocked column by column, copies on the Gone list are blocked row by row, and nothing can be written. Your own login and its rules stay exactly as they are.
 - Your cover photos are shown through short-lived links, the same way as for you.
 - The risk with any secret link is that it gets forwarded. If that happens, tap **Reset link**.
 
@@ -49,6 +49,7 @@ A **Sharing** page (in Tools) with:
 
 $0. It uses the same free Vercel and Supabase plans.
 
-## One question
+## Your decisions
 
-Should viewers see **author and character representation** once Phase 2 adds it? My suggestion: yes, since it comes from public sources, but you decide when it arrives.
+- Viewers see **everything the app has, now and later** (including representation, dashboards and stats), except **loans, keepsake notes and the Gone list**, and they can never edit.
+- **Your own cover photos** (19 copies) are private files. Viewers see the Open Library cover, or the colour card, for those copies. Showing your photos too would need one more Supabase key in Vercel; say if you want it.

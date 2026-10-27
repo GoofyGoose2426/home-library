@@ -68,11 +68,12 @@ type Row = {
     id: string;
     format: CopyFormat;
     source: CopySource;
-    keepsake_notes: string | null;
+    // Not read for the view-only link.
+    keepsake_notes?: string | null;
     cover_url: string | null;
-    cover_path: string | null;
+    cover_path?: string | null;
     cover_confirmed: boolean;
-    on_loan_to: string | null;
+    on_loan_to?: string | null;
     gone_at: string | null;
     reviews: { audio_performance: number | null; body: string | null }[];
   }[];
@@ -99,10 +100,15 @@ const FORMAT_ORDER: CopyFormat[] = ["hardcover", "trade_paperback", "mass_market
 // Gone list are left out, and so are books with no owned copies, unless
 // includeGone (used by Add, to recognise a book she's had before). RLS limits
 // this to her rows; PostgREST returns at most 1,000 rows, so read in pages.
+// shared: for the view-only link, which may not read loans, keepsake notes
+// or her private cover photos.
 export async function loadLibrary(
   supabase: SupabaseClient,
-  { includeGone = false }: { includeGone?: boolean } = {},
+  { includeGone = false, shared = false }: { includeGone?: boolean; shared?: boolean } = {},
 ): Promise<LibraryBook[]> {
+  const copyColumns = shared
+    ? "id, format, source, cover_url, cover_confirmed, gone_at"
+    : "id, format, source, keepsake_notes, cover_url, cover_path, cover_confirmed, on_loan_to, gone_at";
   const books: LibraryBook[] = [];
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
@@ -115,8 +121,7 @@ export async function loadLibrary(
          title_tags(tags(kind, name)),
          reviews(rating, writing_quality, recommendation),
          pieces(count),
-         copies(id, format, source, keepsake_notes, cover_url, cover_path, cover_confirmed, on_loan_to, gone_at,
-                reviews(audio_performance, body))`,
+         copies(${copyColumns}, reviews(audio_performance, body))`,
       )
       .order("title")
       .range(from, from + 999)
@@ -148,8 +153,8 @@ export async function loadLibrary(
             id: c.id,
             format: c.format,
             source: c.source,
-            onLoanTo: c.on_loan_to,
-            keepsakeNotes: c.keepsake_notes,
+            onLoanTo: c.on_loan_to ?? null,
+            keepsakeNotes: c.keepsake_notes ?? null,
             audioPerformance: c.reviews[0]?.audio_performance ?? null,
             audioNote: c.reviews[0]?.body ?? null,
           }))

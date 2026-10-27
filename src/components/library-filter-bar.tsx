@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useViewMode } from "@/components/view-mode";
 import { FACETS } from "@/lib/classification";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
 import {
@@ -50,6 +51,10 @@ export function LibraryFilterBar({
   onChange: (change: (current: Filters) => Filters) => void;
 }) {
   const [open, setOpen] = useState(false);
+  // The view-only link has no loans, keepsake notes or review flags.
+  const { readOnly } = useViewMode();
+  const flags = (Object.keys(FLAGS) as FlagKey[]).filter((f) => !readOnly || f === "reference");
+  const sorts = Object.entries(SORTS).filter(([k]) => !readOnly || k !== "review");
   const active = activeCount(filters);
 
   const toggle = (key: ListKey, value: string) =>
@@ -127,7 +132,7 @@ export function LibraryFilterBar({
             }}
             className="rounded-full border border-border bg-surface px-3 py-1.5 text-foreground"
           >
-            {Object.entries(SORTS).map(([k, label]) => (
+            {sorts.map(([k, label]) => (
               <option key={k} value={k}>
                 {label}
               </option>
@@ -158,18 +163,20 @@ export function LibraryFilterBar({
 
       {open && (
         <div className="space-y-5 rounded-3xl border border-border bg-surface p-4">
-          <Group title="Needs review" note="Books with something to fix. Tap one to see what it needs.">
-            {(Object.keys(REVIEW) as ReviewKey[]).map((v) => (
-              <Chip
-                key={v}
-                on={filters.review.includes(v)}
-                onClick={() => toggle("review", v)}
-                count={options.review.find(([k]) => k === v)?.[1] ?? 0}
-              >
-                {REVIEW[v]}
-              </Chip>
-            ))}
-          </Group>
+          {!readOnly && (
+            <Group title="Needs review" note="Books with something to fix. Tap one to see what it needs.">
+              {(Object.keys(REVIEW) as ReviewKey[]).map((v) => (
+                <Chip
+                  key={v}
+                  on={filters.review.includes(v)}
+                  onClick={() => toggle("review", v)}
+                  count={options.review.find(([k]) => k === v)?.[1] ?? 0}
+                >
+                  {REVIEW[v]}
+                </Chip>
+              ))}
+            </Group>
+          )}
           <Group title="Read status">
             {STATUS.map(([v, label]) => (
               <Chip key={v} on={filters.status.includes(v)} onClick={() => toggle("status", v)}>
@@ -231,7 +238,7 @@ export function LibraryFilterBar({
             </select>
           </Group>
           <Group title="Other">
-            {(Object.keys(FLAGS) as FlagKey[]).map((v) => (
+            {flags.map((v) => (
               <Chip key={v} on={filters.flag.includes(v)} onClick={() => toggle("flag", v)}>
                 {FLAGS[v]}
               </Chip>

@@ -9,8 +9,10 @@ import {
 // Pages anyone can open. Everything else needs Alexandra's login. The app
 // manifest is public because phones fetch it without the login cookie; it
 // only holds the app's name, colours and icon. The daily keep-alive checks
-// its own secret (CRON_SECRET) and returns no data.
-const PUBLIC_PATHS = ["/login", "/forgot-password", "/auth/confirm", "/manifest.webmanifest", "/api/keepalive"];
+// its own secret (CRON_SECRET) and returns no data. /s/<code> is the
+// view-only link: its pages check the code and can only read (see
+// lib/supabase/shared.ts and docs/sharing-plan.md).
+const PUBLIC_PATHS = ["/login", "/forgot-password", "/auth/confirm", "/manifest.webmanifest", "/api/keepalive", "/s"];
 // Pages that make no sense once signed in.
 const SIGNED_OUT_ONLY = ["/login", "/forgot-password"];
 

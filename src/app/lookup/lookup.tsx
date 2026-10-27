@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useDeferredValue, useMemo, useState } from "react";
 import { BookCover } from "@/components/book-cover";
+import { useViewMode } from "@/components/view-mode";
 import { copyList } from "@/lib/copy-labels";
 import type { LibraryBook } from "@/lib/library";
 import {
@@ -15,7 +16,16 @@ import {
   type SeriesStatus,
 } from "@/lib/lookup";
 
+// Viewers of the shared link read "Alexandra owns it", not "You own it".
+function useWords() {
+  const { readOnly } = useViewMode();
+  return readOnly
+    ? { own: "Alexandra owns", library: "Alexandra's library", have: "she has", missing: "she's missing", ownLower: "Alexandra owns", shelf: "her shelf" }
+    : { own: "You own", library: "your library", have: "you have", missing: "you're missing", ownLower: "you own", shelf: "your shelf" };
+}
+
 export function Lookup({ books }: { books: LibraryBook[] }) {
+  const w = useWords();
   const [query, setQuery] = useState("");
   const q = useDeferredValue(query);
 
@@ -62,19 +72,19 @@ export function Lookup({ books }: { books: LibraryBook[] }) {
 
       {!typed && (
         <p className="mt-4 text-muted">
-          Type a few letters of a title, author or series. You&apos;ll see straight away whether it&apos;s in your
-          library, in which formats, and which volumes of the series you&apos;re missing.
+          Type a few letters of a title, author or series. You&apos;ll see straight away whether it&apos;s in {w.library},
+          in which formats, and which volumes of the series {w.missing}.
         </p>
       )}
 
       {verdict === "own" && (
-        <Verdict tone="own" title="✓ You own it">
+        <Verdict tone="own" title={`✓ ${w.own} it`}>
           {exact.length === 1 ? "1 book matches." : `${exact.length} books match.`}
         </Verdict>
       )}
       {verdict === "series" && (
-        <Verdict tone="own" title="✓ You own books in this series">
-          See which volumes you have and which you&apos;re missing below.
+        <Verdict tone="own" title={`✓ ${w.own} books in this series`}>
+          See which volumes {w.have} and which {w.missing} below.
         </Verdict>
       )}
       {verdict === "series" && seriesCards}
@@ -84,8 +94,8 @@ export function Lookup({ books }: { books: LibraryBook[] }) {
         </Verdict>
       )}
       {verdict === "none" && (
-        <Verdict tone="none" title="✗ Not in your library">
-          Nothing you own matches &ldquo;{q.trim()}&rdquo;.
+        <Verdict tone="none" title={`✗ Not in ${w.library}`}>
+          Nothing {w.ownLower} matches &ldquo;{q.trim()}&rdquo;.
         </Verdict>
       )}
 
@@ -120,9 +130,10 @@ function Verdict({ tone, title, children }: { tone: "own" | "maybe" | "none"; ti
 }
 
 function BookResult({ book }: { book: LibraryBook }) {
+  const { base } = useViewMode();
   const { digitalOnly } = formatSummary(book);
   return (
-    <Link href={`/books/${book.id}`} className="flex gap-3 rounded-2xl border border-border bg-surface p-3 hover:bg-accent-soft">
+    <Link href={`${base}/books/${book.id}`} className="flex gap-3 rounded-2xl border border-border bg-surface p-3 hover:bg-accent-soft">
       <BookCover title={book.title} authors={[]} url={book.coverUrl} className="w-14 shrink-0 !rounded-lg !p-1 [&_p]:hidden" />
       <div className="min-w-0">
         <p className="font-medium leading-snug">{book.title}</p>
@@ -146,12 +157,14 @@ function BookResult({ book }: { book: LibraryBook }) {
 }
 
 function SeriesCard({ status: s }: { status: SeriesStatus }) {
+  const { base } = useViewMode();
+  const w = useWords();
   const owned = s.volumes.filter((v) => v.book).length + s.unnumbered.length;
   return (
     <section className="mt-6 rounded-3xl border border-border bg-surface p-4">
       <h2 className="font-serif text-xl font-semibold">{s.name}</h2>
       <p className="mt-1 text-sm">
-        You own <strong>{owned}</strong> {owned === 1 ? "book" : "books"} in this series
+        {w.own} <strong>{owned}</strong> {owned === 1 ? "book" : "books"} in this series
         {s.missing.length > 0 ? (
           <>
             . <strong>Missing {ranges(s.missing)}</strong>
@@ -165,7 +178,7 @@ function SeriesCard({ status: s }: { status: SeriesStatus }) {
       </p>
       {s.matchFormat && (
         <p className="mt-1 text-sm">
-          To match your shelf, buy <strong>{PRINT_NAME[s.matchFormat]}</strong>.
+          To match {w.shelf}, buy <strong>{PRINT_NAME[s.matchFormat]}</strong>.
           {s.mismatched.length > 0 && ` (${ranges(s.mismatched)} ${s.mismatched.length === 1 ? "is a" : "are"} different print type.)`}
         </p>
       )}
@@ -178,7 +191,7 @@ function SeriesCard({ status: s }: { status: SeriesStatus }) {
               <span className="w-9 shrink-0 text-muted">#{v.number}</span>
               {v.book ? (
                 <>
-                  <Link href={`/books/${v.book.id}`} className="min-w-0 flex-1 underline-offset-4 hover:underline">
+                  <Link href={`${base}/books/${v.book.id}`} className="min-w-0 flex-1 underline-offset-4 hover:underline">
                     {v.book.title}
                   </Link>
                   <span
@@ -205,7 +218,7 @@ function SeriesCard({ status: s }: { status: SeriesStatus }) {
         </p>
       )}
       <p className="mt-2 text-xs text-muted">
-        Gaps are counted up to the highest number you own. Later volumes show once series details are filled in
+        Gaps are counted up to the highest number {w.ownLower}. Later volumes show once series details are filled in
         (Phase 2).
       </p>
     </section>

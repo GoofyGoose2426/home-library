@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { BookCover } from "@/components/book-cover";
 import { LibraryFilterBar } from "@/components/library-filter-bar";
 import { QuickEdit, type EditableBook } from "@/components/quick-edit";
+import { useViewMode } from "@/components/view-mode";
 import { setPrintType } from "@/app/edit-actions";
 import type { CopyFormat, LibraryBook } from "@/lib/library";
 import { copyList } from "@/lib/copy-labels";
@@ -110,6 +111,7 @@ const PRINT_TYPES: [CopyFormat, string][] = [
 ];
 
 export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
+  const { readOnly, base } = useViewMode();
   const view = useSyncExternalStore(subscribeView, readView, () => "grid" as View);
   const [edits, setEdits] = useState<Record<string, EditableBook>>({});
   const [editing, setEditing] = useState<string | null>(null);
@@ -183,7 +185,7 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
             {books.filter((b) => b.readStatus === "read").length.toLocaleString()} of{" "}
             {books.length.toLocaleString()} read
           </p>
-          {toReview > 0 && (
+          {toReview > 0 && !readOnly && (
             <button
               type="button"
               onClick={() =>
@@ -197,14 +199,16 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
           )}
         </div>
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => (selecting ? stopSelecting() : (setSelecting(true), setBatchMessage(null)))}
-            aria-pressed={selecting}
-            className={`min-h-9 rounded-full border px-4 text-sm ${selecting ? "border-accent bg-accent-soft" : "border-border bg-surface"}`}
-          >
-            {selecting ? "Cancel" : "Select"}
-          </button>
+          {!readOnly && (
+            <button
+              type="button"
+              onClick={() => (selecting ? stopSelecting() : (setSelecting(true), setBatchMessage(null)))}
+              aria-pressed={selecting}
+              className={`min-h-9 rounded-full border px-4 text-sm ${selecting ? "border-accent bg-accent-soft" : "border-border bg-surface"}`}
+            >
+              {selecting ? "Cancel" : "Select"}
+            </button>
+          )}
           <div className="flex rounded-full border border-border bg-surface p-1" role="tablist" aria-label="View">
             {(["grid", "table"] as const).map((v) => (
               <button
@@ -291,7 +295,7 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
             <div className="mb-4 flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="font-serif text-xl font-semibold leading-tight">{editingBook.title}</p>
-                <Link href={`/books/${editingBook.id}`} className="text-sm text-accent underline-offset-4 hover:underline">
+                <Link href={`${base}/books/${editingBook.id}`} className="text-sm text-accent underline-offset-4 hover:underline">
                   Open book page
                 </Link>
               </div>
@@ -320,6 +324,8 @@ type ItemProps = {
 };
 
 function EditButton({ book, onEdit }: { book: LibraryBook; onEdit: (id: string) => void }) {
+  const { readOnly } = useViewMode();
+  if (readOnly) return null;
   return (
     <button
       type="button"
@@ -333,6 +339,7 @@ function EditButton({ book, onEdit }: { book: LibraryBook; onEdit: (id: string) 
 }
 
 function Grid({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
+  const { base } = useViewMode();
   return (
     <ul className="mt-5 grid grid-cols-3 gap-x-3 gap-y-5 pb-28 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7">
       {books.map((b) => {
@@ -377,14 +384,14 @@ function Grid({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
             ) : (
               <>
                 <div className="relative">
-                  <Link href={`/books/${b.id}`} className="block rounded-xl focus-visible:outline-2 focus-visible:outline-accent">
+                  <Link href={`${base}/books/${b.id}`} className="block rounded-xl focus-visible:outline-2 focus-visible:outline-accent">
                     {cover}
                   </Link>
                   <div className="absolute bottom-1 right-1">
                     <EditButton book={b} onEdit={onEdit} />
                   </div>
                 </div>
-                <Link href={`/books/${b.id}`} tabIndex={-1} className="block">
+                <Link href={`${base}/books/${b.id}`} tabIndex={-1} className="block">
                   {text}
                 </Link>
               </>
@@ -397,6 +404,7 @@ function Grid({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
 }
 
 function Table({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
+  const { base } = useViewMode();
   return (
     <div className="mt-5 mb-28 overflow-hidden rounded-2xl border border-border bg-surface">
       <table className="w-full table-fixed text-left text-sm">
@@ -432,7 +440,7 @@ function Table({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
                           {b.title}
                         </button>
                       ) : (
-                        <Link href={`/books/${b.id}`} className="font-medium leading-snug underline-offset-4 hover:underline after:absolute after:inset-0">
+                        <Link href={`${base}/books/${b.id}`} className="font-medium leading-snug underline-offset-4 hover:underline after:absolute after:inset-0">
                           {b.title}
                         </Link>
                       )}
@@ -471,8 +479,9 @@ const REVIEW_SHORT = { cover: "no cover", author: "no author", guess: "guessed t
 
 // In the grid there's only room for the flag; the table lists the reasons.
 function ReviewNote({ book, compact = false }: { book: LibraryBook; compact?: boolean }) {
+  const { readOnly } = useViewMode();
   const reasons = reviewReasons(book);
-  if (!reasons.length) return null;
+  if (!reasons.length || readOnly) return null;
   return (
     <p className={`${compact ? "line-clamp-1" : ""} text-[11px] font-medium text-accent`} title={reasons.map((r) => REVIEW_SHORT[r]).join(", ")}>
       ⚑ Needs review{compact ? "" : `: ${reasons.map((r) => REVIEW_SHORT[r]).join(", ")}`}

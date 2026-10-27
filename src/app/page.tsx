@@ -61,6 +61,9 @@ export default function Home() {
           <Link href="/formats" className="text-accent underline-offset-4 hover:underline">
             Print formats
           </Link>
+          <Link href="/sharing" className="text-accent underline-offset-4 hover:underline">
+            Sharing
+          </Link>
         </nav>
       </footer>
     </main>

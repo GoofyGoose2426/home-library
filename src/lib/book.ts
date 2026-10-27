@@ -110,7 +110,13 @@ export async function loadLists(supabase: SupabaseClient): Promise<ListTag[]> {
     .map((t) => ({ id: t.id, kind: t.kind, name: t.name, parentIds: parentsOf.get(t.id) ?? [] }));
 }
 
-export async function loadBook(supabase: SupabaseClient, id: string): Promise<Book | null> {
+// shared: for the view-only link, which may not read loans, keepsake notes,
+// why a copy left, or her private cover photos.
+export async function loadBook(
+  supabase: SupabaseClient,
+  id: string,
+  { shared = false }: { shared?: boolean } = {},
+): Promise<Book | null> {
   if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
 
   const { data: t, error } = await supabase
@@ -124,9 +130,9 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
        pieces(id, position, piece_title, kind, is_read),
        credits(role, position, people(name)),
        title_tags(source, confirmed, tags(id, kind, name)),
-       copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_path, cover_confirmed,
-              pages, audio_minutes, est_words, contains_from, contains_to, bonus_notes, keepsake_notes,
-              on_loan_to, gone_at, gone_reason, credits(role, position, people(name)),
+       copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_confirmed,
+              pages, audio_minutes, est_words, contains_from, contains_to, bonus_notes, gone_at,
+              ${shared ? "" : "cover_path, keepsake_notes, on_loan_to, gone_reason,"} credits(role, position, people(name)),
               reviews(audio_performance, body))`,
     )
     .eq("id", id)
@@ -212,15 +218,15 @@ export async function loadBook(supabase: SupabaseClient, id: string): Promise<Bo
       containsFrom: c.contains_from as number | null,
       containsTo: c.contains_to as number | null,
       bonusNotes: c.bonus_notes as string | null,
-      keepsakeNotes: c.keepsake_notes as string | null,
-      onLoanTo: c.on_loan_to as string | null,
+      keepsakeNotes: (c.keepsake_notes as string | null) ?? null,
+      onLoanTo: (c.on_loan_to as string | null) ?? null,
       narrators: (c.credits as { role: string; position: number; people: Person }[])
         .filter((cr) => cr.role === "narrator")
         .sort((a, b) => a.position - b.position)
         .flatMap((cr) => (cr.people ? [cr.people.name] : [])),
       sources: sourcesFor(c.id as string),
       goneAt: c.gone_at as string | null,
-      goneReason: c.gone_reason as BookCopy["goneReason"],
+      goneReason: (c.gone_reason as BookCopy["goneReason"]) ?? null,
       audioPerformance: (c.reviews as { audio_performance: number | null }[])[0]?.audio_performance ?? null,
       audioNote: (c.reviews as { body: string | null }[])[0]?.body ?? null,
     }))

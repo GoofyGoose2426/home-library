@@ -2,6 +2,30 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Share link (view only)
+
+- **Sharing** (in Tools): turn sharing on, copy the link, see what viewers see, reset the link (the old one stops working at once), or turn it off.
+- **What viewers get, at /s/…:** "Alexandra's library" with:
+  - the covers grid and table, search, filters and sorts
+  - book pages, ratings and classification
+  - "Does she own it?", which says "Alexandra owns it" rather than "You own it"
+- **What viewers never get:**
+  - loans, keepsake notes or the Gone list
+  - "Needs review" flags or sources
+  - any edit button or tool, or backups
+- **Privacy is enforced by the database itself:**
+  - Loans and keepsake notes can't be read at all through the link.
+  - Copies on the Gone list are filtered out.
+  - Viewers can only read, never write.
+  - A wrong or turned-off link sees nothing.
+  - Search engines are asked not to list the pages, and the link's address isn't passed on to other sites.
+- Your own 19 cover photos stay private. Viewers see the Open Library cover or the colour card for those copies.
+- Project rule 1 now allows this one view-only link (`CLAUDE.md`, `docs/build-plan.md`, `docs/sharing-plan.md`). Viewers will also see future dashboards and stats.
+- **Tested:**
+  - 15 privacy checks on a throwaway database.
+  - Live checks that requests with no link, or a made-up one, return nothing.
+  - A temporary test link on your real library (deleted afterwards): the library, a book page with a keepsake note (not shown) and "Does she own it?", at phone width in light and dark mode.
+
 ## 2026-10-27 · Merging, series check, print formats, author-series sort
 
 - **Author sort keeps series together.** "Author A–Z, series in order" shows each author's series in reading order (series A–Z), then their books that aren't in a series. Ilona Andrews: Hidden Legacy 1–6, Kate Daniels 1–10, … Books without a series number go at the end of their series.

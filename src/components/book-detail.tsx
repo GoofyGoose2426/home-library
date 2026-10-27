@@ -72,8 +72,8 @@ function sourceLabel(s: FieldSource | undefined) {
   return s.confirmed ? `${name} · confirmed` : `${name} · not confirmed yet`;
 }
 
-function Source({ s }: { s: FieldSource | undefined }) {
-  const label = sourceLabel(s);
+function Source({ s, hidden = false }: { s: FieldSource | undefined; hidden?: boolean }) {
+  const label = hidden ? null : sourceLabel(s);
   return label ? <span className="block text-[11px] text-muted">{label}</span> : null;
 }
 
@@ -91,7 +91,9 @@ function seriesNumber(n: number | null) {
   return n == null ? "" : `#${Number(n)}`;
 }
 
-export function BookDetail({ book }: { book: Book }) {
+// readOnly: the view-only link. No editing, no sources or review notes, and
+// links stay under its address (base).
+export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; readOnly?: boolean; base?: string }) {
   const cover = [...book.copies, ...book.goneCopies].find((c) => c.coverKind === "photo" && c.coverUrl) ?? [...book.copies, ...book.goneCopies].find((c) => c.coverUrl);
   const authors = book.credits.filter((c) => c.role !== "narrator");
 
@@ -106,7 +108,7 @@ export function BookDetail({ book }: { book: Book }) {
           ) : (
             <BookCover title={book.title} authors={authors.map((a) => a.name)} url={null} className="!rounded-2xl !p-4 [&_p:first-child]:text-lg" />
           )}
-          {cover?.coverUrl && (
+          {cover?.coverUrl && !readOnly && (
             <p className="mt-2 text-center text-[11px] text-muted">
               {cover.coverKind === "photo"
                 ? "Your photo"
@@ -133,12 +135,12 @@ export function BookDetail({ book }: { book: Book }) {
               ))}
             </p>
           )}
-          <Source s={book.sources.authors} />
+          <Source hidden={readOnly} s={book.sources.authors} />
 
           {book.series && (
             <p className="mt-3">
               <Link
-                href={`/?series=${encodeURIComponent(book.series.name)}&sort=series`}
+                href={`${base || "/"}?series=${encodeURIComponent(book.series.name)}&sort=series`}
                 className="text-accent underline-offset-4 hover:underline"
               >
                 {book.series.name} {seriesNumber(book.series.number)}
@@ -153,7 +155,7 @@ export function BookDetail({ book }: { book: Book }) {
               <span className="rounded-full border border-border px-3 py-1">Left out of stats</span>
             )}
           </div>
-          <Source s={book.sources.read_status} />
+          <Source hidden={readOnly} s={book.sources.read_status} />
 
           {book.copies.length === 0 && (
             <p className="mt-4 rounded-2xl bg-accent-soft px-4 py-3 text-sm">
@@ -162,7 +164,7 @@ export function BookDetail({ book }: { book: Book }) {
             </p>
           )}
 
-          {book.needsCheck && (
+          {book.needsCheck && !readOnly && (
             <p className="mt-4 rounded-2xl bg-accent-soft px-4 py-3 text-sm">
               <strong>Needs checking:</strong> {book.checkNote ?? "The title or author was uncertain in the photos."}
             </p>
@@ -175,44 +177,50 @@ export function BookDetail({ book }: { book: Book }) {
               {[book.firstPublished && `First published ${book.firstPublished}`, book.typicalPages && `Typically ${book.typicalPages} pages`]
                 .filter(Boolean)
                 .join(" · ")}
-              <Source s={book.sources.first_published ?? book.sources.typical_pages} />
+              <Source hidden={readOnly} s={book.sources.first_published ?? book.sources.typical_pages} />
             </p>
           )}
 
           {book.description && (
             <div className="mt-4">
               <p className="whitespace-pre-line leading-relaxed">{book.description}</p>
-              <Source s={book.sources.description} />
+              <Source hidden={readOnly} s={book.sources.description} />
             </div>
           )}
 
-          <div className="mt-5">
-            <EditDetails
-              key={`${book.title}|${book.credits.map((c) => c.name).join(",")}|${book.series?.name ?? ""}`}
-              seriesNames={book.seriesNames}
-              peopleNames={book.peopleNames}
-              book={{
-                id: book.id,
-                title: book.title,
-                subtitle: book.subtitle,
-                bookType: book.bookType,
-                series: book.series?.name ?? null,
-                seriesNumber: book.series?.number ?? null,
-                needsCheck: book.needsCheck,
-                credits: authors,
-                audiobooks: book.copies
-                  .filter((c) => c.format === "audiobook")
-                  .map((c) => ({ id: c.id, label: `${WHERE[c.source] ?? "Other"} audiobook`, narrators: c.narrators })),
-              }}
-            />
-          </div>
+          {!readOnly && (
+            <div className="mt-5">
+              <EditDetails
+                key={`${book.title}|${book.credits.map((c) => c.name).join(",")}|${book.series?.name ?? ""}`}
+                seriesNames={book.seriesNames}
+                peopleNames={book.peopleNames}
+                book={{
+                  id: book.id,
+                  title: book.title,
+                  subtitle: book.subtitle,
+                  bookType: book.bookType,
+                  series: book.series?.name ?? null,
+                  seriesNumber: book.series?.number ?? null,
+                  needsCheck: book.needsCheck,
+                  credits: authors,
+                  audiobooks: book.copies
+                    .filter((c) => c.format === "audiobook")
+                    .map((c) => ({ id: c.id, label: `${WHERE[c.source] ?? "Other"} audiobook`, narrators: c.narrators })),
+                }}
+              />
+            </div>
+          )}
         </div>
       </div>
 
       <Section
-        title={book.copies.length === 1 ? "Your copy" : book.copies.length ? `Your ${book.copies.length} copies` : "Your copies"}
+        title={
+          readOnly
+            ? book.copies.length === 1 ? "Copy" : `${book.copies.length} copies`
+            : book.copies.length === 1 ? "Your copy" : book.copies.length ? `Your ${book.copies.length} copies` : "Your copies"
+        }
         action={
-          <Link href={`/add?to=${book.id}`} className="rounded-full border border-border px-4 py-1.5 text-sm hover:bg-accent-soft">
+          !readOnly && <Link href={`/add?to=${book.id}`} className="rounded-full border border-border px-4 py-1.5 text-sm hover:bg-accent-soft">
             + Add a copy
           </Link>
         }
@@ -220,17 +228,19 @@ export function BookDetail({ book }: { book: Book }) {
         <ul className="grid gap-3 sm:grid-cols-2">
           {book.copies.map((c) => (
             <li key={c.id}>
-              <CopyCard copy={c} title={book.title} author={authors[0]?.name ?? ""} isLastCopy={book.copies.length === 1} />
+              <CopyCard copy={c} title={book.title} author={authors[0]?.name ?? ""} isLastCopy={book.copies.length === 1} readOnly={readOnly} />
             </li>
           ))}
         </ul>
         {book.copies.length === 0 && <p className="text-sm text-muted">You don&apos;t own a copy right now.</p>}
-        <div className="mt-3">
-          <MergeEntry titleId={book.id} title={book.title} />
-        </div>
+        {!readOnly && (
+          <div className="mt-3">
+            <MergeEntry titleId={book.id} title={book.title} />
+          </div>
+        )}
       </Section>
 
-      {book.goneCopies.length > 0 && (
+      {book.goneCopies.length > 0 && !readOnly && (
         <Section title="Gone">
           <ul className="divide-y divide-border rounded-2xl border border-border bg-surface">
             {book.goneCopies.map((c) => (
@@ -248,32 +258,34 @@ export function BookDetail({ book }: { book: Book }) {
         </Section>
       )}
 
-      <Section title="Update">
-        <div className="rounded-2xl border border-border bg-surface p-4">
-          <QuickEdit
-            book={{
-              id: book.id,
-              title: book.title,
-              readStatus: book.readStatus,
-              rating: book.rating,
-              writingQuality: book.writingQuality,
-              recommendation: book.recommendation,
-              isReference: book.isReference,
-              pieces: book.pieces,
-              pieceCount: book.pieces.length,
-              copies: book.copies.map((c) => ({
-                id: c.id,
-                format: c.format,
-                source: c.source,
-                onLoanTo: c.onLoanTo,
-                keepsakeNotes: c.keepsakeNotes,
-                audioPerformance: c.audioPerformance,
-                audioNote: c.audioNote,
-              })),
-            }}
-          />
-        </div>
-      </Section>
+      {!readOnly && (
+        <Section title="Update">
+          <div className="rounded-2xl border border-border bg-surface p-4">
+            <QuickEdit
+              book={{
+                id: book.id,
+                title: book.title,
+                readStatus: book.readStatus,
+                rating: book.rating,
+                writingQuality: book.writingQuality,
+                recommendation: book.recommendation,
+                isReference: book.isReference,
+                pieces: book.pieces,
+                pieceCount: book.pieces.length,
+                copies: book.copies.map((c) => ({
+                  id: c.id,
+                  format: c.format,
+                  source: c.source,
+                  onLoanTo: c.onLoanTo,
+                  keepsakeNotes: c.keepsakeNotes,
+                  audioPerformance: c.audioPerformance,
+                  audioNote: c.audioNote,
+                })),
+              }}
+            />
+          </div>
+        </Section>
+      )}
 
       {book.series && book.series.books.length > 1 && (
         <Section title={`${book.series.name}: the volumes you own`}>
@@ -281,7 +293,7 @@ export function BookDetail({ book }: { book: Book }) {
             {book.series.books.map((s) => (
               <li key={s.id}>
                 <Link
-                  href={`/books/${s.id}`}
+                  href={`${base}/books/${s.id}`}
                   aria-current={s.id === book.id ? "page" : undefined}
                   className={`flex items-baseline gap-3 px-4 py-2.5 text-sm hover:bg-accent-soft ${s.id === book.id ? "font-semibold" : ""}`}
                 >
@@ -297,41 +309,58 @@ export function BookDetail({ book }: { book: Book }) {
       )}
 
       <Section title="Classification">
-        <Classification book={book} />
-        <div className="mt-4">
-          <ClassificationEditor
-            key={book.tags.map((t) => t.id).join(",") + book.audience + book.spice + book.storyFocus + book.vibeMain + book.vibeSecond + book.romanticSubplot}
-            titleId={book.id}
-            bookType={book.bookType}
-            lists={book.lists}
-            initial={{
-              tagIds: book.tags.filter((t) => t.kind !== "rough_genre").map((t) => t.id),
-              audience: book.audience,
-              romanticSubplot: book.romanticSubplot,
-              spice: book.spice as Spice | null,
-              storyFocus: book.storyFocus as StoryFocus | null,
-              vibeMain: book.vibeMain as Vibe | null,
-              vibeSecond: book.vibeSecond as Vibe | null,
-            }}
-          />
-        </div>
-        <p className="mt-4 rounded-2xl border border-dashed border-border px-4 py-3 text-sm text-muted">
-          Coming later in Phase 2, each with its source for you to check: suggestions for all of this, publisher and
-          length, and author and character representation.
-        </p>
+        <Classification book={book} readOnly={readOnly} />
+        {!readOnly && (
+          <div className="mt-4">
+            <ClassificationEditor
+              key={book.tags.map((t) => t.id).join(",") + book.audience + book.spice + book.storyFocus + book.vibeMain + book.vibeSecond + book.romanticSubplot}
+              titleId={book.id}
+              bookType={book.bookType}
+              lists={book.lists}
+              initial={{
+                tagIds: book.tags.filter((t) => t.kind !== "rough_genre").map((t) => t.id),
+                audience: book.audience,
+                romanticSubplot: book.romanticSubplot,
+                spice: book.spice as Spice | null,
+                storyFocus: book.storyFocus as StoryFocus | null,
+                vibeMain: book.vibeMain as Vibe | null,
+                vibeSecond: book.vibeSecond as Vibe | null,
+              }}
+            />
+          </div>
+        )}
+        {!readOnly && (
+          <p className="mt-4 rounded-2xl border border-dashed border-border px-4 py-3 text-sm text-muted">
+            Coming later in Phase 2, each with its source for you to check: suggestions for all of this, publisher and
+            length, and author and character representation.
+          </p>
+        )}
       </Section>
     </article>
   );
 }
 
 // " (Open Library, not confirmed)" after a value that was filled in for her.
-function from(s: FieldSource | undefined) {
+function sourceNote(s: FieldSource | undefined) {
   if (!s || s.source === "alexandra" || s.confirmed) return "";
   const name = { openlibrary: "Open Library", googlebooks: "Google Books", import: "your photos" }[s.source] ?? s.source;
   return ` (${name}, not confirmed)`;
 }
 
-function CopyCard({ copy: c, title, author, isLastCopy }: { copy: BookCopy; title: string; author: string; isLastCopy: boolean }) {
+function CopyCard({
+  copy: c,
+  title,
+  author,
+  isLastCopy,
+  readOnly,
+}: {
+  copy: BookCopy;
+  title: string;
+  author: string;
+  isLastCopy: boolean;
+  readOnly: boolean;
+}) {
+  const from = readOnly ? () => "" : sourceNote;
   const details = [
     c.edition && ["Edition", c.edition],
     c.editionType === "omnibus" && ["Edition type", "Omnibus / collected edition"],
@@ -370,13 +399,17 @@ function CopyCard({ copy: c, title, author, isLastCopy }: { copy: BookCopy; titl
           ))}
         </dl>
       )}
-      {ADDED_FROM[c.source] && <p className="mt-3 text-[11px] text-muted">Added from {ADDED_FROM[c.source]}</p>}
-      <CoverPicker copyId={c.id} title={title} author={author} hasCover={!!c.coverUrl} isPhoto={c.coverKind === "photo"} />
-      <RemoveCopy
-        copyId={c.id}
-        label={c.format === "ebook" || c.format === "audiobook" ? `${WHERE[c.source] ?? "other"} ${c.format}` : "bookshelf copy"}
-        isLastCopy={isLastCopy}
-      />
+      {!readOnly && (
+        <>
+          {ADDED_FROM[c.source] && <p className="mt-3 text-[11px] text-muted">Added from {ADDED_FROM[c.source]}</p>}
+          <CoverPicker copyId={c.id} title={title} author={author} hasCover={!!c.coverUrl} isPhoto={c.coverKind === "photo"} />
+          <RemoveCopy
+            copyId={c.id}
+            label={c.format === "ebook" || c.format === "audiobook" ? `${WHERE[c.source] ?? "other"} ${c.format}` : "bookshelf copy"}
+            isLastCopy={isLastCopy}
+          />
+        </>
+      )}
     </div>
   );
 }
@@ -424,7 +457,7 @@ const SHOWN_KINDS: TagKind[] = [
 ];
 
 // What the book is, as she's set it (or as it came from the photos, marked).
-function Classification({ book }: { book: Book }) {
+function Classification({ book, readOnly }: { book: Book; readOnly: boolean }) {
   const rows: [string, React.ReactNode][] = [];
   const audience = labelOf(AUDIENCE, book.audience);
   if (audience) rows.push(["Audience", audience]);
@@ -437,8 +470,8 @@ function Classification({ book }: { book: Book }) {
         {tags.map((t) => (
           <span
             key={t.id}
-            title={sourceLabel(t) ?? undefined}
-            className={`rounded-full px-2.5 py-0.5 ${t.confirmed ? "bg-accent-soft" : "border border-dashed border-border"}`}
+            title={readOnly ? undefined : (sourceLabel(t) ?? undefined)}
+            className={`rounded-full px-2.5 py-0.5 ${t.confirmed || readOnly ? "bg-accent-soft" : "border border-dashed border-border"}`}
           >
             {t.name}
           </span>
@@ -453,7 +486,7 @@ function Classification({ book }: { book: Book }) {
   const rough = book.tags.filter((t) => t.kind === "rough_genre");
   const unconfirmed = book.tags.some((t) => t.kind !== "rough_genre" && !t.confirmed);
 
-  if (!rows.length && !rough.length) return <p className="text-sm text-muted">Nothing set yet.</p>;
+  if (!rows.length && (!rough.length || readOnly)) return <p className="text-sm text-muted">Nothing set yet.</p>;
   return (
     <>
       {rows.length > 0 && (
@@ -466,10 +499,10 @@ function Classification({ book }: { book: Book }) {
           ))}
         </dl>
       )}
-      {unconfirmed && (
+      {unconfirmed && !readOnly && (
         <p className="mt-2 text-xs text-muted">Dashed values came from your shelf photos and aren&apos;t confirmed yet. Saving the classification confirms them.</p>
       )}
-      {rough.length > 0 && (
+      {rough.length > 0 && !readOnly && (
         <p className="mt-2 text-xs text-muted">
           Rough genre from your shelf photos: {rough.map((t) => t.name).join(", ")}. It goes away once you set genres.
         </p>

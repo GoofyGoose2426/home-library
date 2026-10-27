@@ -8,7 +8,7 @@ A private catalog of every book Alexandra owns in print, ebook and audio. It hel
 
 - **Owned books only.** A copy that's sold, donated, given away or lost moves to the **Gone list** (with the reason and date, and Undo). A title with no owned copies left drops out of the library, lookup and stats. A copy added by mistake is deleted outright. DNF books are removed, not tracked.
 - **Prefill, then edit.** Metadata, classification and representation are pre-filled from public sources. Alexandra can add to, correct or override any field. Each pre-filled field records where it came from.
-- **Owner-only.** Only Alexandra can view or edit. No public pages, no sharing links.
+- **Owner-only editing.** Only Alexandra can edit. She can turn on one secret view-only link for friends and co-workers: it shows everything except loans, keepsake notes and the Gone list, including future dashboards and stats (`docs/sharing-plan.md`).
 - **The catalog is the system of record.** Ratings and reviews are written here. StoryGraph and Goodreads aren't connected.
 
 ## Data model
