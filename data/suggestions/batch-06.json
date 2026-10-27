@@ -1,0 +1,1699 @@
+[
+ {
+  "id": "dd56b466-7c5c-4eca-8b1f-b2ba766c5289",
+  "title": "Who Was Betty?",
+  "genre": [
+   "Nonfiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "3454bbef-2d51-4e78-8098-40ee069b4c23",
+  "title": "Notes to Myself",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Self-help"
+  ],
+  "subject": [
+   "Wellbeing & rest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "f6af7f4f-b4f0-46e4-9f9e-635e3c4a3377",
+  "title": "Tale of the Waning Moon Vol. 1",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "beec54a3-a0f7-440b-a9ec-02af34fea847",
+  "title": "Tale of the Waning Moon Vol. 2",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "c62ca940-cd8d-4672-9783-033233e7debc",
+  "title": "Tale of the Waning Moon Vol. 3",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "5d28e0ed-e8ba-4111-b434-81c0a54d0026",
+  "title": "Tale of the Waning Moon Vol. 4",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "61da34d2-cb5d-4bbe-a0fc-c0cd01bfce8f",
+  "title": "Bayou Moon",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0cc11221-ca08-4af1-be8d-93a39a8db220",
+  "title": "On the Edge",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Urban fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "525b5334-6d4e-41f1-b0ad-8109c0ad1ebe",
+  "title": "Burn for Me",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Fantasy romance",
+   "Romantic suspense"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7fd933f3-3797-4fcf-8057-68615c263ddf",
+  "title": "White Hot",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Fantasy romance",
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2682f18e-5ea3-4b2b-aa9d-619a4c840748",
+  "title": "Wildfire",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Fantasy romance",
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4104d50a-bdb1-4f01-a6a0-7913d6360b0e",
+  "title": "Sapphire Flames",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Fantasy romance",
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "afdf4d8e-dc0f-47b6-a4ff-e65610087f60",
+  "title": "Emerald Blaze",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Fantasy romance",
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c16e8c99-3a9b-4fb1-ac73-3436685011b5",
+  "title": "Ruby Fever",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Fantasy romance",
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b098c475-6c43-49e1-9151-a9b91fa54305",
+  "title": "Magic Bites",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "845586b0-3ec3-4018-b735-b468731e27ee",
+  "title": "Magic Burns",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "8f816ee0-25da-48f3-b33e-faa38f2649a2",
+  "title": "Magic Strikes",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "772b802b-cb02-4871-a299-7323c6d50567",
+  "title": "Magic Bleeds",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "479a93e1-c8c3-4f24-8db0-59fe29291ef2",
+  "title": "Magic Rises",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b9dd544d-0355-4d31-bc2b-5146e479a20f",
+  "title": "Magic Breaks",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "5162dd2c-9f13-4b67-9d99-86e01234e31c",
+  "title": "Magic Shifts",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a7a695f3-36c6-4b70-8f9c-71e6e4169ef4",
+  "title": "Magic Binds",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "7657ee07-c726-4fa2-85dd-139450226e12",
+  "title": "Magic Triumphs",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "1a997bff-e3f1-4441-ae9f-30f2d780bec6",
+  "title": "Magic Gifts",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "shifter_type": [
+   "Big cats",
+   "Wolves"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d0dd5de8-f250-4b35-880b-f91fd33e76e0",
+  "title": "Gunmetal Magic",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Various real animals"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "354a1a72-18fc-49ad-8a57-9e92e622d93e",
+  "title": "Magic Dreams",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Big cats"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7ab51bae-63e6-43d8-b64d-41dcd4fe8238",
+  "title": "Magic Steals",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Big cats"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "71d7733e-f09e-4307-8122-ecb96a2b042d",
+  "title": "Alphas: Origins",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "9c75e78a-92c9-4857-bb10-ff7d4d9d3309",
+  "title": "A Fellowship of Bakers & Magic",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "cb974416-6358-4071-8598-743073355a47",
+  "title": "Death Meets Cute",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "2906a339-e637-4f17-a0f4-0a5a7d8d6a18",
+  "title": "Harry Potter and the Chamber of Secrets",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Magic school / academy",
+   "Chosen one",
+   "Found family"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "f76376ec-58fa-462e-9948-a92f24f90458",
+  "title": "Harry Potter and the Philosopher's Stone",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Magic school / academy",
+   "Chosen one",
+   "Found family"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "d63803f8-363e-40a8-80cb-f8c95a510c16",
+  "title": "Harry Potter and the Prisoner of Azkaban",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Magic school / academy",
+   "Chosen one",
+   "Found family"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "42333b81-ed44-434b-bf2a-30668b95c7e2",
+  "title": "Harry Potter and the Deathly Hallows",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Magic school / academy",
+   "Chosen one",
+   "Found family"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "40e3c3f1-0e2f-4d0b-84cd-cfb27953ddc8",
+  "title": "Harry Potter and the Goblet of Fire",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Magic school / academy",
+   "Chosen one",
+   "Found family"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "375aef24-a2fe-4193-b9a3-727054b2b709",
+  "title": "Harry Potter and the Half-Blood Prince",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Magic school / academy",
+   "Chosen one",
+   "Found family"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "1c9da736-2260-404b-a9e8-1a1874a41260",
+  "title": "Harry Potter and the Order of the Phoenix",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Magic school / academy",
+   "Chosen one",
+   "Found family"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "b21de33b-3d04-4bf2-9d99-95eaddc8a048",
+  "title": "The Ginger Man",
+  "genre": [
+   "Literary fiction",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "89c9ec49-c37d-4c83-ad49-668ca64f2173",
+  "title": "The Hobbit: The Graphic Novel",
+  "genre": [
+   "Fantasy",
+   "Classics"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Quest",
+   "Dragons"
+  ],
+  "gn_style": [
+   "Adaptation"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b7c7eec8-aade-41f6-a83d-58e1b3b070b5",
+  "title": "Kushiel's Avatar",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Court intrigue",
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "ae6051a9-b334-4e90-82dc-9672e1e2ae4c",
+  "title": "Kushiel's Chosen",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Court intrigue",
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "048ce446-f541-4f0a-83cb-79d63c1239d4",
+  "title": "Kushiel's Dart",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Court intrigue",
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "06e60348-3733-436b-93bd-105fd00c077c",
+  "title": "Cassiel's Servant",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Bodyguard",
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "418cabc3-f706-4980-8f6a-f7dfa105b760",
+  "title": "Banewreaker",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Dark fantasy"
+  ],
+  "trope": [
+   "Villain origin"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "intense"
+  ]
+ },
+ {
+  "id": "d79df577-1e17-481f-a95b-845b0d8fa966",
+  "title": "Godslayer",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Dark fantasy"
+  ],
+  "trope": [
+   "Villain origin"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "intense"
+  ]
+ },
+ {
+  "id": "97dfa9e8-f9ef-494c-b6b3-f84c6997b5f8",
+  "title": "Chlorine",
+  "genre": [
+   "Horror",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Body horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "f17f8fec-db05-4129-996d-f1d2460ef4a9",
+  "title": "Sugar Daddies",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Smut"
+  ],
+  "trope": [
+   "Why choose / reverse harem"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "spice_led"
+ },
+ {
+  "id": "fe16521b-0c84-4da6-8ede-1c5400c2ee06",
+  "title": "The Last of the Mohicans",
+  "genre": [
+   "Classics",
+   "Historical fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "8dbccf11-f96d-4a2d-810d-9eb8a52fb237",
+  "title": "Politically Correct Bedtime Stories",
+  "genre": [
+   "Fantasy",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Satire",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "cc7889e6-5feb-4399-81d3-13785bf178e9",
+  "title": "Reprieve",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Queer horror",
+   "Slasher"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "7cc168ff-3494-44b0-860a-fad0388d8cfe",
+  "title": "Black Friday",
+  "genre": [
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "638057e0-74d8-426e-b1b2-979fb7871487",
+  "title": "Jack & Jill",
+  "genre": [
+   "Thriller & suspense",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Crime thriller",
+   "Detective / police procedural"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "62ce3434-0d5f-420d-8156-e7a9830c0407",
+  "title": "Leviathan Wakes",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "6cf2a7ea-b1b4-489d-b657-d03e3cad9bef",
+  "title": "Emma",
+  "genre": [
+   "Classics",
+   "Romance"
+  ],
+  "trope": [
+   "Friends to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d29437d6-93d0-4010-9226-d926e8f5230f",
+  "title": "Jane Austen Collection: The Complete Novels",
+  "genre": [
+   "Classics",
+   "Romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "779b01c5-6fa4-49b3-a7a8-af442dd14c90",
+  "title": "Mansfield Park",
+  "genre": [
+   "Classics",
+   "Romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "1aa62f23-68c0-4efa-94f2-dee80e54193d",
+  "title": "Sense and Sensibility",
+  "genre": [
+   "Classics",
+   "Romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "07f18d13-29ef-4d87-abed-0ee80f527d94",
+  "title": "Northanger Abbey",
+  "genre": [
+   "Classics",
+   "Romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "80018ef8-936c-4418-8379-eba7e7c1d3f5",
+  "title": "Persuasion",
+  "genre": [
+   "Classics",
+   "Romance"
+  ],
+  "trope": [
+   "Second chance",
+   "Mutual pining"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "ff5c651c-79ca-4133-99c6-115cb7d1224d",
+  "title": "Pride and Prejudice",
+  "genre": [
+   "Classics",
+   "Romance"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Opposites attract"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "2412447b-ffac-415a-84f2-960c5bc2d7de",
+  "title": "Through Wolf's Eyes",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Court intrigue"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "9d6085cd-f6f2-4df0-998c-51e92c18cc2b",
+  "title": "Wolf's Head, Wolf's Heart",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Court intrigue"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "daa14fdf-7ec9-497a-ad61-e92632d08d6d",
+  "title": "The Dragon of Despair",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Court intrigue"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "ef6c2c06-d444-41a8-88a6-23ea0a037905",
+  "title": "Trupp: A Fuzzhead Tale",
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "605aedf1-cfb2-44c1-8c15-ae2089680747",
+  "title": "Chef's Kiss",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a689271f-82c4-42b8-b41f-aa06a02d610a",
+  "title": "Nevernight",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Grimdark"
+  ],
+  "trope": [
+   "Assassin",
+   "Revenge",
+   "Trials / competition"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "881fe95d-f69b-428e-b392-27a0b513fab2",
+  "title": "Godsgrave",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Grimdark"
+  ],
+  "trope": [
+   "Assassin",
+   "Revenge",
+   "Trials / competition"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d85ea8a2-0d21-4246-a3c3-ade50bbf0dcc",
+  "title": "Darkdawn",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Grimdark"
+  ],
+  "trope": [
+   "Assassin",
+   "Revenge",
+   "Trials / competition"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b6267b1f-dbf8-44e6-bed9-e182ff5559af",
+  "title": "For Whom the Belle Tolls",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Demons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "55986857-6165-4867-9924-ed38fa6e9b6e",
+  "title": "Acceptance",
+  "genre": [
+   "Sci-fi",
+   "Horror"
+  ],
+  "subgenre": [
+   "Weird fiction",
+   "Cosmic horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "3dccfab2-4e34-477b-a062-160e2f01e34d",
+  "title": "Annihilation",
+  "genre": [
+   "Sci-fi",
+   "Horror"
+  ],
+  "subgenre": [
+   "Weird fiction",
+   "Cosmic horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "3834a502-d8a1-49d8-9a2b-2fde87c8ed37",
+  "title": "Authority",
+  "genre": [
+   "Sci-fi",
+   "Horror"
+  ],
+  "subgenre": [
+   "Weird fiction",
+   "Cosmic horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "17e64e1d-3d5c-4c51-8879-ad883fef9bbc",
+  "title": "Blood",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Popular science"
+  ],
+  "subject": [
+   "Health, bodies & sexuality"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "88425b65-519a-433c-a537-6fe96c68dd6f",
+  "title": "The Madness of Lord Ian Mackenzie",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2afb1509-73d6-46b8-9a22-3ab9055f0a95",
+  "title": "Lady Isabella's Scandalous Marriage",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3c745b62-1652-44b7-be58-7ad8c9629c3d",
+  "title": "The Duke's Perfect Wife",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a5ffd2f0-49c8-41ff-8960-b421a266afe0",
+  "title": "The Many Sins of Lord Cameron",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bef5d892-dcdf-4aca-9564-7fc50adca8cd",
+  "title": "Rules for a Proper Governess",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Single parent"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2b3d2563-6f31-4e3a-8213-df2cffa69084",
+  "title": "The Untamed Mackenzie",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "79e0bfb3-1a8b-4b24-b599-dd8b1d4b4f88",
+  "title": "Highlander Ever After",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6eea0044-6e1b-49ac-81e6-e7e61640181e",
+  "title": "The Pirate Next Door",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bc9791cf-3ce4-40a7-9be9-352478656ab1",
+  "title": "Canadian Boyfriend",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "00a8593f-b01b-42b2-a471-a099d060df84",
+  "title": "Batman: Hush",
+  "genre": [
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Crime thriller"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Batman / DC"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "08a18589-9193-43d5-8b9f-3b2de2793e34",
+  "title": "Come as You Are",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "49f971dc-bfdd-4f4b-96b3-77945fa7d073",
+  "title": "Women and Other Monsters",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Essays",
+   "Cultural criticism"
+  ],
+  "subject": [
+   "Feminism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ }
+]

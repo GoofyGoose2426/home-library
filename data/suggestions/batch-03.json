@@ -1,0 +1,1668 @@
+[
+ {
+  "id": "6e1dd488-1c76-40be-8c62-3b875bb476d5",
+  "title": "The Perfect Rake",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Fake dating",
+   "Rake / reformed rake"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "cf9374d6-9202-458d-81c4-f0e143137abb",
+  "title": "The Ship Who Sang",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "6a839f8e-a232-40fe-b031-4585f8c484eb",
+  "title": "Blood and Chocolate",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "e2a68dcf-b286-48df-8bcc-71926dcccb83",
+  "title": "The Little Prince",
+  "genre": [
+   "Classics",
+   "Fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "c9e6a56d-2b48-45d4-ac36-679ac27eed03",
+  "title": "The Phoenix King",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Assassin",
+   "Court intrigue"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "81960518-dfdd-4c5b-807e-67b36f49fcdf",
+  "title": "Sherlock Holmes: The Complete Novels and Stories, Vol. I",
+  "genre": [
+   "Classics",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Detective / police procedural"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ]
+ },
+ {
+  "id": "516a75b8-cc86-454f-b5b6-880e9fb98f6e",
+  "title": "Sherlock Holmes: The Complete Novels and Stories, Vol. II",
+  "genre": [
+   "Classics",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Detective / police procedural"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ]
+ },
+ {
+  "id": "fa02e068-ef60-4cad-a593-5584e0b98f11",
+  "title": "Unsettling Canada",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "History",
+   "Memoir"
+  ],
+  "subject": [
+   "Indigenous history & Canada"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "f603ee34-262b-4566-88f6-704b6e36a40c",
+  "title": "Delilah Green Doesn't Care",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bfbe36c9-6779-4a80-bcfb-2c37a8e87f84",
+  "title": "Sister Outsider",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Essays"
+  ],
+  "subject": [
+   "Feminism",
+   "Social justice & anti-racism",
+   "Queer & trans lives"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "0b383e21-4be5-442e-a733-343d44846d59",
+  "title": "The Time Traveler's Wife",
+  "genre": [
+   "Literary fiction",
+   "Sci-fi",
+   "Romance"
+  ],
+  "subgenre": [
+   "Time travel"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "0bc79910-2ad7-49a5-919e-f35e57289a21",
+  "title": "Field Guide for the Formerly Villainous",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Redemption arc"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "aaab6e73-7c18-4066-be6c-92a43c069f63",
+  "title": "The Wolf and the Woodsman",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical fantasy",
+   "Dark fantasy",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f00e253c-368e-4756-a07c-a29de0cbadf6",
+  "title": "Bound",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Monster romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "c9d7efa5-1158-4f3e-86b9-8fd8f6c998b7",
+  "title": "Offside",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "897d0fb3-8f1f-4956-a088-3fed48f5f178",
+  "title": "I, Medusa",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "trope": [
+   "Villain origin"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "f5d19ee8-71ca-42da-bd75-71a5e63baa1e",
+  "title": "Good Spirits",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Holiday romance"
+  ],
+  "supernatural_being": [
+   "Ghosts"
+  ],
+  "trope": [
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6dad282a-eb0c-4999-8136-b7efbfe2a622",
+  "title": "Mixed Signals",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2fe67dc5-2ac2-47e0-8601-c4fb2becc55c",
+  "title": "A Dreadful Splendour",
+  "genre": [
+   "Horror",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Gothic"
+  ],
+  "supernatural_being": [
+   "Ghosts"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a87a6101-d27e-4e0c-b194-14371c1fc83b",
+  "title": "Of Monsters and Mainframes",
+  "genre": [
+   "Sci-fi",
+   "Horror"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI",
+   "Comedic horror"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "7c348d30-13e6-458f-81d7-b589b96d6dc9",
+  "title": "Sky Doll (Marvel)",
+  "genre": [
+   "Sci-fi"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "c35fe1a7-ecde-4d3e-ba48-27849c7f8927",
+  "title": "Sky Doll: Doll's Factory",
+  "genre": [
+   "Sci-fi"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "eac233ad-d5ae-4302-a495-a869dd6fbdb1",
+  "title": "Sky Doll: Spaceship",
+  "genre": [
+   "Sci-fi"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "e234d461-2e87-427b-9bb0-0541d722f19a",
+  "title": "Heart of Fire",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Dragons"
+  ],
+  "trope": [
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8175540d-c70f-4604-8704-be0138f344af",
+  "title": "Imogen, Obviously",
+  "genre": [
+   "Contemporary fiction",
+   "Romance"
+  ],
+  "subgenre": [
+   "Coming of age",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "0b9af158-1df8-4494-8e5a-30a6e6c51655",
+  "title": "A Closed and Common Orbit",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI",
+   "Solarpunk / hopepunk"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "9fb49bbe-12e6-4d09-baee-96ad4aa89831",
+  "title": "Monk & Robot",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Robots & AI",
+   "Solarpunk / hopepunk"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "9657f993-077b-4284-8334-dc0c100dedb0",
+  "title": "To Be Taught, If Fortunate",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "e2c11e0b-eb27-4038-adea-6ead1641e572",
+  "title": "Mrs. Mike",
+  "genre": [
+   "Classics",
+   "Historical fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "e66fc8ed-8301-412c-9f12-4ef2a63f0885",
+  "title": "Girl, Woman, Other",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Book club fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "8b78f2b1-e508-46c1-bcaf-06f56974bda7",
+  "title": "Ouran High School Host Club, Vol. 1",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "18676a62-5d3c-4db0-a4f1-302c3fec4346",
+  "title": "Ouran High School Host Club, Vol. 2",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "75cd4751-f38f-4e4f-a91b-d4b5713ef740",
+  "title": "Ouran High School Host Club, Vol. 3",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "4a31c8b9-3cd2-4be7-ad97-6ecf8ac49ce9",
+  "title": "Ouran High School Host Club, Vol. 4",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "5727e1a8-485a-4cc6-9b07-8cba2d731df2",
+  "title": "Ouran High School Host Club, Vol. 5",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "20a0218b-6f63-4818-ba4d-4d8e2c290a1f",
+  "title": "Ouran High School Host Club, Vol. 6",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "098b9388-3acb-4437-9d07-ecbe722fb194",
+  "title": "Ouran High School Host Club, Vol. 7",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "cf1a3163-c7dc-4b28-aa27-65eca833c002",
+  "title": "Ouran High School Host Club, Vol. 8",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d385c304-27a9-4f1d-a36e-59d0565b7016",
+  "title": "Ouran High School Host Club, Vol. 9",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "6a8c9f05-4751-47a2-92b0-df9902eaa98a",
+  "title": "Ouran High School Host Club, Vol. 10",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "712309a4-0ccb-4cc4-9985-dcfa7c217411",
+  "title": "Ouran High School Host Club, Vol. 11",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "05bb8a83-d23b-4f5a-aad4-036ece4c638b",
+  "title": "Ouran High School Host Club, Vol. 12",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d9dde67d-7053-4f4f-82c9-9e63064dff47",
+  "title": "Ouran High School Host Club, Vol. 13",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "dc01d5ec-cf96-4ae5-85f7-b6cf8667f395",
+  "title": "Ouran High School Host Club, Vol. 14",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "c3a6089e-fca4-4169-9288-be1c5a0ba525",
+  "title": "Ouran High School Host Club, Vol. 15",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "806aed65-6e11-4aeb-83d8-cf30dc49ff10",
+  "title": "Ouran High School Host Club, Vol. 16",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d01de6d6-3ec9-4bf3-87ed-5b151d09f4b3",
+  "title": "Ouran High School Host Club, Vol. 17",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "88f6db0d-a4c9-4a3f-9338-446182fa8bbc",
+  "title": "Ouran High School Host Club, Vol. 18",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fish out of water",
+   "Secret identity"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "ea39d6f6-4818-4b80-a448-ffeb3aa663a2",
+  "title": "Love in Color",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore",
+   "Greek / Roman myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "8fb3a7d5-7360-4e29-811d-085f2c3a3f66",
+  "title": "André the Giant: Life and Legend",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "History"
+  ],
+  "subject": [
+   "Celebrity"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "4774b326-2c8b-45fd-93b1-b46f798f1f25",
+  "title": "Dracula",
+  "genre": [
+   "Classics",
+   "Horror"
+  ],
+  "subgenre": [
+   "Gothic"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "1762f5f1-18de-4ad2-947f-f644c0db9429",
+  "title": "The Way of Kings",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "b168a5f8-a658-485e-b263-b16ab208bb10",
+  "title": "Bonfire & Bliss Bookstore",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a6e9035a-68eb-4493-a7a6-8c318f8acfc9",
+  "title": "Butcher & Blackbird",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "trope": [
+   "Morally grey love interest",
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4717e5a7-9cd6-4cb5-9885-f1eb8eaa2044",
+  "title": "Leather & Lark",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "trope": [
+   "Bodyguard",
+   "Enemies to lovers",
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6fec8562-62b9-4935-a8a1-abd3a388face",
+  "title": "The Unbroken",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "ba8a5b85-df39-45c3-a667-8e886d223ee4",
+  "title": "Witchmark",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical fantasy",
+   "Gaslamp / gaslight"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "2316ab05-c1e6-4087-85ed-d522cd162d7e",
+  "title": "The Winter King",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4577b1ad-a075-429a-80f8-14536261386e",
+  "title": "Unnatural Magic",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "84525733-d89b-408f-9470-694412f070d1",
+  "title": "Sea of Rust",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Post-apocalyptic",
+   "Robots & AI"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "15c23c5e-87da-41d9-a8bc-4e61e7b268c3",
+  "title": "Captive Prince",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Captor / captive",
+   "Court intrigue",
+   "Secret identity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "99df1639-0dfb-4f44-a43d-cd5146749e9a",
+  "title": "Prince's Gambit",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Captor / captive",
+   "Court intrigue",
+   "Secret identity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "fe8c6d2a-c1d6-4f2f-b3e6-967770df1785",
+  "title": "Kings Rising",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Captor / captive",
+   "Court intrigue",
+   "Secret identity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "5d756f73-343c-43bc-9053-3284e8765555",
+  "title": "Prince Caspian",
+  "genre": [
+   "Fantasy",
+   "Classics"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "a39dc256-d98e-4a91-ab47-7dcfd371b9fe",
+  "title": "The Horse and His Boy",
+  "genre": [
+   "Fantasy",
+   "Classics"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "184e2951-458b-4029-b74f-ea70c639fc9a",
+  "title": "The Last Battle",
+  "genre": [
+   "Fantasy",
+   "Classics"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "6fda1be9-b270-44d7-bfc6-3b92ea0a6eab",
+  "title": "The Magician's Nephew",
+  "genre": [
+   "Fantasy",
+   "Classics"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "f511edcf-4f58-4c0c-af48-57d8658bbeee",
+  "title": "The Voyage of the Dawn Treader",
+  "genre": [
+   "Fantasy",
+   "Classics"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "a403d446-770e-4afe-9b54-cd1f9fb1d4c2",
+  "title": "The Starving Saints",
+  "genre": [
+   "Horror",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Psychological horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "b245f269-54c7-4292-8f62-75fd5de8046b",
+  "title": "Once",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales",
+   "Other fairy tales & folklore"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e82a574a-4e0e-4e37-8e0c-d88529c163db",
+  "title": "Beauty Sleep",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "035a4c58-9ce7-4262-b08e-908218434a1a",
+  "title": "Belle",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "dc2c0fac-2577-44ec-a6e5-d14df6fb2af5",
+  "title": "Once a Gentleman",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "02014e55-2210-493d-938d-41b418b5ea87",
+  "title": "The Serpent and the Wings of Night",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "trope": [
+   "Trials / competition",
+   "Enemies to lovers",
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "2a18b809-2d0c-41fd-8c55-936835dd6def",
+  "title": "Meet Me at the Lake",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "cozy"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6003f565-e7cf-46d8-b10c-83efb9358f60",
+  "title": "Nancy Drew #12: The Message in the Hollow Oak",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "fa5246e5-808e-497a-9128-9a76a30260f4",
+  "title": "Nancy Drew #13: The Mystery of the Ivory Charm",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b4d60e18-4f82-4d35-bc0e-4f0955bd96f7",
+  "title": "Nancy Drew #2: The Hidden Staircase",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "9eed1e71-37c5-46ec-805a-98347304343a",
+  "title": "Nancy Drew #29: Mystery at the Ski Jump",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "5bf0ec56-90e5-4126-b530-1845bd9ce532",
+  "title": "Nancy Drew #31: The Ringmaster's Secret",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ }
+]

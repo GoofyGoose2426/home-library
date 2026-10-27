@@ -1,0 +1,1541 @@
+[
+ {
+  "id": "c0d66be2-b496-460f-bdbb-430480889697",
+  "title": "Sea of Charms",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Cozy fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "9a9de5c5-c403-4c37-9c3a-ebf458b7ef05",
+  "title": "The Enchanted Greenhouse",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "7cf0b88d-4065-4e15-93c0-55fac35e5301",
+  "title": "The Lost",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "92f209bc-57c2-4cdd-a6f4-10b3d3d7d348",
+  "title": "Magic for Liars",
+  "genre": [
+   "Fantasy",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Detective / police procedural"
+  ],
+  "trope": [
+   "Magic school / academy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "60228b8b-9872-46bc-9402-665d72d1951f",
+  "title": "Spread Me",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Body horror",
+   "Queer horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "a42d074d-fc30-4820-b699-f8405407f9f1",
+  "title": "Our Rogue Fates",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "trope": [
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "33291a21-3aa0-4e3b-9d95-5cca4cb71c96",
+  "title": "House of Earth and Blood",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae",
+   "Shifters",
+   "Angels"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "25fce670-a463-480f-8c0b-4ab7efbc08b1",
+  "title": "The Assassin's Blade",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Assassin",
+   "Hidden heir / lost royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d176c91b-779e-49b9-acdf-3242663c40f1",
+  "title": "Crown of Midnight",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Assassin",
+   "Hidden heir / lost royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d3dc6978-f207-4eea-abfc-0ca8297532dc",
+  "title": "Heir of Fire",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Assassin",
+   "Hidden heir / lost royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "4cb49c2c-4a05-4a0f-a989-2f21e3bee870",
+  "title": "Queen of Shadows",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Assassin",
+   "Hidden heir / lost royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b90c64a6-35c1-4e7d-8a27-4cc89a922508",
+  "title": "Empire of Storms",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Hidden heir / lost royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "cd4857a8-9da2-4e5f-96fb-72d76cb0af43",
+  "title": "Kingdom of Ash",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Hidden heir / lost royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "57a340a9-4d0f-44ed-91d4-0f89e1db3a0f",
+  "title": "Bluebeard's Secret: The Complete Series",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "00c58035-1bc8-49d1-86ef-8ede6658eec0",
+  "title": "Bombshell",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c92cd96e-19f0-46d0-9a9b-b6f5cf663f39",
+  "title": "A Rogue by Any Other Name",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Revenge",
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2b3123d1-68fa-4748-aa4d-a98fd7478c91",
+  "title": "One Good Earl Deserves a Lover",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b03e38c8-5337-464b-840a-27057a94a07a",
+  "title": "No Good Duke Goes Unpunished",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "611a8cfd-bdbf-4f4f-a8ae-8ba8ffc7074c",
+  "title": "A Scot in the Dark",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7d4c6556-0e72-4a94-a823-168d16604963",
+  "title": "I Kissed a Rogue",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "55f2e003-7fff-4793-929d-fa39b8e41f0c",
+  "title": "The Lady Chosen",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c0514cbc-b7f8-4346-be95-45ef37369255",
+  "title": "Some Like It Scot",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "78534f21-94b7-4ac8-899f-2d34ddc461e6",
+  "title": "Never Judge a Lady by Her Cover",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Secret identity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "005f29ea-a9cc-4f36-90a2-15326fa6be46",
+  "title": "The Day of the Duchess",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0c3bb989-d1e0-4eb7-80bb-72f6469ccb6f",
+  "title": "The Tourist Attraction",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "trope": [
+   "Grumpy / sunshine"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "342eaa02-d562-4c00-9f2f-7480e101977c",
+  "title": "Mistletoe and Mr. Right",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance",
+   "Holiday romance"
+  ],
+  "trope": [
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "dcb59da1-9f16-4563-b09b-83fb1a3ac92b",
+  "title": "Enjoy the View",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "48d33c7a-5141-4088-997c-27ffa6f2e909",
+  "title": "Thrown for a Loop",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a70ebad5-79b1-456f-ada7-635d70973a88",
+  "title": "The Dawnhounds",
+  "genre": [
+   "Sci-fi",
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "7ef6cf52-2515-4739-835c-63933c6e3ab6",
+  "title": "The Rakess",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Rake / reformed rake"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "077c119c-f3e3-4601-9c7a-7baf4923ad9d",
+  "title": "A Touch of Darkness",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "supernatural_being": [
+   "Deities"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "780b5b79-a6c3-484a-affd-87313b9a70a4",
+  "title": "Kill the Beast",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Revenge",
+   "Redemption arc"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "8475ea59-d9d6-4cbf-a9b7-e49f27012247",
+  "title": "Never Whistle at Night",
+  "genre": [
+   "Horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "af46b6d2-f224-4fc8-8688-82fb781c49b5",
+  "title": "The Adventures of Amina al-Sirafi",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical fantasy"
+  ],
+  "trope": [
+   "Quest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "5a5d8075-ad42-419d-9036-50df0e54423a",
+  "title": "Wrath",
+  "genre": [
+   "Sci-fi",
+   "Thriller & suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "c82d5b31-db6c-4a60-8e34-3e596bb216de",
+  "title": "Transcendence",
+  "genre": [
+   "Romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "873ae0db-441b-48c8-ac32-8c7b84db7ad8",
+  "title": "A Light in the Attic",
+  "genre": [
+   "Poetry"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "5c89c798-5413-4b8b-b074-96d7d4dc073a",
+  "title": "The Giving Tree",
+  "audience": "childrens",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a60af812-b55b-497a-9ec3-3d6b9b29ce06",
+  "title": "Remarkably Bright Creatures",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Book club fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "8d8b8ae7-7100-4411-87cf-806bd6ca39fd",
+  "title": "The Poet Empress",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy"
+  ],
+  "trope": [
+   "Court intrigue"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "05876596-0736-4b09-873d-4c285fa6b07c",
+  "title": "Mabel Murple",
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "17e232fd-631a-4522-a983-efc95ac138a6",
+  "title": "Sleeping Dragons All Around",
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "d39a21f1-d2d1-42ab-913f-47f51c455b22",
+  "title": "Dorothy in Dreamland",
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e40d16dd-65a7-408e-9d22-a3545eef3986",
+  "title": "Africa Risen",
+  "genre": [
+   "Sci-fi",
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "4a7c5036-1aea-4eb3-95f8-e50124a3f668",
+  "title": "Cat on the Edge",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Cozy mystery"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "43f5c186-d983-4b5c-8b5d-9a8f9c282061",
+  "title": "Annie Bot",
+  "genre": [
+   "Sci-fi",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Robots & AI"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "7645bd8e-8f8b-4261-848a-dd603e1ee680",
+  "title": "Certain Dark Things",
+  "genre": [
+   "Horror"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "7641471a-1f34-47ce-92c0-493ae3fb5fad",
+  "title": "The Body Is Not an Apology, Second Edition",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Self-help"
+  ],
+  "subject": [
+   "Health, bodies & sexuality",
+   "Social justice & anti-racism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "350071ce-b24e-4b5d-8ec6-56ef1982957a",
+  "title": "My Darling Duke",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Wallflower"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "87d6813d-42d5-43ef-8478-7847de386f91",
+  "title": "Her Wicked Marquess",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Wallflower"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "9b91f7fc-5423-4571-8865-393e3cca6677",
+  "title": "Sticking to the Script",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "18c77bfb-3101-4387-8e79-2d24b6814a9c",
+  "title": "Wooing the Witch Queen",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e301635c-d16e-4fb2-93b1-cbc9e0918969",
+  "title": "My Heart Is a Chainsaw",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Slasher"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "887c605b-4ea5-41d5-83a4-e74c5ebfb71f",
+  "title": "30 Days of Night: Return to Barrow",
+  "genre": [
+   "Horror"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "9dc94655-50a6-4c7f-9eff-9591d7c6d325",
+  "title": "Gardens of the Moon",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Grimdark"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "370c1ab2-25b3-4245-8cfa-b84601e67f09",
+  "title": "Deadhouse Gates",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Grimdark"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "2c4e733d-7ba1-4fa7-82f6-e36743839529",
+  "title": "The Boyfriend Subscription",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Fake dating"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "24d06f3e-803d-4a13-90cd-38b9b02b88d0",
+  "title": "Rescuing Rayne",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "trope": [
+   "Bodyguard"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3e53003d-6614-4ed6-8b68-6a25c2c77feb",
+  "title": "Remedial Rocket Science",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8b709208-2e71-4997-a1e2-21779998ae1e",
+  "title": "Son of the Storm",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "ea70727f-480c-4e2d-97d8-5491e6afb0ae",
+  "title": "Water Song",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "57332797-b857-404b-a53f-ed58605108bb",
+  "title": "The Night Dance",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "883e1a13-3456-42b3-bd30-295f5f3e4bc7",
+  "title": "Here Be Sexist Vampires",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2182104d-73fb-48a7-9a69-9472a9adafa2",
+  "title": "Sword Stone Table",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "213f9b88-ee37-4a95-aba0-a0b20e4bf29e",
+  "title": "The Honey Witch",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "90a72f23-7d12-4691-aa06-ebfdc761993f",
+  "title": "Clockwork Boys",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "79cfa19b-8406-4c32-bcd0-86db56d9b26c",
+  "title": "The Wonder Engine",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "44a9330e-c3e0-42ee-ac56-2e1655de2864",
+  "title": "Daggerbound",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "f83665ed-5b67-440e-b71c-a21d133a7aeb",
+  "title": "What Feasts at Night",
+  "genre": [
+   "Horror",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Gothic"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "504c59b9-7c8a-46ad-9ebe-62b1540a8e73",
+  "title": "Paladin's Strength",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "5ccbd9aa-5758-47a3-8bcf-85bcc61fb1ce",
+  "title": "Hemlock & Silver",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "7eaa56cf-c2d1-4095-b465-c8ba7e9a626a",
+  "title": "Nettle & Bone",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Quest",
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "ec1a7a9a-6569-40e2-b550-f6f0144e2af4",
+  "title": "The Hollow Places",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Cosmic horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "059a6f03-ee05-40d5-a856-b4a1b62f3fd9",
+  "title": "The Raven And The Reindeer",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "eb852ab1-1e92-4105-b4a3-da1dbc0b238e",
+  "title": "The Twisted Ones",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Folk horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "d7a0a2bb-0357-49f8-a469-f493dd902614",
+  "title": "Sorry, Bro",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b50dc7f9-e676-4c41-af46-80f60826542a",
+  "title": "The Princess Trap",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "068f5820-ffcd-4f0a-b27f-82c606ce22bd",
+  "title": "Guarding Temptation",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Bodyguard"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3ffee6de-d3fc-4388-80f7-b025768a3bbe",
+  "title": "The Roommate Risk",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Friends to lovers",
+   "Mutual pining",
+   "Forced proximity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "81cac2f9-b35f-437f-beba-312ff757344c",
+  "title": "A Girl Like Her",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "trope": [
+   "Grumpy / sunshine"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c307958e-0b99-482a-940e-e4d6a8f2ee76",
+  "title": "Damaged Goods",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4205e4c2-2823-4676-acbb-1b53e3851bd6",
+  "title": "Take a Hint, Dani Brown",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Fake dating",
+   "Bodyguard"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8e34ec3e-2959-4a5c-b014-01a856a32f2f",
+  "title": "Act Your Age, Eve Brown",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Grumpy / sunshine"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7ea5e8a2-42c2-450a-960a-d525fa29f10b",
+  "title": "First Test",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Underdog"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ]
+ },
+ {
+  "id": "e0967b99-b369-47d9-b6eb-6c2e30a3ee25",
+  "title": "Page",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Underdog"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ]
+ },
+ {
+  "id": "358e663f-e79c-40f4-8c5a-284c4ce5ac5a",
+  "title": "Squire",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Underdog"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ]
+ },
+ {
+  "id": "b30042dc-7f8d-4460-af4d-265cb249932e",
+  "title": "Lady Knight",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Underdog"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ]
+ },
+ {
+  "id": "2ccf2dad-0619-4ea3-83ea-2d014ee2a137",
+  "title": "Protector of the Small Quartet",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Underdog"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic",
+   "light"
+  ]
+ }
+]

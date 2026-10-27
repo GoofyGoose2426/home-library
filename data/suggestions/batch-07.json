@@ -1,0 +1,1706 @@
+[
+ {
+  "id": "3435f115-61d3-4548-a1f2-5c01657e96be",
+  "title": "The Duke Undone",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "9e4d017a-1791-4e7d-bab2-2581c923ad71",
+  "title": "An Academic Affair",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "712f2b2f-3a05-4fef-8213-fbe0ff596bdd",
+  "title": "Just One Damned Thing After Another",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Time travel"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "a7e2a86c-c9c5-41ff-84db-97465ea0b5e1",
+  "title": "Our Iceberg Is Melting",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Business & leadership"
+  ],
+  "subject": [
+   "Leadership & work"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "276ce089-bcfb-4d05-badd-072a1523bf2e",
+  "title": "When the Moon Hits Your Eye",
+  "genre": [
+   "Sci-fi"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "0421f2a2-e1b9-4568-b1d0-19ddf227e920",
+  "title": "Princess Florecita and the Iron Shoes",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "ed6c0cfd-76cd-47f8-9001-216546e23f80",
+  "title": "Harry's Trees",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Book club fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "f071ed23-eb20-40d0-ba19-0cbf79ae5ce7",
+  "title": "The True Story of the 3 Little Pigs!",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "618300f8-2bb6-49cf-96b8-a1179025e4f0",
+  "title": "Someone in Time",
+  "genre": [
+   "Sci-fi",
+   "Romance"
+  ],
+  "subgenre": [
+   "Time travel",
+   "Sci-fi romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "3b2bc3d7-daa9-435f-ac92-c907c54e5998",
+  "title": "Out There Screaming",
+  "genre": [
+   "Horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "a62f3fdd-ce10-4847-9db1-a0dc90ba79de",
+  "title": "Making Love with the Land",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Essays",
+   "Memoir"
+  ],
+  "subject": [
+   "Indigenous history & Canada",
+   "Queer & trans lives",
+   "Nature & environment"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "7df5030e-80ab-44a2-977b-f1127fe0a379",
+  "title": "Love After the End",
+  "genre": [
+   "Sci-fi"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "2ce7d184-1446-4c1e-b99f-61980fe55a67",
+  "title": "Serenity: Better Days and Other Stories",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Serenity / Firefly"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "8f9dc91e-e8e6-458b-8ed0-6d50e3b40292",
+  "title": "Serenity: The Shepherd's Tale",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Serenity / Firefly"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "59f0bb40-0cd2-4e36-9409-09d047cad477",
+  "title": "Serenity: Those Left Behind",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Serenity / Firefly"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "ff55d776-112e-4021-9626-bc50a507e224",
+  "title": "Romancing Mister Bridgerton",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Friends to lovers",
+   "Wallflower"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4b360e1b-9a7f-4aff-b147-41ec6e1ca3dc",
+  "title": "Bridgerton Collection Volume 1",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "ac34f839-0aa7-4c5a-a4fb-1f6f7807a434",
+  "title": "Bridgerton Collection Volume 2",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a6a3c7cf-cfc3-47fe-95f1-3afe5b923e9c",
+  "title": "Bridgerton Collection Volume 3",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "dbe58446-b4a5-4be8-acf8-e86bdb3f0195",
+  "title": "My Season of Scandal",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3d0b6c9c-4f92-4e20-bf6f-a2c9ecb75e91",
+  "title": "A Belated Bride",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a5fd1879-f86e-4967-bd68-082779c43779",
+  "title": "Heartbreaker",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "60b0fd5b-432b-47af-a50f-cf3abd4442c9",
+  "title": "Mercy",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "60d26235-5c58-4acc-a355-ee72c1874648",
+  "title": "Slow Burn",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "ec78ab4f-385c-4898-96fd-ddcf9aa9ef5e",
+  "title": "Fast Track",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "178b742b-a838-4993-9f08-c5e8f0e772c6",
+  "title": "Ransom",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d8bd854d-9782-431f-89af-3f94d3883d14",
+  "title": "Honor's Splendour",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Captor / captive"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3af85077-7915-4a68-8952-8cf99dfc1a88",
+  "title": "The Teller of Small Fortunes",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "3cec4520-2497-415c-9202-c33a4c36804d",
+  "title": "A Merry Little Meet Cute",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Holiday romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "aeb0b8ae-e0a9-4343-b3a3-c01d15c436ef",
+  "title": "Fierce Femmes and Notorious Liars",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Coming of age"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "006c8918-7da7-43c8-80ea-4a2437eb5e3f",
+  "title": "I Hope We Choose Love",
+  "genre": [
+   "Poetry"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a44446a7-afa5-4ac5-a42b-a0353a924038",
+  "title": "Empire of AI",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Cultural criticism"
+  ],
+  "subject": [
+   "Technology & AI"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "915e2b5a-ba6e-4438-9742-79c6df0fb4f9",
+  "title": "Darkfever",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "22c61308-7d2c-4b92-aeb0-13e36fdf6919",
+  "title": "Bloodfever",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d78f7d0e-005f-4644-b78e-fe5e925a6564",
+  "title": "Faefever",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "71e580c7-02f6-4098-a4e0-7d60ff9bb755",
+  "title": "Dreamfever",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "72622ab3-bb85-4f95-adf1-c908a1e0e469",
+  "title": "Shadowfever",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_4",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "6bc7159e-2d7f-4d5d-b8eb-a5467a3bc3a2",
+  "title": "Beneath Dark Waters",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b13d147c-b8b8-463d-b1e9-0e6f9e3851b4",
+  "title": "Say You're Sorry",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b7f63bc1-703d-44b0-b5e0-4c463701645b",
+  "title": "Say No More",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "c0ba2a1f-6da9-4f76-b505-653bdc862acb",
+  "title": "Say Goodbye",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b6ed84f6-1599-4c04-92f1-097a31313215",
+  "title": "You Belong to Me",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "83fc0b82-bd23-4a5a-9e14-1aea0d03154d",
+  "title": "No One Left to Tell",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "62e038de-7620-4aa1-98e6-f383fb68affd",
+  "title": "Did You Miss Me?",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "2eab8f8e-8a50-4891-89a0-1e2aac2aaef2",
+  "title": "Watch Your Back",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "0f8c7e70-4a70-41e3-a1d3-a310b66e4fe9",
+  "title": "Monster in the Closet",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a57e83d1-7ff5-4ad5-9322-c23885efea73",
+  "title": "Death Is Not Enough",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "fe87ea76-76dd-470d-9f87-9847b51b38c3",
+  "title": "Closer Than You Think",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "6d985e68-b273-45dc-8f5a-9cd9725f941f",
+  "title": "Alone in the Dark",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f0bd6034-bf15-4ff7-8596-d57c46727813",
+  "title": "Every Dark Corner",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "40e94656-342c-4034-83fc-8d6ad5580fca",
+  "title": "Edge of Darkness",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "6651cab8-673f-43e3-a46e-1921de502525",
+  "title": "Into the Dark",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "aa3db740-5a47-470d-b52f-8017a00fe533",
+  "title": "Cold-Blooded Liar",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a14573c2-d79b-4d30-8665-f18f6e035f19",
+  "title": "Cheater",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a0e495c5-9c1a-4829-a5c5-90a22bb54de8",
+  "title": "Broken Silence",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "5b94018b-c925-4229-9111-b4039baa2061",
+  "title": "Count to Ten",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "00b3f4e5-783b-493e-af98-eda12b2b4777",
+  "title": "Die for Me",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "c1942daf-5880-4c22-971e-cf8524f84e1f",
+  "title": "Dirty Secrets",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "797d3844-c2bf-4ed0-a2af-d9e489b04bb4",
+  "title": "Don't Tell",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "5df04d65-00d0-4d7d-9807-99c519e45695",
+  "title": "Have You Seen Her?",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "3b32af7d-d485-4695-8619-4de5b90caa23",
+  "title": "I Can See You",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "eca1b17d-6ae0-4386-b1de-707a0af813b3",
+  "title": "I'm Watching You",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "35684cd5-9f4f-44a0-a972-ce7bc5630cd2",
+  "title": "Kill for Me",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "2b2319b5-32f8-476c-946d-b9705d346c3d",
+  "title": "Scream for Me",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "e18bf1d7-7a40-457d-8ab3-c1a453dfd632",
+  "title": "Silent Scream",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "35914cdb-0ce2-4d3d-9ba7-e7ef15aba265",
+  "title": "The White Picket Fence",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f91bdecf-60ef-4b7f-b8c5-4fb8cec55289",
+  "title": "You Can't Hide",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a0d52785-f6e9-4d0c-96c9-9bfa036afe2c",
+  "title": "A Polar Expedition: And Other Stimulating Research Opportunities",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Monster romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "18513737-7dea-4753-9b99-7db6a3dded09",
+  "title": "The Rake, or the Orca Who Met His Match in a Selkie Desiring Revenge",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Various real animals"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "ba646f68-00e5-4484-bc27-b708e40b9a5b",
+  "title": "Daddy Issues",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Age gap"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c79fa607-1517-42c1-918c-feaccc852987",
+  "title": "One to Watch",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "eab1d7de-29ce-46d5-91a6-8285053f9cc1",
+  "title": "Experienced",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0c8554a2-1982-49c5-80be-542b8cbdecef",
+  "title": "Neon Gods",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "ab5d96a8-77c2-425a-9644-606941de88b1",
+  "title": "Radiant Sin",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "55a1d54f-3c48-40fc-8541-8d672654214c",
+  "title": "Stone Heart",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6b9b993c-7149-415d-8607-0135769496e2",
+  "title": "Wicked Pursuit",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bbc5ea32-a83c-44b7-9486-e9b4f680979b",
+  "title": "The Last Dragon of the East",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Dragons"
+  ],
+  "trope": [
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "49c6c31c-8718-43be-84c3-6c55a31314dd",
+  "title": "Bastard!!, Vol. 1",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "cec564e8-efb6-4718-bccb-e9d052c9a532",
+  "title": "Bastard!!, Vol. 2",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "f0a507c2-2e55-4965-b5de-ba7c1185b11f",
+  "title": "Bastard!!, Vol. 3",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "8561a541-55f8-4ee6-b683-b2deba1ca5ca",
+  "title": "Bastard!!, Vol. 4",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "66a11def-66c3-41cc-8054-e18f1d3a50dc",
+  "title": "Bastard!!, Vol. 5",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "2190c469-911d-4a03-99a3-720aefd9e108",
+  "title": "Bastard!!, Vol. 6",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "f4c6105d-dff9-4cb9-8698-a91cc270dea2",
+  "title": "Bastard!!, Vol. 7",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "20bdb7b9-39b4-4a4f-9e3f-8d03b955b0a7",
+  "title": "Bastard!!, Vol. 8",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "dbee70df-9090-43d6-abfa-d2c9951e2e5c",
+  "title": "Bastard!!, Vol. 9",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "bd4e758d-eed0-4ce8-9c3b-138b5243652a",
+  "title": "Bastard!!, Vol. 10",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Sword & sorcery"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōnen"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ]
+ },
+ {
+  "id": "16a00a50-dc0f-4b52-9685-0e55d0785b72",
+  "title": "Taproot: A Story About a Gardener and a Ghost",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Ghosts"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "86f34ca8-864e-4500-8d81-1159cc093416",
+  "title": "Bitten",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Paranormal romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "25ca7193-51b3-4925-8f51-5474f266fba7",
+  "title": "When Women Were Dragons",
+  "genre": [
+   "Fantasy",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Historical fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ }
+]

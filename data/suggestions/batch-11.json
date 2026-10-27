@@ -1,0 +1,1687 @@
+[
+ {
+  "id": "3a722d61-85b6-4d5b-9d54-7f0d86e33a4c",
+  "title": "The Varlet and the Voyeur",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0a034b82-7562-4567-960b-901b69e4e838",
+  "title": "The Quality Street Girls",
+  "genre": [
+   "Historical fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "6032a9be-8a84-4a29-a9e9-47a8bd14c490",
+  "title": "The Amber Spyglass",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "trope": [
+   "Chosen one"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "c4ba5d67-ea34-4b18-9eab-9883e8a1f167",
+  "title": "The Golden Compass",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "trope": [
+   "Chosen one"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "4b8a2de2-4c02-4f4c-b1bc-c64de6e6f550",
+  "title": "The Subtle Knife",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "trope": [
+   "Chosen one"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a24a63e8-1b19-4257-9d88-f34ac00fa50d",
+  "title": "The Art of Gathering",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Guide / how-to"
+  ],
+  "subject": [
+   "Leadership & work"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "a3bc2df8-44f9-4fa1-b7f8-99e6820448b4",
+  "title": "There Is No Antimemetics Division",
+  "genre": [
+   "Sci-fi",
+   "Horror"
+  ],
+  "subgenre": [
+   "Weird fiction",
+   "Cosmic horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "fb79bf9a-ff08-4072-87f7-825dc9aa012f",
+  "title": "A Suitable Captive",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Captor / captive"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b85501d4-b845-483e-9e12-e9a838035716",
+  "title": "Medium, Sweet, Extra Shot of Geek",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2e0ce2f3-62d8-486e-b227-7cf89318d059",
+  "title": "A Rival Most Vial: Potioneering for Love and Profit",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "4bca2eab-0c49-4a13-b21f-d7dac72110e1",
+  "title": "The Knave and the Moon",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Dark fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d4f012e3-1003-41a9-abb2-9abcac6b820b",
+  "title": "The Knight and the Moth",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Dark fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "0fd051c4-c0d0-488c-beca-38b85855ec32",
+  "title": "The Sun and the Starmaker",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "a13d10d1-ce65-477b-980d-03c8c734e411",
+  "title": "Game Changer",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a3e4f881-ed64-492b-a407-d8a6f425df26",
+  "title": "Heated Rivalry",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Rivals to lovers",
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "148d3dcc-c81a-4977-b1fe-3a2a577800f2",
+  "title": "Lore Olympus Vol. 1",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "253facc1-b7af-4be2-af10-cd40ad9718d0",
+  "title": "Lore Olympus Vol. 2",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "ca950dc3-7823-48ae-aa59-fadddf5956fa",
+  "title": "Lore Olympus Vol. 3",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "3b2be121-afbf-474a-88ab-181b2a1f9824",
+  "title": "Lore Olympus Vol. 4",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "31d647c1-4768-448a-8380-d1c587254536",
+  "title": "Lore Olympus Vol. 5",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "31900a97-1d7b-4431-8acf-38cf5221b84e",
+  "title": "Lore Olympus Vol. 6",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "59e7a640-08bd-436e-a491-7eed3b8a0668",
+  "title": "Lore Olympus Vol. 7",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "013c50ec-17af-4959-a5d5-0da66f4cbdb0",
+  "title": "The Rough-Face Girl",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "53f6b368-5f7a-4d82-ae92-364676dd7406",
+  "title": "Black Sun",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "4d678b01-680f-4626-9362-196a99e559a1",
+  "title": "A Fire Endless",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b4d084b7-70ad-4958-9bbe-0f20a5d22dab",
+  "title": "A River Enchanted",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "9620ce16-0dcb-44c5-85fb-70802afa4cf5",
+  "title": "A Pirate's Life for Tea",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a4319205-fcfc-4ba2-a098-89a503184bef",
+  "title": "Can't Spell Treason Without Tea",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "0307932e-6419-4a12-bd76-fea973f9b33a",
+  "title": "If the Boot Fits",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c0be7789-6e63-47f0-a892-fc463328f338",
+  "title": "Dick Fight Island, Vol. 1",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "37f97205-1430-4ab9-a614-069b1aae9b2b",
+  "title": "Jonathan Livingston Seagull",
+  "genre": [
+   "Literary fiction",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "53a65b85-29f0-4acf-a584-750ca7b505d2",
+  "title": "Tokyo Ghost: Complete Edition",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Cyberpunk"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "d7ced60f-70d1-480b-afac-75926dd2c921",
+  "title": "Silver Under Nightfall",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "queer_romance_type": [
+   "Poly (more than two people)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bd9055ea-dc7b-4dbe-88e4-b6eb108bb28d",
+  "title": "The Deep",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a7dcdfc8-20b2-4612-8716-d4a1002c1c86",
+  "title": "Charlie and the Chocolate Factory",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "2a9da7f4-1c2f-4b64-94c1-b95fc3643c7e",
+  "title": "James and the Giant Peach",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "8b62d376-8eb4-4b0b-803c-a6439e1429d3",
+  "title": "The Witches",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e6c2edc7-b2ff-4d75-aea5-b1b992a5245b",
+  "title": "My Uncle Oswald",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Satire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "4f8deb86-0f92-4fa7-872b-32b4aa437c98",
+  "title": "Someone Like You",
+  "genre": [
+   "Literary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "48cb7533-f09a-4339-9f28-7ef2cfa9adb8",
+  "title": "The Best of Roald Dahl",
+  "genre": [
+   "Literary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "778f7562-fa47-48b8-a03d-773b50d69d7b",
+  "title": "Switch Bitch",
+  "genre": [
+   "Literary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "c11e389e-02d7-45a1-b7aa-92bce2a60fde",
+  "title": "The House of Wolves",
+  "genre": [
+   "Literary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "f1b4616f-2d58-468e-9b01-0fb0973f7aae",
+  "title": "The Poems of Browning",
+  "genre": [
+   "Poetry",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "4a97a4a7-337a-4ef5-9a8b-4b877f5761aa",
+  "title": "Rose Daughter",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "556ab25b-c357-410d-955f-a8c90babc2e1",
+  "title": "Spindle's End",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "55201eb2-0e83-43bb-a77a-85b0eb4553c5",
+  "title": "My Kind of Christmas",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance",
+   "Holiday romance"
+  ],
+  "trope": [
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4f5eaa78-3778-4ee1-925f-254087733d88",
+  "title": "Virgin River Collection Volume 1",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "adbfde3e-7df7-4639-8717-3aab2ce759f5",
+  "title": "Policing Black Lives",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "History"
+  ],
+  "subject": [
+   "Social justice & anti-racism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "7c48e3c9-61e0-47e4-8af4-a3b84beae05b",
+  "title": "Til Death Do Us Bard",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "1cfd98cb-b593-4da9-91aa-11cc09819536",
+  "title": "The Roommate",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Forced proximity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c17117bd-681e-453c-90f9-7bc74198fd43",
+  "title": "Bad Feminist",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Essays",
+   "Cultural criticism"
+  ],
+  "subject": [
+   "Feminism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "81157e93-9288-4bbc-883e-10a367981f6a",
+  "title": "Not That Bad",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Essays"
+  ],
+  "subject": [
+   "Feminism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "0dc8b7d7-a6e1-4497-b152-be87dd662f27",
+  "title": "home body",
+  "genre": [
+   "Poetry"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "75567bf9-ea69-45a3-9b8c-3ec726b1f045",
+  "title": "milk and honey",
+  "genre": [
+   "Poetry"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "4ec4abeb-0f37-4cd1-917a-9f65ad3e3cd4",
+  "title": "Light from Uncommon Stars",
+  "genre": [
+   "Sci-fi",
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "050053ce-a1ce-43a5-b0e8-717dbdb48b3a",
+  "title": "Blacktop Wasteland",
+  "genre": [
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Crime thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "629c70c5-261f-4066-83f8-9b22647eadd0",
+  "title": "The Phoenix Keeper",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Workplace romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c32ff403-f7bc-496b-90e2-79215bddfdc4",
+  "title": "Special Topics in Being a Human",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Guide / how-to"
+  ],
+  "subject": [
+   "Queer & trans lives"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b94bf487-3941-45ef-b049-20052ad2631b",
+  "title": "An Ember in the Ashes",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Love triangle"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "de6f024d-9aa8-46ea-8941-e60c64d3ae5c",
+  "title": "A Torch Against the Night",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Love triangle"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d0b941d6-5b62-41fb-9bea-c3977709a599",
+  "title": "A Reaper at the Gates",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Love triangle"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "97615234-809b-47ec-bb6d-d55a819be6b1",
+  "title": "A Sky Beyond the Storm",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Love triangle"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "3c590106-b8d6-404c-9730-aa5e63432623",
+  "title": "Stormswept",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c5f1a9e2-49ab-43e5-b143-96e593068ea8",
+  "title": "Femme Feral",
+  "genre": [
+   "Horror"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "24f1b282-ee9b-425a-a84c-b9c56380b10e",
+  "title": "Sold to the MC Men",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance",
+   "Smut"
+  ],
+  "trope": [
+   "Why choose / reverse harem"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "spice_led"
+ },
+ {
+  "id": "13d8f8d6-5c4b-4412-9925-29049a456ac3",
+  "title": "Guess How Much I Love You",
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "e74b7a0a-b637-48c9-9a48-aa01935f66a6",
+  "title": "Seven Blades in Black",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy"
+  ],
+  "trope": [
+   "Revenge"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "94693f46-aaf4-414e-862d-445456642437",
+  "title": "Fever Dream",
+  "genre": [
+   "Horror",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Psychological horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "7d45bdb3-1119-4491-a3f4-b5ff318d250c",
+  "title": "Cat Dragon",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "fe1f6232-6a8a-4f48-aba8-6775266eac5e",
+  "title": "The Priory of the Orange Tree",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Dragons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a4ebd8c7-54aa-4ee5-9af3-948da35a22af",
+  "title": "Water Moon",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "8cb9a56f-16ac-495e-aad8-5716af265026",
+  "title": "Breaking Out",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Poly (more than two people)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0167265c-c54d-40cd-b7e5-ec8e54ef2bad",
+  "title": "Hero",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e34717e5-07ba-4ab7-9405-9f2e727e442c",
+  "title": "On Dublin Street",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "586cc32f-415c-4d09-bf21-ac80436eac6d",
+  "title": "We Have Always Been Here",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Memoir"
+  ],
+  "subject": [
+   "Queer & trans lives"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "cc55acff-ed74-4012-9541-0548651e2481",
+  "title": "FAKE Vol. 1",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "1aae9830-3a4d-427a-8624-170e228df219",
+  "title": "FAKE Vol. 2",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "ffaca813-43a9-46ee-b053-974bef3be94c",
+  "title": "FAKE Vol. 3",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "0dc2c5bc-1c92-4bf4-8fb5-834a52505320",
+  "title": "FAKE Vol. 4",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "180915bb-30d1-45c5-907e-94e7db02a827",
+  "title": "FAKE Vol. 5",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "c646a158-b6e1-4dee-90b7-b96ca9a807ef",
+  "title": "FAKE Vol. 6",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "755211d0-d6da-432b-9544-33280fac74d2",
+  "title": "FAKE Vol. 7",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "1f00c1b9-dbe0-4b0a-938c-48dcc929bcda",
+  "title": "Until the Full Moon Vol. 1",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Vampires",
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "09873a18-cca6-4b8b-a0e9-484c4d7eeac9",
+  "title": "Until the Full Moon Vol. 2",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Vampires",
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "BL"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "0968bfe5-c197-42fa-8a11-91a61517982e",
+  "title": "RA-I",
+  "genre": [
+   "Fantasy"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "10e9053f-ff73-49da-a812-92fdb4d98438",
+  "title": "A Witch's Guide to Magical Innkeeping",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7ea75ae2-587b-41f0-b026-b02b40f2c917",
+  "title": "The Very Secret Society of Irregular Witches",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Paranormal romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8ebef876-6972-4d55-8469-bc02fef558d0",
+  "title": "The Wayfarer Redemption",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ }
+]

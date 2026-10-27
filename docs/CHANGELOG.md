@@ -2,6 +2,18 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Phase 2, step 5: Claude suggestions for the whole library
+
+- **Every book now has Claude suggestions waiting in To check**, apart from the ones listed below. In 12 more batches (02–13), 1,006 books got about 6,800 suggestions, so the library now has 3,605 list values and 3,408 story-field values from Claude. All are unconfirmed and labelled "Claude".
+- **Coverage:** 1,031 of your 1,067 books have suggestions. Left out on purpose:
+  - 5 books you'd already classified yourself (nothing of yours was touched)
+  - 12 art, craft and colouring books (reference)
+  - 4 titles that are still guesses from the shelf photos, plus the Holy Bible
+  - 14 books I don't know well enough to suggest anything (e.g. *Spellfire*, *The Queen's Wing*, *Lord Mouse*). These are better done by hand.
+- **How I judged:** your approved lists only, deeper levels only under their parent, and spice and story focus only for Romance or a romantic subplot. Spice is my least reliable field; where I wasn't fairly sure, I left it out. Manga volumes in a run share the same suggestions.
+- **Quickest way through:** in To check, use **Confirm all** for fields you trust (e.g. Audience), then go **By book** for genres, tropes and spice.
+- All batch files are kept in `data/suggestions/` (batch-01 to batch-13), and the tool is `scripts/suggest/apply_suggestions.py`.
+
 ## 2026-10-27 · Phase 2, step 5 (Option A): first 25 Claude suggestions
 
 - **No extra cost:** you chose Option A. Claude suggestions are made in Claude Code sessions, under your existing Claude plan, instead of an in-app API. The Phase 2 plan is updated; the in-app API waits until you want one-tap suggestions or Ask your library.

@@ -1,0 +1,1407 @@
+[
+ {
+  "id": "053a18a5-4a83-4f2a-952d-7c222c7368b5",
+  "title": "Harrow the Ninth",
+  "genre": [
+   "Fantasy",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Space opera"
+  ],
+  "trope": [
+   "Unreliable narrator"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "b15acff4-0805-4b25-a326-73edac22e73d",
+  "title": "Fifth Quarter",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "0fd6a9dc-26a6-48f1-96a0-f3cc12087dd2",
+  "title": "No Quarter",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "bc82861f-1d97-4b88-94f3-f2816f501755",
+  "title": "The Co-op",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "072503f8-27be-4021-8090-0589ecb50e72",
+  "title": "The Isle in the Silver Sea",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance",
+   "Retelling"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d5008354-76e4-49e2-9149-8eefdd9daa74",
+  "title": "One True Loves",
+  "genre": [
+   "Romance",
+   "Contemporary fiction"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Love triangle",
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a290d2bb-d31f-46c5-9337-1b65cdce1f09",
+  "title": "The Seven Husbands of Evelyn Hugo",
+  "genre": [
+   "Literary fiction",
+   "Historical fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "7db440a0-2bb7-43b1-a182-eefa7f48a3e3",
+  "title": "O Canada",
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "c210633f-49ef-4964-b139-2cf51b2b4909",
+  "title": "Magic & Matchmaking",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Cozy fantasy"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "1adf7033-adf0-4710-b4d3-7bac934f6b03",
+  "title": "The Devil Wears Plaid",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Captor / captive"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b12ac1b8-bd45-42f8-bf0d-0a841bcce4f6",
+  "title": "The Bride and the Beast",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6482032f-a201-41b7-b0cc-64d38b49617a",
+  "title": "Catch Her If You Can",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e3e71ceb-7e28-4f90-8259-20816ee0a4fa",
+  "title": "Risking It All",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4b42c43d-fa6a-419a-900d-7200eb34455e",
+  "title": "Protecting What's His",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7a287026-02b7-4cc4-85ee-a72d9fd4054f",
+  "title": "Tools of Engagement",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6fccc435-4c30-4fca-a84f-39ab27c667cf",
+  "title": "Happenstance",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3b3a2d68-8bc2-44fe-9b73-0e2249a26ed1",
+  "title": "Reborn Yesterday",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "11e5f046-897e-444e-8f95-aa7d3168ae2a",
+  "title": "My Killer Vacation",
+  "genre": [
+   "Romance",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "abbce27d-9457-426d-96d7-87bab0f16539",
+  "title": "Romancing the Duke",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "ec82f1b5-10d7-4dce-9e91-bca4b991f0d1",
+  "title": "Say Yes to the Marquess",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "33ea087b-09f9-42a1-a219-812f20c04524",
+  "title": "When a Scot Ties the Knot",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "98b98c09-bcb8-4f53-94dc-5f3193f95424",
+  "title": "A Night to Surrender",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3b221495-615d-4a49-b4f8-2f6625390e9c",
+  "title": "The Duchess Deal",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Marriage of convenience",
+   "Beauty and the beast"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "cd1b31ac-8f89-4f5c-8782-244d333e4cf6",
+  "title": "The Governess Game",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Boss / employee"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "dd0d85ff-7366-4356-9fbc-b7289912aaed",
+  "title": "The Wallflower Wager",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Wallflower",
+   "Beauty and the beast"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d4e3b641-97d1-4740-a5ea-46b1cd5ccf3c",
+  "title": "A Week to Be Wicked",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Road trip"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "92c0c576-fc46-4196-825d-10a01a1ba19a",
+  "title": "How the Dukes Stole Christmas",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Holiday romance"
+  ],
+  "trope": [
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d30d3ba6-0f5d-4157-831d-f80e42cd7467",
+  "title": "Slash or Pass",
+  "genre": [
+   "Romance",
+   "Horror"
+  ],
+  "subgenre": [
+   "Dark romance",
+   "Slasher"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d614d711-a4e3-4682-8a89-08ac47b22b97",
+  "title": "Grimms' Fairy Tales",
+  "genre": [
+   "Classics",
+   "Fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "02110a6f-fa4b-4dd8-ac46-abe1f76e924d",
+  "title": "Tess of the D'Urbervilles",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a68250f7-6f7e-49fa-8d49-f3aed2a23505",
+  "title": "The Inconvenient Indian",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "History"
+  ],
+  "subject": [
+   "Indigenous history & Canada"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "e69822b1-4002-44c2-af96-11cb6cc3818e",
+  "title": "A Love Song for Ricki Wilde",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7b010c9b-a909-4395-a233-ffde927cf92e",
+  "title": "Spinning",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Memoir"
+  ],
+  "subject": [
+   "Queer & trans lives"
+  ],
+  "gn_style": [
+   "Graphic memoir"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "aca814f4-b4c7-4f21-bc95-f4247c33893e",
+  "title": "The Wars",
+  "genre": [
+   "Literary fiction",
+   "Historical fiction",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "2ca5d6e7-0593-44df-ab9b-73b5681a7498",
+  "title": "Until You",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "ba39ec5a-6cab-4b97-ad06-72c15d8fb6a2",
+  "title": "The House in the Cerulean Sea",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "526b69fc-45d8-4623-97af-d0ea1da8a99b",
+  "title": "Somewhere Beyond the Sea",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f8a791e9-b9e9-400b-ace6-0e9f2c294117",
+  "title": "Burn",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "71a6cf28-b477-42e1-9f63-e87773fcdc58",
+  "title": "Wolfsong",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Found family",
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "da315033-6791-42d6-9ec5-b66980be6472",
+  "title": "Ravensong",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Found family",
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "748e4eed-91ad-456e-9d51-2e930f245349",
+  "title": "Heartsong",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Found family",
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "af3363cb-46a5-4837-8782-cf4a1f0f9323",
+  "title": "Brothersong",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Found family",
+   "Soulmates / fated mates"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "51a360ab-edc0-4838-95b9-2788c6e664dc",
+  "title": "How to Be a Normal Person",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance",
+   "Romantic comedy"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "52f9af90-f257-489d-9472-4fb8f7967c4a",
+  "title": "A Destiny of Dragons",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance",
+   "Romantic comedy"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "356ce64f-21e8-4c35-9749-58dd64aba58e",
+  "title": "The Consumption of Magic",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance",
+   "Romantic comedy"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "dd5c6d8c-1a7c-4bd4-9053-e3bbe11075cb",
+  "title": "A Wish Upon the Stars",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance",
+   "Romantic comedy"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "94e7baa7-1e85-4ba6-a31b-f6ed2b1b9915",
+  "title": "The Damning Stone",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance",
+   "Romantic comedy"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b411092d-b7f8-4de3-98db-4fb42133026e",
+  "title": "In the Lives of Puppets",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Robots & AI",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Classic literature"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "5e123001-d3b0-4f06-8cb5-55ae6a310e93",
+  "title": "The Bones Beneath My Skin",
+  "genre": [
+   "Sci-fi"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "af18686f-0af3-4eda-a482-ee755a57c80e",
+  "title": "Under the Whispering Door",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Cozy fantasy",
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Ghosts"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "edbe8540-d6d1-406a-a2a8-98df1033a0e1",
+  "title": "We Burned So Bright",
+  "genre": [
+   "Literary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a4953d85-eb1b-4193-99cd-69b9b10aa75c",
+  "title": "Beloved",
+  "genre": [
+   "Literary fiction",
+   "Historical fiction",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "8e6d1d54-f23e-4788-a270-e425692c5f0f",
+  "title": "Before the Coffee Gets Cold",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Magical realism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "16e11a3c-cb4a-4523-b0d7-0076277bf44a",
+  "title": "Legendborn",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Magic school / academy"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "4d1fd1a0-43ed-489a-9510-37658d8a5af1",
+  "title": "Legends & Lattes",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "14188940-a9ef-468a-914c-7fde69032c40",
+  "title": "Brigands & Breadknives",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "4688ed72-5f9b-4f54-9bee-5cbd9e487b9a",
+  "title": "Leadership 2.0",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Business & leadership"
+  ],
+  "subject": [
+   "Leadership & work"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "a8594b40-63c2-4b4e-bd80-88651d4b00db",
+  "title": "Rest Is Resistance",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Self-help"
+  ],
+  "subject": [
+   "Wellbeing & rest",
+   "Social justice & anti-racism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "2342df0a-6915-4a38-aaf9-a534b8c85f4a",
+  "title": "Wild Irish Heart",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "9a62e984-9502-4b6c-8213-9fee8b6c5e29",
+  "title": "Artemis Made Me Do It",
+  "genre": [
+   "Poetry"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "89e6f170-bbff-41fd-8b4d-6a27749de1be",
+  "title": "Persephone Made Me Do It",
+  "genre": [
+   "Poetry"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "72fb02dd-27de-49c5-8b61-6e11b30a887b",
+  "title": "Hana Khan Carries On",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bd32c477-6808-49c2-bf92-dd737d6aa43f",
+  "title": "The Invisible Life of Addie LaRue",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "54d311a1-7fb5-45d9-a1e3-418367f534a2",
+  "title": "Butterfly (Orphans #1)",
+  "genre": [
+   "Contemporary fiction"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "45bda53f-810f-4131-bf3c-cd241af57612",
+  "title": "Vicious",
+  "genre": [
+   "Sci-fi"
+  ],
+  "trope": [
+   "Villain origin",
+   "Revenge",
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "68388606-55dd-4dfd-8a05-0861d3e642ce",
+  "title": "Vengeful",
+  "genre": [
+   "Sci-fi"
+  ],
+  "trope": [
+   "Villain origin",
+   "Revenge",
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "af374d73-d9b7-4a7d-b3ea-e5ff029653b0",
+  "title": "A Darker Shade of Magic",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "55e6d12d-8c07-48e0-8b90-6d7f1b5e2748",
+  "title": "Rakesfall",
+  "genre": [
+   "Sci-fi",
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "8585996f-d45a-4f57-bf02-cbfa8d529426",
+  "title": "Ellie Hayes and the Himbos",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Why choose / reverse harem",
+   "Forced proximity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "87bc4790-cedf-4c6f-b422-6c47e397aebd",
+  "title": "Dead Serious Case #1 Miz Dusty Le Frey",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Queer romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Ghosts"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "0442e7f4-b6c1-4805-b99c-035c578ad549",
+  "title": "Chosen Ones",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "trope": [
+   "Chosen one"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "569f11e7-f973-4cf6-a99d-17aba90a3deb",
+  "title": "Other Terrors",
+  "genre": [
+   "Horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "1d46b0c9-dd21-4c59-99bd-6d75c42ae668",
+  "title": "Death by Dumpling",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Cozy mystery",
+   "Amateur sleuth"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "978c86ab-080c-47d8-b461-3579ac4fc11f",
+  "title": "All Her Little Secrets",
+  "genre": [
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Psychological thriller"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "0b22a4fa-f420-464d-a686-66e202a14562",
+  "title": "Vanity Fair",
+  "genre": [
+   "Classics",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Satire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "07b0c92d-9d94-4a0d-90a0-4fd4aa7742ae",
+  "title": "King Lear",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "d6538949-becb-437b-81e2-06393ef85a11",
+  "title": "Dr. Horrible and Other Horrible Stories",
+  "genre": [
+   "Sci-fi"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "a34b1a48-b860-4844-8108-e29f2278ed74",
+  "title": "Serenity: Leaves on the Wind",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Serenity / Firefly"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ }
+]

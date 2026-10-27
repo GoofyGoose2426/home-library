@@ -1,0 +1,1517 @@
+[
+ {
+  "id": "ac052912-c451-4a2e-8133-448a8534c8d0",
+  "title": "Dirty Girl Duet",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Fake dating"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d099b46d-aebf-44de-a640-db8e28800862",
+  "title": "Real Dirty Duet",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3206b080-97c1-43cd-8798-65d1315d6166",
+  "title": "How My Neighbor Stole Christmas",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Holiday romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "708f2797-8fe3-4e94-b378-aa838b00dd76",
+  "title": "Dream Daddy (graphic novel)",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Single parent"
+  ],
+  "gn_style": [
+   "Adaptation"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "759f4ed6-1833-4768-856a-3d4575dfae2a",
+  "title": "The Black Swan",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "ee91814e-05b0-456d-b262-1beff6469720",
+  "title": "The Obsidian Mountain Trilogy",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a03739fa-d20b-4c00-8bf5-5c2420a8ca17",
+  "title": "Mistakes Were Made",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "trope": [
+   "Age gap",
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "582bdd83-3abe-475b-8975-9153a6fc788d",
+  "title": "The Worst Best Man",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Workplace romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3e811b32-85bb-44de-a74e-824f211182f1",
+  "title": "A Wild Swan",
+  "genre": [
+   "Literary fiction",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales",
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a36b124f-5834-4218-a1fe-9e588110ee6f",
+  "title": "House of the Beast",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "8540d897-86c9-4378-b952-71cbe09018bf",
+  "title": "Shirley Jackson's \"The Lottery\" (graphic adaptation)",
+  "genre": [
+   "Horror",
+   "Classics"
+  ],
+  "gn_style": [
+   "Adaptation"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "47f95f38-ccdc-494b-a139-4a81a620c5cb",
+  "title": "Onyx & Ivory",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "78b2f4a2-3a44-43e0-958b-089ea54f1640",
+  "title": "Shadow & Flame",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a5aa0c1f-60c0-45cb-aa25-298e89af08e1",
+  "title": "Witches Get Stuff Done",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Small-town romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b255cb7b-2d37-43e1-beb5-7dcd51be5ea2",
+  "title": "Greenteeth",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "22ac5fc4-42e3-483f-b9fa-3ce79d5ea3f6",
+  "title": "We Hexed the Moon",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "6ca3f8f0-07b3-4fdd-937f-56bba0b4b2c6",
+  "title": "Bunny",
+  "genre": [
+   "Horror",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Psychological horror",
+   "Satire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "d851d4b1-5ddb-4be5-869c-d6cbf09fb796",
+  "title": "Rouge",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Psychological horror",
+   "Body horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "377051eb-61e9-4688-b4be-c600a2ffbd6c",
+  "title": "To Shape a Dragon's Breath",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical fantasy"
+  ],
+  "trope": [
+   "Dragons",
+   "Magic school / academy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "04839fe7-3af8-48f1-8caf-99208f8f8453",
+  "title": "Jacob Two-Two's First Spy Case",
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e5cf94b6-eb52-4d20-9d31-2f7b6e3d1014",
+  "title": "Meet Cute Magic",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Cozy fantasy"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "c0e55fc1-8e6b-41e7-9472-c6f858466fbf",
+  "title": "The Bookshop and the Barbarian",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "97e05da7-edaa-40a1-8a68-5faa276209bd",
+  "title": "The Armored Saint",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "73606d9a-9c31-49b6-857a-48db39926091",
+  "title": "The Killing Light",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "cf4cc7f4-a8e4-43c5-88ab-52a8185ece12",
+  "title": "The Queen of Crows",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "c358da30-e53f-444c-b8f0-c34e4e2218de",
+  "title": "I Ran Away to Evil",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "20e13b2e-3195-4c36-97e5-0c6f5cb1b3f3",
+  "title": "The Killing Moon",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "0554510f-3b80-427b-b718-0a2a5778ca06",
+  "title": "How Long 'til Black Future Month?",
+  "genre": [
+   "Sci-fi",
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "7e7e3283-008b-4600-b8cb-b538d190718a",
+  "title": "The Broken Kingdoms",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "417aec78-9ba5-4b7b-ae63-c676af0bfd13",
+  "title": "The Kingdom of Gods",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "314d2001-bb5f-4f3b-864d-93112ffc05f8",
+  "title": "The Hundred Thousand Kingdoms",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Court intrigue"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "60c85316-4ed8-4470-99fc-704aac77310f",
+  "title": "The City We Became",
+  "genre": [
+   "Fantasy",
+   "Horror"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Cosmic horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "88d74cc6-bee3-4863-ac53-d9bcd706b365",
+  "title": "The Obelisk Gate",
+  "genre": [
+   "Fantasy",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Dark fantasy",
+   "Post-apocalyptic"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f0f5e08f-b480-44be-a9b0-431eba9d16e1",
+  "title": "The Stone Sky",
+  "genre": [
+   "Fantasy",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Epic / high fantasy",
+   "Dark fantasy",
+   "Post-apocalyptic"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "orange_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f6d9cac9-f3bb-4347-afb6-3c183d1d36df",
+  "title": "Love at First Fright",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance"
+  ],
+  "trope": [
+   "Age gap"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "40493e56-5fba-4636-8d2d-a5c4c9ea682c",
+  "title": "Stone Blind",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a9fe623f-6459-413a-855a-a40d549163de",
+  "title": "Hench",
+  "genre": [
+   "Sci-fi"
+  ],
+  "trope": [
+   "Villain origin"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "6289de60-9a31-4a0e-9551-42f586f0f38a",
+  "title": "Villain",
+  "genre": [
+   "Sci-fi"
+  ],
+  "trope": [
+   "Villain origin"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "40223144-f161-45bf-907e-4363afbd750e",
+  "title": "Game On",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "ba11890c-ff55-4714-9f00-06fd71756640",
+  "title": "Snowed In",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b0c9a46c-4891-46a4-92d3-9be11b5aa0bb",
+  "title": "Lights Out",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "trope": [
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense",
+   "light"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "55206c94-02d7-44af-a673-a04ce93d5be8",
+  "title": "The Lunatics",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b4385cc7-dfa2-4549-a39f-33286d288c38",
+  "title": "Stardust",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "cozy"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "e7351996-9ca1-4218-a902-406bad1eeed2",
+  "title": "Good Omens",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Angels",
+   "Demons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "5362ece2-1514-4ba4-b42b-04dfda181c19",
+  "title": "Wicked Passions",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Smut"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "spice_led"
+ },
+ {
+  "id": "0d534266-a7a3-42bf-99e6-4d1d7e3a5393",
+  "title": "Scandalous Passions",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Smut"
+  ],
+  "trope": [
+   "Why choose / reverse harem"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_5",
+  "story_focus": "spice_led"
+ },
+ {
+  "id": "c9b231b6-3b6a-44d1-a14f-02422415597c",
+  "title": "Pride and Protest",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Classic literature"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "41c6c93e-feb4-4c00-8b9c-7910120dc88f",
+  "title": "Binti",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "First contact"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "25f388b7-3a42-4145-a4fc-570812f43e23",
+  "title": "Death of the Author",
+  "genre": [
+   "Sci-fi",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Robots & AI"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "d62e1b46-b329-4667-9689-5bad50a5a7df",
+  "title": "Heart of the Sea",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Small-town romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "76f7d489-bfc3-4c25-9f0f-c0b03b11f346",
+  "title": "Jewels of the Sun",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Small-town romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d27f1bb9-1f43-4846-9a82-29811f336333",
+  "title": "Tears of the Moon",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Small-town romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "52dc6f1e-b5c5-4496-a229-a7d35c23361f",
+  "title": "The Witness",
+  "genre": [
+   "Romance",
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Romantic suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "25d428ee-7a42-4095-b35b-ff53cf756b17",
+  "title": "Kindred",
+  "genre": [
+   "Sci-fi",
+   "Historical fiction"
+  ],
+  "subgenre": [
+   "Time travel"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "84450215-c1d6-4bf3-a197-550307ef4f91",
+  "title": "Half a Soul",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f162fba6-fbd0-42dd-a94e-9ea729bd5d34",
+  "title": "Girl Dinner",
+  "genre": [
+   "Literary fiction",
+   "Horror"
+  ],
+  "subgenre": [
+   "Satire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "15299fc1-68ed-47cd-8838-c3d39fb7d8ef",
+  "title": "One for My Enemy",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy",
+   "Retelling"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "retelling_type": [
+   "Classic literature"
+  ],
+  "trope": [
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_2",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "65c2ade4-b0cc-4240-a139-f68ac0977e3c",
+  "title": "One Day, Everyone Will Have Always Been Against This",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Essays"
+  ],
+  "subject": [
+   "Social justice & anti-racism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a31ecaa8-5174-4fa5-8f1c-a0b882e91572",
+  "title": "Mad Dog",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "30304c6a-771a-44db-a52f-eb02d9473fe1",
+  "title": "The Black God's Drums",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical fantasy",
+   "Gaslamp / gaslight"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e7f275f6-e5b4-4168-be23-c3ece1257905",
+  "title": "Dragon Bones",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Dragons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "1569e7b8-0543-4db7-934e-4b81f29be0df",
+  "title": "Dragon Blood",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Dragons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "dd676932-aee6-43a9-b628-77aa9198bdff",
+  "title": "Silence Fallen",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires"
+  ],
+  "shifter_type": [
+   "Wolves",
+   "Various real animals"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "93739ce9-b5ac-49a2-9af4-444d24ea4563",
+  "title": "Storm Cursed",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Urban fantasy"
+  ],
+  "supernatural_being": [
+   "Shifters",
+   "Vampires"
+  ],
+  "shifter_type": [
+   "Wolves",
+   "Various real animals"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "2301df74-de4f-499d-973b-a8d307753998",
+  "title": "Steal the Dragon",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "0a5682fc-012a-416b-a7f0-b3b1bdf21725",
+  "title": "When Demons Walk",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "f61d3dfa-83a3-4490-97f9-fe492144d97e",
+  "title": "Raven's Shadow",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "e1f75f09-dc2c-474d-9978-1a778430546c",
+  "title": "Raven's Strike",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "52517f81-6ade-4bef-900b-627aacebc88e",
+  "title": "The Hob's Bargain",
+  "genre": [
+   "Fantasy",
+   "Romance"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "9dce6064-b714-4202-a376-b41b62621eba",
+  "title": "Tanya and Emily in a Dance for Two",
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "f6c71785-ac62-4e62-8dd8-7a08db2ed99f",
+  "title": "An Irish Country Doctor",
+  "genre": [
+   "Historical fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "bc2116d7-5d8b-4aec-8d99-3e61f3d6e2e5",
+  "title": "When They Call You a Terrorist",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Memoir"
+  ],
+  "subject": [
+   "Social justice & anti-racism",
+   "Activism & organizing"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "682f1726-7da4-44e3-9019-365cb4687df6",
+  "title": "Tinkers",
+  "genre": [
+   "Literary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a5e6c420-7d2d-421e-92c9-f61137e43a8f",
+  "title": "Laird of the Mist",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e7d68862-b857-4de4-ad99-52714d43cdc9",
+  "title": "Totally Folked",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "29985d97-073a-4cee-a3a2-00690748b4c7",
+  "title": "Neanderthal Seeks Human",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Boss / employee"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "56aadbab-5692-4ca1-8a4b-b182d0eab1e0",
+  "title": "The Neanderthal Box Set",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "facede80-6260-4c4f-bbb9-0c95775c0a70",
+  "title": "Love Hacked",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "42c1c5b5-3a2e-411c-bc93-fc8a407a85fd",
+  "title": "Beauty and the Mustache",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4c84c6f6-d830-4337-8af9-8d4e43ae3edf",
+  "title": "Dating-ish",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "192a150b-9f44-462c-97c7-7ce9712b1483",
+  "title": "Bananapants",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2d6a6228-a060-462d-9484-7feb2fd52d05",
+  "title": "Friends Without Benefits",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Friends to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "85974867-6303-4946-b70f-1769773656e4",
+  "title": "Marriage of Inconvenience",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "25f72708-2952-40bd-b605-c6e69084b51a",
+  "title": "Truth or Beard",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "50f690cf-e18a-4bc4-8bd0-d0f9ec8b367a",
+  "title": "Beard Science",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "91ddcba3-532c-4190-861e-7d8a366ee2a5",
+  "title": "Grin and Beard It",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c0acdd03-6125-4165-8b12-357c2d85ee9f",
+  "title": "The Cad and the Co-Ed",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ }
+]

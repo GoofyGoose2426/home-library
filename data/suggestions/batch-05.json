@@ -1,0 +1,1773 @@
+[
+ {
+  "id": "f2845562-b24a-4d74-bedb-da61e45670a7",
+  "title": "Much Ado About You",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "17a12820-8a05-4f73-a2f7-be6f80fae48f",
+  "title": "A Kiss at Midnight",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "338e82e2-95e5-49f3-b99c-49ec86a97674",
+  "title": "When Beauty Tamed the Beast",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0583ccc8-bd1e-4d2f-a791-895bc48caec8",
+  "title": "The Ugly Duchess",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Ugly duckling",
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "641ada8c-da16-4b80-b548-1284967f96f3",
+  "title": "Wilde in Love",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "69301fcb-d759-4b10-8849-c8ab7990d003",
+  "title": "Too Wilde to Wed",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "323e76e3-86db-4946-b018-fda332bcefe9",
+  "title": "Born to Be Wilde",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "f1faf402-68a9-4449-af0c-6d4889640a83",
+  "title": "The Reluctant Countess",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "26d715e4-a6fb-4757-8da5-5072818e037c",
+  "title": "Out of the Gate",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "f447c0b1-8ead-4a8f-b63d-c1648f117337",
+  "title": "A Photo Finish",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bdd978db-239e-4279-85e0-a8c4975ab84f",
+  "title": "A False Start",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Small-town romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Brother's best friend"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "07ec3c31-4989-4423-a61a-e96c8a49ccfc",
+  "title": "Wuthering Heights",
+  "genre": [
+   "Classics"
+  ],
+  "trope": [
+   "Forbidden love",
+   "Revenge"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "6e86e119-31e5-4743-8efe-afbca0bb7b80",
+  "title": "Book Lovers",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Small-town romance"
+  ],
+  "trope": [
+   "Rivals to lovers",
+   "Grumpy / sunshine"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e68b378c-ee0a-4c5a-9b6c-23c6e8bfef5f",
+  "title": "Violet Thistlewaite Is Not a Villain Anymore",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Cozy fantasy"
+  ],
+  "trope": [
+   "Grumpy / sunshine",
+   "Redemption arc"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "6a40155f-cc3c-4409-94fe-31e673e4b616",
+  "title": "Come As You Are",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Popular science",
+   "Self-help"
+  ],
+  "subject": [
+   "Health, bodies & sexuality"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "76c6ed7c-9ecd-47a4-bcf3-f08a169beec5",
+  "title": "Burnout",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Self-help"
+  ],
+  "subject": [
+   "Wellbeing & rest",
+   "Feminism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "f27b9a98-61e4-4d7b-9072-9315aee0e3b1",
+  "title": "Some Desperate Glory",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Military sci-fi"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "c6e14f83-a710-476f-bc93-b82f3ffcbcba",
+  "title": "Tangled",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Workplace romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "153a6c09-d716-42f0-8a03-35de654d7741",
+  "title": "The Royally Series Collection",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Royalty"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b1073e0f-8c4e-4ab2-ac74-446fd08acbc0",
+  "title": "Royally Matched",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Royalty"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "ba9d4a7e-739e-4f27-b64c-b401d7fdf5d5",
+  "title": "Love Story",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "12041ee6-e00c-4d29-b85b-c12680cb7dc6",
+  "title": "The Starless Sea",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Portal fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "78d168d8-21b1-4074-bc94-7f0ccc89af7b",
+  "title": "The Ex Hex",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy",
+   "Small-town romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "75b97410-ca80-4319-8a59-13e09e34fda6",
+  "title": "The Kiss Curse",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy",
+   "Small-town romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "trope": [
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "f6399f6b-aa54-474a-a820-5c0db49f09e3",
+  "title": "Tandem Unit",
+  "genre": [
+   "Romance",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Sci-fi romance"
+  ],
+  "audience": "adult"
+ },
+ {
+  "id": "c173a023-26b0-4ca4-8fc6-ad7ec5ba38d1",
+  "title": "Ocean's Echo",
+  "genre": [
+   "Romance",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Sci-fi romance",
+   "Space opera",
+   "Military sci-fi",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "92951968-d03c-4efd-bec0-aa5f5e502994",
+  "title": "Winter's Orbit",
+  "genre": [
+   "Romance",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Sci-fi romance",
+   "Space opera",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Arranged marriage",
+   "Court intrigue"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "507c01f1-84b5-4f8a-9b37-16f98b539301",
+  "title": "The Pumpkin Bride",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Monster romance",
+   "Cozy fantasy",
+   "Holiday romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "8bee811d-5907-4b4f-ae68-61afd3136586",
+  "title": "A Little Princess",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "80a6bae1-3c0b-4c51-8a6f-6afa9dfd3603",
+  "title": "The Secret Garden",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "1a63271c-c001-46f1-9081-2e9576c5482b",
+  "title": "Butter Honey Pig Bread",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Family saga"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "f515791e-cf00-4bb2-9bb0-14bb94ee4acd",
+  "title": "Batman: The Dark Knight Returns",
+  "genre": [
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Crime thriller"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Batman / DC"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "a1895547-085c-4196-b167-77007e833da8",
+  "title": "Batman: The Dark Knight Strikes Again",
+  "genre": [
+   "Thriller & suspense"
+  ],
+  "subgenre": [
+   "Crime thriller"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Batman / DC"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "9c689299-450b-41cf-9f4d-53651a07aceb",
+  "title": "A Man Called Ove",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Book club fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "dda9bdc3-666a-4afc-a17e-49f7fe8fffbc",
+  "title": "Mars, Vol. 1",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d8cab6e5-524f-4c60-b8f5-1ff69695fac3",
+  "title": "Mars, Vol. 2",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "9bb49eec-e312-4167-81c3-d53c978f4db5",
+  "title": "Mars, Vol. 4",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "09c19f6c-5bd8-4b65-a879-e2ce43385fad",
+  "title": "Mars, Vol. 5",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "cb66effe-b294-4f07-be99-ae793fd85922",
+  "title": "Mars, Vol. 6",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "767a9831-4cea-445e-9383-9401b9c12ecb",
+  "title": "Mars, Vol. 7",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "964ebf03-5c5a-4a73-a7ae-68a11e6f675d",
+  "title": "Mars, Vol. 8",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "29d6e38a-39e9-43fe-8c0f-384a39359263",
+  "title": "Mars, Vol. 9",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "23115b3f-9c1e-4c1d-9570-95fe817318f8",
+  "title": "Mars, Vol. 10",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "1b43ff4c-750c-48e8-9d65-5b39e9cd6295",
+  "title": "Mars, Vol. 11",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "35e97528-f01e-41f4-bbaf-83a96685d4a7",
+  "title": "Mars, Vol. 12",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "c1f1f8cf-f3d3-48c7-aea5-ade2091c4786",
+  "title": "Mars, Vol. 13",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "77fa258b-17da-428e-abb1-c98162e34d21",
+  "title": "Mars, Vol. 14",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "1ea4f171-0978-4be8-8c74-1cf04fc60e18",
+  "title": "Mars, Vol. 15",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "gn_style": [
+   "Manga"
+  ],
+  "manga_demographic": [
+   "Shōjo"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "8c9087a8-0274-4a3d-aa5b-e925df3f16b7",
+  "title": "The Blacksmith Queen",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a30949e5-0ace-46db-bf38-b679580c9ef6",
+  "title": "The Love Letters of a Portuguese Nun",
+  "genre": [
+   "Poetry",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "eb0ad601-8f53-40fb-a7e2-15fed9c5e41c",
+  "title": "Wicked Nights",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance"
+  ],
+  "supernatural_being": [
+   "Angels",
+   "Demons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "fd218b8a-076f-445f-a2f5-0955ce7d85a9",
+  "title": "Foul Days",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "6c364e47-9101-4ecd-a28a-982333bfa768",
+  "title": "Want",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Essays"
+  ],
+  "subject": [
+   "Feminism",
+   "Health, bodies & sexuality",
+   "Celebrity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "34618abd-a069-4261-8b9c-9a4ce4f01b41",
+  "title": "The Captive",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "beb9ca5c-c37a-439f-b065-150294b7aefd",
+  "title": "The Truth About Dukes",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "01801ecd-58c9-4052-90bc-d90d2f789c79",
+  "title": "The Trouble with Dukes",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7baab80a-91b9-40f2-afb6-45822bc25f59",
+  "title": "Too Scot to Handle",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bcdb42b1-e34c-4070-9a0e-0150153454bf",
+  "title": "No Other Duke Will Do",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8a1966cf-9dd8-4d62-857d-a354da0bc160",
+  "title": "The Virtuoso",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6d40c09a-14f3-485a-a73f-91fdf4014b25",
+  "title": "A Rogue of Her Own",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Marriage of convenience",
+   "Rake / reformed rake"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3a350c0d-c6c9-4066-8194-7a7edeb85ebb",
+  "title": "Christmas Ladies",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Holiday romance"
+  ],
+  "trope": [
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "48086fdc-51a4-4199-b7db-0e887ddadb71",
+  "title": "The Light Within",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0fda5d2b-13e5-45fc-9f76-32a18d45af3b",
+  "title": "Phoenix Unbound",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "284f3b87-c023-4d5e-bdea-466ea35fb1cd",
+  "title": "Eidolon",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c842c6cb-e141-44f0-9bb8-7cd117b7a5d9",
+  "title": "The Ippos King",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "9a039854-ea60-44c9-ac82-7fef70508193",
+  "title": "A Memory of Summer",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8eaaec28-bc56-4536-8b4e-9a1f05e4b092",
+  "title": "Radiance",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Arranged marriage"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e62a33b1-f1e7-4c0f-ade3-d82391ee9581",
+  "title": "Entreat Me",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d7d8cbde-479d-4e03-97e8-55a7ac0ee677",
+  "title": "Afterglow",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Climate fiction",
+   "Solarpunk / hopepunk"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "2af3fe4b-bf68-482b-9417-95a98cbc4a5d",
+  "title": "Madame Bovary",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "022948df-294f-4612-a521-b060d6d1c37c",
+  "title": "Maiden, Mother, Crone: Fantastical Trans Femmes",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "40253a1d-9359-412b-aee0-48eefabbedfb",
+  "title": "The Classic Works of H.G. Wells: The Time Machine, The Invisible Man & The War of the Worlds",
+  "genre": [
+   "Classics",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Time travel",
+   "First contact"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "eece6224-6b30-402f-a118-8b735d3be043",
+  "title": "Next of Kin",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "f70892ef-9429-472b-8a6c-81af8e2f62df",
+  "title": "Icebreaker",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Forced proximity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "70667059-e497-4b99-b1f9-e40251d63921",
+  "title": "Wildfire",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c289e859-1414-4633-bcca-e03da0819fd9",
+  "title": "Daydream",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3f630fd1-c894-4fe7-80af-493ca31c448b",
+  "title": "Highland Warrior",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2a4677b1-96a0-4c44-b472-5aca66ed1868",
+  "title": "Godkiller",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "trope": [
+   "Quest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "9cb339f9-858f-4d31-91f8-a5c3db376a9a",
+  "title": "Accomplice to the Villain",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Workplace romance",
+   "Boss / employee",
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "4781c2a3-b662-4706-894c-7a6b605f6009",
+  "title": "Apprentice to the Villain",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Workplace romance",
+   "Boss / employee",
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "75391f50-a542-4335-b4d9-e67459103028",
+  "title": "Assistant to the Villain",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Workplace romance",
+   "Boss / employee",
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "245bb49a-bb48-4a8f-90e1-89fe1b37b77f",
+  "title": "Cosmoknights",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "8788f199-7475-4695-8776-795de6be43cd",
+  "title": "Emily Wilde's Compendium of Lost Tales",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Cozy fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Grumpy / sunshine",
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "ddbfaec1-472b-4ee9-84e7-5f796c288949",
+  "title": "Emily Wilde's Encyclopaedia of Faeries",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Cozy fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Grumpy / sunshine",
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b07ec68b-5459-4b48-879a-debaf2803d28",
+  "title": "Emily Wilde's Map of the Otherlands",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Cozy fantasy"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Grumpy / sunshine",
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "be606084-0415-480b-9576-b9dcf4258368",
+  "title": "The Bride Test",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Arranged marriage"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b31b7004-5ee9-4744-9dd5-b2f7535cc51a",
+  "title": "The Heart Principle",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bdb8799d-bb7c-4e4f-9fc3-52447b1f4394",
+  "title": "The Kiss Quotient",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Fake dating"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4c801241-6441-4295-b202-5c9d4edd4192",
+  "title": "Pucked",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ }
+]

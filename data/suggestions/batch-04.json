@@ -1,0 +1,1459 @@
+[
+ {
+  "id": "ec8ccbc3-091f-4ed3-b7e1-bf1f7ba4ed23",
+  "title": "Nancy Drew #32: The Scarlet Slipper Mystery",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "79ce0c78-aa48-400a-bc90-f23b73071c0c",
+  "title": "Nancy Drew #33: The Witch Tree Symbol",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "69fd39e1-20a3-4647-bf95-0744ec9649fb",
+  "title": "Nancy Drew #37: The Clue in the Old Stagecoach",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b5ab3ddc-cc63-4e26-9995-bf4ac4713eeb",
+  "title": "Nancy Drew #38: The Mystery of the Fire Dragon",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "41885698-c24e-4559-9a3a-7ca13e784de8",
+  "title": "Nancy Drew #39: The Clue of the Dancing Puppet",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "42f8067c-8306-483f-8016-21564655bd19",
+  "title": "Nancy Drew #40: The Moonstone Castle Mystery",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "61923e39-653a-4f0a-910d-9252089cb214",
+  "title": "Nancy Drew #45: The Spider Sapphire Mystery",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "d6c1e93e-d226-4f0a-a0ca-09cf8aab4afa",
+  "title": "Nancy Drew #46: The Invisible Intruder",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "82991fde-dede-46af-b7d1-adc71eeb548e",
+  "title": "Nancy Drew #47: The Mysterious Mannequin",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "749e6021-cc75-4348-8cf3-3ceaef861c95",
+  "title": "Nancy Drew #8: Nancy's Mysterious Letter",
+  "genre": [
+   "Mystery"
+  ],
+  "subgenre": [
+   "Amateur sleuth"
+  ],
+  "audience": "middle_grade",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "ebffcc7e-463d-4641-ad7c-6bdee344dc38",
+  "title": "One Last Stop",
+  "genre": [
+   "Romance",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Time travel",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Sapphic (F/F)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "893abadb-075a-4283-9c56-174ee4e53d0c",
+  "title": "Red, White & Royal Blue",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Royalty",
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "15ade841-a47f-442f-9e7e-b230068b3d84",
+  "title": "The Pairing",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "trope": [
+   "Second chance",
+   "Road trip"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3034eedc-4c10-487d-bc2a-b3dea70bdb40",
+  "title": "The Goddess of Nothing At All",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Celtic / Norse myths"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "d9e6edc3-68bc-45fa-a33b-c80cf43013bd",
+  "title": "You Should Be So Lucky",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Sports romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "cbf70bcc-e128-47f8-93ba-fc63268e702c",
+  "title": "Role Playing",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c83e2d1f-c80f-42ef-aa87-8778077c7673",
+  "title": "PS, I Love You",
+  "genre": [
+   "Contemporary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "4849ba67-beaf-43ae-88b8-e50f6c893268",
+  "title": "Nonprofit AI",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Business & leadership"
+  ],
+  "subject": [
+   "Technology & AI"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "a9a088f8-f209-458b-a1d2-b21ca005accc",
+  "title": "The Witch Collector",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4294c511-445b-4307-8123-ab8c9aaebe3a",
+  "title": "The Wolf at the Door",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic suspense",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b7fa750f-f8f5-4cd6-96bc-45732b83b4f3",
+  "title": "The Wolf at Bay",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic suspense",
+   "Queer romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Wolves"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "45362697-c61d-4e1d-8a08-d9b9bd6b1187",
+  "title": "Migrations",
+  "genre": [
+   "Literary fiction",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Climate fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic",
+   "intense"
+  ]
+ },
+ {
+  "id": "48dfc388-8d6a-4236-9622-64cdc28d46ea",
+  "title": "Once There Were Wolves",
+  "genre": [
+   "Literary fiction",
+   "Thriller & suspense"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "romantic_subplot": true
+ },
+ {
+  "id": "6599ef47-ed70-4a68-a108-9f7e4b0e1c95",
+  "title": "Wild Dark Shore",
+  "genre": [
+   "Literary fiction",
+   "Mystery"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "cdcf2b8b-4ff0-4099-83b6-e5025f72ea38",
+  "title": "When Grumpy Met Sunshine",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "trope": [
+   "Grumpy / sunshine"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e598899a-e238-41cb-b96f-87c224829579",
+  "title": "Always Only You",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Workplace romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a0bf7b1d-e98a-4422-aa56-58afb0fdd693",
+  "title": "Only When It's Us",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "f3a538f4-9b77-4916-9981-1fe491264886",
+  "title": "Better Hate Than Never",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Classic literature"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "53e543e9-0947-4099-996b-4b569fbd42c4",
+  "title": "Serenity: No Power in the 'Verse",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "gn_style": [
+   "Western comics"
+  ],
+  "franchise": [
+   "Serenity / Firefly"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "4e785218-03d0-4363-9f5f-42cca3a89937",
+  "title": "The Girl in Red",
+  "genre": [
+   "Horror",
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Post-apocalyptic",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Grimm's fairy tales"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "c25be7ff-4cbe-4b25-9859-659cabfe0838",
+  "title": "The Adventures of Dr. McNinja Omnibus",
+  "genre": [
+   "Sci-fi"
+  ],
+  "gn_style": [
+   "Webcomic / Webtoon collection"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "c0452022-be23-465b-8fd7-02a8a55e1f74",
+  "title": "Bury Your Gays",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Queer horror",
+   "Slasher"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "0ade1dc6-1b8c-4f45-aeb6-82eb5ced17ce",
+  "title": "Camp Damascus",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Queer horror"
+  ],
+  "supernatural_being": [
+   "Demons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "76259882-627a-40ab-bdfe-5df902f69314",
+  "title": "Bluebird",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "47352722-176d-4da6-9bcd-65ce8156a487",
+  "title": "Just Like This",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "79185e9d-6551-4184-9755-8b937b2b90c4",
+  "title": "Brooklyn",
+  "genre": [
+   "Literary fiction",
+   "Historical fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "aa04bade-d687-4fe0-bf38-d886e6d41ae3",
+  "title": "Hot Head",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Friends to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e43930db-ec67-4bc9-9ee9-377b5d025024",
+  "title": "Vile Lady Villains",
+  "genre": [
+   "Horror",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Gothic",
+   "Queer horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "b90a2ba6-43fa-4359-ad64-af9058d5fb96",
+  "title": "Shattered Glass",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Romantic suspense",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a36b4da9-948c-4239-835c-b0540b246ebf",
+  "title": "Love Is a War Song",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4ed4db44-9b1d-4695-8c6d-23d437f2ce58",
+  "title": "Angel Down",
+  "genre": [
+   "Horror",
+   "Historical fiction"
+  ],
+  "supernatural_being": [
+   "Angels"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "a52ebc3e-c50c-48e3-8287-22fbc8ed1ae0",
+  "title": "The Accidental Pinup",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Rivals to lovers",
+   "Workplace romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e94941a9-2bca-4a40-90bd-24964c045781",
+  "title": "Fire Bringer",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "9b885c1f-e8a9-4b87-8fd0-efc7e564132d",
+  "title": "Notorious Sorcerer",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "96233822-c59a-4210-8c4c-eab211096bcf",
+  "title": "Meditations for Makers",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Self-help"
+  ],
+  "subject": [
+   "Creativity & making"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "fc3b2ee9-a9c4-4bbe-a764-091c1882b512",
+  "title": "Midnight Pearls",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d0862979-c5f7-4879-a665-c5609a877ab8",
+  "title": "Violet Eyes",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "light"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "a3e9c6d5-606b-43a0-837a-fd6cc0df9954",
+  "title": "Kiss of Fire",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance"
+  ],
+  "supernatural_being": [
+   "Shifters"
+  ],
+  "shifter_type": [
+   "Dragons"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2edb0194-a6c1-49ea-8f87-ca0838118a69",
+  "title": "A Discovery of Witches",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Historical fantasy"
+  ],
+  "supernatural_being": [
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "trope": [
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "2fc5c041-cbda-4557-8010-4f3ad6dd937c",
+  "title": "Shadow of Night",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Historical fantasy"
+  ],
+  "supernatural_being": [
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "trope": [
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "9af63db1-4a59-4cf1-9101-c79d2230a172",
+  "title": "The Book of Life",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Historical fantasy"
+  ],
+  "supernatural_being": [
+   "Vampires",
+   "Witches / wizards / warlocks"
+  ],
+  "trope": [
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_1",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "e7a52110-e900-4c9c-af03-0796709f18f0",
+  "title": "The Ether Witch",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Cozy fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "3f7f80df-f7ca-46ae-a248-b46b420ec921",
+  "title": "How to Fail at Flirting",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "1162fce6-c966-4bac-b49e-1b2df197dcdf",
+  "title": "Once Upon a Winter's Night",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b099cade-48c2-4ce1-8b99-15cc75c17597",
+  "title": "The Skin We're In",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Cultural criticism"
+  ],
+  "subject": [
+   "Social justice & anti-racism"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "8cbce211-438d-4896-baa7-fefef3975f97",
+  "title": "The Seed Keeper",
+  "genre": [
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Family saga"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "819cb768-e02e-4b4f-b35f-dc9522a2c887",
+  "title": "A Sorceress of His Own",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Historical romance"
+  ],
+  "supernatural_being": [
+   "Witches / wizards / warlocks"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "291fd995-03ea-4183-940f-7dc5fa711899",
+  "title": "Beauty and the Beast",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "539e3833-3f77-483e-8a0d-11c6b235b45d",
+  "title": "Everybody Wants to Rule the World Except Me",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Time loop",
+   "Villain origin"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "2de33a86-13a9-456b-ae21-0ee7324e6c11",
+  "title": "How to Become the Dark Lord and Die Trying",
+  "genre": [
+   "Fantasy"
+  ],
+  "trope": [
+   "Time loop",
+   "Villain origin"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "42d1f0c3-4e12-4ff4-a2c5-a614c547c3b5",
+  "title": "Everything I Know About Love",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Memoir"
+  ],
+  "subject": [
+   "Relationships & love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "acc6831e-583b-4d6a-824b-0e9a98917573",
+  "title": "Coat of Many Colors",
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "fc1a85ab-e5b4-49a1-aece-3819a21448e3",
+  "title": "The Curse Giver",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "39b24673-773d-4137-9a37-8437f2f1db06",
+  "title": "Old Turtle",
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "59658f32-9ffa-4e73-9fa0-8f8363224453",
+  "title": "Old Turtle: Questions of the Heart",
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "358b9415-0c56-4f4d-b10a-85351855e42f",
+  "title": "Oh, the Places You'll Go!",
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "a10851f5-2477-4206-803e-04a6187be0a5",
+  "title": "Charlotte's Web",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "7b3a4986-8dfa-47d1-932c-94b4d03831ec",
+  "title": "The Keeper of Lonely Spirits",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "d393ac6c-ccfd-42a1-b33c-2b16708ceca8",
+  "title": "Son of a Trickster",
+  "genre": [
+   "Fantasy",
+   "Literary fiction"
+  ],
+  "subgenre": [
+   "Coming of age"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "5da04c73-2a98-4f70-b03e-949962908676",
+  "title": "The Raven and Other Favorite Poems",
+  "genre": [
+   "Poetry",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "bed1fe21-d8b8-40bd-9477-cd18229084ac",
+  "title": "John Carter: Adventures on Mars Collection (Illustrated)",
+  "genre": [
+   "Classics",
+   "Sci-fi"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "639b4891-1500-4302-873d-1d949519cd9c",
+  "title": "The Tarzan Series: Volumes 1-8 (Illustrated Edition)",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "2387dcee-afab-45bd-96be-e2c07d59cf4f",
+  "title": "The Companion",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "adult"
+ },
+ {
+  "id": "b021de45-135e-4791-8a37-e1020ce134ef",
+  "title": "Damsel",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Dark fantasy",
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "009a45f8-c5e0-4a5a-81c9-64f426802370",
+  "title": "The Darkness Outside Us",
+  "genre": [
+   "Sci-fi",
+   "Romance"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "8b142a5f-7346-4eb6-b23e-e005b5059fc5",
+  "title": "A Dance with the Fae Prince",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "supernatural_being": [
+   "Fae"
+  ],
+  "trope": [
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b1cd35fe-b7a0-49ce-bd20-0c2db0ed4063",
+  "title": "To Taste Temptation",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "0342eba8-ad22-4112-a4d8-3241cbcb6d4a",
+  "title": "To Seduce a Sinner",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b81f0243-0d4f-4f2d-9735-583cf90bff72",
+  "title": "To Beguile a Beast",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "f3577133-4bab-4d64-b251-1297f4a72a48",
+  "title": "The Deed of Paksenarrion",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "d5a27ba8-0b13-48f4-97e4-94f4b86903d4",
+  "title": "The Chase",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "5eefd1ca-3ca3-464d-bbd7-4858e014d009",
+  "title": "The Graham Effect",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "282f5bf1-7d8e-4925-983f-05e2d5ad1063",
+  "title": "The Charlie Method",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "9c4ddcfb-0ce7-4dbe-9b01-0ed65feaba7c",
+  "title": "Stay",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "c24d8604-b7bc-4abe-97b2-0d105bd5f47e",
+  "title": "The Deal",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Fake dating"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b2c34ab9-2144-47df-b911-a8d9871e6cef",
+  "title": "Desperate Duchesses",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ }
+]

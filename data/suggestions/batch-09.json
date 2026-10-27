@@ -1,0 +1,1584 @@
+[
+ {
+  "id": "4bf43fa0-4379-4481-bb84-c7b85f09494b",
+  "title": "Only With Your Love",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4ebb3ca6-6afa-4b04-984f-3d3be67221da",
+  "title": "Love In The Afternoon (Hathaways)",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "20845193-1e4c-4af5-b0f6-f1ae2e4c3731",
+  "title": "Married By Morning (Hathaways)",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6b3bf7a5-436a-4011-897a-8bebb999a049",
+  "title": "Mine Till Midnight (Platinum Romance Series)",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "3ef00674-28b5-40a1-86aa-f17af86909a1",
+  "title": "Suddenly You",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "cbc072d6-d800-491b-b8a4-ca25d982bf37",
+  "title": "Devil in Winter",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Marriage of convenience",
+   "Rake / reformed rake",
+   "Wallflower"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bb24296b-942a-4daf-b6cd-53393e6242dc",
+  "title": "I Will",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Fake dating"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6ee4cc50-713d-4c85-a9f8-a1668dcb0331",
+  "title": "Seduce Me at Sunrise",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "66a9c985-4526-4b6b-be6d-77fc9704c62e",
+  "title": "Where Dreams Begin",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Opposites attract"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6defe988-d263-4500-a811-776ab488467b",
+  "title": "Already Enough",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Self-help"
+  ],
+  "subject": [
+   "Wellbeing & rest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "8ebb3c27-25ee-4a88-89d3-57e63a4ffb96",
+  "title": "Monster Mama",
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "f515f60b-01be-48ab-a637-fc040e3a67f1",
+  "title": "Color Zoo",
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b784a3b2-9c4f-4099-bb54-a3641f9bc9f3",
+  "title": "Princess Prunella and the Purple Peanut",
+  "audience": "childrens",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e8e7910e-bf5e-4efb-991b-ce6beda5061a",
+  "title": "Persephone (graphic novel)",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "gn_style": [
+   "Adaptation"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "806edff6-cc0d-45af-803c-b601313b6b38",
+  "title": "The Love Poems of Lord Byron",
+  "genre": [
+   "Poetry",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "ac8e1f69-ec23-42af-9c1c-c0a6657b92d4",
+  "title": "Lisbon Poets",
+  "genre": [
+   "Poetry",
+   "Classics"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "d3ed1fc5-dced-47a1-ba4c-56a6bbd68393",
+  "title": "Beauty Tempts the Beast",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "732bc56d-3b83-4b2c-8007-d57c0aa30686",
+  "title": "Little Women",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "cozy",
+   "dramatic"
+  ]
+ },
+ {
+  "id": "a0bd9ba8-496a-46cf-80da-acfdf62820db",
+  "title": "Married to the Mafia",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "trope": [
+   "Arranged marriage"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b63beb07-5e4e-4765-bbd0-0b242846980d",
+  "title": "Tall, Dark & Hungry",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "f3acdd49-126a-460e-b15f-4cd545c7cfea",
+  "title": "A Bite to Remember",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "95af7238-2239-4377-9ada-5cef63907727",
+  "title": "Bite Me If You Can",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "e3f589b4-1165-4a82-b634-3fbff5e89a3d",
+  "title": "Vampires Are Forever",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "cfd9590c-1d00-449a-9e4c-86c840c5f96e",
+  "title": "Vampire, Interrupted",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a610b261-1e8b-4b7b-8c58-15a4d5787842",
+  "title": "A Quick Bite",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4418795e-8949-492d-a0c3-1581ce13f6d8",
+  "title": "Love Bites",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "1f69eb6f-18b9-406d-bdd2-ed7056490c39",
+  "title": "Single White Vampire",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Vampires"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "2b8f2494-bd71-4b57-8736-a41fda7d14d7",
+  "title": "Devil of the Highlands",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Marriage of convenience"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "237d48b8-be04-4d59-9d4d-42c750fbcab3",
+  "title": "Crazy Stupid Bromance",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "89d76283-d843-40b7-aacf-c7057fa7c57b",
+  "title": "Isn't It Bromantic?",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "7d2dd79d-faec-4ae9-827c-e197a3c18389",
+  "title": "Undercover Bromance",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Sports romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "5d3630c0-8c2f-4f3c-a0a0-03081b8884f4",
+  "title": "The Bromance Book Club",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Sports romance"
+  ],
+  "trope": [
+   "Second chance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "fb17300f-680d-47fc-893c-d7064657cc37",
+  "title": "A Very Merry Bromance",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Romantic comedy",
+   "Holiday romance"
+  ],
+  "trope": [
+   "Holiday / Christmas"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "39bf1b5f-6823-4ed6-950c-1ebc3cb4a632",
+  "title": "Rehoove'd",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Monster romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "ca4453e3-e779-4403-bbc1-f4c6ab876c0e",
+  "title": "Meetings with the Minotaur",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Monster romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "5a366678-5f95-44ac-81c5-c440fac19ceb",
+  "title": "I Hope This Email Finds You in Hell",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Paranormal romance",
+   "Romantic comedy"
+  ],
+  "supernatural_being": [
+   "Demons"
+  ],
+  "trope": [
+   "Workplace romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b09b59f4-6f58-41cf-9a1b-346e099fcc7a",
+  "title": "The Song of Achilles",
+  "genre": [
+   "Fantasy",
+   "Historical fiction",
+   "Romance"
+  ],
+  "subgenre": [
+   "Retelling",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "retelling_type": [
+   "Greek / Roman myths"
+  ],
+  "trope": [
+   "Forbidden love"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d7b04697-cdf8-4565-b70b-1e3450e1e21a",
+  "title": "Gender Queer",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Memoir"
+  ],
+  "subject": [
+   "Queer & trans lives"
+  ],
+  "gn_style": [
+   "Graphic memoir"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "039351fd-b406-4a49-87e1-b158d16d6409",
+  "title": "Sorcery and Small Magics",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "trope": [
+   "Rivals to lovers",
+   "Forced proximity"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "edc7ff94-c134-4ee0-b6cb-d9546a664f0f",
+  "title": "Bromantasy",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "ee7df91e-20aa-43f8-a720-b30bd9d00356",
+  "title": "The Mimicking of Known Successes",
+  "genre": [
+   "Sci-fi",
+   "Mystery"
+  ],
+  "subgenre": [
+   "Detective / police procedural"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "e41b5b42-2ae7-47fa-8bb6-1b572bf67fa2",
+  "title": "How to Survive a Horror Story",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Comedic horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "intense"
+  ]
+ },
+ {
+  "id": "084c23aa-d160-402a-9c70-700575ccb803",
+  "title": "We Used to Live Here",
+  "genre": [
+   "Horror"
+  ],
+  "subgenre": [
+   "Haunted house",
+   "Queer horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "33d6719f-3f41-455e-94e1-12e9f72c88b8",
+  "title": "Furies",
+  "genre": [
+   "Literary fiction"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "de53193a-4e6e-4b15-b9f8-88651b13c42c",
+  "title": "Gone with the Wind",
+  "genre": [
+   "Classics",
+   "Historical fiction",
+   "Romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "d77f3e2f-336e-4d6a-90ce-a674adbc4bf6",
+  "title": "The Velveteen Rabbit",
+  "genre": [
+   "Classics"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "cozy"
+  ]
+ },
+ {
+  "id": "b611dd4d-b048-41e4-954b-77fceb137a42",
+  "title": "Highlander's Captive",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Historical romance",
+   "Historical fantasy"
+  ],
+  "trope": [
+   "Captor / captive"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "427b313d-a645-4b6d-8fd2-c8bbdabc571c",
+  "title": "From Lukov with Love",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Slow burn"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "aae12fe4-e444-4d78-b070-baf23596c44d",
+  "title": "Kulti",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Grumpy / sunshine",
+   "Slow burn"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d451c766-6cc2-432d-aff7-f000ac38460a",
+  "title": "The Wall of Winnipeg and Me",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance",
+   "Sports romance"
+  ],
+  "trope": [
+   "Marriage of convenience",
+   "Grumpy / sunshine",
+   "Slow burn",
+   "Boss / employee"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "b71fb896-5b69-4109-a851-d884af3cab38",
+  "title": "The Winner's Curse",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Forbidden love",
+   "Court intrigue"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "cc1f2eff-9008-4ea3-ba44-e6916e35f8cb",
+  "title": "The Winner's Crime",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Forbidden love",
+   "Court intrigue"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "f1a7a4a6-6b79-43c9-bda1-8aed7dbec5c5",
+  "title": "The Winner's Kiss",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Enemies to lovers",
+   "Forbidden love",
+   "Court intrigue"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "767c9f7c-f3b0-4617-acb1-9f54e9269a23",
+  "title": "The Complete Persepolis",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Memoir"
+  ],
+  "gn_style": [
+   "Graphic memoir"
+  ],
+  "franchise": [
+   "Standalone"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "9ce5596d-14f6-463f-86ff-3442ab5af833",
+  "title": "A Kingdom Far and Clear",
+  "genre": [
+   "Fantasy"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "01593f48-1c7a-42e3-a39d-2ef121c94a34",
+  "title": "Swan Lake",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "audience": "childrens",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "1dbaec75-eeb0-4aeb-abbc-789d825c0691",
+  "title": "Lead It Like Lasso",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Business & leadership"
+  ],
+  "subject": [
+   "Leadership & work"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "e111636e-85b0-48b1-851e-f3c87895a4f7",
+  "title": "All Systems Red",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "e00482cf-ccc2-4d99-8534-b6d695a23d95",
+  "title": "Compulsory",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "93853af2-5e46-4044-b45f-ac5b9b121d58",
+  "title": "Home: Habitat, Range, Niche, Territory",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "81db366f-d71f-42c1-9dc7-c341877d9db7",
+  "title": "Rapport: Friendship, Solidarity, Communion, Empathy",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "07b573b8-56d8-4a2e-bcff-78beb674596d",
+  "title": "Platform Decay",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "548ea6d2-93be-4a31-a196-6fe3e02400b0",
+  "title": "The Murderbot Diaries Vol. 2",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "879ad001-218f-41cc-b8af-3b7dda012516",
+  "title": "The Murderbot Diaries Vol. 3",
+  "genre": [
+   "Sci-fi"
+  ],
+  "subgenre": [
+   "Space opera",
+   "Robots & AI"
+  ],
+  "trope": [
+   "Found family"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light",
+   "dramatic"
+  ],
+  "romantic_subplot": false
+ },
+ {
+  "id": "c34143ee-48e0-42a8-91ca-bac4d2d3de24",
+  "title": "Witch King",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Epic / high fantasy"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ]
+ },
+ {
+  "id": "b8b8f9e6-8d6a-4f1b-a861-3d646de8b44f",
+  "title": "Until Death",
+  "genre": [
+   "Horror"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ]
+ },
+ {
+  "id": "5a93528d-36be-4f34-a084-5b2cd085ccf5",
+  "title": "The Kiss of Deception",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Secret identity",
+   "Love triangle",
+   "Royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "0f946c00-e066-4873-a681-d0790b1768d5",
+  "title": "The Heart of Betrayal",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Secret identity",
+   "Love triangle",
+   "Royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "b7424896-2ab6-468c-8c40-9191a07b1fa5",
+  "title": "The Beauty of Darkness",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance"
+  ],
+  "trope": [
+   "Secret identity",
+   "Love triangle",
+   "Royalty"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "yellow_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "806ffa43-2e77-42aa-95b5-c033365ea0a0",
+  "title": "Stiff",
+  "genre": [
+   "Nonfiction"
+  ],
+  "subgenre": [
+   "Popular science"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "286ddd7a-2a87-49ae-8029-302367a3126d",
+  "title": "Overheard",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "d697048c-a0c4-40ba-af37-e9a97d4b88a9",
+  "title": "Never Seduce a Scot",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "6c800da4-453c-4525-b3e8-9468e68468d0",
+  "title": "Pillow Talk",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_3",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "a0ecebda-d76d-43f1-aca4-5cde50aa10c1",
+  "title": "The Wicked Wallflower",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Historical romance"
+  ],
+  "trope": [
+   "Fake dating",
+   "Wallflower"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "9efc9ac8-6de4-4c28-aa35-ac9b0e9e7d2b",
+  "title": "Hunted",
+  "genre": [
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Retelling"
+  ],
+  "retelling_type": [
+   "Other fairy tales & folklore"
+  ],
+  "trope": [
+   "Beauty and the beast"
+  ],
+  "audience": "young_adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "romantic_subplot": true,
+  "spice": "green_pepper",
+  "story_focus": "plot_led"
+ },
+ {
+  "id": "c7e4c9e8-3533-4e3e-bfc8-617b82ed0410",
+  "title": "The Undercutting of Rosie and Adam",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Rivals to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "845b4ffe-3e24-4869-ab04-b4e733092615",
+  "title": "The Undermining of Twyla and Frank",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Friends to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4c73632c-c101-4c70-bbe2-1895a100b433",
+  "title": "The Undertaking of Hart and Mercy",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Romantic comedy"
+  ],
+  "trope": [
+   "Enemies to lovers"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "cozy",
+   "light"
+  ],
+  "spice": "red_pepper_2",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "33f87109-696e-43b0-a51d-5991c060da81",
+  "title": "The High King's Golden Tongue",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "354e8c00-e72e-4f0d-8691-98c8d0900506",
+  "title": "The Stable Boy",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "5c066f46-f9e6-460e-b781-93da539a1f69",
+  "title": "Tournament of Losers",
+  "genre": [
+   "Romance",
+   "Fantasy"
+  ],
+  "subgenre": [
+   "Fantasy romance",
+   "Queer romance"
+  ],
+  "queer_romance_type": [
+   "Achillean (M/M)"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "light"
+  ]
+ },
+ {
+  "id": "b01d8fae-3851-49ae-b972-1b758b9365bf",
+  "title": "Beneath This Mask",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "4a7091ad-d180-4b1d-b98a-d48d92b6476e",
+  "title": "Defiant Queen",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Dark romance"
+  ],
+  "trope": [
+   "Morally grey love interest"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "intense"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8050c90c-213f-4679-874b-9c5d7c9380b2",
+  "title": "Dirty Billionaire",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Billionaire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "bc93b1c4-ea3f-4e34-92fb-4077e5209fca",
+  "title": "Dirty Pleasures",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Billionaire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8f1e0909-7938-4f90-af0d-7a3208dc4c1d",
+  "title": "Dirty Together",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Billionaire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ },
+ {
+  "id": "8a567320-287d-475c-96cb-8666a27e9a80",
+  "title": "The Dirty Billionaire Trilogy",
+  "genre": [
+   "Romance"
+  ],
+  "subgenre": [
+   "Contemporary romance"
+  ],
+  "trope": [
+   "Billionaire"
+  ],
+  "audience": "adult",
+  "vibe": [
+   "dramatic"
+  ],
+  "spice": "red_pepper_4",
+  "story_focus": "balanced"
+ }
+]
