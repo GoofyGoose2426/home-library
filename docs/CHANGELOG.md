@@ -2,6 +2,10 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-27 · Google Books key found
+
+- The app was looking for a key named `GOOGLE_BOOKS_API_KEY`, but yours in Vercel is `GOOGLE_BOOKS_KEY`, so Google Books was never used (every filled-in value so far came from Open Library). The app now accepts either name.
+
 ## 2026-10-27 · Fill in details keeps going when Open Library is slow
 
 - If Open Library doesn't answer for a book, that book is set aside ("It'll be checked next time") and the run carries on, instead of stopping.

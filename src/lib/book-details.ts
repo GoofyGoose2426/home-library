@@ -7,6 +7,12 @@ import { fold } from "./library-filters";
 // rather than guessed. Edition details (publisher, pages) only come from a
 // copy's own ISBN.
 
+// The Google Books key from Vercel. Alexandra's is named GOOGLE_BOOKS_KEY;
+// GOOGLE_BOOKS_API_KEY (the name in .env.example) works too.
+export function googleBooksKey() {
+  return process.env.GOOGLE_BOOKS_KEY || process.env.GOOGLE_BOOKS_API_KEY || undefined;
+}
+
 const UA = "HomeLibraryCatalog/1.0 (+https://home-library-mocha.vercel.app)";
 const OL = "https://openlibrary.org";
 

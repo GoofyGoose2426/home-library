@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { findDetails, testGoogleBooks } from "@/lib/book-details";
+import { findDetails, googleBooksKey, testGoogleBooks } from "@/lib/book-details";
 import { fold } from "@/lib/library-filters";
 import { ownerClient } from "@/lib/supabase/owner";
 
@@ -62,7 +62,7 @@ export async function fillBookDetails(
         .filter((c) => !c.gone_at);
       let found;
       try {
-        found = await findDetails({ title: t.title, authors, copies }, process.env.GOOGLE_BOOKS_API_KEY || undefined);
+        found = await findDetails({ title: t.title, authors, copies }, googleBooksKey());
       } catch {
         // Open Library was too slow or down. Leave the book unchecked so a
         // later run picks it up, and carry on with the next one.
@@ -106,7 +106,7 @@ export async function fillBookDetails(
 export async function checkGoogleBooks(): Promise<{ ok: boolean; message: string }> {
   try {
     await ownerClient();
-    const key = process.env.GOOGLE_BOOKS_API_KEY;
+    const key = googleBooksKey();
     if (!key) return { ok: false, message: "There's no Google Books key in Vercel yet." };
     const n = await testGoogleBooks(key);
     return { ok: true, message: `Google Books is working (${n.toLocaleString()} results for a test search).` };

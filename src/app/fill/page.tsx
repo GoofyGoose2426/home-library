@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { googleBooksKey } from "@/lib/book-details";
 import { createClient } from "@/lib/supabase/server";
 import { FillRunner } from "./fill-runner";
 
@@ -13,7 +14,7 @@ export default function FillPage() {
       </Link>
       <h1 className="mt-3 font-serif text-3xl font-semibold">Fill in details</h1>
       <p className="mt-2 text-muted">
-        Looks up each book on Open Library{process.env.GOOGLE_BOOKS_API_KEY ? " and Google Books" : ""} by title and
+        Looks up each book on Open Library{googleBooksKey() ? " and Google Books" : ""} by title and
         author, and fills in the description, first published year, typical length, a word estimate, and series where
         a book has none. Copies with an ISBN also get their publisher and page count.
       </p>
@@ -48,7 +49,7 @@ async function Pending() {
       unchecked={owned.filter((r) => !r.details_checked_at).map((r) => r.id)}
       checked={owned.filter((r) => r.details_checked_at).map((r) => r.id)}
       missingDescription={owned.filter((r) => r.details_checked_at && !r.description).map((r) => r.id)}
-      google={!!process.env.GOOGLE_BOOKS_API_KEY}
+      google={!!googleBooksKey()}
     />
   );
 }
