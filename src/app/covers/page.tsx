@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { signCoverPaths } from "@/lib/covers";
 import { createClient } from "@/lib/supabase/server";
 import { CoverCheck, type CoverRow } from "./cover-check";
 
@@ -30,13 +31,15 @@ async function Covers() {
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
       .from("titles")
-      .select("id, title, credits(role, position, people(name)), copies(cover_url, cover_confirmed, gone_at)")
+      .select("id, title, credits(role, position, people(name)), copies(cover_url, cover_path, cover_confirmed, gone_at)")
       .order("title")
       .range(from, from + 999);
     if (error) throw new Error(error.message);
     for (const t of data ?? []) {
       const owned = t.copies.filter((c) => !c.gone_at);
       if (!owned.length) continue; // on the Gone list
+      // Her own photo counts first, as it does everywhere else.
+      const photo = owned.find((c) => c.cover_path);
       const cover = owned.find((c) => c.cover_url);
       rows.push({
         id: t.id,
@@ -45,11 +48,19 @@ async function Covers() {
           .filter((c) => c.role === "author")
           .sort((a, b) => a.position - b.position)
           .flatMap((c) => (c.people ? [(c.people as unknown as { name: string }).name] : [])),
-        url: cover?.cover_url ?? null,
-        confirmed: cover?.cover_confirmed ?? false,
+        url: photo ? `photo:${photo.cover_path}` : (cover?.cover_url ?? null),
+        confirmed: photo ? true : (cover?.cover_confirmed ?? false),
+        photo: !!photo,
       });
     }
     if ((data ?? []).length < 1000) break;
+  }
+  const signed = await signCoverPaths(
+    supabase,
+    rows.flatMap((r) => (r.url?.startsWith("photo:") ? [r.url.slice(6)] : [])),
+  );
+  for (const r of rows) {
+    if (r.url?.startsWith("photo:")) r.url = signed.get(r.url.slice(6)) ?? null;
   }
   return <CoverCheck rows={rows} />;
 }

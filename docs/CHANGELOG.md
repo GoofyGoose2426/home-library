@@ -2,6 +2,11 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-30 · Check covers counts your own photos
+
+- **Check covers** now counts cover photos you added yourself. Before, it only looked at covers found online, so books with your photo stayed under "No cover yet" (that's why it was stuck at 313; it's now 280).
+- Your own photos show on the "With a cover" tab, and tapping one doesn't offer "Wrong cover, remove". To change a photo, use the book page.
+
 ## 2026-10-27 · Phase 2, step 5: Claude suggestions for the whole library
 
 - **Every book now has Claude suggestions waiting in To check**, apart from the ones listed below. In 12 more batches (02–13), 1,006 books got about 6,800 suggestions, so the library now has 3,605 list values and 3,408 story-field values from Claude. All are unconfirmed and labelled "Claude".

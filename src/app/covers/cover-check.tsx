@@ -10,6 +10,8 @@ export type CoverRow = {
   authors: string[];
   url: string | null;
   confirmed: boolean;
+  // Her own photo: change it on the book page, not here.
+  photo: boolean;
 };
 
 export function CoverCheck({ rows: initial }: { rows: CoverRow[] }) {
@@ -53,9 +55,9 @@ export function CoverCheck({ rows: initial }: { rows: CoverRow[] }) {
           <li key={r.id}>
             <button
               type="button"
-              onClick={() => r.url && setSelected(selected === r.id ? null : r.id)}
+              onClick={() => r.url && !r.photo && setSelected(selected === r.id ? null : r.id)}
               className="block w-full text-left"
-              aria-label={r.url ? `${r.title}: tap to remove if wrong` : r.title}
+              aria-label={r.url && !r.photo ? `${r.title}: tap to remove if wrong` : r.title}
             >
               <BookCover title={r.title} authors={r.authors} url={r.url} unconfirmed={!!r.url && !r.confirmed} />
             </button>
