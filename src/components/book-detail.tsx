@@ -7,9 +7,11 @@ import { EditDetails } from "@/components/edit-details";
 import { MergeEntry } from "@/components/merge-entry";
 import { QuickEdit } from "@/components/quick-edit";
 import { RemoveCopy, UndoGone } from "@/components/remove-copy";
+import { OwnVoices, RepresentationPanel } from "@/components/representation-panel";
 import { GONE_LABEL } from "@/lib/gone";
 import { AUDIO, RECOMMEND, STARS, WRITING, find, starText } from "@/lib/ratings";
 import type { Book, BookCopy, FieldSource } from "@/lib/book";
+import { CATEGORY_LABEL } from "@/lib/representation";
 import {
   AUDIENCE,
   KIND_LABEL,
@@ -127,9 +129,11 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
           {authors.length > 0 && (
             <p className="mt-2 text-lg">
               {authors.map((a, i) => (
-                <span key={`${a.name}-${a.role}`}>
+                <span key={`${a.id}-${a.role}`}>
                   {i > 0 && ", "}
-                  {a.name}
+                  <Link href={`${base}/authors/${a.id}`} className="underline-offset-4 hover:underline">
+                    {a.name}
+                  </Link>
                   {ROLE[a.role] ? <span className="text-sm text-muted"> ({ROLE[a.role]})</span> : null}
                 </span>
               ))}
@@ -329,12 +333,10 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
             />
           </div>
         )}
-        {!readOnly && (
-          <p className="mt-4 rounded-2xl border border-dashed border-border px-4 py-3 text-sm text-muted">
-            Coming later in Phase 2, each with its source for you to check: suggestions for all of this, publisher and
-            length, and author and character representation.
-          </p>
-        )}
+      </Section>
+
+      <Section title="Representation">
+        <Representation book={book} readOnly={readOnly} base={base} />
       </Section>
     </article>
   );
@@ -508,6 +510,59 @@ function Classification({ book, readOnly }: { book: Book; readOnly: boolean }) {
         </p>
       )}
     </>
+  );
+}
+
+// The authors (from their own words, kept on their author pages), own voices,
+// and the main characters (from publisher text or representation lists).
+function Representation({ book, readOnly, base }: { book: Book; readOnly: boolean; base: string }) {
+  const names = new Map(book.credits.map((c) => [c.id, c.name]));
+  return (
+    <div className="space-y-5">
+      <div>
+        <h3 className="text-sm font-medium">Authors</h3>
+        {book.authorIdentities.length ? (
+          <ul className="mt-2 space-y-1.5 text-sm">
+            {book.authorIdentities.map((a) => {
+              const shown = a.values.filter((v) => v.confirmed || !readOnly);
+              return (
+                <li key={a.personId}>
+                  <Link href={`${base}/authors/${a.personId}`} className="text-accent underline-offset-4 hover:underline">
+                    {names.get(a.personId)}
+                  </Link>
+                  {": "}
+                  {shown.length ? (
+                    shown.map((v, i) => (
+                      <span key={`${v.category}:${v.value}`}>
+                        {i > 0 && " · "}
+                        <span className={v.confirmed || readOnly ? "" : "text-muted"} title={CATEGORY_LABEL[v.category]}>
+                          {v.value}
+                        </span>
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-muted">{a.checkedAt || readOnly ? "unknown" : "not looked up yet"}</span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <p className="mt-1 text-sm text-muted">No author on this book yet.</p>
+        )}
+        {!readOnly && <p className="mt-1 text-xs text-muted">Grey values aren&apos;t confirmed yet. Open an author to check their words and links.</p>}
+      </div>
+      <OwnVoices titleId={book.id} value={book.ownVoices} source={book.sources.own_voices} readOnly={readOnly} />
+      {(!readOnly || book.characterReps.length > 0) && (
+        <div>
+          <h3 className="text-sm font-medium">Main characters</h3>
+          <p className="mb-2 mt-0.5 text-xs text-muted">
+            From the publisher&apos;s description or community representation lists, with the source.
+          </p>
+          <RepresentationPanel kind="character" targetId={book.id} values={book.characterReps} readOnly={readOnly} />
+        </div>
+      )}
+    </div>
   );
 }
 

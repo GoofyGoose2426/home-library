@@ -2,6 +2,7 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "./classification";
 import { REVIEW_FIELDS } from "./review-fields";
+import { CATEGORY_LABEL, type IdentityCategory } from "./representation";
 
 // What's waiting on the "To check" screen: values filled in for Alexandra
 // that she hasn't confirmed, on books she still owns. Her own values never
@@ -9,9 +10,10 @@ import { REVIEW_FIELDS } from "./review-fields";
 
 export type ReviewItem = {
   key: string; // e.g. "titles.description", "tags.genre"
-  table: "titles" | "copies" | "tags";
-  id: string; // the title or copy; for tags, the tag
-  titleId: string;
+  table: "titles" | "copies" | "tags" | "author_identities" | "character_representations";
+  id: string; // the title or copy; for tags, the tag; for identity, its row
+  titleId: string; // for author identity, one of their books (for "By book")
+  personId?: string;
   source: string;
 };
 
@@ -19,6 +21,10 @@ export type ReviewRow = ReviewItem & {
   title: string;
   value: string | null;
   detail?: string; // e.g. which copy
+  // Identity values: the words that say it, the link, and the author page.
+  quote?: string | null;
+  link?: string | null;
+  href?: string;
 };
 
 async function readAll<T>(query: (from: number) => PromiseLike<{ data: T[] | null; error: { message: string } | null }>) {
@@ -32,8 +38,8 @@ async function readAll<T>(query: (from: number) => PromiseLike<{ data: T[] | nul
 }
 
 export async function loadWaiting(supabase: SupabaseClient): Promise<ReviewItem[]> {
-  const plain = REVIEW_FIELDS.filter((f) => !f.key.startsWith("tags."));
-  const [sources, tags, copies] = await Promise.all([
+  const plain = REVIEW_FIELDS.filter((f) => f.key.startsWith("titles.") || f.key.startsWith("copies."));
+  const [sources, tags, copies, authorValues, characterValues, credits] = await Promise.all([
     readAll<{ entity_table: "titles" | "copies"; entity_id: string; field: string; source: string }>((from) =>
       supabase
         .from("field_sources")
@@ -56,6 +62,15 @@ export async function loadWaiting(supabase: SupabaseClient): Promise<ReviewItem[
     readAll<{ id: string; title_id: string; gone_at: string | null }>((from) =>
       supabase.from("copies").select("id, title_id, gone_at").order("id").range(from, from + 999),
     ),
+    readAll<{ id: string; person_id: string; source: string }>((from) =>
+      supabase.from("author_identities").select("id, person_id, source").eq("confirmed", false).order("id").range(from, from + 999),
+    ),
+    readAll<{ id: string; title_id: string; source: string }>((from) =>
+      supabase.from("character_representations").select("id, title_id, source").eq("confirmed", false).order("id").range(from, from + 999),
+    ),
+    readAll<{ person_id: string; title_id: string; role: string }>((from) =>
+      supabase.from("credits").select("person_id, title_id, role").neq("role", "narrator").order("title_id").range(from, from + 999),
+    ),
   ]);
   const titleOfCopy = new Map(copies.map((c) => [c.id, c.title_id]));
   const ownedCopy = new Set(copies.filter((c) => !c.gone_at).map((c) => c.id));
@@ -75,8 +90,29 @@ export async function loadWaiting(supabase: SupabaseClient): Promise<ReviewItem[
     if (!known.has(key) || !ownedTitle.has(t.title_id)) continue;
     items.push({ key, table: "tags", id: t.tag_id, titleId: t.title_id, source: t.source });
   }
+  const bookOf = new Map<string, string>();
+  for (const c of credits) if (ownedTitle.has(c.title_id) && !bookOf.has(c.person_id)) bookOf.set(c.person_id, c.title_id);
+  for (const a of authorValues) {
+    const titleId = bookOf.get(a.person_id);
+    if (!titleId) continue;
+    items.push({ key: "identity.author", table: "author_identities", id: a.id, titleId, personId: a.person_id, source: a.source });
+  }
+  for (const c of characterValues) {
+    if (!ownedTitle.has(c.title_id)) continue;
+    items.push({ key: "identity.character", table: "character_representations", id: c.id, titleId: c.title_id, source: c.source });
+  }
   return items;
 }
+
+type IdentityRow = {
+  id: string;
+  category: IdentityCategory;
+  value: string;
+  quote: string | null;
+  source_url: string | null;
+  character_name?: string | null;
+  people?: { name: string } | null;
+};
 
 const COPY_NAME: Record<string, string> = {
   hardcover: "Hardcover",
@@ -92,12 +128,14 @@ export async function withValues(supabase: SupabaseClient, items: ReviewItem[]):
   const titleIds = [...new Set(items.map((i) => i.titleId))];
   const copyIds = items.filter((i) => i.table === "copies").map((i) => i.id);
   const tagIds = items.filter((i) => i.table === "tags").map((i) => i.id);
-  const [titles, copies, tags] = await Promise.all([
+  const authorIds = items.filter((i) => i.table === "author_identities").map((i) => i.id);
+  const characterIds = items.filter((i) => i.table === "character_representations").map((i) => i.id);
+  const [titles, copies, tags, authorRows, characterRows] = await Promise.all([
     titleIds.length
       ? supabase
           .from("titles")
           .select(
-            "id, title, description, first_published, typical_pages, series_number, series(name), audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second",
+            "id, title, description, first_published, typical_pages, series_number, series(name), audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second, own_voices",
           )
           .in("id", titleIds)
       : { data: [], error: null },
@@ -105,14 +143,35 @@ export async function withValues(supabase: SupabaseClient, items: ReviewItem[]):
       ? supabase.from("copies").select("id, format, publisher, pages, est_words").in("id", copyIds)
       : { data: [], error: null },
     tagIds.length ? supabase.from("tags").select("id, name").in("id", tagIds) : { data: [], error: null },
+    authorIds.length
+      ? supabase.from("author_identities").select("id, category, value, quote, source_url, people(name)").in("id", authorIds)
+      : { data: [], error: null },
+    characterIds.length
+      ? supabase.from("character_representations").select("id, category, value, quote, source_url, character_name").in("id", characterIds)
+      : { data: [], error: null },
   ]);
-  for (const r of [titles, copies, tags]) if (r.error) throw new Error(r.error.message);
+  for (const r of [titles, copies, tags, authorRows, characterRows]) if (r.error) throw new Error(r.error.message);
+  const identity = new Map(
+    [...(authorRows.data ?? []), ...(characterRows.data ?? [])].map((x) => [(x as IdentityRow).id, x as unknown as IdentityRow]),
+  );
   const t = new Map((titles.data ?? []).map((x: Record<string, unknown>) => [x.id as string, x]));
   const c = new Map((copies.data ?? []).map((x: Record<string, unknown>) => [x.id as string, x]));
   const g = new Map((tags.data ?? []).map((x: Record<string, unknown>) => [x.id as string, x.name as string]));
 
   return items.map((i) => {
     const title = t.get(i.titleId);
+    if (i.table === "author_identities" || i.table === "character_representations") {
+      const v = identity.get(i.id);
+      return {
+        ...i,
+        title: i.table === "author_identities" ? (v?.people?.name ?? "") : ((title?.title as string) ?? ""),
+        value: v?.value ?? null,
+        detail: v ? [CATEGORY_LABEL[v.category], v.character_name].filter(Boolean).join(" · ") : undefined,
+        quote: v?.quote ?? null,
+        link: v?.source_url ?? null,
+        href: i.personId ? `/authors/${i.personId}` : undefined,
+      };
+    }
     const field = i.key.split(".")[1];
     let value: unknown = null;
     let detail: string | undefined;
@@ -127,6 +186,7 @@ export async function withValues(supabase: SupabaseClient, items: ReviewItem[]):
     } else if (field === "audience") value = labelOf(AUDIENCE, title?.audience as Audience);
     else if (field === "spice") value = labelOf(SPICE, title?.spice as Spice);
     else if (field === "story_focus") value = labelOf(STORY_FOCUS, title?.story_focus as StoryFocus);
+    else if (field === "own_voices") value = title?.own_voices == null ? null : title.own_voices ? "Yes" : "No";
     else if (field === "romantic_subplot") value = title?.romantic_subplot == null ? null : title.romantic_subplot ? "Yes" : "No";
     else if (field === "vibe")
       value = [labelOf(VIBE, title?.vibe_main as Vibe), labelOf(VIBE, title?.vibe_second as Vibe)].filter(Boolean).join(", then ") || null;

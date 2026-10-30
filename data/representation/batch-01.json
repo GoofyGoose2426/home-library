@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {"name": "TJ Klune", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://www.tjklunebooks.com/about",
+       "quote": "Being queer himself, Klune believes it's important—now more than ever—to have accurate, positive queer representation in stories."}
+    ]},
+    {"name": "Talia Hibbert", "values": [
+      {"category": "race_ethnicity", "value": "Black British", "url": "https://www.bookreporter.com/authors/talia-hibbert",
+       "quote": "Talia Hibbert is a Black British author who lives in a bedroom full of books."}
+    ]},
+    {"name": "Helen Hoang", "values": [
+      {"category": "neurodivergence", "value": "Autistic", "url": "https://www.mprnews.org/story/2019/05/05/npr-books-helen-hoang",
+       "quote": "That's how the diagnosis came to be, and how the character came to be, we kind of happened at the same time."}
+    ]},
+    {"name": "N.K. Jemisin", "values": [
+      {"category": "race_ethnicity", "value": "Black", "url": "https://www.wpr.org/shows/to-the-best-of-our-knowledge/a-not-so-distant-future-in-the-n-k-jemisins-broken-earth-trilogy",
+       "quote": "As a black woman living in modern day America, I have lots of questions about validity and exploitation."},
+      {"category": "gender_identity", "value": "Woman", "url": "https://www.wpr.org/shows/to-the-best-of-our-knowledge/a-not-so-distant-future-in-the-n-k-jemisins-broken-earth-trilogy",
+       "quote": "As a black woman living in modern day America, I have lots of questions about validity and exploitation."}
+    ]},
+    {"name": "Sabaa Tahir", "values": [
+      {"category": "race_ethnicity", "value": "Pakistani American", "url": "https://www.sabaatahir.com/about",
+       "quote": "Sabaa became the first Pakistani-American fantasist to hit Number 1 on the New York Times Bestseller List."}
+    ]},
+    {"name": "Alisha Rai", "values": []},
+    {"name": "Karen Rose", "values": []},
+    {"name": "Lisa Kleypas", "values": []},
+    {"name": "Ilona Andrews", "values": []},
+    {"name": "T. Kingfisher", "values": []}
+  ],
+  "characters": [
+    {"title": "The Kiss Quotient", "values": [
+      {"category": "neurodivergence", "value": "Autistic", "character": "Stella", "url": "https://openlibrary.org/works/OL19744698W",
+       "quote": "It doesn't help that Stella has Asperger's and French kissing reminds her of a shark getting its teeth cleaned by pilot fish."},
+      {"category": "race_ethnicity", "value": "Vietnamese and Swedish", "character": "Michael", "url": "https://openlibrary.org/works/OL19744698W",
+       "quote": "The Vietnamese and Swedish stunner can't afford to turn down Stella's offer…"}
+    ]},
+    {"title": "The Bride Test", "values": [
+      {"category": "neurodivergence", "value": "Autistic", "character": "Khai", "url": "https://openlibrary.org/works/OL19800269W",
+       "quote": "His family knows better—that his autism means he just processes emotions differently."}
+    ]},
+    {"title": "Get a Life, Chloe Brown", "values": [
+      {"category": "disability", "value": "Chronic illness", "character": "Chloe", "url": "https://openlibrary.org/works/OL20422812W",
+       "quote": "Chloe Brown is a chronically ill computer geek with a goal, a plan, and a list."}
+    ]},
+    {"title": "Under the Whispering Door", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://openlibrary.org/works/OL20862021W",
+       "quote": "A Man Called Ove meets The Good Place in Under the Whispering Door, a delightful queer love story from TJ Klune…"}
+    ]}
+  ]
+}

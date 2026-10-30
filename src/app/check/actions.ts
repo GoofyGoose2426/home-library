@@ -33,11 +33,16 @@ export async function reviewItem(
     const [table, field] = key.split(".");
     const { supabase } = await ownerClient();
     const { error } =
-      table === "tags"
+      table === "identity"
+        ? action === "edit"
+          ? { error: { message: "Change this on the author or book page." } }
+          : await supabase.rpc("review_identity", { p_action: action, p_kind: field, p_id: id })
+        : table === "tags"
         ? await supabase.rpc("review_tag", { p_action: action, p_title_id: titleId, p_tag_id: id })
         : await supabase.rpc("review_value", { p_action: action, p_table: table, p_id: id, p_field: field, p_value: value });
     if (error) throw new Error(error.message);
     revalidatePath(`/books/${titleId}`);
+    if (table === "identity") revalidatePath("/authors/[id]", "page");
   });
 }
 

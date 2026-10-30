@@ -29,7 +29,7 @@ function Row({ row: r, showTitle }: { row: ReviewRow; showTitle: boolean }) {
   const [more, setMore] = useState(false);
   const [busy, startBusy] = useTransition();
   const [message, setMessage] = useState<string | null>(null);
-  const canEdit = field.kind !== "tag" && field.kind !== "series" && field.kind !== "choice";
+  const canEdit = field.kind !== "tag" && field.kind !== "series" && field.kind !== "choice" && field.kind !== "identity";
 
   function act(action: "confirm" | "edit" | "reject", value: string | null, label: string) {
     setMessage(null);
@@ -52,8 +52,12 @@ function Row({ row: r, showTitle }: { row: ReviewRow; showTitle: boolean }) {
     <div className="rounded-xl border border-border bg-background p-3 text-sm">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3">
         {showTitle ? (
-          <Link href={`/books/${r.titleId}`} className="font-medium underline-offset-4 hover:underline">
+          <Link href={r.href ?? `/books/${r.titleId}`} className="font-medium underline-offset-4 hover:underline">
             {r.title}
+          </Link>
+        ) : r.href ? (
+          <Link href={r.href} className="font-medium underline-offset-4 hover:underline">
+            {r.title} <span className="font-normal text-muted">(author)</span>
           </Link>
         ) : (
           <span className="font-medium">{field.label.replace(/s$/, "")}</span>
@@ -103,6 +107,12 @@ function Row({ row: r, showTitle }: { row: ReviewRow; showTitle: boolean }) {
           <p className={`mt-1.5 whitespace-pre-line ${field.kind === "long" && !more ? "line-clamp-4" : ""}`}>
             {r.value ?? <span className="text-muted">(empty)</span>}
           </p>
+          {r.quote && <q className="mt-1 block text-[13px] italic leading-snug">{r.quote}</q>}
+          {r.link && (
+            <a href={r.link} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block break-all text-xs text-accent underline underline-offset-2">
+              {r.link}
+            </a>
+          )}
           {field.kind === "long" && (r.value?.length ?? 0) > 280 && (
             <button type="button" onClick={() => setMore((m) => !m)} className="text-xs text-accent">
               {more ? "Less" : "More"}

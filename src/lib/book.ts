@@ -4,6 +4,7 @@ import { signCoverPaths } from "./covers";
 import type { CopyFormat, CopySource } from "./library";
 import type { Audience, ListTag, TagKind } from "./classification";
 import type { Recommendation } from "./ratings";
+import type { IdentityCategory, IdentityValue } from "./representation";
 
 export type FieldSource = { source: string; confirmed: boolean };
 
@@ -48,7 +49,11 @@ export type Book = {
   id: string;
   title: string;
   subtitle: string | null;
-  credits: { name: string; role: string }[];
+  credits: { id: string; name: string; role: string }[];
+  // What each writing credit has said about themselves (not narrators).
+  authorIdentities: { personId: string; checkedAt: string | null; values: Pick<IdentityValue, "category" | "value" | "confirmed">[] }[];
+  characterReps: IdentityValue[];
+  ownVoices: boolean | null;
   series: { id: string; name: string; number: number | null; books: SeriesBook[] } | null;
   readStatus: "unread" | "partly_read" | "read";
   bookType: string;
@@ -84,6 +89,12 @@ export type Book = {
 const FORMAT_ORDER: CopyFormat[] = ["hardcover", "trade_paperback", "mass_market", "print_unknown", "ebook", "audiobook"];
 
 type Person = { name: string } | null;
+type CreditPerson = {
+  id: string;
+  name: string;
+  identity_checked_at: string | null;
+  author_identities: { category: IdentityCategory; value: string; confirmed: boolean }[];
+} | null;
 
 export async function namesOf(supabase: SupabaseClient, table: "series" | "people") {
   const names: string[] = [];
@@ -122,13 +133,14 @@ export async function loadBook(
   const { data: t, error } = await supabase
     .from("titles")
     .select(
-      `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description, audience,
+      `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description, audience, own_voices,
        first_published, typical_pages,
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
        reviews(rating, writing_quality, recommendation),
        pieces(id, position, piece_title, kind, is_read),
-       credits(role, position, people(name)),
+       credits(role, position, people(id, name, identity_checked_at, author_identities(category, value, confirmed))),
+       character_representations(id, category, value, character_name, source, source_url, quote, confirmed),
        title_tags(source, confirmed, tags(id, kind, name)),
        copies(id, format, source, publisher, edition, edition_type, isbn13, isbn10, cover_url, cover_confirmed,
               pages, audio_minutes, est_words, contains_from, contains_to, bonus_notes, gone_at,
@@ -179,9 +191,17 @@ export async function loadBook(
     };
   }
 
-  const credits = (t.credits as unknown as { role: string; position: number; people: Person }[])
+  const creditRows = (t.credits as unknown as { role: string; position: number; people: CreditPerson }[])
     .sort((a, b) => a.position - b.position)
-    .flatMap((c) => (c.people ? [{ name: c.people.name, role: c.role }] : []));
+    .flatMap((c) => (c.people ? [{ ...c, people: c.people }] : []));
+  const credits = creditRows.map((c) => ({ id: c.people.id, name: c.people.name, role: c.role }));
+  const authorIdentities = [
+    ...new Map(
+      creditRows
+        .filter((c) => c.role !== "narrator")
+        .map((c) => [c.people.id, { personId: c.people.id, checkedAt: c.people.identity_checked_at, values: c.people.author_identities }]),
+    ).values(),
+  ];
 
   const [seriesNames, peopleNames, lists, signed] = await Promise.all([
     namesOf(supabase, "series"),
@@ -244,6 +264,31 @@ export async function loadBook(
     title: t.title,
     subtitle: t.subtitle,
     credits,
+    authorIdentities,
+    characterReps: (
+      t.character_representations as unknown as {
+        id: string;
+        category: IdentityCategory;
+        value: string;
+        character_name: string | null;
+        source: string;
+        source_url: string | null;
+        quote: string | null;
+        confirmed: boolean;
+      }[]
+    )
+      .map((r) => ({
+        id: r.id,
+        category: r.category,
+        value: r.value,
+        characterName: r.character_name,
+        source: r.source,
+        sourceUrl: r.source_url,
+        quote: r.quote,
+        confirmed: r.confirmed,
+      }))
+      .sort((a, b) => a.value.localeCompare(b.value)),
+    ownVoices: t.own_voices,
     series,
     readStatus: t.read_status,
     bookType: t.book_type,

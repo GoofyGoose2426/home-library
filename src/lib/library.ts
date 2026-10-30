@@ -3,6 +3,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
 import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "./classification";
 import type { Recommendation } from "./ratings";
+import { AUTHOR_FACET, CATEGORIES, CHARACTER_FACET, UNKNOWN, type IdentityCategory } from "./representation";
 
 export type CopySource = "shelf" | "kobo" | "audible" | "librofm" | "other";
 
@@ -54,7 +55,13 @@ type Row = {
   needs_check: boolean;
   series_number: number | null;
   series: { name: string } | null;
-  credits: { role: string; position: number; people: { name: string } | null }[];
+  credits: {
+    role: string;
+    position: number;
+    people: { name: string; author_identities: { category: IdentityCategory; value: string }[] } | null;
+  }[];
+  character_representations: { category: IdentityCategory; value: string }[];
+  own_voices: boolean | null;
   title_tags: { tags: { kind: string; name: string } | null }[];
   audience: Audience | null;
   romantic_subplot: boolean | null;
@@ -91,6 +98,15 @@ function facetsOf(t: Row): Record<string, string[]> {
   add("romantic_subplot", t.romantic_subplot == null ? null : t.romantic_subplot ? "Yes" : "No");
   add("spice", labelOf(SPICE, t.spice));
   add("story_focus", labelOf(STORY_FOCUS, t.story_focus));
+  // Representation: every writing credit's own words ("Unknown" when none of
+  // them has said), the main characters, and own voices.
+  const writers = t.credits.filter((c) => c.role !== "narrator" && c.people);
+  for (const { key } of CATEGORIES) {
+    const values = new Set(writers.flatMap((c) => c.people!.author_identities.filter((i) => i.category === key).map((i) => i.value)));
+    if (writers.length) for (const v of values.size ? values : [UNKNOWN]) add(AUTHOR_FACET(key), v);
+  }
+  for (const r of t.character_representations) add(CHARACTER_FACET(r.category), r.value);
+  add("own_voices", t.own_voices == null ? null : t.own_voices ? "Yes" : "No");
   return f;
 }
 
@@ -117,7 +133,9 @@ export async function loadLibrary(
         `id, title, read_status, book_type, is_reference, needs_check, series_number,
          audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second,
          series(name),
-         credits(role, position, people(name)),
+         own_voices,
+         credits(role, position, people(name, author_identities(category, value))),
+         character_representations(category, value),
          title_tags(tags(kind, name)),
          reviews(rating, writing_quality, recommendation),
          pieces(count),

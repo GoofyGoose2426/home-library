@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-30 · Phase 2, step 6: author pages and representation (first batch)
+
+- **Author pages.** Tap an author's name on any book page to see every book of theirs you own (read status, series, copies) and what they've said publicly about who they are. Viewers of your share link see author pages too, but only values you've confirmed.
+- **"In their own words".** Six categories: gender identity, 2SLGBTQIA+, race / ethnicity, disability, neurodivergence, nationality / region. A suggested value always has a link and the author's own words; anything else shows **Unknown**. The page also says when the author was last looked up. You can confirm, remove, or add a value yourself, with or without a link.
+- **Book pages** have a new **Representation** section: each author's values (linked to their page), **own voices** (Yes / No / Clear), and the **main characters**, taken only from publisher descriptions or community representation lists, with the line that says it.
+- **To check** has three new groups: Author identity, Character representation and Own voices. Each row shows the quote and the link. Rejecting a value is remembered, so it isn't suggested again.
+- **New library filters:** each author category ("Author: 2SLGBTQIA+", including Unknown), own voices, and each main-character category.
+- **First lookup: 10 authors of books you've read.** 6 values found for TJ Klune, Talia Hibbert, Helen Hoang, N.K. Jemisin and Sabaa Tahir. Nothing in the author's own words for Alisha Rai, Karen Rose, Lisa Kleypas or T. Kingfisher, and Ilona Andrews is a pen name shared by two writers, so those stay unknown. Also 5 character values on 4 books, and 3 own-voices suggestions (The Kiss Quotient, The Bride Test, Under the Whispering Door). All are waiting in To check.
+
 ## 2026-10-30 · Check covers counts your own photos
 
 - **Check covers** now counts cover photos you added yourself. Before, it only looked at covers found online, so books with your photo stayed under "No cover yet" (that's why it was stuck at 313; it's now 280).

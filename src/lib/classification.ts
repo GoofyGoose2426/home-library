@@ -2,6 +2,8 @@
 // Her wording: "Fantasy romance" (never "romantasy"), Smut is a Romance
 // subgenre, Scoville Smut Scale labels. Shared by the server and the browser.
 
+import { AUTHOR_FACET, CATEGORIES, CHARACTER_FACET } from "./representation";
+
 export type TagKind =
   | "genre"
   | "subgenre"
@@ -105,6 +107,13 @@ export const FACETS: { key: string; title: string; note?: string }[] = [
   { key: "gn_style", title: "Graphic novel origin / style" },
   { key: "manga_demographic", title: "Manga demographic" },
   { key: "franchise", title: "Universe / franchise" },
+  ...CATEGORIES.map((c, i) => ({
+    key: AUTHOR_FACET(c.key),
+    title: `Author: ${c.label.toLowerCase().replace("2slgbtqia+", "2SLGBTQIA+")}`,
+    note: i === 0 ? "From authors' own public words. Unknown means they haven't said, or haven't been looked up yet." : undefined,
+  })),
+  { key: "own_voices", title: "Own voices" },
+  ...CATEGORIES.map((c) => ({ key: CHARACTER_FACET(c.key), title: `Main character: ${c.label.toLowerCase().replace("2slgbtqia+", "2SLGBTQIA+")}` })),
   { key: "rough_genre", title: "Rough genre", note: "From the shelf photos; goes away once you set a book's genres." },
 ];
 

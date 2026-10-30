@@ -1,7 +1,7 @@
 // The fields on the "To check" screen (see review_column in the database).
 // Shared by the server and the browser.
 
-export type ReviewKind = "long" | "text" | "number" | "series" | "choice" | "tag";
+export type ReviewKind = "long" | "text" | "number" | "series" | "choice" | "tag" | "identity";
 
 export const REVIEW_FIELDS: { key: string; label: string; kind: ReviewKind; note?: string }[] = [
   { key: "titles.description", label: "Descriptions", kind: "long" },
@@ -16,6 +16,9 @@ export const REVIEW_FIELDS: { key: string; label: string; kind: ReviewKind; note
   { key: "titles.romantic_subplot", label: "Romantic subplot", kind: "choice" },
   { key: "titles.spice", label: "Spice", kind: "choice" },
   { key: "titles.story_focus", label: "Story focus", kind: "choice" },
+  { key: "identity.author", label: "Author identity", kind: "identity", note: "Only the author's own public words count. Open the link to check the quote" },
+  { key: "identity.character", label: "Character representation", kind: "identity", note: "From the publisher's description or a community representation list" },
+  { key: "titles.own_voices", label: "Own voices", kind: "choice", note: "The author shares an identity with the main character, both with a source" },
   { key: "tags.genre", label: "Genres", kind: "tag" },
   { key: "tags.subgenre", label: "Subgenres", kind: "tag" },
   { key: "tags.supernatural_being", label: "Supernatural beings", kind: "tag" },
