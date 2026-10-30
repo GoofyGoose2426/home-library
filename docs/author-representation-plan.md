@@ -29,7 +29,7 @@ A category with no statement shows **unknown**. The author page also shows **whe
 
 ## How each lookup works
 
-1. Search the author's own website, publisher bio, interviews and essays.
+1. Search widely, not just the author's website (widened after batch 01, at Alexandra's request): publisher bio, the author's blog and newsletter, interviews (print, radio, podcast transcripts), award speeches, essays, Goodreads Q&A answers and their public social posts. Wikipedia and fan wikis are only used to find where the author said it, never as the source.
 2. Save only what the author says about themselves, with the page link and the line where they say it (one sentence at most).
 3. If statements change over time (for example, a newer coming-out), use the most recent one.
 4. Pen names shared by more than one writer, and authors with no public statements, stay unknown.

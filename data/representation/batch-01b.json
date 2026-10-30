@@ -1,0 +1,26 @@
+{
+  "authors": [
+    {"name": "TJ Klune", "values": [
+      {"category": "lgbtqia", "value": "Asexual", "url": "https://tjklunebooks.blogspot.com/2015/08/coming-out-for-second-time-at-age-33.html",
+       "quote": "So, if we’re being specific, I’m a sex-positive homoromantic asexual."},
+      {"category": "neurodivergence", "value": "ADHD", "url": "https://www.lapl.org/news-stories/articles/interview-author-tj-klune-0",
+       "quote": "But going deeper, I wanted to see someone like me—with ADHD—smack dab in the middle of it all: a queer kid who also happens to be neurodiverse."}
+    ]},
+    {"name": "Talia Hibbert", "values": [
+      {"category": "disability", "value": "Fibromyalgia", "url": "https://www.goodreads.com/questions/2260698-just-wondering-if-you-had-personal",
+       "quote": "I do have fibromyalgia!"},
+      {"category": "neurodivergence", "value": "Autistic", "url": "https://readingtheend.com/2021/03/10/episode-142-interview-with-talia-hibbert-author-of-act-your-age-eve-brown/",
+       "quote": "I'm an autistic person and I was diagnosed very young"}
+    ]},
+    {"name": "Sabaa Tahir", "values": [
+      {"category": "gender_identity", "value": "Woman", "url": "https://www.publishersweekly.com/pw/by-topic/childrens/childrens-authors/article/90957-sabaa-tahir-wins-2022-national-book-award-for-young-people-s-literature.html",
+       "quote": "I am the first Muslim and Pakistani American woman to win this award."}
+    ]}
+  ],
+  "characters": [
+    {"title": "How to Be a Normal Person", "values": [
+      {"category": "lgbtqia", "value": "Asexual", "character": "Casey", "url": "https://openlibrary.org/works/OL20049169W",
+       "quote": "Until Casey, an asexual stoner hipster and the newest employee at Lottie's Lattes, enters his life."}
+    ]}
+  ]
+}

@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-10-30 · Wider author lookups (batch 01, second pass)
+
+- Lookups now go beyond author websites: blogs, interviews, podcast transcripts, award speeches and Goodreads Q&A answers. Still only the author's own words, with a link.
+- **TJ Klune:** Asexual (his 2015 blog post) and ADHD (a library interview).
+- **Talia Hibbert:** Fibromyalgia (her Goodreads answer) and Autistic (a podcast interview).
+- **Sabaa Tahir:** Woman (her National Book Award speech).
+- **How to Be a Normal Person:** Casey is asexual, from the description, which gives an own-voices suggestion.
+- All are waiting in To check.
+
 ## 2026-10-30 · Phase 2, step 6: author pages and representation (first batch)
 
 - **Author pages.** Tap an author's name on any book page to see every book of theirs you own (read status, series, copies) and what they've said publicly about who they are. Viewers of your share link see author pages too, but only values you've confirmed.
