@@ -2,14 +2,25 @@
 
 /* eslint-disable @next/next/no-img-element -- hotlinked Open Library covers */
 import { useRouter } from "next/navigation";
-import { useCallback, useId, useMemo, useState, useTransition } from "react";
+import Link from "next/link";
+import { useCallback, useEffect, useId, useMemo, useRef, useState, useTransition } from "react";
 import { addBook, type NewBook, type NewCopy } from "@/app/edit-actions";
-import { BarcodeScanner } from "@/components/barcode-scanner";
+import { BarcodeScanner, readBarcodeFromPhoto } from "@/components/barcode-scanner";
 import { copyLabel } from "@/lib/copy-labels";
 import type { LibraryBook } from "@/lib/library";
 import { findBooks } from "@/lib/lookup";
+import { estimateWords } from "@/lib/word-estimate";
+import { lookupDetails, type LookedField, type LookedSource } from "./actions";
 
 type OwnedBook = Pick<LibraryBook, "id" | "title" | "authors" | "copies" | "series" | "seriesNumber">;
+// Her copies' ISBNs: which book each belongs to, and whether it's on the Gone list.
+export type OwnedIsbns = Record<string, { titleId: string; title: string; copy: string; gone: boolean }>;
+
+const SOURCE_NAME: Record<LookedSource, string> = { openlibrary: "Open Library", googlebooks: "Google Books" };
+const SERIES_IN_TITLE = /\s*\([^()]*(?:book|bk\.?|#|vol\.?|volume|no\.?)\s*\d+(?:\.\d+)?\)\s*$/i;
+
+// "T. J. Klune" and "TJ Klune" are the same person (matches person_key in the database).
+const personKey = (name: string) => name.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "");
 
 type Result = {
   key: string;
@@ -103,11 +114,13 @@ export function AddBook({
   copyOf,
   seriesNames,
   peopleNames,
+  ownedIsbns,
 }: {
   library: OwnedBook[];
   copyOf: Pick<OwnedBook, "id" | "title" | "authors" | "copies"> | null;
   seriesNames: string[];
   peopleNames: string[];
+  ownedIsbns: OwnedIsbns;
 }) {
   const router = useRouter();
   const [picked, setPicked] = useState<Result | null>(null);
@@ -185,6 +198,7 @@ export function AddBook({
           library={library}
           seriesNames={seriesNames}
           peopleNames={peopleNames}
+          ownedIsbns={ownedIsbns}
           onSaved={onSaved}
         />
       </>
@@ -213,11 +227,12 @@ export function AddBook({
             library={library}
             seriesNames={seriesNames}
             peopleNames={peopleNames}
+            ownedIsbns={ownedIsbns}
             onSaved={onSaved}
           />
         </>
       ) : (
-        <Search key={round} library={library} onPick={setPicked} onManual={() => setManual(true)} />
+        <Search key={round} library={library} ownedIsbns={ownedIsbns} onPick={setPicked} onManual={() => setManual(true)} />
       )}
     </>
   );
@@ -234,21 +249,29 @@ function ownedMatch(library: OwnedBook[], title: string, authors: string[]) {
 
 function Search({
   library,
+  ownedIsbns,
   onPick,
   onManual,
 }: {
   library: OwnedBook[];
+  ownedIsbns: OwnedIsbns;
   onPick: (r: Result) => void;
   onManual: () => void;
 }) {
   const [query, setQuery] = useState("");
+  const [searched, setSearched] = useState("");
   const [results, setResults] = useState<Result[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, startBusy] = useTransition();
   const [scanning, setScanning] = useState(false);
+  const [reading, setReading] = useState(false);
+  const photo = useRef<HTMLInputElement>(null);
+  const searchedIsbn = toIsbn13(searched);
+  const have = searchedIsbn ? ownedIsbns[searchedIsbn] : undefined;
 
   const run = useCallback((q: string) => {
     setError(null);
+    setSearched(q.trim());
     startBusy(async () => {
       try {
         setResults(await searchOpenLibrary(q.trim()));
@@ -280,6 +303,33 @@ function Search({
         <span aria-hidden>▥</span> Scan the barcode
       </button>
       {scanning && <BarcodeScanner onIsbn={scanned} onClose={() => setScanning(false)} />}
+      <button
+        type="button"
+        disabled={reading}
+        onClick={() => photo.current?.click()}
+        className="mt-2 w-full text-center text-sm text-accent underline-offset-4 hover:underline disabled:opacity-60"
+      >
+        {reading ? "Reading the photo…" : "Camera won’t focus? Use a photo instead"}
+      </button>
+      <input
+        ref={photo}
+        type="file"
+        accept="image/*"
+        className="hidden"
+        aria-label="Photo of the barcode"
+        onChange={async (e) => {
+          const file = e.target.files?.[0];
+          e.target.value = "";
+          if (!file) return;
+          setError(null);
+          setScanning(false);
+          setReading(true);
+          const isbn = await readBarcodeFromPhoto(file);
+          setReading(false);
+          if (isbn) scanned(isbn);
+          else setError("Couldn’t find an ISBN barcode in that photo. Try a closer, sharper one, or type the ISBN.");
+        }}
+      />
 
       <p className="mt-5 text-sm font-medium">Or search by title, author or ISBN</p>
       <form
@@ -316,6 +366,14 @@ function Search({
         </p>
       )}
 
+      {have && !busy && (
+        <p role="status" className="mt-3 rounded-2xl bg-accent-soft px-4 py-3 text-sm">
+          <strong>{have.gone ? "This copy is on your Gone list:" : "You already have this exact copy:"}</strong> {have.title} ({have.copy}).{" "}
+          <Link href={`/books/${have.titleId}`} className="text-accent underline underline-offset-2">
+            Open it
+          </Link>
+        </p>
+      )}
       {results && (
         <ul className="mt-4 space-y-2">
           {results.map((r) => {
@@ -364,12 +422,15 @@ function Search({
   );
 }
 
+type Src = Partial<Record<LookedField, LookedSource>>;
+
 function BookForm({
   result,
   copyOfId,
   library,
   seriesNames,
   peopleNames,
+  ownedIsbns,
   onSaved,
 }: {
   result: Result;
@@ -377,6 +438,7 @@ function BookForm({
   library: OwnedBook[];
   seriesNames: string[];
   peopleNames: string[];
+  ownedIsbns: OwnedIsbns;
   onSaved: (titleId: string, title: string, asCopy: boolean) => void;
 }) {
   const ids = useId();
@@ -392,23 +454,118 @@ function BookForm({
   const [isbn, setIsbn] = useState(result.isbn13 ?? "");
   const [publisher, setPublisher] = useState(result.publisher ?? "");
   const [pages, setPages] = useState(result.pages ? String(result.pages) : "");
+  const [description, setDescription] = useState("");
+  const [firstPublished, setFirstPublished] = useState("");
+  const [typicalPages, setTypicalPages] = useState("");
   const [useCover, setUseCover] = useState(!!result.coverId);
   const [loan, setLoan] = useState("");
   const [narrators, setNarrators] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [saving, startSaving] = useTransition();
 
+  // Where each filled-in value came from. Typing in a field makes it hers.
+  // Publisher and pages from an ISBN search result came from Open Library.
+  const [src, setSrc] = useState<Src>(() => ({
+    ...(result.publisher ? { publisher: "openlibrary" as const } : {}),
+    ...(result.pages ? { pages: "openlibrary" as const } : {}),
+  }));
+  const [openlibraryKey, setOpenlibraryKey] = useState("");
+  const [lookedUp, setLookedUp] = useState(false);
+  const [looking, startLooking] = useTransition();
+  const [lookNote, setLookNote] = useState<string | null>(null);
+
   const digital = format === "ebook" || format === "audiobook";
   const authorList = useMemo(() => authors.split(",").map((a) => a.trim()).filter(Boolean), [authors]);
   const owned = copyOfId ? null : ownedMatch(library, title, authorList);
   const [asCopy, setAsCopy] = useState(true);
   const addingCopyTo = copyOfId ?? (owned && asCopy ? owned.id : null);
+  const isbn13 = toIsbn13(isbn);
+  const haveIsbn = isbn13 ? ownedIsbns[isbn13] : undefined;
+
+  // The same person spelled differently, already in her library.
+  const respell = useMemo(() => {
+    const byKey = new Map(peopleNames.map((n) => [personKey(n), n]));
+    return authorList.flatMap((a) => {
+      const mine = byKey.get(personKey(a));
+      return mine && mine !== a ? [{ typed: a, mine }] : [];
+    });
+  }, [authorList, peopleNames]);
+
+  const dropSrc = (field: LookedField) =>
+    setSrc((s) => {
+      const next = { ...s };
+      delete next[field];
+      return next;
+    });
+  const edited = (field: LookedField, set: (v: string) => void) => (v: string) => {
+    set(v);
+    dropSrc(field);
+  };
+
+  function lookUp() {
+    setLookNote(null);
+    startLooking(async () => {
+      const res = await lookupDetails({
+        title: copyOfId ? result.title : title,
+        authors: copyOfId ? result.authors : authorList,
+        isbn13: isbn13 ?? null,
+        format,
+      });
+      if (!res.ok) {
+        setLookNote(res.error);
+        return;
+      }
+      const f = res.looked.fields;
+      const filled: Src = {};
+      // Only fill what's still empty, so nothing she's typed is replaced.
+      const fill = (field: LookedField, current: string, set: (v: string) => void) => {
+        const found = f[field];
+        if (found && !current.trim()) {
+          set(String(found.value));
+          filled[field] = found.source;
+        }
+      };
+      if (!copyOfId) {
+        fill("description", description, setDescription);
+        fill("first_published", firstPublished, setFirstPublished);
+        fill("typical_pages", typicalPages, setTypicalPages);
+        if (f.series && !series.trim()) {
+          fill("series", series, setSeries);
+          fill("series_number", seriesNumber, setSeriesNumber);
+        }
+        // "A Hunger Like No Other (The Immortals After Dark Series, Book 1)":
+        // once the series is known, the title doesn't need to repeat it.
+        if (f.series) setTitle((t) => t.replace(SERIES_IN_TITLE, "") || t);
+        setOpenlibraryKey(res.looked.openlibraryKey ?? "");
+        setLookedUp(true);
+      }
+      fill("publisher", publisher, setPublisher);
+      fill("pages", pages, setPages);
+      setSrc((s) => ({ ...s, ...filled }));
+      const names = [...new Set(Object.values(filled))].map((x) => SOURCE_NAME[x]);
+      setLookNote(
+        names.length
+          ? `Filled in from ${names.join(" and ")}. Check them, then save.`
+          : "Nothing more found online. Fill in what you know.",
+      );
+    });
+  }
+
+  // A picked search result is looked up straight away; Add a copy and
+  // Enter it yourself have a button instead.
+  const autoLooked = useRef(false);
+  useEffect(() => {
+    if (autoLooked.current || copyOfId || !result.key) return;
+    autoLooked.current = true;
+    lookUp();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- once, for the picked result
+  }, []);
 
   function save(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-    const isbn13 = isbn.trim() ? toIsbn13(isbn) : "";
-    if (isbn13 === null) {
+    const cleanIsbn = isbn.trim() ? toIsbn13(isbn) : "";
+    if (cleanIsbn === null) {
       setError("That ISBN doesn't look right. It should be 10 or 13 digits.");
       return;
     }
@@ -422,6 +579,23 @@ function BookForm({
       setError("The series number should be a number, like 3 or 1.5.");
       return;
     }
+    const year = firstPublished.trim() ? Number(firstPublished) : null;
+    if (year !== null && (!Number.isInteger(year) || year < 1000 || year > 2100)) {
+      setError("The year first published should be a year, like 2019.");
+      return;
+    }
+    const typical = typicalPages.trim() ? Number(typicalPages) : null;
+    if (typical !== null && (!Number.isInteger(typical) || typical <= 0)) {
+      setError("The typical length should be a whole number of pages.");
+      return;
+    }
+    // Word estimate from this copy's pages, else the typical edition's.
+    const basis = format === "audiobook" ? null : pageCount ?? (addingCopyTo ? null : typical);
+    const estWords = basis ? estimateWords(basis, format) : null;
+    const estSource = pageCount ? src.pages : src.typical_pages;
+    const pick = <K extends LookedField>(keys: K[]) =>
+      Object.fromEntries(keys.flatMap((k) => (src[k] ? [[k, src[k]]] : []))) as Partial<Record<K, LookedSource>>;
+
     startSaving(async () => {
       const res = await addBook(
         addingCopyTo,
@@ -435,16 +609,24 @@ function BookForm({
               series,
               seriesNumber: number,
               credits: authorList.map((name) => ({ name, role: "author" as const })),
+              description: description.trim(),
+              firstPublished: year,
+              typicalPages: typical,
+              openlibraryKey,
+              lookedUp,
+              sources: pick(["series", "description", "first_published", "typical_pages"]),
             },
         {
           format,
           source: digital ? app : "shelf",
-          isbn13: isbn13 ?? "",
+          isbn13: cleanIsbn ?? "",
           publisher,
           pages: pageCount,
           coverUrl: useCover && result.coverId ? `https://covers.openlibrary.org/b/id/${result.coverId}-M.jpg` : "",
           onLoanTo: digital ? "" : loan,
           narrators: format === "audiobook" ? narrators.split(",").map((n) => n.trim()).filter(Boolean) : [],
+          estWords,
+          sources: { ...pick(["publisher", "pages"]), ...(estWords && estSource ? { est_words: estSource } : {}) },
         },
       );
       if (!res.ok) {
@@ -455,6 +637,28 @@ function BookForm({
     });
   }
 
+  // "from Open Library ✕" under a filled-in field.
+  const fromNote = (field: LookedField, clear: () => void) =>
+    src[field] ? (
+      <span className="mt-1 flex items-center gap-2 text-xs text-muted">
+        from {SOURCE_NAME[src[field]!]}
+        <button
+          type="button"
+          onClick={() => {
+            clear();
+            dropSrc(field);
+          }}
+          aria-label={`Clear the ${field.replace("_", " ")}`}
+          className="min-h-6 rounded-full border border-border px-2 leading-none hover:bg-accent-soft"
+        >
+          ✕
+        </button>
+      </span>
+    ) : null;
+
+  const canLook = (copyOfId ? !!isbn13 : !!title.trim()) && !looking;
+  const showMore = !addingCopyTo && (lookedUp || !!description || !!firstPublished || !!typicalPages);
+
   return (
     <form onSubmit={save} className="mt-4 space-y-5">
       {error && (
@@ -462,6 +666,24 @@ function BookForm({
           {error}
         </p>
       )}
+
+      <div className="flex flex-wrap items-center gap-3 text-sm" aria-live="polite">
+        {looking ? (
+          <span className="text-muted">Looking this book up on Open Library…</span>
+        ) : (
+          lookNote && <span className={lookedUp || copyOfId ? "" : "text-muted"}>{lookNote}</span>
+        )}
+        {!looking && (copyOfId || !result.key || lookNote) && (
+          <button
+            type="button"
+            onClick={lookUp}
+            disabled={!canLook}
+            className="min-h-9 rounded-full border border-border px-4 hover:bg-accent-soft disabled:opacity-50"
+          >
+            {copyOfId ? "Look up publisher and pages" : lookNote ? "Look again" : "Look it up online"}
+          </button>
+        )}
+      </div>
 
       {owned && (
         <div className="rounded-2xl bg-accent-soft p-4 text-sm">
@@ -499,30 +721,47 @@ function BookForm({
             Subtitle <span className="text-muted">(optional)</span>
             <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} maxLength={300} className={input} />
           </label>
-          <label className="block text-sm">
-            Author(s), separated by commas
-            <input value={authors} onChange={(e) => setAuthors(e.target.value)} list={`${ids}-people`} maxLength={1000} className={input} />
+          <div className="text-sm">
+            <label className="block">
+              Author(s), separated by commas
+              <input value={authors} onChange={(e) => setAuthors(e.target.value)} list={`${ids}-people`} maxLength={1000} className={input} />
+            </label>
             <datalist id={`${ids}-people`}>
               {peopleNames.map((n) => (
                 <option key={n} value={n} />
               ))}
             </datalist>
-          </label>
+            {respell.map(({ typed, mine }) => (
+              <p key={typed} className="mt-1 text-xs">
+                You have <strong>{mine}</strong>, so &ldquo;{typed}&rdquo; will be saved as that author.{" "}
+                <button
+                  type="button"
+                  onClick={() => setAuthors(authorList.map((a) => (a === typed ? mine : a)).join(", "))}
+                  className="text-accent underline underline-offset-2"
+                >
+                  Use that spelling
+                </button>
+              </p>
+            ))}
+          </div>
           <div className="grid grid-cols-[1fr_6rem] gap-3">
-            <label className="block text-sm">
-              Series <span className="text-muted">(optional)</span>
-              <input value={series} onChange={(e) => setSeries(e.target.value)} list={`${ids}-series`} maxLength={200} className={input} />
+            <div className="text-sm">
+              <label className="block">
+                Series <span className="text-muted">(optional)</span>
+                <input value={series} onChange={(e) => edited("series", setSeries)(e.target.value)} list={`${ids}-series`} maxLength={200} className={input} />
+              </label>
               <datalist id={`${ids}-series`}>
                 {seriesNames.map((n) => (
                   <option key={n} value={n} />
                 ))}
               </datalist>
-            </label>
+              {fromNote("series", () => { setSeries(""); setSeriesNumber(""); })}
+            </div>
             <label className="block text-sm">
               Number
               <input
                 value={seriesNumber}
-                onChange={(e) => setSeriesNumber(e.target.value)}
+                onChange={(e) => edited("series_number", setSeriesNumber)(e.target.value)}
                 inputMode="decimal"
                 disabled={!series.trim()}
                 className={`${input} disabled:opacity-50`}
@@ -551,19 +790,54 @@ function BookForm({
         </fieldset>
       )}
 
+      {showMore && (
+        <fieldset className="space-y-3 rounded-2xl border border-border bg-surface p-4">
+          <legend className="px-1 text-sm font-medium">More about the book</legend>
+          <div className="text-sm">
+            <label className="block">
+              Description <span className="text-muted">(optional)</span>
+              <textarea
+                value={description}
+                onChange={(e) => edited("description", setDescription)(e.target.value)}
+                rows={5}
+                maxLength={5000}
+                className={input}
+              />
+            </label>
+            {fromNote("description", () => setDescription(""))}
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="text-sm">
+              <label className="block">
+                First published
+                <input value={firstPublished} onChange={(e) => edited("first_published", setFirstPublished)(e.target.value)} inputMode="numeric" maxLength={4} className={input} />
+              </label>
+              {fromNote("first_published", () => setFirstPublished(""))}
+            </div>
+            <div className="text-sm">
+              <label className="block">
+                Typical length <span className="text-muted">(pages)</span>
+                <input value={typicalPages} onChange={(e) => edited("typical_pages", setTypicalPages)(e.target.value)} inputMode="numeric" className={input} />
+              </label>
+              {fromNote("typical_pages", () => setTypicalPages(""))}
+            </div>
+          </div>
+        </fieldset>
+      )}
+
       <fieldset className="space-y-3 rounded-2xl border border-border bg-surface p-4">
         <legend className="px-1 text-sm font-medium">{addingCopyTo ? "The new copy" : "Your copy"}</legend>
         {result.coverId && (
           <label className="flex items-center gap-3 text-sm">
-          <img
-            src={`https://covers.openlibrary.org/b/id/${result.coverId}-M.jpg`}
-            alt=""
-            className="aspect-[2/3] w-16 rounded-md bg-accent-soft object-cover"
-          />
-          <span className="flex items-center gap-2">
-            <input type="checkbox" checked={useCover} onChange={(e) => setUseCover(e.target.checked)} className="size-5 accent-[var(--accent)]" />
-            Use this cover
-          </span>
+            <img
+              src={`https://covers.openlibrary.org/b/id/${result.coverId}-M.jpg`}
+              alt=""
+              className="aspect-[2/3] w-16 rounded-md bg-accent-soft object-cover"
+            />
+            <span className="flex items-center gap-2">
+              <input type="checkbox" checked={useCover} onChange={(e) => setUseCover(e.target.checked)} className="size-5 accent-[var(--accent)]" />
+              Use this cover
+            </span>
           </label>
         )}
         <div className="grid grid-cols-2 gap-3">
@@ -597,15 +871,30 @@ function BookForm({
             ISBN <span className="text-muted">(optional)</span>
             <input value={isbn} onChange={(e) => setIsbn(e.target.value)} inputMode="numeric" maxLength={20} className={input} />
           </label>
-          <label className="block text-sm">
-            Pages
-            <input value={pages} onChange={(e) => setPages(e.target.value)} inputMode="numeric" className={input} />
-          </label>
+          <div className="text-sm">
+            <label className="block">
+              Pages
+              <input value={pages} onChange={(e) => edited("pages", setPages)(e.target.value)} inputMode="numeric" className={input} />
+            </label>
+            {fromNote("pages", () => setPages(""))}
+          </div>
         </div>
-        <label className="block text-sm">
-          Publisher <span className="text-muted">(optional)</span>
-          <input value={publisher} onChange={(e) => setPublisher(e.target.value)} maxLength={200} className={input} />
-        </label>
+        {haveIsbn && (
+          <p role="status" className="rounded-xl bg-accent-soft px-3 py-2 text-sm">
+            {haveIsbn.gone ? "A copy with this ISBN is on your Gone list:" : "You already have a copy with this ISBN:"}{" "}
+            <Link href={`/books/${haveIsbn.titleId}`} className="text-accent underline underline-offset-2">
+              {haveIsbn.title}
+            </Link>{" "}
+            ({haveIsbn.copy}).
+          </p>
+        )}
+        <div className="text-sm">
+          <label className="block">
+            Publisher <span className="text-muted">(optional)</span>
+            <input value={publisher} onChange={(e) => edited("publisher", setPublisher)(e.target.value)} maxLength={200} className={input} />
+          </label>
+          {fromNote("publisher", () => setPublisher(""))}
+        </div>
         {format === "audiobook" && (
           <label className="block text-sm">
             Narrators <span className="text-muted">(separate with commas)</span>
@@ -622,10 +911,10 @@ function BookForm({
 
       <button
         type="submit"
-        disabled={saving || (!addingCopyTo && !title.trim())}
+        disabled={saving || looking || (!addingCopyTo && !title.trim())}
         className="min-h-12 w-full rounded-2xl bg-accent px-5 font-medium text-on-accent disabled:opacity-50"
       >
-        {saving ? "Saving…" : addingCopyTo ? "Add this copy" : "Add to my library"}
+        {saving ? "Saving…" : looking ? "Looking it up…" : addingCopyTo ? "Add this copy" : "Add to my library"}
       </button>
     </form>
   );

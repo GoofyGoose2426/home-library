@@ -2,6 +2,22 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Phase 2, step 7: add a book, smarter
+
+- **Details fill in as you add.** Once you pick a search result, the app looks the book up on Open Library (and Google Books for anything missing). It fills in:
+  - series and number, using your spelling if you already have the series
+  - description, year first published and typical length
+  - your copy's publisher and pages, when there's an ISBN
+
+  Each value says where it came from and has a ✕ to clear it. Typing in a field makes the value yours. Whatever you keep counts as checked, so it won't come back in To check. The book's source stays on record.
+- **Tidier titles.** When the series is found, the "(… Series, Book 1)" part is trimmed off the title.
+- **Word estimate** for your copy, from its pages (or the typical length).
+- **Add a copy** has a "Look up publisher and pages" button. **Enter it yourself** has "Look it up online".
+- **"You already have this exact copy."** Scanning or typing an ISBN you own says so straight away, with a link to the book. The same goes for one on your Gone list.
+- **Barcode from a photo.** "Camera won't focus? Use a photo instead" reads the ISBN from a picture.
+- **No more duplicate authors.** Adding or editing a book treats "T. J. Klune", "TJ Klune" and "tj klune" as the same person. If you type a different spelling of an author you have, the form says so and offers your spelling.
+- **"Not classified yet" filter** (under Classification): books with no genre yet. Right now that's 34 books. Ask in a Claude session to classify them.
+
 ## 2026-11-04 · Author lookups, batch 16: every read author done
 
 - **Found in their own words:** Tillie Walden (Lesbian).

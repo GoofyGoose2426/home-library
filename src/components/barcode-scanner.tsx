@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 // browser's built-in barcode reader where there is one (Chrome on Android),
 // and the ZXing library everywhere else.
 
-type Detector = { detect: (source: HTMLVideoElement) => Promise<{ rawValue: string }[]> };
+type Detector = { detect: (source: HTMLVideoElement | ImageBitmap) => Promise<{ rawValue: string }[]> };
 declare global {
   interface Window {
     BarcodeDetector?: new (options: { formats: string[] }) => Detector;
@@ -17,6 +17,30 @@ declare global {
 function asIsbn(raw: string) {
   const digits = raw.replace(/\D/g, "");
   return /^97[89]\d{10}$/.test(digits) ? digits : null;
+}
+
+// Reads the ISBN from a photo of the barcode, for when the camera won't
+// focus. Returns null when there's no ISBN barcode in the picture.
+export async function readBarcodeFromPhoto(file: File): Promise<string | null> {
+  if (window.BarcodeDetector) {
+    try {
+      const codes = await new window.BarcodeDetector({ formats: ["ean_13"] }).detect(await createImageBitmap(file));
+      for (const c of codes) {
+        const isbn = asIsbn(c.rawValue);
+        if (isbn) return isbn;
+      }
+    } catch {}
+  }
+  const url = URL.createObjectURL(file);
+  try {
+    const { BrowserMultiFormatReader } = await import("@zxing/browser");
+    const result = await new BrowserMultiFormatReader().decodeFromImageUrl(url);
+    return asIsbn(result.getText());
+  } catch {
+    return null;
+  } finally {
+    URL.revokeObjectURL(url);
+  }
 }
 
 export function BarcodeScanner({ onIsbn, onClose }: { onIsbn: (isbn: string) => void; onClose: () => void }) {

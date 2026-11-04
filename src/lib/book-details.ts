@@ -1,5 +1,6 @@
 import "server-only";
 import { fold } from "./library-filters";
+import { estimateWords } from "./word-estimate";
 
 // Looks a book up on Open Library (and Google Books, when there's a key) by
 // title and author, and returns details to fill in. A match needs the same
@@ -42,10 +43,6 @@ type TitleDetails = {
   series?: string;
   series_number?: number;
 };
-
-// Rough words per page by format; labelled as an estimate wherever shown.
-const WORDS_PER_PAGE: Record<string, number> = { mass_market: 300 };
-const DEFAULT_WORDS_PER_PAGE = 275;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -230,7 +227,7 @@ export async function findDetails(book: DetailsInput, googleKey?: string): Promi
     // Word estimate from this copy's pages, else a typical edition's.
     if (pages || typical) {
       if (!pages && !found.publisher) found.source = typical!.source;
-      found.est_words = Math.round(((pages ?? typical!.typical_pages!) * (WORDS_PER_PAGE[c.format] ?? DEFAULT_WORDS_PER_PAGE)) / 1000) * 1000;
+      found.est_words = estimateWords(pages ?? typical!.typical_pages!, c.format);
     }
     if (found.publisher || found.pages || found.est_words) copies.push(found);
   }

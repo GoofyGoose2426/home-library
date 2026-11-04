@@ -86,12 +86,16 @@ type Row = {
   }[];
 };
 
+export const NOT_CLASSIFIED = "Not classified yet";
+
 function facetsOf(t: Row): Record<string, string[]> {
   const f: Record<string, string[]> = {};
   const add = (key: string, value: string | null) => {
     if (value) f[key] = [...(f[key] ?? []), value];
   };
   for (const tt of t.title_tags) if (tt.tags) add(tt.tags.kind, tt.tags.name);
+  // New books wait for genre and the rest until a Claude session classifies them.
+  if (!f.genre && !t.is_reference) add("classification", NOT_CLASSIFIED);
   add("audience", labelOf(AUDIENCE, t.audience));
   add("vibe", labelOf(VIBE, t.vibe_main));
   add("vibe", labelOf(VIBE, t.vibe_second));

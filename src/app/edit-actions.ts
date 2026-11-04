@@ -336,7 +336,17 @@ export type NewCopy = {
   coverUrl: string;
   onLoanTo: string;
   narrators: string[];
+  // Looked up while adding (see app/add/actions.ts), when she kept them.
+  estWords?: number | null;
+  sources?: Partial<Record<"publisher" | "pages" | "est_words", LookupSource>>;
 };
+
+type LookupSource = "openlibrary" | "googlebooks";
+const LOOKUP_SOURCES = ["openlibrary", "googlebooks"];
+const sourcesOk = (s: unknown, fields: string[]) =>
+  s === undefined ||
+  (typeof s === "object" && s !== null &&
+    Object.entries(s).every(([k, v]) => fields.includes(k) && LOOKUP_SOURCES.includes(v as string)));
 
 export type NewBook = {
   title: string;
@@ -346,6 +356,13 @@ export type NewBook = {
   series: string;
   seriesNumber: number | null;
   credits: DetailsInput["credits"];
+  // Looked up while adding, kept by her in the form.
+  description?: string;
+  firstPublished?: number | null;
+  typicalPages?: number | null;
+  openlibraryKey?: string;
+  lookedUp?: boolean;
+  sources?: Partial<Record<"series" | "description" | "first_published" | "typical_pages", LookupSource>>;
 };
 
 // Adds a new book with its first copy, or (with titleId) a copy of a book
@@ -365,7 +382,9 @@ export async function addBook(
         (copy.pages === null || (Number.isInteger(copy.pages) && copy.pages > 0 && copy.pages < 20000)) &&
         (copy.coverUrl === "" || /^https:\/\/covers\.openlibrary\.org\/b\/id\/\d+-[SML]\.jpg$/.test(copy.coverUrl)) &&
         short(copy.onLoanTo, 80) &&
-        Array.isArray(copy.narrators) && copy.narrators.length <= 20 && copy.narrators.every((n) => short(n, 200)),
+        Array.isArray(copy.narrators) && copy.narrators.length <= 20 && copy.narrators.every((n) => short(n, 200)) &&
+        (copy.estWords == null || (Number.isInteger(copy.estWords) && copy.estWords > 0 && copy.estWords < 5_000_000)) &&
+        sourcesOk(copy.sources, ["publisher", "pages", "est_words"]),
       "Some of the copy's details aren't valid. Check the ISBN (13 digits) and page count.",
     );
     if (titleId) {
@@ -379,7 +398,12 @@ export async function addBook(
           BOOK_TYPES.includes(book.bookType) &&
           (book.seriesNumber === null || (Number.isFinite(book.seriesNumber) && book.seriesNumber >= 0 && book.seriesNumber < 10000)) &&
           Array.isArray(book.credits) && book.credits.length <= 50 &&
-          book.credits.every((c) => short(c.name, 200) && CREDIT_ROLES.includes(c.role)),
+          book.credits.every((c) => short(c.name, 200) && CREDIT_ROLES.includes(c.role)) &&
+          (book.description === undefined || short(book.description, 5000)) &&
+          (book.firstPublished == null || (Number.isInteger(book.firstPublished) && book.firstPublished >= 1000 && book.firstPublished <= 2100)) &&
+          (book.typicalPages == null || (Number.isInteger(book.typicalPages) && book.typicalPages > 0 && book.typicalPages < 20000)) &&
+          (book.openlibraryKey === undefined || book.openlibraryKey === "" || /^\/works\/OL\d+W$/.test(book.openlibraryKey)) &&
+          sourcesOk(book.sources, ["series", "description", "first_published", "typical_pages"]),
         "A title is required.",
       );
     }
@@ -394,6 +418,12 @@ export async function addBook(
         series: book.series,
         series_number: book.series.trim() ? book.seriesNumber : null,
         credits: book.credits.filter((c) => c.name.trim()),
+        description: book.description ?? "",
+        first_published: book.firstPublished ?? null,
+        typical_pages: book.typicalPages ?? null,
+        openlibrary_key: book.openlibraryKey ?? "",
+        looked_up: !!book.lookedUp,
+        sources: book.sources ?? {},
       },
       p_copy: {
         format: copy.format,
@@ -404,6 +434,8 @@ export async function addBook(
         cover_url: copy.coverUrl,
         on_loan_to: copy.onLoanTo,
         narrators: copy.narrators,
+        est_words: copy.estWords ?? null,
+        sources: copy.sources ?? {},
       },
     });
     if (error) {

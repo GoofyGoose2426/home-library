@@ -114,6 +114,7 @@ export const FACETS: { key: string; title: string; note?: string }[] = [
   })),
   { key: "own_voices", title: "Own voices" },
   ...CATEGORIES.map((c) => ({ key: CHARACTER_FACET(c.key), title: `Main character: ${c.label.toLowerCase().replace("2slgbtqia+", "2SLGBTQIA+")}` })),
+  { key: "classification", title: "Classification", note: "Books with no genre yet. Ask in a Claude session to classify them." },
   { key: "rough_genre", title: "Rough genre", note: "From the shelf photos; goes away once you set a book's genres." },
 ];
 
