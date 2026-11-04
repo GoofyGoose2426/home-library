@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Phase 2, step 8: wrap-up (Phase 2 done)
+
+- **27 more books classified.** These are the books in "Not classified yet". Most are ones the first pass couldn't identify, and a web search found them. They're in To check as Claude suggestions. 7 are left on purpose (listed in `docs/phase-2-review.md`).
+- **Tested on a throwaway database.** I built a brand-new practice database on my computer from every database change and ran 34 checks. They cover privacy, the view-only link, your edits always winning, and no duplicate authors. All pass. The tests are saved in `scripts/db-tests/` so they can be re-run after any future change.
+- **Checked the real library without changing anything.** No orphaned records and no duplicate authors. The code builds cleanly.
+- **Claude cost:** $0 against an estimate of $20–40 plus a few dollars a month, because the work ran in our sessions.
+- **The build plan is updated:** Phase 2 is marked done, with what changed from the original plan and what's still open.
+- The review is in `docs/phase-2-review.md`.
+
 ## 2026-11-04 · Phase 2, step 7: add a book, smarter
 
 - **Details fill in as you add.** Once you pick a search result, the app looks the book up on Open Library (and Google Books for anything missing). It fills in:

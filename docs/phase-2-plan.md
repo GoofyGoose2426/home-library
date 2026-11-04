@@ -1,6 +1,6 @@
 # Phase 2 plan: Enrichment
 
-Approved by Alexandra · 2026-10-28.
+Approved by Alexandra · 2026-10-28. **Done 2026-11-04**: see `docs/phase-2-review.md`.
 
 Phase 2 fills in what your books don't have yet: publisher and length, then genre, subgenre, tropes, vibe, spice and story focus, then author and character representation. Each filled-in value is a **suggestion** with its source ("Open Library", "Google Books", "Claude", or a web link). You check it before it counts. Your own edits always win and are never overwritten.
 

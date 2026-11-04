@@ -1,6 +1,6 @@
 # Home Library Catalog — Build Plan
 
-Owner: Alexandra Theroux · Last updated 2026-10-28 (rev. 5: starter lists approved; audience field; queer romance types)
+Owner: Alexandra Theroux · Last updated 2026-11-04 (rev. 6: Phase 2 done; classification and author lookups done in Claude Code sessions, no in-app AI yet)
 
 ## Purpose and principles
 
@@ -205,14 +205,22 @@ Fable's warmth with StoryGraph's information.
 
 1. **Foundation:** private login, database, data model, seed import of the 428 shelf titles, grid and table views, sort/filter, bookstore lookup, quick edits, loans. Done 2026-10-26.
 1b. **Edit, add, remove, rate** (brought forward from later phases): edit details, per-copy covers (photo upload or Open Library), needs-review filter, add a book or copy (Open Library search, ISBN barcode scan), Gone list and Added by mistake, the four rating scales. Done 2026-10-28.
-2. **Enrichment:** ISBN/metadata lookup, AI prefill of series, publisher, length, genres, subgenres (starter list approved first), tropes, vibe, spice, story focus and author representation with sources; AI fill-in on top of the add-a-book flow (the basic flow and barcode scan shipped in 1b).
+2. **Enrichment:** ISBN/metadata lookup, AI prefill of series, publisher, length, genres, subgenres (starter list approved first), tropes, vibe, spice, story focus and author representation with sources; AI fill-in on top of the add-a-book flow (the basic flow and barcode scan shipped in 1b). Done 2026-11-04 (`docs/phase-2-plan.md`, review in `docs/phase-2-review.md`). What changed from the plan:
+   - **No AI inside the app yet** (Alexandra's "Option A", 2026-10-27). Claude classified the library and looked up authors in Claude Code sessions, under her existing Claude plan, at no extra cost. Every value is saved as a "Claude" suggestion, unconfirmed, for her to check in **To check**. The in-app Claude API (one-tap suggestions for new books, Ask your library) waits for Phase 3, with its own cost estimate first.
+   - **Sources live beside each value** (`field_sources`, and a source and `confirmed` flag on each tag), not in a separate suggestions table. Without in-app AI there's no `ai_runs` cost log yet; it comes with the API.
+   - **Add a book** looks the book up on Open Library and Google Books as it's added. Values she keeps in the form are saved as confirmed, with their source (her choice, 2026-11-04).
+   - **Author representation** covers authors of books she's read (380 looked up). Authors of unread books are looked up only when she asks.
 3. **Reviews and stats:** review prompts (the rating scales shipped in 1b); format, series and collection reviews; read/unread dashboard; Ask your library.
 4. **Ongoing:** digital library imports, ISBNs and exact editions a shelf at a time.
 
 ## Open items
 
-- [ ] Resolve the seed entries marked `needs_check` (4 left as of 2026-10-28; the Needs review filter finds them)
-- [ ] Approve the starter subgenre and trope lists
+- [ ] Resolve the seed entries marked `needs_check` (3 left as of 2026-11-04; the Needs review filter finds them)
+- [x] Approve the starter subgenre and trope lists (2026-10-28)
+- [ ] 7 books Claude couldn't classify honestly (four fable-style picture books, *Coat of Many Colors*, and two titles not found online); the "Not classified yet" filter finds them
+- [ ] Look up authors of unread books (only when Alexandra asks)
+- [ ] Renew the Supabase access token used by the session scripts (expires around 2026-11-22)
+- [ ] Phase 3: decide on the in-app Claude API, with a cost estimate first
 - [x] Kobo, Audible and Libro.fm books imported from app screenshots (Phase 1)
 - [x] Confirm whether children's/YA novels (e.g. Harry Potter) stay in read/unread stats (only picture books are excluded). Decided 2026-10-23: yes, they stay in stats.
 - [x] Split manga runs (Bastard!!, Mars, Ouran) into one entry per volume (done on import)
