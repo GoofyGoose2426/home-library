@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {"name": "Marjane Satrapi", "values": [
+      {"category": "nationality_region", "value": "Iran", "url": "https://blog.thephoenix.com/Boston/movies/54066-iranian-chick",
+       "quote": "I am this chick from Iran. I live in France. My husband is Swedish."}
+    ]},
+    {"name": "Mercury Stardust", "values": [
+      {"category": "lgbtqia", "value": "Trans", "url": "https://penguinrandomhouse.com/authors/2279335/mercury-stardust",
+       "quote": "known as the Trans Handy Ma'am"}
+    ]},
+    {"name": "Nadia El-Fassi", "values": [
+      {"category": "race_ethnicity", "value": "Half-Moroccan, half-Australian", "url": "https://penguinrandomhouse.com/authors/2299010/nadia-el-fassi",
+       "quote": "Nadia El-Fassi is a half-Moroccan, half-Australian writer of fantasy, romance and horror"}
+    ]},
+    {"name": "N. K. Jemisin", "values": [
+      {"category": "race_ethnicity", "value": "Black", "url": "https://www.wpr.org/shows/to-the-best-of-our-knowledge/a-not-so-distant-future-in-the-n-k-jemisins-broken-earth-trilogy",
+       "quote": "As a black woman living in modern day America, I have lots of questions about validity and exploitation."},
+      {"category": "gender_identity", "value": "Woman", "url": "https://www.wpr.org/shows/to-the-best-of-our-knowledge/a-not-so-distant-future-in-the-n-k-jemisins-broken-earth-trilogy",
+       "quote": "As a black woman living in modern day America, I have lots of questions about validity and exploitation."}
+    ]},
+    {"name": "Margaret Atwood", "values": []},
+    {"name": "Margaret Mitchell", "values": []},
+    {"name": "Margery Williams", "values": []},
+    {"name": "Mariah Stone", "values": []},
+    {"name": "Mário de Sá-Carneiro", "values": []},
+    {"name": "Mary Roach", "values": []},
+    {"name": "Mason Thomas", "values": []},
+    {"name": "Max Gladstone", "values": []},
+    {"name": "Maya Rodale", "values": []},
+    {"name": "Meagan Spooner", "values": []},
+    {"name": "Meléndez", "values": []},
+    {"name": "Mercedes Lackey", "values": []},
+    {"name": "Mia Sosa", "values": []},
+    {"name": "Michael Cunningham", "values": []},
+    {"name": "Miles Hyman", "values": []},
+    {"name": "Molly Harper", "values": []},
+    {"name": "Mordecai Richler", "values": []},
+    {"name": "Mystic Neptune", "values": []},
+    {"name": "Nancy Freedman", "values": []},
+    {"name": "Natalie Zina Walschots", "values": []},
+    {"name": "Nicholas Bella", "values": []}
+  ],
+  "characters": [
+    {"title": "Villain", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://openlibrary.org/works/OL45345796W",
+       "quote": "Filled with a queer and neurodiverse cast, Villain asks the question…"},
+      {"category": "neurodivergence", "value": "Neurodiverse", "other": true, "url": "https://openlibrary.org/works/OL45345796W",
+       "quote": "Filled with a queer and neurodiverse cast, Villain asks the question…"}
+    ]}
+  ]
+}

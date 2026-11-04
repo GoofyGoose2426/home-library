@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 13 (25 read authors)
+
+- **Found in their own words:** Marjane Satrapi (Iran), Mercury Stardust (Trans) and Nadia El-Fassi (half-Moroccan, half-Australian, from her author bio).
+- **"N. K. Jemisin"** is a second spelling of N.K. Jemisin, so it got the same values as batch 01.
+- **Nothing found:** the other 21 stay unknown.
+- **Main characters:** Villain has a queer and neurodiverse cast.
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 12 (25 read authors)
 
 - **Found in their own words:** Layla F. Saad ("East African, Arab, Black", British, Woman, from her author bio).
