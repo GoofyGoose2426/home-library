@@ -1,0 +1,50 @@
+{
+  "authors": [
+    {"name": "Caitlin Starling", "values": [
+      {"category": "neurodivergence", "value": "Autistic", "url": "https://buttondown.com/ada-hoffmann/archive/autistic-reader-interview-caitlin-starling",
+       "quote": "I’m an autistic, queer author of horror and speculative fiction (and a fair amount of fanfiction)."},
+      {"category": "lgbtqia", "value": "Queer", "url": "https://buttondown.com/ada-hoffmann/archive/autistic-reader-interview-caitlin-starling",
+       "quote": "I’m an autistic, queer author of horror and speculative fiction (and a fair amount of fanfiction)."}
+    ]},
+    {"name": "Damon Suede", "values": [
+      {"category": "lgbtqia", "value": "Gay", "url": "https://archive.underthecoversbookblog.com/interview-and-giveaway-with-damon-suede/",
+       "quote": "Well, I’m a gay man writing gay romance, I can verify that my sex scenes are pretty fucking realistic."},
+      {"category": "gender_identity", "value": "Man", "url": "https://archive.underthecoversbookblog.com/interview-and-giveaway-with-damon-suede/",
+       "quote": "Well, I’m a gay man writing gay romance, I can verify that my sex scenes are pretty fucking realistic."}
+    ]},
+    {"name": "Colm Tóibín", "values": [
+      {"category": "lgbtqia", "value": "Gay", "url": "https://gcn.ie/colm-toibin-reveals-importance-marriage-referendum/",
+       "quote": "As gay people, we grow up alone; there is no history."}
+    ]},
+    {"name": "Cole McCade", "values": [
+      {"category": "lgbtqia", "value": "Bisexual", "url": "https://www.goodreads.com/user/show/27483057",
+       "quote": "bi/queer"},
+      {"category": "lgbtqia", "value": "Queer", "url": "https://www.goodreads.com/user/show/27483057",
+       "quote": "bi/queer"},
+      {"category": "race_ethnicity", "value": "Black, Asian and Native American", "url": "https://www.goodreads.com/user/show/27483057",
+       "quote": "various flavors of Black, Asian, and Native American"}
+    ]},
+    {"name": "C. M. Waggoner", "values": []},
+    {"name": "Candice Hern", "values": []},
+    {"name": "Cassandra Khaw", "values": []},
+    {"name": "Cathy Yardley", "values": []},
+    {"name": "Cecelia Ahern", "values": []},
+    {"name": "Cesário Verde", "values": []},
+    {"name": "Charissa Weaks", "values": []},
+    {"name": "Charlotte Stein", "values": []},
+    {"name": "Chris Roberson et al.", "values": []},
+    {"name": "Christopher Hastings", "values": []},
+    {"name": "Christy Healy", "values": []},
+    {"name": "Chuck Dixon", "values": []},
+    {"name": "Dani Alexander", "values": []},
+    {"name": "Danica Brine", "values": []},
+    {"name": "Dave Gibbons", "values": []},
+    {"name": "David Clement-Davies", "values": []},
+    {"name": "David Shannon", "values": []},
+    {"name": "David Wenzel", "values": []},
+    {"name": "Deborah Cooke", "values": []},
+    {"name": "Deborah Harkness", "values": []},
+    {"name": "Denise Williams", "values": []}
+  ],
+  "characters": []
+}

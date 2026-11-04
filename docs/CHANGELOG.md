@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 08 (25 read authors)
+
+- **Found in their own words:**
+  - Caitlin Starling: Autistic, Queer.
+  - Damon Suede: Gay, Man.
+  - Colm Tóibín: Gay.
+  - Cole McCade: Bisexual, Queer, and "Black, Asian and Native American".
+- **Nothing found:** the other 21 stay unknown. "Chris Roberson et al." is a group credit.
+- No new main characters from these descriptions.
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 07 (25 read authors)
 
 - **Found in their own words:** Becky Albertalli (Bisexual), Becky Chambers (Queer), C. L. Polk (Non-binary) and Angie Thomas (Black).
