@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 16: every read author done
+
+- **Found in their own words:** Tillie Walden (Lesbian).
+- **Nothing found:** the other 20 stay unknown. Thomas King said in 2025 that he has no Cherokee ancestry, so nothing is recorded for him.
+- **Main characters:** Gideon the Ninth (lesbian necromancers).
+- **Totals:** all 380 authors of books you've read are looked up. That gives 77 author values (11 confirmed so far), 26 main-character values and 6 own-voices books. All the unconfirmed ones are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 15 (25 read authors)
 
 - **Found in their own words:** Samra Habib (Queer, Woman) and Sonya Renee Taylor (Queer, Black).

@@ -42,7 +42,7 @@ A category with no statement shows **unknown**. The author page also shows **whe
 | 1 | Database: a "last looked up" date on each author, a quote on character representation, the own-voices suggestion, and To check support for both. Tests that a value can't be saved without a link, and that your edits are never overwritten. | — |
 | 2 | **Author pages**, linked from every book page, with an Edit button for identity (add, change or remove a value, with or without a link). | Open three authors you know |
 | 3 | **First lookup: 10 authors of books you've read**, mixed so there's something to check (some with public statements, some without). | Check every quote and link |
-| 4 | After your OK: the rest of your **382 read authors** in batches, then the unread ones when you ask. Character representation for the same books. | Spot-check in To check |
+| 4 | After your OK: the rest of your **382 read authors** in batches, then the unread ones when you ask. Character representation for the same books. **Done 2026-11-04:** all read authors looked up in 16 batches (`data/representation/batch-*.json`, 380 after merging 3 duplicates). Unread authors wait until you ask. | Spot-check in To check |
 | 5 | Filters, test at phone size in light and dark mode, publish. | Filter by one category |
 
 ## Cost
