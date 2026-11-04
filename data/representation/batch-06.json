@@ -1,0 +1,44 @@
+{
+  "authors": [
+    {"name": "Trista Mateer", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://www.tristamateerpoetry.com/media-kit.html",
+       "quote": "Relevant identities: queer, demisexual, lesbian, neurodivergent"},
+      {"category": "lgbtqia", "value": "Lesbian", "url": "https://www.tristamateerpoetry.com/media-kit.html",
+       "quote": "Relevant identities: queer, demisexual, lesbian, neurodivergent"},
+      {"category": "lgbtqia", "value": "Demisexual", "other": true, "url": "https://www.tristamateerpoetry.com/media-kit.html",
+       "quote": "Relevant identities: queer, demisexual, lesbian, neurodivergent"},
+      {"category": "neurodivergence", "value": "Neurodivergent", "other": true, "url": "https://www.tristamateerpoetry.com/media-kit.html",
+       "quote": "Relevant identities: queer, demisexual, lesbian, neurodivergent"}
+    ]},
+    {"name": "Amal El-Mohtar", "values": [
+      {"category": "race_ethnicity", "value": "Lebanese heritage", "url": "https://storyological.com/interviews/amal-el-mohtar",
+       "quote": "Well, so I was born in Canada and my family is from Lebanon."},
+      {"category": "nationality_region", "value": "Canadian-born", "url": "https://storyological.com/interviews/amal-el-mohtar",
+       "quote": "Well, so I was born in Canada and my family is from Lebanon."}
+    ]},
+    {"name": "Shel Silverstein", "values": []},
+    {"name": "Sheree Fitch", "values": []},
+    {"name": "Stacy Reid", "values": []},
+    {"name": "Steve Niles", "values": []},
+    {"name": "Steven Erikson", "values": []},
+    {"name": "Suzanne Weyn", "values": []},
+    {"name": "Tanya Huff", "values": []},
+    {"name": "Teresa Medeiros", "values": []},
+    {"name": "Travis Baldree", "values": []},
+    {"name": "Zack Whedon et al.", "values": []},
+    {"name": "3dtotal", "values": []},
+    {"name": "A.A. Milne", "values": []},
+    {"name": "Adam Cesare", "values": []},
+    {"name": "Agustina Bazterrica", "values": []},
+    {"name": "Alan Bennett", "values": []},
+    {"name": "Alan Moore", "values": []},
+    {"name": "Alex North", "values": []},
+    {"name": "Alexandre Dumas", "values": []},
+    {"name": "Alexandria Bellefleur", "values": []},
+    {"name": "Alexis Daria", "values": []},
+    {"name": "Alicia Elliott", "values": []},
+    {"name": "Amelia Atwater-Rhodes", "values": []},
+    {"name": "Amelia Nagoski", "values": []}
+  ],
+  "characters": []
+}
