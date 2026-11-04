@@ -1,0 +1,43 @@
+{
+  "authors": [
+    {"name": "Rachel Smythe", "values": [
+      {"category": "gender_identity", "value": "Woman", "url": "https://thecomicsourceblog.com/episode-670/",
+       "quote": "I’m a small, angry woman from New Zealand."},
+      {"category": "nationality_region", "value": "New Zealand", "url": "https://thecomicsourceblog.com/episode-670/",
+       "quote": "I’m a small, angry woman from New Zealand."}
+    ]},
+    {"name": "J.K. Rowling", "values": [
+      {"category": "gender_identity", "value": "Woman", "url": "https://www.jkrowling.com/opinions/j-k-rowling-writes-about-her-reasons-for-speaking-out-on-sex-and-gender-issues/",
+       "quote": "Speaking as a biological woman,"}
+    ]},
+    {"name": "Bisco Hatori", "values": []},
+    {"name": "Carolyn Keene", "values": []},
+    {"name": "Fuyumi Soryo", "values": []},
+    {"name": "Kresley Cole", "values": []},
+    {"name": "Penny Reid", "values": []},
+    {"name": "Kazushi Hagiwara", "values": []},
+    {"name": "Lynsay Sands", "values": []},
+    {"name": "Sanami Matoh", "values": []},
+    {"name": "Jennifer Ashley", "values": []},
+    {"name": "Meghan March", "values": []},
+    {"name": "Roald Dahl", "values": []},
+    {"name": "Sarah MacLean", "values": []},
+    {"name": "Tessa Dare", "values": []},
+    {"name": "Eloisa James", "values": []},
+    {"name": "Grace Burrowes", "values": []},
+    {"name": "Jane Austen", "values": []},
+    {"name": "Kristen Britain", "values": []},
+    {"name": "Sarah J. Maas", "values": []},
+    {"name": "Tessa Bailey", "values": []},
+    {"name": "C.S. Lewis", "values": []},
+    {"name": "Julie Garwood", "values": []},
+    {"name": "Kurtis J. Wiebe", "values": []},
+    {"name": "L.M. Montgomery", "values": []}
+  ],
+  "characters": [
+    {"title": "Grin and Beard It", "values": [
+      {"category": "race_ethnicity", "value": "Latina", "url": "https://openlibrary.org/works/OL26140290W",
+       "quote": "Topics: movie star, movie star romance, celebrity romance, plus size romance, Latina romance, multi cultural Romance, interracial romance…"}
+    ]}
+  ]
+}

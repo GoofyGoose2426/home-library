@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 02 (25 read authors)
+
+- Looked up the next 25 authors of books you've read, using the wider search.
+- **Found in their own words:** Rachel Smythe (Woman, New Zealand) and J.K. Rowling (Woman).
+- **Nothing found:** the other 23 stay unknown and are marked as looked up. Carolyn Keene is a house pen name used by many writers. For the manga creators, there's very little in English.
+- **Main characters:** Grin and Beard It is tagged "Latina romance" in its description.
+- All are waiting in To check.
+
 ## 2026-10-30 · Wider author lookups (batch 01, second pass)
 
 - Lookups now go beyond author websites: blogs, interviews, podcast transcripts, award speeches and Goodreads Q&A answers. Still only the author's own words, with a link.
