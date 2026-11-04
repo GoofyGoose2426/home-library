@@ -1,0 +1,44 @@
+{
+  "authors": [
+    {"name": "Layla F. Saad", "values": [
+      {"category": "race_ethnicity", "value": "East African, Arab, Black", "url": "https://hachette.co.uk/contributor/layla-saad",
+       "quote": "As an East African, Arab, British, Black, Muslim woman who was born and grew up in the West, and lives in the Middle East,"},
+      {"category": "nationality_region", "value": "British", "url": "https://hachette.co.uk/contributor/layla-saad",
+       "quote": "As an East African, Arab, British, Black, Muslim woman who was born and grew up in the West, and lives in the Middle East,"},
+      {"category": "gender_identity", "value": "Woman", "url": "https://hachette.co.uk/contributor/layla-saad",
+       "quote": "As an East African, Arab, British, Black, Muslim woman who was born and grew up in the West, and lives in the Middle East,"}
+    ]},
+    {"name": "Laura Moore", "values": []},
+    {"name": "Laurell K. Hamilton", "values": []},
+    {"name": "Lauren Blakely", "values": []},
+    {"name": "Lauren D.M. Smith", "values": []},
+    {"name": "Lauren Mills", "values": []},
+    {"name": "Laurie Viera Rigler", "values": []},
+    {"name": "Leifer", "values": []},
+    {"name": "Leo Tolstoy", "values": []},
+    {"name": "Lewrick", "values": []},
+    {"name": "Lily Gold", "values": []},
+    {"name": "Link", "values": []},
+    {"name": "Lisa Sterle", "values": []},
+    {"name": "Liz Rosenberg", "values": []},
+    {"name": "Loïc Locatelli-Kournwsky", "values": []},
+    {"name": "Lois Ehlert", "values": []},
+    {"name": "Lord Byron", "values": []},
+    {"name": "Lorraine Heath", "values": []},
+    {"name": "Louisa May Alcott", "values": []},
+    {"name": "Lucy Smoke", "values": []},
+    {"name": "Luís de Camões", "values": []},
+    {"name": "M. Stevenson", "values": []},
+    {"name": "Madeline Miller", "values": []},
+    {"name": "Maia Kobabe", "values": []},
+    {"name": "Maiga Doocy", "values": []}
+  ],
+  "characters": [
+    {"title": "Gender Queer", "values": [
+      {"category": "gender_identity", "value": "Non-binary", "character": "Maia", "url": "https://openlibrary.org/works/OL21337755W",
+       "quote": "Started as a way to explain to eir family what it means to be nonbinary and asexual, Gender Queer is more than a personal story…"},
+      {"category": "lgbtqia", "value": "Asexual", "character": "Maia", "url": "https://openlibrary.org/works/OL21337755W",
+       "quote": "Started as a way to explain to eir family what it means to be nonbinary and asexual, Gender Queer is more than a personal story…"}
+    ]}
+  ]
+}

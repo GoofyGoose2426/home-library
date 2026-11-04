@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 12 (25 read authors)
+
+- **Found in their own words:** Layla F. Saad ("East African, Arab, Black", British, Woman, from her author bio).
+- **Nothing found:** the other 24 stay unknown.
+- **Main characters:** Gender Queer (Maia is non-binary and asexual, from the description of this memoir).
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 11 (25 read authors)
 
 - **Found in their own words:** Julie Murphy (Bisexual), Kate Stayman-London (Bisexual, from her author bio) and Jordan Peele (Black, Man).
