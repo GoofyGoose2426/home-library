@@ -1,6 +1,8 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element -- hotlinked covers, see book-cover.tsx */
 import { useRef, useState } from "react";
+import { ConfirmCover, CoverPicker } from "@/components/cover-picker";
 import type { CopyFormat, CopySource } from "@/lib/library";
 import { AUDIO, RECOMMEND, STARS, WRITING, find, starText, type Recommendation } from "@/lib/ratings";
 import {
@@ -52,11 +54,22 @@ function copyName(c: EditableCopy) {
   return "Bookshelf copy";
 }
 
+// The cover as the library has it now (it refreshes after a cover change).
+export type QuickCover = {
+  copyId: string;
+  url: string | null;
+  confirmed: boolean;
+  isPhoto: boolean;
+  author: string;
+};
+
 export function QuickEdit({
   book: initial,
+  cover,
   onChange,
 }: {
   book: EditableBook;
+  cover?: QuickCover | null;
   onChange?: (book: EditableBook) => void;
 }) {
   const [book, setBook] = useState(initial);
@@ -92,6 +105,29 @@ export function QuickEdit({
         <p role="alert" className="rounded-2xl bg-accent-soft px-4 py-2 text-sm">
           {error}
         </p>
+      )}
+
+      {cover && (
+        <Row label="Cover">
+          <div className="flex items-start gap-3">
+            {cover.url ? (
+              <img src={cover.url} alt="" className="aspect-[2/3] w-16 shrink-0 rounded-lg bg-accent-soft object-cover" />
+            ) : (
+              <div className="flex aspect-[2/3] w-16 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-[10px] text-muted">
+                No cover
+              </div>
+            )}
+            <div className="min-w-0 flex-1 [&>button]:mt-0 [&>button+button]:mt-2 [&>button]:block">
+              {cover.url && !cover.confirmed && !cover.isPhoto && (
+                <>
+                  <p className="mb-2 text-xs text-muted">Best guess, not checked yet.</p>
+                  <ConfirmCover copyId={cover.copyId} />
+                </>
+              )}
+              <CoverPicker copyId={cover.copyId} title={book.title} author={cover.author} hasCover={!!cover.url} isPhoto={cover.isPhoto} />
+            </div>
+          </div>
+        </Row>
       )}
 
       <Row label="Status">

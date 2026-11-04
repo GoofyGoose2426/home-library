@@ -307,7 +307,22 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
                 Done
               </button>
             </div>
-            <QuickEdit key={editingBook.id} book={toEditable(editingBook)} onChange={recordEdit} />
+            <QuickEdit
+              key={editingBook.id}
+              book={toEditable(editingBook)}
+              cover={
+                editingBook.coverCopyId
+                  ? {
+                      copyId: editingBook.coverCopyId,
+                      url: editingBook.coverUrl,
+                      confirmed: editingBook.coverConfirmed,
+                      isPhoto: editingBook.coverIsPhoto,
+                      author: editingBook.authors[0] ?? "",
+                    }
+                  : null
+              }
+              onChange={recordEdit}
+            />
           </div>
         </div>
       )}

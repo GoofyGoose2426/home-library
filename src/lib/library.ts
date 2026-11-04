@@ -44,6 +44,9 @@ export type LibraryBook = {
   hasKeepsake: boolean;
   coverUrl: string | null;
   coverConfirmed: boolean;
+  // The owned copy whose cover is shown (or the first copy), for quick edit.
+  coverCopyId: string | null;
+  coverIsPhoto: boolean;
 };
 
 type Row = {
@@ -194,6 +197,8 @@ export async function loadLibrary(
         owned: ownedCopies.length > 0,
         coverUrl: cover?.cover_path ? `photo:${cover.cover_path}` : (cover?.cover_url ?? null),
         coverConfirmed: cover?.cover_path ? true : (cover?.cover_confirmed ?? false),
+        coverCopyId: cover?.id ?? t.copies[0]?.id ?? null,
+        coverIsPhoto: !!cover?.cover_path,
       });
     }
     if ((data ?? []).length < 1000) break;
