@@ -1,0 +1,43 @@
+{
+  "authors": [
+    {"name": "Gabrielle Zevin", "values": [
+      {"category": "race_ethnicity", "value": "Half Jewish and half Korean", "url": "https://thecrimson.com/article/2022/11/8/Gabrielle-zevin-harvard-authors-profile",
+       "quote": "I am, like Sam in the book, half Jewish and half Korean."}
+    ]},
+    {"name": "Ijeoma Oluo", "values": [
+      {"category": "race_ethnicity", "value": "Black", "url": "https://kirkusreviews.com/news-and-features/articles/where-ijeoma-finds-inspiration",
+       "quote": "My heart and soul as a Black woman were so hurt,"},
+      {"category": "gender_identity", "value": "Woman", "url": "https://kirkusreviews.com/news-and-features/articles/where-ijeoma-finds-inspiration",
+       "quote": "My heart and soul as a Black woman were so hurt,"}
+    ]},
+    {"name": "Gabriel de Guilleragues", "values": []},
+    {"name": "Gena Showalter", "values": []},
+    {"name": "Gengoroh Tagame", "values": []},
+    {"name": "Glenn Fabry", "values": []},
+    {"name": "Gustave Flaubert", "values": []},
+    {"name": "Gwen Benaway (ed.)", "values": []},
+    {"name": "H.G. Wells", "values": []},
+    {"name": "Hannah Howell", "values": []},
+    {"name": "Hannah Templer", "values": []},
+    {"name": "Holger Rathgeber", "values": []},
+    {"name": "Holly Jackson", "values": []},
+    {"name": "Hugh Prather", "values": []},
+    {"name": "J. David Spurlock (ed.)", "values": []},
+    {"name": "Jacqueline Carey", "values": []},
+    {"name": "Jade West", "values": []},
+    {"name": "James Fenimore Cooper", "values": []},
+    {"name": "James Finn Garner", "values": []},
+    {"name": "James S. A. Corey", "values": []},
+    {"name": "Janell Cannon", "values": []},
+    {"name": "Jarrett Melendez", "values": []},
+    {"name": "Jaysea Lynn", "values": []},
+    {"name": "Jean Greaves", "values": []},
+    {"name": "Jenő Barcsay", "values": []}
+  ],
+  "characters": [
+    {"title": "My Brother's Husband", "values": [
+      {"category": "lgbtqia", "value": "Gay", "character": "Mike", "url": "https://openlibrary.org/works/OL19859742W",
+       "quote": "…a hulking, affable Canadian named Mike Flanagan, who declares himself the widower of Yaichi's estranged gay twin, Ryoji."}
+    ]}
+  ]
+}

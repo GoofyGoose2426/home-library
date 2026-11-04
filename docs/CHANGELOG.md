@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 10 (25 read authors)
+
+- **Found in their own words:** Gabrielle Zevin (half Jewish and half Korean) and Ijeoma Oluo (Black, Woman).
+- **Nothing found:** the other 23 stay unknown. James S. A. Corey is a pen name shared by two writers.
+- **Main characters:** My Brother's Husband (Mike, the widower of a gay man).
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 09 (25 read authors)
 
 - **Found in their own words:** Francesca Ekwuyasi (Gay, Nigerian).
