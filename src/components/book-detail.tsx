@@ -96,7 +96,7 @@ function coverNote(c: BookCopy) {
   if (s?.source === "alexandra") return "Cover chosen by you";
   const from = !s || s.source === "openlibrary" ? "Open Library" : s.source.includes("apple.com") ? "Apple Books" : s.source.replace(/^https?:\/\/(www\.)?([^/]+).*$/, "$2");
   if (c.coverConfirmed) return s?.confirmed ? `Cover from ${from} · checked by you` : `Cover from ${from}, matched by ISBN`;
-  return `Best-guess cover from ${from} · tap \u201cThis cover is right\u201d or change it`;
+  return `Best guess from ${from}`;
 }
 
 function seriesNumber(n: number | null) {
