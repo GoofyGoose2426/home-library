@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 15 (25 read authors)
+
+- **Found in their own words:** Samra Habib (Queer, Woman) and Sonya Renee Taylor (Queer, Black).
+- **Nothing found:** the other 23 stay unknown.
+- **Main characters:**
+  - We Have Always Been Here: Samra is queer, so this memoir gets an own-voices suggestion.
+  - Special Topics in Being a Human: Bear is a trans parent.
+- All are waiting in To check.
+
 ## 2026-11-04 · Duplicate authors merged, and author lookups batch 14
 
 - **Merged three authors listed twice:** N.K. Jemisin, TJ Klune and V.E. Schwab each now have one page with all their books and values. The spellings "N. K. Jemisin", "T. J. Klune" and "V. E. Schwab" are gone. (`scripts/represent/merge_people.py`, safe to re-run.)

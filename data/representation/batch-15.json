@@ -1,0 +1,49 @@
+{
+  "authors": [
+    {"name": "Samra Habib", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://inmagazine.ca/2019/09/interview-samra-habib-on-faith-feminism-and-queer-sexuality/",
+       "quote": "My feminism is informed by my queer sexuality and my lived experience as a Muslim woman."},
+      {"category": "gender_identity", "value": "Woman", "url": "https://inmagazine.ca/2019/09/interview-samra-habib-on-faith-feminism-and-queer-sexuality/",
+       "quote": "My feminism is informed by my queer sexuality and my lived experience as a Muslim woman."}
+    ]},
+    {"name": "Sonya Renee Taylor", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://www.autostraddle.com/national-poetry-month-sonya-renee-isnt-sorry-235190/",
+       "quote": "I identify as a fat black queer activist. I have lots of identifiers, and queer is one of them."},
+      {"category": "race_ethnicity", "value": "Black", "url": "https://www.autostraddle.com/national-poetry-month-sonya-renee-isnt-sorry-235190/",
+       "quote": "I identify as a fat black queer activist. I have lots of identifiers, and queer is one of them."}
+    ]},
+    {"name": "S. Bear Bergman", "values": []},
+    {"name": "Sabrina Jeffries", "values": []},
+    {"name": "Sam Crescent", "values": []},
+    {"name": "Sam McBratney", "values": []},
+    {"name": "Samanta Schweblin", "values": []},
+    {"name": "Sara Douglass", "values": []},
+    {"name": "Sarah Beth Durst", "values": []},
+    {"name": "Sarah Gailey", "values": []},
+    {"name": "Saul Freedman-Lawson", "values": []},
+    {"name": "Scarlett Peckham", "values": []},
+    {"name": "Sean Murphy", "values": []},
+    {"name": "Shana Galen", "values": []},
+    {"name": "Shay Savage", "values": []},
+    {"name": "Shirley Rousseau Murphy", "values": []},
+    {"name": "Sierra Simone", "values": []},
+    {"name": "Sophie Jordan", "values": []},
+    {"name": "Stanley Tigerman", "values": []},
+    {"name": "Stella Starling", "values": []},
+    {"name": "Stephen Gammell", "values": []},
+    {"name": "Steven Salvatore", "values": []},
+    {"name": "Susannah Nix", "values": []},
+    {"name": "Suzanne Enoch", "values": []},
+    {"name": "Suzanne Wright", "values": []}
+  ],
+  "characters": [
+    {"title": "We Have Always Been Here", "values": [
+      {"category": "lgbtqia", "value": "Queer", "character": "Samra", "url": "https://openlibrary.org/works/OL21196498W",
+       "quote": "When she realized she was queer, it was yet another way she felt like an outsider."}
+    ]},
+    {"title": "Special Topics in Being a Human", "values": [
+      {"category": "lgbtqia", "value": "Trans", "character": "Bear", "url": "https://openlibrary.org/works/OL25315115W",
+       "quote": "Bear Bergman has documented his experience as, among other things, a trans parent, with wit and aplomb."}
+    ]}
+  ]
+}
