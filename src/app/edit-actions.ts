@@ -290,6 +290,21 @@ async function replaceCover(copyId: string, cover: { cover_url: string | null; c
   refresh(before!.title_id as string);
 }
 
+// "This cover is right": confirms a best-guess cover, keeping where it came from.
+export async function confirmCopyCover(copyId: string): Promise<Result> {
+  return asResult(async () => {
+    check(UUID.test(copyId));
+    const { supabase } = await ownerClient();
+    const titleId = await titleOfCopy(supabase, copyId);
+    await must(supabase.from("copies").update({ cover_confirmed: true }).eq("id", copyId).not("cover_url", "is", null));
+    await must(
+      supabase.from("field_sources").update({ confirmed: true })
+        .eq("entity_table", "copies").eq("entity_id", copyId).eq("field", "cover_url"),
+    );
+    refresh(titleId);
+  });
+}
+
 // A cover chosen from Open Library's images (by its cover number).
 export async function setCoverFromOpenLibrary(copyId: string, coverId: number): Promise<Result> {
   return asResult(async () => {

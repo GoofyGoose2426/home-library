@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- hotlinked covers, see book-cover.tsx */
 import Link from "next/link";
 import { BookCover } from "@/components/book-cover";
-import { CoverPicker } from "@/components/cover-picker";
+import { ConfirmCover, CoverPicker } from "@/components/cover-picker";
 import { ClassificationEditor } from "@/components/classification-editor";
 import { EditDetails } from "@/components/edit-details";
 import { MergeEntry } from "@/components/merge-entry";
@@ -89,6 +89,16 @@ function audioLength(minutes: number) {
   return h ? `${h} h ${minutes % 60} min` : `${minutes} min`;
 }
 
+// Where the big cover came from, in a few words.
+function coverNote(c: BookCopy) {
+  if (c.coverKind === "photo") return "Your photo";
+  const s = c.sources.cover_url;
+  if (s?.source === "alexandra") return "Cover chosen by you";
+  const from = !s || s.source === "openlibrary" ? "Open Library" : s.source.includes("apple.com") ? "Apple Books" : s.source.replace(/^https?:\/\/(www\.)?([^/]+).*$/, "$2");
+  if (c.coverConfirmed) return s?.confirmed ? `Cover from ${from} · checked by you` : `Cover from ${from}, matched by ISBN`;
+  return `Best-guess cover from ${from} · tap \u201cThis cover is right\u201d or change it`;
+}
+
 function seriesNumber(n: number | null) {
   return n == null ? "" : `#${Number(n)}`;
 }
@@ -98,28 +108,38 @@ function seriesNumber(n: number | null) {
 export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; readOnly?: boolean; base?: string }) {
   const cover = [...book.copies, ...book.goneCopies].find((c) => c.coverKind === "photo" && c.coverUrl) ?? [...book.copies, ...book.goneCopies].find((c) => c.coverUrl);
   const authors = book.credits.filter((c) => c.role !== "narrator");
+  // The owned copy whose cover the page shows, for the buttons under it.
+  const coverCopy = book.copies.find((c) => c.id === cover?.id) ?? book.copies[0];
 
   return (
     <article className="mt-4">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-        <div className="mx-auto w-44 shrink-0 sm:mx-0 sm:w-52">
-          {cover?.coverUrl ? (
-            <div className="overflow-hidden rounded-2xl shadow-md">
-              <img src={largeCover(cover.coverUrl)} alt={`Cover of ${book.title}`} className="aspect-[2/3] w-full bg-accent-soft object-cover" />
-            </div>
-          ) : (
-            <BookCover title={book.title} authors={authors.map((a) => a.name)} url={null} className="!rounded-2xl !p-4 [&_p:first-child]:text-lg" />
-          )}
+        <div className="w-full shrink-0 text-center sm:w-52">
+          <div className="mx-auto w-44 sm:w-full">
+            {cover?.coverUrl ? (
+              <div className="overflow-hidden rounded-2xl shadow-md">
+                <img src={largeCover(cover.coverUrl)} alt={`Cover of ${book.title}`} className="aspect-[2/3] w-full bg-accent-soft object-cover" />
+              </div>
+            ) : (
+              <BookCover title={book.title} authors={authors.map((a) => a.name)} url={null} className="!rounded-2xl !p-4 [&_p:first-child]:text-lg" />
+            )}
+          </div>
           {cover?.coverUrl && !readOnly && (
-            <p className="mt-2 text-center text-[11px] text-muted">
-              {cover.coverKind === "photo"
-                ? "Your photo"
-                : cover.sources.cover_url?.source === "alexandra"
-                ? "Cover chosen by you"
-                : cover.coverConfirmed
-                  ? "Cover matched by ISBN"
-                  : "Best-guess cover from Open Library · unconfirmed until an ISBN is added"}
-            </p>
+            <p className="mt-2 text-[11px] text-muted">{coverNote(cover)}</p>
+          )}
+          {!readOnly && coverCopy && (
+            <div className="text-left [&>button]:mx-auto [&>button]:block">
+              {cover?.coverUrl && !cover.coverConfirmed && cover.coverKind !== "photo" && cover === coverCopy && (
+                <ConfirmCover copyId={coverCopy.id} />
+              )}
+              <CoverPicker
+                copyId={coverCopy.id}
+                title={book.title}
+                author={authors[0]?.name ?? ""}
+                hasCover={!!coverCopy.coverUrl}
+                isPhoto={coverCopy.coverKind === "photo"}
+              />
+            </div>
           )}
         </div>
 
@@ -232,7 +252,7 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
         <ul className="grid gap-3 sm:grid-cols-2">
           {book.copies.map((c) => (
             <li key={c.id}>
-              <CopyCard copy={c} title={book.title} author={authors[0]?.name ?? ""} isLastCopy={book.copies.length === 1} readOnly={readOnly} />
+              <CopyCard copy={c} title={book.title} author={authors[0]?.name ?? ""} isLastCopy={book.copies.length === 1} onlyCopy={book.copies.length === 1} readOnly={readOnly} />
             </li>
           ))}
         </ul>
@@ -354,12 +374,15 @@ function CopyCard({
   title,
   author,
   isLastCopy,
+  onlyCopy,
   readOnly,
 }: {
   copy: BookCopy;
   title: string;
   author: string;
   isLastCopy: boolean;
+  // The cover buttons sit under the big cover when there's just one copy.
+  onlyCopy: boolean;
   readOnly: boolean;
 }) {
   const from = readOnly ? () => "" : sourceNote;
@@ -404,7 +427,7 @@ function CopyCard({
       {!readOnly && (
         <>
           {ADDED_FROM[c.source] && <p className="mt-3 text-[11px] text-muted">Added from {ADDED_FROM[c.source]}</p>}
-          <CoverPicker copyId={c.id} title={title} author={author} hasCover={!!c.coverUrl} isPhoto={c.coverKind === "photo"} />
+          {!onlyCopy && <CoverPicker copyId={c.id} title={title} author={author} hasCover={!!c.coverUrl} isPhoto={c.coverKind === "photo"} />}
           <RemoveCopy
             copyId={c.id}
             label={c.format === "ebook" || c.format === "audiobook" ? `${WHERE[c.source] ?? "other"} ${c.format}` : "bookshelf copy"}

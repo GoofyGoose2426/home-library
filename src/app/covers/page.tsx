@@ -14,7 +14,7 @@ export default function CoversPage() {
       </Link>
       <h1 className="mt-3 font-serif text-3xl font-semibold">Check covers</h1>
       <p className="mt-2 max-w-2xl text-muted">
-        These are best guesses from Open Library, matched by title and author, so some will be a
+        These are best guesses from Open Library and Apple Books, matched by title and author, so some will be a
         different edition or the wrong book. Tap a cover that&apos;s wrong to remove it; the book
         keeps its colour card until you add the right one.
       </p>

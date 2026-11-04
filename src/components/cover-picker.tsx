@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- hotlinked covers, see book-cover.tsx */
 import { useRouter } from "next/navigation";
 import { useRef, useState, useTransition } from "react";
-import { removeCopyCover, setCoverFromOpenLibrary, setCoverPhoto } from "@/app/edit-actions";
+import { confirmCopyCover, removeCopyCover, setCoverFromOpenLibrary, setCoverPhoto } from "@/app/edit-actions";
 import { createClient } from "@/lib/supabase/browser";
 
 const MAX_SIDE = 1200; // pixels; keeps photos small enough to load fast
@@ -212,5 +212,31 @@ export function CoverPicker({
         </button>
       )}
     </div>
+  );
+}
+
+// For a best-guess cover: one tap to say it's the right one.
+export function ConfirmCover({ copyId }: { copyId: string }) {
+  const router = useRouter();
+  const [busy, startBusy] = useTransition();
+  const [error, setError] = useState<string | null>(null);
+  return (
+    <>
+      <button
+        type="button"
+        disabled={busy}
+        onClick={() =>
+          startBusy(async () => {
+            const result = await confirmCopyCover(copyId);
+            if (result.ok) router.refresh();
+            else setError(result.error);
+          })
+        }
+        className="mt-3 min-h-9 rounded-full bg-accent px-4 text-sm font-medium text-on-accent disabled:opacity-60"
+      >
+        {busy ? "Saving…" : "This cover is right"}
+      </button>
+      {error && <p role="alert" className="mt-2 text-xs text-accent">{error}</p>}
+    </>
   );
 }
