@@ -72,6 +72,6 @@ Everything lays out and reads well in both modes. Three notes were out of date a
 
 1. **One author has no books:** "Fitzpatrick", left over from the first import. Nothing shows them, but I can delete the entry if you'd like.
 2. **3 books are still flagged Needs review** from the shelf photos.
-5. **Still in To check:** most of the author identity (66) and character (20) values from the lookups aren't confirmed yet. Confirm them whenever you like.
 3. **Supabase access token** (what lets me run the session scripts) expires around 22 November. I'll walk you through renewing it.
 4. **The view-only link's secret on my computer doesn't match the one in Vercel.** Nothing is broken: your link works and is safe. It only means I can't open your shared view from here, which is fine.
+5. **Still in To check:** most of the author identity (66) and character (20) values from the lookups aren't confirmed yet. Confirm them whenever you like.
