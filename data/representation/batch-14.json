@@ -1,0 +1,48 @@
+{
+  "authors": [
+    {"name": "V.E. Schwab", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://www.today.com/today/amp/rcna210223",
+       "quote": "In many ways, this story is about the three eras of my own queer coming out journey, and going from not knowing who you are, to just wanting to be loved, to being unapologetic,"},
+      {"category": "lgbtqia", "value": "Gay", "url": "https://www.today.com/today/amp/rcna210223",
+       "quote": "What I didn't predict and what turned out to be true is the catharsis of writing this book as a gay person,"}
+    ]},
+    {"name": "Nnedi Okorafor", "values": [
+      {"category": "disability", "value": "Invisible disability", "url": "https://www.bustle.com/entertainment/nnedi-okorafor-noor-africanfuturism-disability-quotes",
+       "quote": "I still have my own invisible disability."}
+    ]},
+    {"name": "S. A. Cosby", "values": [
+      {"category": "race_ethnicity", "value": "Black", "url": "https://www.apr.org/arts-life/arts-life/2023-07-25/crime-writer-s-a-cosby-loves-the-south-and-is-haunted-by-it",
+       "quote": "I've never been ashamed of being a Black man. But I'm acutely aware that my life has never been easier"},
+      {"category": "gender_identity", "value": "Man", "url": "https://www.apr.org/arts-life/arts-life/2023-07-25/crime-writer-s-a-cosby-loves-the-south-and-is-haunted-by-it",
+       "quote": "I've never been ashamed of being a Black man. But I'm acutely aware that my life has never been easier"}
+    ]},
+    {"name": "Olivia Atwater", "values": []},
+    {"name": "Olivie Blake", "values": []},
+    {"name": "Ophelia Bell", "values": []},
+    {"name": "P. Djèlí Clark", "values": []},
+    {"name": "Patricia Briggs", "values": []},
+    {"name": "Patricia Lee Gauch", "values": []},
+    {"name": "Paula Quinn", "values": []},
+    {"name": "Pere Pérez", "values": []},
+    {"name": "Priya Parker", "values": []},
+    {"name": "R.K. Ashwick", "values": []},
+    {"name": "Rachel Curtis", "values": []},
+    {"name": "Rafe Martin", "values": []},
+    {"name": "Rebekah Weatherspoon", "values": []},
+    {"name": "Reibun Ike", "values": []},
+    {"name": "Rena Mason (eds.)", "values": []},
+    {"name": "Richard Bach", "values": []},
+    {"name": "Rick Remender", "values": []},
+    {"name": "RM Virtues", "values": []},
+    {"name": "Robert Browning", "values": []},
+    {"name": "Rosie Danan", "values": []},
+    {"name": "Roxane Gay", "values": []},
+    {"name": "Ryka Aoki", "values": []}
+  ],
+  "characters": [
+    {"title": "Light from Uncommon Stars", "values": [
+      {"category": "lgbtqia", "value": "Trans", "character": "Katrina Nguyen", "url": "https://openlibrary.org/works/OL24167486W",
+       "quote": "When Katrina Nguyen, a young transgender runaway, catches Shizuka's ear with her wild talent, Shizuka can almost feel the curse lifting."}
+    ]}
+  ]
+}

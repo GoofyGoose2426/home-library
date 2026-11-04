@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Duplicate authors merged, and author lookups batch 14
+
+- **Merged three authors listed twice:** N.K. Jemisin, TJ Klune and V.E. Schwab each now have one page with all their books and values. The spellings "N. K. Jemisin", "T. J. Klune" and "V. E. Schwab" are gone. (`scripts/represent/merge_people.py`, safe to re-run.)
+- **Batch 14, found in their own words:** V.E. Schwab (Queer, Gay), Nnedi Okorafor (Invisible disability) and S. A. Cosby (Black, Man).
+- **Nothing found:** the other 22 stay unknown.
+- **Main characters:** Light from Uncommon Stars (Katrina Nguyen is trans).
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 13 (25 read authors)
 
 - **Found in their own words:** Marjane Satrapi (Iran), Mercury Stardust (Trans) and Nadia El-Fassi (half-Moroccan, half-Australian, from her author bio).
