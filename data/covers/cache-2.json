@@ -1632,5 +1632,87 @@
  "9b91f7fc-5423-4571-8865-393e3cca6677": {
   "title": "Sticking to the Script",
   "status": "none"
+ },
+ "778f7562-fa47-48b8-a03d-773b50d69d7b": {
+  "title": "Switch Bitch",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/switch-bitch/id527823229",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/ce/2c/7b/ce2c7b21-ea16-86b0-c31b-df0a6854405a/9781101605455.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/switch-bitch/id527823229",
+  "matched_title": "Switch Bitch",
+  "matched_authors": [
+   "Roald Dahl"
+  ]
+ },
+ "67942092-9895-461f-bf01-fe8677c9c9f9": {
+  "title": "Swordheart",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/10029991-M.jpg",
+  "page": "https://openlibrary.org/works/OL20783649W",
+  "matched_title": "Swordheart",
+  "matched_authors": [
+   "T. Kingfisher"
+  ]
+ },
+ "beec54a3-a0f7-440b-a9ec-02af34fea847": {
+  "title": "Tale of the Waning Moon Vol. 2",
+  "status": "none"
+ },
+ "c62ca940-cd8d-4672-9783-033233e7debc": {
+  "title": "Tale of the Waning Moon Vol. 3",
+  "status": "none"
+ },
+ "5d28e0ed-e8ba-4111-b434-81c0a54d0026": {
+  "title": "Tale of the Waning Moon Vol. 4",
+  "status": "none"
+ },
+ "f6399f6b-aa54-474a-a820-5c0db49f09e3": {
+  "title": "Tandem Unit",
+  "status": "none"
+ },
+ "02110a6f-fa4b-4dd8-ac46-abe1f76e924d": {
+  "title": "Tess of the D'Urbervilles",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/tess-of-the-durbervilles-thomas-hardy/id1572830224",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication125/v4/5f/39/aa/5f39aa71-882d-9db3-3d72-fd211054b994/1034330454.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/tess-of-the-durbervilles-thomas-hardy/id1572830224",
+  "matched_title": "Tess of the d'Urbervilles - Thomas Hardy",
+  "matched_authors": [
+   "Thomas Hardy"
+  ]
+ },
+ "c0acdd03-6125-4165-8b12-357c2d85ee9f": {
+  "title": "The Cad and the Co-Ed",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-cad-and-the-co-ed/id1191890035",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/30/af/c8/30afc820-ff98-463c-6199-5b9ca4b2864a/cc7ae6f5-79f6-4993-a302-501dab965cd5_cover_image.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-cad-and-the-co-ed/id1191890035",
+  "matched_title": "The Cad and the Co-Ed",
+  "matched_authors": [
+   "Penny Reid & L.H. Cosway"
+  ]
+ },
+ "b0cc2691-08d2-422c-8374-a2097f7bc8c5": {
+  "title": "The Change",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/12733452-M.jpg",
+  "page": "https://openlibrary.org/works/OL25814771W",
+  "matched_title": "Change",
+  "matched_authors": [
+   "Kirsten Miller"
+  ]
+ },
+ "40253a1d-9359-412b-aee0-48eefabbedfb": {
+  "title": "The Classic Works of H.G. Wells: The Time Machine, The Invisible Man & The War of the Worlds",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-classic-works-of-h-g-wells-the-time/id540580538",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/eb/6f/c9/eb6fc910-091f-976c-35da-d589e4169815/Wells---Classic-Works.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-classic-works-of-h-g-wells-the-time/id540580538",
+  "matched_title": "The Classic Works of H.G. Wells: The Time Machine, The Invisible Man & The War of the Worlds",
+  "matched_authors": [
+   "H.G. Wells"
+  ]
  }
 }
