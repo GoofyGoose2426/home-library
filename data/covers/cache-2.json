@@ -1437,5 +1437,200 @@
  "8dc6894d-415f-40e1-8a6a-b1ba72e27a09": {
   "title": "Rat Queens Vol. 5: The Colossal Magic Nothing",
   "status": "none"
+ },
+ "bdef882b-93fa-4010-bbdc-aad8750e9244": {
+  "title": "Rat Queens Vol. 6: The Infernal Path",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/8748547-M.jpg",
+  "page": "https://openlibrary.org/works/OL20073965W",
+  "matched_title": "Rat Queens. Volume 6, The infernal path",
+  "matched_authors": [
+   "Owen Gieni",
+   "Kurtis J. Wiebe"
+  ]
+ },
+ "f61d3dfa-83a3-4490-97f9-fe492144d97e": {
+  "title": "Raven's Shadow",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/ravens-shadow/id357923064",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication/69/a2/c4/mzi.qrmvoalf.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/ravens-shadow/id357923064",
+  "matched_title": "Raven's Shadow",
+  "matched_authors": [
+   "Patricia Briggs"
+  ]
+ },
+ "d92bb5df-eeaa-4db1-822c-983700445796": {
+  "title": "Rogue & Gambit: Ring of Fire",
+  "status": "none"
+ },
+ "cbf70bcc-e128-47f8-93ba-fc63268e702c": {
+  "title": "Role Playing",
+  "status": "none"
+ },
+ "85766283-39ee-4984-ba68-d405b02a853f": {
+  "title": "Roll for Romance",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/roll-for-romance/id6736460399",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/91/6a/b3/916ab383-31f8-0e86-77e7-9816baeebcb4/9780593975428.d.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/roll-for-romance/id6736460399",
+  "matched_title": "Roll for Romance",
+  "matched_authors": [
+   "Lenora Woods"
+  ]
+ },
+ "bef5d892-dcdf-4aca-9564-7fc50adca8cd": {
+  "title": "Rules for a Proper Governess",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/rules-for-a-proper-governess/id828743015",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication2/v4/0b/8d/d5/0b8dd55e-e53f-f358-e47c-f594705dc3ca/9781101614983.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/rules-for-a-proper-governess/id828743015",
+  "matched_title": "Rules for a Proper Governess",
+  "matched_authors": [
+   "Jennifer Ashley"
+  ]
+ },
+ "0d534266-a7a3-42bf-99e6-4d1d7e3a5393": {
+  "title": "Scandalous Passions",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/scandalous-passions/id1509038513",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication123/v4/14/27/1a/14271aa1-9fb2-351c-b311-6b0484aee66c/9781682816035.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/scandalous-passions/id1509038513",
+  "matched_title": "Scandalous Passions",
+  "matched_authors": [
+   "Nicola Davidson"
+  ]
+ },
+ "c0d66be2-b496-460f-bdbb-430480889697": {
+  "title": "Sea of Charms",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/sea-of-charms/id6751503691",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/7b/42/37/7b4237a3-e667-ea01-aee0-3fa9ad600c11/9781250400680.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/sea-of-charms/id6751503691",
+  "matched_title": "Sea of Charms",
+  "matched_authors": [
+   "Sarah Beth Durst"
+  ]
+ },
+ "1aa62f23-68c0-4efa-94f2-dee80e54193d": {
+  "title": "Sense and Sensibility",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/sense-and-sensibility/id543483396",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/39/44/05/39440578-5665-0119-ba0e-982c6207b7df/S_S_Cover.png/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/sense-and-sensibility/id543483396",
+  "matched_title": "Sense and Sensibility",
+  "matched_authors": [
+   "Jane Austen"
+  ]
+ },
+ "81960518-dfdd-4c5b-807e-67b36f49fcdf": {
+  "title": "Sherlock Holmes: The Complete Novels and Stories, Vol. I",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/8351127-M.jpg",
+  "page": "https://openlibrary.org/works/OL1524152W",
+  "matched_title": "Sherlock Holmes [play]",
+  "matched_authors": [
+   "Arthur Conan Doyle",
+   "William Gillette"
+  ]
+ },
+ "516a75b8-cc86-454f-b5b6-880e9fb98f6e": {
+  "title": "Sherlock Holmes: The Complete Novels and Stories, Vol. II",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/8351127-M.jpg",
+  "page": "https://openlibrary.org/works/OL1524152W",
+  "matched_title": "Sherlock Holmes [play]",
+  "matched_authors": [
+   "Arthur Conan Doyle",
+   "William Gillette"
+  ]
+ },
+ "1f69eb6f-18b9-406d-bdd2-ed7056490c39": {
+  "title": "Single White Vampire",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/single-white-vampire/id362246956",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/b0/0d/71/b00d7156-c2d3-1204-443a-459cced5c383/9780062013644.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/single-white-vampire/id362246956",
+  "matched_title": "Single White Vampire",
+  "matched_authors": [
+   "Lynsay Sands"
+  ]
+ },
+ "c35fe1a7-ecde-4d3e-ba48-27849c7f8927": {
+  "title": "Sky Doll: Doll's Factory",
+  "status": "none"
+ },
+ "d30d3ba6-0f5d-4157-831d-f80e42cd7467": {
+  "title": "Slash or Pass",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/slash-or-pass/id6752763703",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/c4/2d/b8/c42db80f-9e97-6c0f-96f0-f51f6e5712af/9781035434732.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/slash-or-pass/id6752763703",
+  "matched_title": "Slash or Pass",
+  "matched_authors": [
+   "Thalia Sanchez"
+  ]
+ },
+ "4f8deb86-0f92-4fa7-872b-32b4aa437c98": {
+  "title": "Someone Like You",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/12884539-M.jpg",
+  "page": "https://openlibrary.org/works/OL45868W",
+  "matched_title": "Someone Like You [18 stories]",
+  "matched_authors": [
+   "Roald Dahl"
+  ]
+ },
+ "c135154f-d5e0-4a3b-a44d-25adb63a5403": {
+  "title": "Son of the Morning",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/son-of-the-morning/id6741470628",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/64/71/0a/64710a7b-44d3-9f1d-ab83-d02ca76ff7e9/9780063323209.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/son-of-the-morning/id6741470628",
+  "matched_title": "Son of the Morning",
+  "matched_authors": [
+   "Akwaeke Emezi"
+  ]
+ },
+ "d6b45b17-2c3a-4bfb-9d80-a9ebed1a3a38": {
+  "title": "Spellfire",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/spellfire/id6744147405",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/9e/c9/08/9ec908e8-8a73-1ce7-fc34-c2cf948424e6/9780008779443.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/spellfire/id6744147405",
+  "matched_title": "Spellfire",
+  "matched_authors": [
+   "Agatha Willow"
+  ]
+ },
+ "60228b8b-9872-46bc-9402-665d72d1951f": {
+  "title": "Spread Me",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/spread-me/id6739501735",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/df/29/75/df297597-155a-98c7-2a2c-778709506200/9781250387349.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/spread-me/id6739501735",
+  "matched_title": "Spread Me",
+  "matched_authors": [
+   "Sarah Gailey"
+  ]
+ },
+ "9c4ddcfb-0ce7-4dbe-9b01-0ed65feaba7c": {
+  "title": "Stay",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/stay/id6479748605",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/36/09/bb/3609bbe2-f971-7b9b-390f-4dccb3de4fb1/9781464227387.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/stay/id6479748605",
+  "matched_title": "Stay",
+  "matched_authors": [
+   "Elle Kennedy & Sarina Bowen"
+  ]
+ },
+ "9b91f7fc-5423-4571-8865-393e3cca6677": {
+  "title": "Sticking to the Script",
+  "status": "none"
  }
 }

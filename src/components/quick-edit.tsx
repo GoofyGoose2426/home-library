@@ -109,7 +109,7 @@ export function QuickEdit({
 
       {cover && (
         <Row label="Cover">
-          <div className="flex items-start gap-3">
+          <div className="flex items-center gap-3">
             {cover.url ? (
               <img src={cover.url} alt="" className="aspect-[2/3] w-16 shrink-0 rounded-lg bg-accent-soft object-cover" />
             ) : (
@@ -117,16 +117,18 @@ export function QuickEdit({
                 No cover
               </div>
             )}
-            <div className="min-w-0 flex-1 [&>button]:mt-0 [&>button+button]:mt-2 [&>button]:block">
-              {cover.url && !cover.confirmed && !cover.isPhoto && (
+            <div className="min-w-0 flex-1 [&>button]:mt-0">
+              {cover.url && !cover.confirmed && !cover.isPhoto ? (
                 <>
                   <p className="mb-2 text-xs text-muted">Best guess, not checked yet.</p>
                   <ConfirmCover copyId={cover.copyId} />
                 </>
+              ) : (
+                <p className="text-xs text-muted">{cover.isPhoto ? "Your photo" : cover.url ? "Checked" : "No cover yet"}</p>
               )}
-              <CoverPicker copyId={cover.copyId} title={book.title} author={cover.author} hasCover={!!cover.url} isPhoto={cover.isPhoto} />
             </div>
           </div>
+          <CoverPicker copyId={cover.copyId} title={book.title} author={cover.author} hasCover={!!cover.url} isPhoto={cover.isPhoto} />
         </Row>
       )}
 
