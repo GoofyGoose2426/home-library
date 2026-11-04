@@ -337,14 +337,15 @@
  },
  "87584468-eb6f-47e5-8510-b0e41294a570": {
   "title": "Doctor Who Colouring Book",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/375088-M.jpg",
   "page": "https://openlibrary.org/works/OL35689827W",
   "matched_title": "Doctor Who",
   "matched_authors": [
    "Justin Richards"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "4774b326-2c8b-45fd-93b1-b46f798f1f25": {
   "title": "Dracula",
@@ -653,14 +654,15 @@
  },
  "bed1fe21-d8b8-40bd-9477-cd18229084ac": {
   "title": "John Carter: Adventures on Mars Collection (Illustrated)",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/7922473-M.jpg",
   "page": "https://openlibrary.org/works/OL1418199W",
   "matched_title": "John Carter of Mars",
   "matched_authors": [
    "Edgar Rice Burroughs"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "47352722-176d-4da6-9bcd-65ce8156a487": {
   "title": "Just Like This",
@@ -701,14 +703,15 @@
  },
  "ac8e1f69-ec23-42af-9c1c-c0a6657b92d4": {
   "title": "Lisbon Poets",
-  "status": "found",
+  "status": "dropped",
   "source": "https://books.apple.com/ca/book/lisbon-poets-camo-es-cesa-rio-sa-carneiro-florbela-pessoa/id6468962927",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/f7/80/f5/f780f57b-4792-9107-a5fe-19ce4498f9de/1041662337.jpg/600x600bb.jpg",
   "page": "https://books.apple.com/ca/book/lisbon-poets-camo-es-cesa-rio-sa-carneiro-florbela-pessoa/id6468962927",
   "matched_title": "Lisbon Poets. Camões, Cesário, Sá-Carneiro, Florbela, Pessoa",
   "matched_authors": [
    "Luís de Camões, Cesário Verde, Mário de Sá-Carneiro, Florbela Espanca & Fernando Pessoa"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "fcdf5482-ba96-439e-aa42-1533c626897c": {
   "title": "Lord Mouse",
@@ -716,25 +719,27 @@
  },
  "148d3dcc-c81a-4977-b1fe-3a2a577800f2": {
   "title": "Lore Olympus Vol. 1",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/15251962-M.jpg",
   "page": "https://openlibrary.org/works/OL35766264W",
   "matched_title": "Lore Olympus Volumes 1-3",
   "matched_authors": [
    "Rachel Smythe"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "ca950dc3-7823-48ae-aa59-fadddf5956fa": {
   "title": "Lore Olympus Vol. 3",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/15251962-M.jpg",
   "page": "https://openlibrary.org/works/OL35766264W",
   "matched_title": "Lore Olympus Volumes 1-3",
   "matched_authors": [
    "Rachel Smythe"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "31d647c1-4768-448a-8380-d1c587254536": {
   "title": "Lore Olympus Vol. 5",
@@ -952,168 +957,183 @@
  },
  "6003f565-e7cf-46d8-b10c-83efb9358f60": {
   "title": "Nancy Drew #12: The Message in the Hollow Oak",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "fa5246e5-808e-497a-9128-9a76a30260f4": {
   "title": "Nancy Drew #13: The Mystery of the Ivory Charm",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "b4d60e18-4f82-4d35-bc0e-4f0955bd96f7": {
   "title": "Nancy Drew #2: The Hidden Staircase",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "9eed1e71-37c5-46ec-805a-98347304343a": {
   "title": "Nancy Drew #29: Mystery at the Ski Jump",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "5bf0ec56-90e5-4126-b530-1845bd9ce532": {
   "title": "Nancy Drew #31: The Ringmaster's Secret",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "ec8ccbc3-091f-4ed3-b7e1-bf1f7ba4ed23": {
   "title": "Nancy Drew #32: The Scarlet Slipper Mystery",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "79ce0c78-aa48-400a-bc90-f23b73071c0c": {
   "title": "Nancy Drew #33: The Witch Tree Symbol",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "69fd39e1-20a3-4647-bf95-0744ec9649fb": {
   "title": "Nancy Drew #37: The Clue in the Old Stagecoach",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "b5ab3ddc-cc63-4e26-9995-bf4ac4713eeb": {
   "title": "Nancy Drew #38: The Mystery of the Fire Dragon",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "41885698-c24e-4559-9a3a-7ca13e784de8": {
   "title": "Nancy Drew #39: The Clue of the Dancing Puppet",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "42f8067c-8306-483f-8016-21564655bd19": {
   "title": "Nancy Drew #40: The Moonstone Castle Mystery",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "61923e39-653a-4f0a-910d-9252089cb214": {
   "title": "Nancy Drew #45: The Spider Sapphire Mystery",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "d6c1e93e-d226-4f0a-a0ca-09cf8aab4afa": {
   "title": "Nancy Drew #46: The Invisible Intruder",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "82991fde-dede-46af-b7d1-adc71eeb548e": {
   "title": "Nancy Drew #47: The Mysterious Mannequin",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "749e6021-cc75-4348-8cf3-3ceaef861c95": {
   "title": "Nancy Drew #8: Nancy's Mysterious Letter",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/2422608-M.jpg",
   "page": "https://openlibrary.org/works/OL15046268W",
   "matched_title": "Nancy Drew Starter Set (Nancy Drew)",
   "matched_authors": [
    "Carolyn Keene"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "087609a2-22f2-4c16-94db-228396cd1c5c": {
   "title": "Nightstrider",
@@ -1423,7 +1443,7 @@
  },
  "50a1ae86-8bd7-47c8-a836-dd4524bc3f1e": {
   "title": "Rat Queens Vol. 4: High Fantasies",
-  "status": "found",
+  "status": "dropped",
   "source": "openlibrary",
   "url": "https://covers.openlibrary.org/b/id/14054964-M.jpg",
   "page": "https://openlibrary.org/works/OL35077780W",
@@ -1432,7 +1452,8 @@
    "Kurtis J. Wiebe",
    "Kurtis J. Gieni",
    "Ryan Ferrier"
-  ]
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
  },
  "8dc6894d-415f-40e1-8a6a-b1ba72e27a09": {
   "title": "Rat Queens Vol. 5: The Colossal Magic Nothing",
@@ -1713,6 +1734,792 @@
   "matched_title": "The Classic Works of H.G. Wells: The Time Machine, The Invisible Man & The War of the Worlds",
   "matched_authors": [
    "H.G. Wells"
+  ]
+ },
+ "7438bf7d-e476-4cb0-a5a0-8ef1b2002ecf": {
+  "title": "The Comeback",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-comeback/id6444773697",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication126/v4/1b/3c/e1/1b3ce110-cc68-8ff9-41e6-1136d363445a/9781728242668.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-comeback/id6444773697",
+  "matched_title": "The Comeback",
+  "matched_authors": [
+   "Lily Chu"
+  ]
+ },
+ "2387dcee-afab-45bd-96be-e2c07d59cf4f": {
+  "title": "The Companion",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-companion/id1547179291",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/32/35/b9/3235b980-04b3-7d65-3a1c-05738ae70670/0000653167.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-companion/id1547179291",
+  "matched_title": "The Companion",
+  "matched_authors": [
+   "E.E. Ottoman"
+  ]
+ },
+ "5e86e8a7-4318-4f35-a548-fe50fe6218cf": {
+  "title": "The Complete Tales of Winnie-the-Pooh",
+  "status": "none"
+ },
+ "d84767bc-711f-40f8-afe0-f86710ed7ca5": {
+  "title": "The Count of Monte Cristo",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-count-of-monte-cristo/id481657971",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication123/v4/8b/b0/b0/8bb0b03a-3f80-e6cb-de7f-c74e0aaa4f7f/PD-The_Count_of_Monte_Cristo-Adj.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-count-of-monte-cristo/id481657971",
+  "matched_title": "The Count of Monte Cristo",
+  "matched_authors": [
+   "Alexandre Dumas"
+  ]
+ },
+ "fc1a85ab-e5b4-49a1-aece-3819a21448e3": {
+  "title": "The Curse Giver",
+  "status": "none"
+ },
+ "94e7baa7-1e85-4ba6-a31b-f6ed2b1b9915": {
+  "title": "The Damning Stone",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/14855853-M.jpg",
+  "page": "https://openlibrary.org/works/OL28580242W",
+  "matched_title": "Damning Stone",
+  "matched_authors": [
+   "T. J. Klune"
+  ]
+ },
+ "a70ebad5-79b1-456f-ada7-635d70973a88": {
+  "title": "The Dawnhounds",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-dawnhounds/id1590876056",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication126/v4/0b/3c/c6/0b3cc621-e545-833f-98a5-468b977d62e5/9781982187064.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-dawnhounds/id1590876056",
+  "matched_title": "The Dawnhounds",
+  "matched_authors": [
+   "Sascha Stronach"
+  ]
+ },
+ "8a567320-287d-475c-96cb-8666a27e9a80": {
+  "title": "The Dirty Billionaire Trilogy",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/11177063-M.jpg",
+  "page": "https://openlibrary.org/works/OL24538809W",
+  "matched_title": "Dirty Billionaire Trilogy",
+  "matched_authors": [
+   "Meghan March"
+  ]
+ },
+ "e7a52110-e900-4c9c-af03-0796709f18f0": {
+  "title": "The Ether Witch",
+  "status": "none"
+ },
+ "754c6b3b-0e3b-49fc-abb8-841b6254011c": {
+  "title": "The Fantastic Paintings of Frazetta",
+  "status": "none"
+ },
+ "b21de33b-3d04-4bf2-9d99-95eaddc8a048": {
+  "title": "The Ginger Man",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-ginger-man/id1435239952",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/dc/da/03/dcda03e4-1ef5-5ced-b702-8f74ec7b72de/1058077882.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-ginger-man/id1435239952",
+  "matched_title": "The Ginger Man",
+  "matched_authors": [
+   "J. P. Donleavy"
+  ]
+ },
+ "a1a48149-a4c0-44a9-b32d-b8758828d49a": {
+  "title": "The Goat in the Bedroom",
+  "status": "found",
+  "source": "https://books.apple.com/ca/audiobook/the-goat-in-the-bedroom/id1824308598",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/eb/e8/42ebe876-67c1-fdd5-d7b8-4fbf1e118a9b/9798349109232.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/audiobook/the-goat-in-the-bedroom/id1824308598",
+  "matched_title": "The Goat in the Bedroom",
+  "matched_authors": [
+   "Amy Award"
+  ]
+ },
+ "f7c738f8-d6ef-4491-ab76-b8fe4b0c9da2": {
+  "title": "The Hobbit",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-hobbit/id375035258",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/dc/b9/16/dcb91663-fb27-71ce-e49e-c842e10406ad/9780007322602.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-hobbit/id375035258",
+  "matched_title": "The Hobbit",
+  "matched_authors": [
+   "J. R. R. Tolkien"
+  ]
+ },
+ "89c9ec49-c37d-4c83-ad49-668ca64f2173": {
+  "title": "The Hobbit: The Graphic Novel",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-hobbit/id375035258",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/dc/b9/16/dcb91663-fb27-71ce-e49e-c842e10406ad/9780007322602.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-hobbit/id375035258",
+  "matched_title": "The Hobbit",
+  "matched_authors": [
+   "J. R. R. Tolkien"
+  ]
+ },
+ "a39dc256-d98e-4a91-ab47-7dcfd371b9fe": {
+  "title": "The Horse and His Boy",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-horse-and-his-boy/id360628860",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/13/e8/88/13e8889e-d7f8-f1e3-861c-a144cc517770/9780061974137.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-horse-and-his-boy/id360628860",
+  "matched_title": "The Horse and His Boy",
+  "matched_authors": [
+   "C. S. Lewis"
+  ]
+ },
+ "c842c6cb-e141-44f0-9bb8-7cd117b7a5d9": {
+  "title": "The Ippos King",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-ippos-king/id1506127245",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication123/v4/13/03/a6/1303a62a-4cea-8344-fb83-adc7e71cde20/0000543402.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-ippos-king/id1506127245",
+  "matched_title": "The Ippos King",
+  "matched_authors": [
+   "Grace Draven"
+  ]
+ },
+ "184e2951-458b-4029-b74f-ea70c639fc9a": {
+  "title": "The Last Battle",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-last-battle/id360631870",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/23/44/2d/23442dcd-706b-28a2-399d-241c41c9e703/9780061974144.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-last-battle/id360631870",
+  "matched_title": "The Last Battle",
+  "matched_authors": [
+   "C. S. Lewis"
+  ]
+ },
+ "bbc5ea32-a83c-44b7-9486-e9b4f680979b": {
+  "title": "The Last Dragon of the East",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-last-dragon-of-the-east/id6477406156",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/32/16/32/321632d1-3172-b277-7187-e97cba25de87/9781668051245.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-last-dragon-of-the-east/id6477406156",
+  "matched_title": "The Last Dragon of the East",
+  "matched_authors": [
+   "Katrina Kwan"
+  ]
+ },
+ "fe16521b-0c84-4da6-8ede-1c5400c2ee06": {
+  "title": "The Last of the Mohicans",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-last-of-the-mohicans/id481667881",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication/b7/3f/8e/mzi.lhaccuhe.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-last-of-the-mohicans/id481667881",
+  "matched_title": "The Last of the Mohicans",
+  "matched_authors": [
+   "James Fenimore Cooper"
+  ]
+ },
+ "48086fdc-51a4-4199-b7db-0e887ddadb71": {
+  "title": "The Light Within",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-light-within/id952646331",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication5/v4/b7/ca/44/b7ca4420-2889-6753-208e-ea02783717f5/9781311266026.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-light-within/id952646331",
+  "matched_title": "The Light Within",
+  "matched_authors": [
+   "Grace Draven"
+  ]
+ },
+ "39d49e02-6af6-44c0-9fa6-945337393864": {
+  "title": "The Lion, the Witch and the Wardrobe",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-lion-the-witch-and-the-wardrobe/id1542459184",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/b3/80/04/b3800479-411f-3187-1159-d48f3b147000/ChatGPT_Image_Apr_9_2025_11_22_25_AM.png/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-lion-the-witch-and-the-wardrobe/id1542459184",
+  "matched_title": "The Lion, The Witch and The Wardrobe",
+  "matched_authors": [
+   "C. S. Lewis"
+  ]
+ },
+ "7cf0b88d-4065-4e15-93c0-55fac35e5301": {
+  "title": "The Lost",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-lost/id6747710220",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/e7/3b/16/e73b1661-7833-0ea9-786b-d8d11b28b456/9780369775986.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-lost/id6747710220",
+  "matched_title": "The Lost",
+  "matched_authors": [
+   "Sarah Beth Durst"
+  ]
+ },
+ "a30949e5-0ace-46db-bf38-b679580c9ef6": {
+  "title": "The Love Letters of a Portuguese Nun",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-love-letters-of-a-portuguese-nun/id6503166289",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/0d/e2/68/0de2680f-7fb8-ceff-d797-fa635c96c557/9781843919285.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-love-letters-of-a-portuguese-nun/id6503166289",
+  "matched_title": "The Love Letters of a Portuguese Nun",
+  "matched_authors": [
+   "Josephine Lazarus & Gabriel-Joseph de Lavergne Guilleragues"
+  ]
+ },
+ "806edff6-cc0d-45af-803c-b601313b6b38": {
+  "title": "The Love Poems of Lord Byron",
+  "status": "none"
+ },
+ "67ab1600-b3cd-455d-be90-a80fd34442c9": {
+  "title": "The Lovers",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-lovers/id6740242882",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/0d/f4/83/0df48309-d6b2-e9e4-4a8f-88b8379e0266/9781464235061.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-lovers/id6740242882",
+  "matched_title": "The Lovers",
+  "matched_authors": [
+   "Kristin Cast"
+  ]
+ },
+ "6fda1be9-b270-44d7-bfc6-3b92ea0a6eab": {
+  "title": "The Magician's Nephew",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-magicians-nephew/id360634201",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/10/73/1a/10731ae2-19f2-1613-f294-4eb00b949cf8/9780061974168.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-magicians-nephew/id360634201",
+  "matched_title": "The Magician's Nephew",
+  "matched_authors": [
+   "C. S. Lewis"
+  ]
+ },
+ "36e4d3d7-e650-4610-aed0-d5af051ceaae": {
+  "title": "The Murderbot Diaries Vol. 1",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/15126666-M.jpg",
+  "page": "https://openlibrary.org/works/OL39199442W",
+  "matched_title": "Murderbot Diaries Vol. 1",
+  "matched_authors": [
+   "Martha Wells"
+  ]
+ },
+ "548ea6d2-93be-4a31-a196-6fe3e02400b0": {
+  "title": "The Murderbot Diaries Vol. 2",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/15233129-M.jpg",
+  "page": "https://openlibrary.org/works/OL39204828W",
+  "matched_title": "Murderbot Diaries Vol. 2",
+  "matched_authors": [
+   "Martha Wells"
+  ]
+ },
+ "879ad001-218f-41cc-b8af-3b7dda012516": {
+  "title": "The Murderbot Diaries Vol. 3",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/15233130-M.jpg",
+  "page": "https://openlibrary.org/works/OL42398755W",
+  "matched_title": "Murderbot Diaries Vol. 3",
+  "matched_authors": [
+   "Martha Wells"
+  ]
+ },
+ "56aadbab-5692-4ca1-8a4b-b182d0eab1e0": {
+  "title": "The Neanderthal Box Set",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-neanderthal-box-set/id1495383717",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication113/v4/a0/f8/64/a0f864d5-b303-da91-9b9d-38960bb63f06/dj.mcriqmec.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-neanderthal-box-set/id1495383717",
+  "matched_title": "The Neanderthal Box Set",
+  "matched_authors": [
+   "Penny Reid"
+  ]
+ },
+ "ee91814e-05b0-456d-b262-1beff6469720": {
+  "title": "The Obsidian Mountain Trilogy",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-obsidian-mountain-trilogy/id884753938",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1c/b1/49/1cb1494a-7d34-900a-c36f-1d8187673d9d/9781466864771.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-obsidian-mountain-trilogy/id884753938",
+  "matched_title": "The Obsidian Mountain Trilogy",
+  "matched_authors": [
+   "Mercedes Lackey & James Mallory"
+  ]
+ },
+ "629c70c5-261f-4066-83f8-9b22647eadd0": {
+  "title": "The Phoenix Keeper",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-phoenix-keeper/id6473719349",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/57/d3/af/57d3af5d-09c9-885d-5868-b8e9091bc5cb/9780316573108.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-phoenix-keeper/id6473719349",
+  "matched_title": "The Phoenix Keeper",
+  "matched_authors": [
+   "S. A. MacLean"
+  ]
+ },
+ "c9e6a56d-2b48-45d4-ac36-679ac27eed03": {
+  "title": "The Phoenix King",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-phoenix-king/id6444399155",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/fa/1e/61/fa1e61d4-bd87-2893-d27b-45f3367b3ff3/9780316522892.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-phoenix-king/id6444399155",
+  "matched_title": "The Phoenix King",
+  "matched_authors": [
+   "Aparna Verma"
+  ]
+ },
+ "e9606276-75d0-4389-b986-99fd1a570e44": {
+  "title": "The Princess Bride: A Storybook to Color",
+  "status": "none"
+ },
+ "507c01f1-84b5-4f8a-9b37-16f98b539301": {
+  "title": "The Pumpkin Bride",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-pumpkin-bride/id6761471822",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/78/e2/e7/78e2e791-30f7-da2d-de44-a1556e7eb1cd/9780369786333.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-pumpkin-bride/id6761471822",
+  "matched_title": "The Pumpkin Bride",
+  "matched_authors": [
+   "Fiona Buttercup"
+  ]
+ },
+ "0a034b82-7562-4567-960b-901b69e4e838": {
+  "title": "The Quality Street Girls",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-quality-street-girls/id1384281879",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication123/v4/f0/9e/fc/f09efc5d-3d53-22a3-4cf7-fcfe5a7dd130/9780008307776.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-quality-street-girls/id1384281879",
+  "matched_title": "The Quality Street Girls",
+  "matched_authors": [
+   "Penny Thorpe"
+  ]
+ },
+ "18513737-7dea-4753-9b99-7db6a3dded09": {
+  "title": "The Rake, or the Orca Who Met His Match in a Selkie Desiring Revenge",
+  "status": "found",
+  "source": "https://books.apple.com/ca/audiobook/the-rake-or-the-orca-who-met-his-match-in-a/id1890056733",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/51/0b/e1510bcc-9351-4844-d35f-f80d3ea7c7d2/9781039474710.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/audiobook/the-rake-or-the-orca-who-met-his-match-in-a/id1890056733",
+  "matched_title": "The Rake, or the Orca Who Met His Match in a Selkie Desiring Revenge",
+  "matched_authors": [
+   "Kass O'Shire"
+  ]
+ },
+ "5da04c73-2a98-4f70-b03e-949962908676": {
+  "title": "The Raven and Other Favorite Poems",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/310875-M.jpg",
+  "page": "https://openlibrary.org/works/OL14938077W",
+  "matched_title": "The Raven and Other Favorite Poems [41 poems]",
+  "matched_authors": [
+   "Edgar Allan Poe"
+  ]
+ },
+ "059a6f03-ee05-40d5-a856-b4a1b62f3fd9": {
+  "title": "The Raven And The Reindeer",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-raven-and-the-reindeer/id1082536956",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication49/v4/50/e1/12/50e11207-47ea-4dc6-dd11-dc8434b25339/0000149525.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-raven-and-the-reindeer/id1082536956",
+  "matched_title": "The Raven And The Reindeer",
+  "matched_authors": [
+   "T. Kingfisher"
+  ]
+ },
+ "468f8823-4e1e-42c7-b941-98bae011546b": {
+  "title": "The Ride of Her Life",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/14801243-M.jpg",
+  "page": "https://openlibrary.org/works/OL37582637W",
+  "matched_title": "Ride of Her Life",
+  "matched_authors": [
+   "Jennifer Dugan"
+  ]
+ },
+ "1cfd98cb-b593-4da9-91aa-11cc09819536": {
+  "title": "The Roommate",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/10448537-M.jpg",
+  "page": "https://openlibrary.org/works/OL21676778W",
+  "matched_title": "Roommate",
+  "matched_authors": [
+   "Rosie Danan"
+  ]
+ },
+ "153a6c09-d716-42f0-8a03-35de654d7741": {
+  "title": "The Royally Series Collection",
+  "status": "none"
+ },
+ "354e8c00-e72e-4f0d-8691-98c8d0900506": {
+  "title": "The Stable Boy",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-stable-boy/id1482353430",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication123/v4/12/17/3d/12173d5a-a282-0656-4fdd-9b4db85d2cda/0000487885.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-stable-boy/id1482353430",
+  "matched_title": "The Stable Boy",
+  "matched_authors": [
+   "Megan Derr"
+  ]
+ },
+ "c962765c-f36a-42a7-8e59-efe93ebf91dd": {
+  "title": "The Stand-In",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/13860680-M.jpg",
+  "page": "https://openlibrary.org/works/OL26513423W",
+  "matched_title": "Stand-In",
+  "matched_authors": [
+   "Lily Chu"
+  ]
+ },
+ "4b8a2de2-4c02-4f4c-b1bc-c64de6e6f550": {
+  "title": "The Subtle Knife",
+  "status": "dropped",
+  "source": "https://books.apple.com/ca/book/the-subtle-knife-graphic-novel/id1574007914",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication115/v4/4b/f4/e9/4bf4e983-9c56-1764-a8d9-42babb05ba62/9780593176955.d.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-subtle-knife-graphic-novel/id1574007914",
+  "matched_title": "The Subtle Knife Graphic Novel",
+  "matched_authors": [
+   "Philip Pullman"
+  ],
+  "why": "loose match checked by Claude: wrong book or edition"
+ },
+ "639b4891-1500-4302-873d-1d949519cd9c": {
+  "title": "The Tarzan Series: Volumes 1-8 (Illustrated Edition)",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/tarzan-series/id6743080882",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/d1/75/61/d17561a2-4d37-3c8d-88d2-6afdee5b39f4/29333719-fe08-4d3c-8922-9654ac37abe1_cover_image.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/tarzan-series/id6743080882",
+  "matched_title": "Tarzan Series",
+  "matched_authors": [
+   "Edgar Rice Burroughs"
+  ]
+ },
+ "0c3bb989-d1e0-4eb7-80bb-72f6469ccb6f": {
+  "title": "The Tourist Attraction",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/12410163-M.jpg",
+  "page": "https://openlibrary.org/works/OL20757165W",
+  "matched_title": "Tourist Attraction",
+  "matched_authors": [
+   "Sarah Morgenthaler"
+  ]
+ },
+ "01801ecd-58c9-4052-90bc-d90d2f789c79": {
+  "title": "The Trouble with Dukes",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-trouble-with-dukes/id1099724131",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication128/v4/54/ed/81/54ed8105-b0e6-b4e8-7f0e-bc1a17992573/9781455569946.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-trouble-with-dukes/id1099724131",
+  "matched_title": "The Trouble with Dukes",
+  "matched_authors": [
+   "Grace Burrowes"
+  ]
+ },
+ "f071ed23-eb20-40d0-ba19-0cbf79ae5ce7": {
+  "title": "The True Story of the 3 Little Pigs!",
+  "status": "none"
+ },
+ "5a5cadd2-bad7-4e08-a193-882d3aab3248": {
+  "title": "The Uncommon Reader",
+  "status": "none"
+ },
+ "c7e4c9e8-3533-4e3e-bfc8-617b82ed0410": {
+  "title": "The Undercutting of Rosie and Adam",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-undercutting-of-rosie-and-adam/id6523420501",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/39/c0/ce/39c0cee4-aa3f-f470-dd20-5bf417b7b783/9780316568302.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-undercutting-of-rosie-and-adam/id6523420501",
+  "matched_title": "The Undercutting of Rosie and Adam",
+  "matched_authors": [
+   "Megan Bannen"
+  ]
+ },
+ "845b4ffe-3e24-4869-ab04-b4e733092615": {
+  "title": "The Undermining of Twyla and Frank",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/14673787-M.jpg",
+  "page": "https://openlibrary.org/works/OL37575286W",
+  "matched_title": "Undermining of Twyla and Frank",
+  "matched_authors": [
+   "Megan Bannen"
+  ]
+ },
+ "d089e145-d4f1-4313-a953-413a540696f1": {
+  "title": "The Unidentified Redhead",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-unidentified-redhead/id597497316",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication30/v4/e4/74/2f/e4742fa3-5237-a1b9-9e71-fb63565a579f/mzm.iqvqlblm.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-unidentified-redhead/id597497316",
+  "matched_title": "The Unidentified Redhead",
+  "matched_authors": [
+   "Alice Clayton"
+  ]
+ },
+ "2b3d2563-6f31-4e3a-8213-df2cffa69084": {
+  "title": "The Untamed Mackenzie",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-untamed-mackenzie/id582465369",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication6/v4/fd/2b/dc/fd2bdc32-6e85-cdf1-fee2-7ff05fb1c5e7/9781101615928.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-untamed-mackenzie/id582465369",
+  "matched_title": "The Untamed Mackenzie",
+  "matched_authors": [
+   "Jennifer Ashley"
+  ]
+ },
+ "d77f3e2f-336e-4d6a-90ce-a674adbc4bf6": {
+  "title": "The Velveteen Rabbit",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-velveteen-rabbit/id395686723",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication1/v4/fa/04/04/fa0404df-9190-2f78-1989-c9591d4357fd/coverArt.4c7820.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-velveteen-rabbit/id395686723",
+  "matched_title": "The Velveteen Rabbit",
+  "matched_authors": [
+   "Margery Williams"
+  ]
+ },
+ "f511edcf-4f58-4c0c-af48-57d8658bbeee": {
+  "title": "The Voyage of the Dawn Treader",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-voyage-of-the-dawn-treader/id790617884",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/89/a2/4e/89a24ef2-ce0d-263f-c67e-93b0357d6044/Voyage.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-voyage-of-the-dawn-treader/id790617884",
+  "matched_title": "The Voyage of the Dawn Treader",
+  "matched_authors": [
+   "C. S. Lewis"
+  ]
+ },
+ "aca814f4-b4c7-4f21-bc95-f4247c33893e": {
+  "title": "The Wars",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/the-wars/id1144327569",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/15/49/43/15494313-39af-fcc1-d7ce-8b5ef66e50bb/9780735233881.d.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/the-wars/id1144327569",
+  "matched_title": "The Wars",
+  "matched_authors": [
+   "Timothy Findley"
+  ]
+ },
+ "dc2c696b-a3b2-4ad8-81e5-2102bcde3c1d": {
+  "title": "Through the Looking-Glass",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/through-the-looking-glass/id392612116",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/e8/ea/6b/e8ea6b23-85bf-d827-5d7e-7494016b706e/ABC_Through_The_Looking_Glass.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/through-the-looking-glass/id392612116",
+  "matched_title": "Through the Looking-Glass",
+  "matched_authors": [
+   "Lewis Carroll"
+  ]
+ },
+ "48d33c7a-5141-4088-997c-27ffa6f2e909": {
+  "title": "Thrown for a Loop",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/thrown-for-a-loop/id6742734028",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/ae/8b/f9/ae8bf9f3-8294-76dd-ea2a-e86412638449/9781538772485.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/thrown-for-a-loop/id6742734028",
+  "matched_title": "Thrown for a Loop",
+  "matched_authors": [
+   "Sarina Bowen"
+  ]
+ },
+ "7c48e3c9-61e0-47e4-8af4-a3b84beae05b": {
+  "title": "Til Death Do Us Bard",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/til-death-do-us-bard/id6450669069",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/d3/c5/61/d3c56107-f20d-6dec-e66f-72178f6f4078/9781399724708.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/til-death-do-us-bard/id6450669069",
+  "matched_title": "Til Death Do Us Bard",
+  "matched_authors": [
+   "Rose Black"
+  ]
+ },
+ "12b62428-8674-4687-afb1-73cd8c41bb84": {
+  "title": "Triple-Duty Bodyguards",
+  "status": "found",
+  "source": "https://books.apple.com/ca/audiobook/triple-duty-bodyguards/id1794531197",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/90/6a/75/906a756d-7559-fa1e-fe3c-815f839247c3/9781039452428.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/audiobook/triple-duty-bodyguards/id1794531197",
+  "matched_title": "Triple-Duty Bodyguards",
+  "matched_authors": [
+   "Lily Gold"
+  ]
+ },
+ "9b19e616-e550-4781-bcc3-5c60131ef8c4": {
+  "title": "Unbound",
+  "status": "found",
+  "source": "https://books.apple.com/ca/audiobook/unbound/id1700300374",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e2/55/03/e25503be-795b-c0e1-3c87-55b8a4db9bb9/fyeb-square.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/audiobook/unbound/id1700300374",
+  "matched_title": "Unbound",
+  "matched_authors": [
+   "Christy Healy"
+  ]
+ },
+ "f1ad51c4-001a-45bb-bf0c-3de199daaaec": {
+  "title": "Unravelling Canada",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/unravelling-canada/id1560318232",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication114/v4/54/c5/87/54c58733-5522-a76e-22ba-132cd6b6ff11/9781771622875.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/unravelling-canada/id1560318232",
+  "matched_title": "Unravelling Canada",
+  "matched_authors": [
+   "Sylvia Olsen"
+  ]
+ },
+ "fa02e068-ef60-4cad-a593-5584e0b98f11": {
+  "title": "Unsettling Canada",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/unsettling-canada/id1017902895",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication1/v4/aa/01/d1/aa01d101-f83e-3eef-9b3a-0caba55680cf/9781771131773.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/unsettling-canada/id1017902895",
+  "matched_title": "Unsettling Canada",
+  "matched_authors": [
+   "Arthur Manuel & Grand Chief Grand Chief Ronald M. Derrickson"
+  ]
+ },
+ "b8b8f9e6-8d6a-4f1b-a861-3d646de8b44f": {
+  "title": "Until Death",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/until-death/id6751794051",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/5d/f0/7a/5df07adc-e6a1-bca8-c608-a58dc4523352/9780316597180.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/until-death/id6751794051",
+  "matched_title": "Until Death",
+  "matched_authors": [
+   "Mary Berman"
+  ]
+ },
+ "1f00c1b9-dbe0-4b0a-938c-48dcc929bcda": {
+  "title": "Until the Full Moon Vol. 1",
+  "status": "none"
+ },
+ "0b22a4fa-f420-464d-a686-66e202a14562": {
+  "title": "Vanity Fair",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/vanity-fair/id498914944",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication7/v4/55/4e/94/554e949e-3362-1eca-f319-cc42046b4d4b/coverArt.647c67.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/vanity-fair/id498914944",
+  "matched_title": "Vanity Fair",
+  "matched_authors": [
+   "William Makepeace Thackeray"
+  ]
+ },
+ "e43930db-ec67-4bc9-9ee9-377b5d025024": {
+  "title": "Vile Lady Villains",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/vile-lady-villains/id6751793751",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/0b/e4/d8/0be4d816-9175-f3f0-22c7-4cb009f1127e/9781454966616.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/vile-lady-villains/id6751793751",
+  "matched_title": "Vile Lady Villains",
+  "matched_authors": [
+   "Danai Christopoulou"
+  ]
+ },
+ "626db44b-159e-4a04-8a2e-61944651fb0c": {
+  "title": "Wait With Me",
+  "status": "none"
+ },
+ "0d01bcf0-2f3e-41c9-8921-ea31f793e442": {
+  "title": "War and Peace",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/15183543-M.jpg",
+  "page": "https://openlibrary.org/works/OL45017724W",
+  "matched_title": "War and Peace",
+  "matched_authors": [
+   "Leo Tolstoy"
+  ]
+ },
+ "22ac5fc4-42e3-483f-b9fa-3ce79d5ea3f6": {
+  "title": "We Hexed the Moon",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/we-hexed-the-moon/id6754252368",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/07/c5/8f/07c58f40-ce76-d71e-0048-eda346544515/9781668099247.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/we-hexed-the-moon/id6754252368",
+  "matched_title": "We Hexed the Moon",
+  "matched_authors": [
+   "Mollyhall Seeley"
+  ]
+ },
+ "3bcacd96-7f9e-43fa-a1b3-3a81c29e7efc": {
+  "title": "What the Hex",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/what-the-hex/id6443662590",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/50/20/84/5020846b-29d6-6132-4f67-5c5f42e6fe70/1053780050.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/what-the-hex/id6443662590",
+  "matched_title": "What the Hex",
+  "matched_authors": [
+   "Alexis Daria"
+  ]
+ },
+ "5362ece2-1514-4ba4-b42b-04dfda181c19": {
+  "title": "Wicked Passions",
+  "status": "none"
+ },
+ "6b9b993c-7149-415d-8607-0135769496e2": {
+  "title": "Wicked Pursuit",
+  "status": "found",
+  "source": "https://books.apple.com/ca/audiobook/wicked-pursuit/id1792425443",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8a/1a/49/8a1a497f-de6d-6798-18b7-48a55001da56/9798347700981.png/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/audiobook/wicked-pursuit/id1792425443",
+  "matched_title": "Wicked Pursuit",
+  "matched_authors": [
+   "Katee Robert"
+  ]
+ },
+ "2342df0a-6915-4a38-aaf9-a534b8c85f4a": {
+  "title": "Wild Irish Heart",
+  "status": "found",
+  "source": "openlibrary",
+  "url": "https://covers.openlibrary.org/b/id/13259916-M.jpg",
+  "page": "https://openlibrary.org/works/OL20008314W",
+  "matched_title": "Wild Irish heart",
+  "matched_authors": [
+   "Tricia O'Malley"
+  ]
+ },
+ "c2a6efcd-2688-438f-a20a-55e86486879a": {
+  "title": "Woman World",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/woman-world/id6807470766",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/d7/d1/fd/d7d1fda6-bbf7-e705-81b1-25aa84037611/9781770463813.d.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/woman-world/id6807470766",
+  "matched_title": "Woman World",
+  "matched_authors": [
+   "Aminder Dhaliwal"
+  ]
+ },
+ "07ec3c31-4989-4423-a61a-e96c8a49ccfc": {
+  "title": "Wuthering Heights",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/wuthering-heights/id395546348",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication113/v4/02/5b/cb/025bcbe1-afd5-71ee-5335-1e45f07c70e0/PD-Wuthering_Heights-Adj.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/wuthering-heights/id395546348",
+  "matched_title": "Wuthering Heights",
+  "matched_authors": [
+   "Emily Bronte"
+  ]
+ },
+ "d9e6edc3-68bc-45fa-a33b-c80cf43013bd": {
+  "title": "You Should Be So Lucky",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/you-should-be-so-lucky/id6461457288",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication116/v4/02/8e/c2/028ec2ea-0ba2-9c55-b836-5c65d12f2e76/9780063272811.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/you-should-be-so-lucky/id6461457288",
+  "matched_title": "You Should Be So Lucky",
+  "matched_authors": [
+   "Cat Sebastian"
+  ]
+ },
+ "9f8ce7ce-6ee6-4851-8010-6cc94e899eb7": {
+  "title": "Zero Lives Remaining",
+  "status": "found",
+  "source": "https://books.apple.com/ca/book/zero-lives-remaining/id6757379447",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/8e/0d/9f/8e0d9f4c-0af0-3f7c-29dc-418396c63b62/9781454967729.jpg/600x600bb.jpg",
+  "page": "https://books.apple.com/ca/book/zero-lives-remaining/id6757379447",
+  "matched_title": "Zero Lives Remaining",
+  "matched_authors": [
+   "Adam Cesare"
   ]
  }
 }

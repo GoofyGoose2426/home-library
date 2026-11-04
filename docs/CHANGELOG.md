@@ -8,7 +8,11 @@ What's been built, in plain language. Newest first.
 - **The small pink "I'm the..." item is removed.** It's from shelf photo Media (27), top shelf of the black bookcase. You checked it, and it's a notebook, not a book.
 - **Covers in quick edit.** The ✎ quick edit on the library list now starts with the cover: **This cover is right** for a best guess, and **Change cover** to take a photo or find another cover, without opening the book page.
 - **Cover buttons now sit right under the cover on the book page.** No more scrolling past the description. A best-guess cover also gets a **This cover is right** button: one tap confirms it. Books with several copies still have a cover button on each copy.
-- **A second cover search** (`scripts/covers/find_more_covers.py`) for the books still without a cover. It searches Open Library more loosely, then Apple Books, which covers ebooks, audiobooks and manga well. Title and author still both have to match, and a cover you removed is never suggested again. New covers arrive as best guesses (dashed) for you to keep or change.
+- **A second cover search** (`scripts/covers/find_more_covers.py`) for the 249 books without a cover. It searched Open Library more loosely, then Apple Books, which covers ebooks, audiobooks and manga well. Title and author both had to match.
+  - It found 214 matches. I checked every loose one and dropped 22 that were the wrong book or edition: a Nancy Drew "starter set" in place of 15 single volumes, a box set, a Spanish edition, and a graphic novel.
+  - **134 covers saved** as best guesses (dashed), for you to keep with **This cover is right** or change. Books with no cover went from 249 to 114.
+  - **57 more matches are held back.** You removed an earlier cover for each of those books, and the app never overwrites a choice you've made.
+  - Google Books wasn't used: its free daily lookups had run out.
 
 ## 2026-11-04 · Phase 2, step 8: wrap-up (Phase 2 done)
 

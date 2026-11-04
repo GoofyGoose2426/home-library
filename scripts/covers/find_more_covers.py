@@ -66,7 +66,7 @@ def author_ok(authors, names):
 
 def volume_ok(want, got):
     """'Ouran High School Host Club, Vol. 3' must find volume 3, not 1."""
-    m = re.search(r"\b(?:vol\.?|volume|book|#)\s*(\d+)", want, re.I)
+    m = re.search(r"(?:\bvol\.?|\bvolume|\bbook|#)\s*(\d+)", want, re.I)
     if not m:
         return True
     return bool(re.search(rf"(?:\bvol\.?|\bvolume|\bbook|#|\b)\s*0*{m.group(1)}\b", got, re.I))
@@ -143,14 +143,15 @@ def apply():
     cache = json.loads(CACHE.read_text())
     found = [(tid, v) for tid, v in cache.items() if v["status"] == "found"]
     rows = ",".join(f"({q(tid)}::uuid, {q(v['url'])}, {q(v['source'])})" for tid, v in found)
-    # She asked for suggestions for every book still without a cover, including
-    # ones whose first guess she removed; a removed image itself never returns
-    # (filtered out above). Her own photos and any cover now set are left alone.
+    # A cover she set or removed herself is hers: the database refuses to
+    # overwrite it (protect_alexandra_values), so those copies are skipped.
     print(sql(f"""
       with found(title_id, url, source) as (values {rows}),
       targets as (
         select c.id, f.url, f.source from copies c join found f on f.title_id = c.title_id
         where c.gone_at is null and c.cover_url is null and c.cover_path is null
+          and not exists (select 1 from field_sources s where s.entity_table = 'copies' and s.entity_id = c.id
+                          and s.field = 'cover_url' and s.source = 'alexandra')
       ),
       updated as (
         update copies c set cover_url = t.url, cover_confirmed = false
