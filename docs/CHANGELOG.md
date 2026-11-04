@@ -10,8 +10,8 @@ What's been built, in plain language. Newest first.
 - **Cover buttons now sit right under the cover on the book page.** No more scrolling past the description. A best-guess cover also gets a **This cover is right** button: one tap confirms it. Books with several copies still have a cover button on each copy.
 - **A second cover search** (`scripts/covers/find_more_covers.py`) for the 249 books without a cover. It searched Open Library more loosely, then Apple Books, which covers ebooks, audiobooks and manga well. Title and author both had to match.
   - It found 214 matches. I checked every loose one and dropped 22 that were the wrong book or edition: a Nancy Drew "starter set" in place of 15 single volumes, a box set, a Spanish edition, and a graphic novel.
-  - **134 covers saved** as best guesses (dashed), for you to keep with **This cover is right** or change. Books with no cover went from 249 to 114.
-  - **57 more matches are held back.** You removed an earlier cover for each of those books, and the app never overwrites a choice you've made.
+  - **134 covers saved** as best guesses (dashed), for you to keep with **This cover is right** or change. Books with no cover went from 249 to 114, then to 57 (below).
+  - **57 more added with your OK.** You'd removed an earlier cover for each of these books, so the app held them back at first. You asked for them too, so I lifted the "removed by you" mark on just those books and saved the new covers as best guesses. None is the same image you removed. Books with no cover are now down to 57.
   - Google Books wasn't used: its free daily lookups had run out.
 
 ## 2026-11-04 · Phase 2, step 8: wrap-up (Phase 2 done)
