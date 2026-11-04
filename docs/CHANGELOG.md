@@ -2,6 +2,18 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 03 (25 read authors)
+
+- **Found in their own words:**
+  - C. S. Pacat: Queer, Genderqueer, Bisexual, and "wog", an Australian minority-ethnic identity. All are from Pacat's own posts.
+  - Martha Wells: "non-neurotypical".
+  - Jay Kristoff: Australian.
+  - Grace Draven: Louisiana.
+  - Julia Quinn: Jewish.
+- **Nothing found:** the other 20 stay unknown. "Joss Whedon et al." is a group credit, so it isn't one person.
+- No new main characters from these descriptions.
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 02 (25 read authors)
 
 - Looked up the next 25 authors of books you've read, using the wider search.

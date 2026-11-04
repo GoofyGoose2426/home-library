@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {"name": "C. S. Pacat", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://twitter.com/cspacat/status/926729376690995200",
+       "quote": "Heya all, I'm out as queer, and genderqueer. I've been out for almost twenty years (since the 90s!)"},
+      {"category": "gender_identity", "value": "Genderqueer", "other": true, "url": "https://twitter.com/cspacat/status/926729376690995200",
+       "quote": "Heya all, I'm out as queer, and genderqueer. I've been out for almost twenty years (since the 90s!)"},
+      {"category": "lgbtqia", "value": "Bisexual", "url": "https://twitter.com/cspacat/status/770153811105030144",
+       "quote": "As for the influence on Captive Prince, I'm a bisexual wog, and Damen is a bisexual wog - so there's that"},
+      {"category": "race_ethnicity", "value": "Wog (Australian minority-ethnic identity)", "url": "https://web.archive.org/web/20170506145138/https://twitter.com/cspacat/status/770149563193708544",
+       "quote": "I'm a proud wog, though the Australian minority-ethnic identity \"wog\" can be difficult to explain to non-Australians"}
+    ]},
+    {"name": "Martha Wells", "values": [
+      {"category": "neurodivergence", "value": "Non-neurotypical", "other": true, "url": "https://culturalgutter.com/2025/05/11/i-didnt-know-how-non-neurotypical-i-was-until-murderbot-interview-with-martha-wells/",
+       "quote": "I didn’t know how non-neurotypical I was until Murderbot"}
+    ]},
+    {"name": "Jay Kristoff", "values": [
+      {"category": "nationality_region", "value": "Australian", "url": "https://thenerddaily.com/jay-kristoff-author-interview/",
+       "quote": "I’m 6’7, Australian, and I lie for a living."}
+    ]},
+    {"name": "Grace Draven", "values": [
+      {"category": "nationality_region", "value": "Louisiana", "url": "https://www.goodreads.com/author/show/2759153.Grace_Draven",
+       "quote": "I'm an author and Louisiana native living in Texas with my husband, three smalls and a big doofus dog."}
+    ]},
+    {"name": "Julia Quinn", "values": [
+      {"category": "race_ethnicity", "value": "Jewish", "url": "https://thejc.com/life/the-family-tragedy-that-haunts-the-jewish-creator-of-bridgerton-yx55nr5a",
+       "quote": "When I'd read a book and one of the characters would be Jewish, I'd be like, 'Oh, that's me.'"}
+    ]},
+    {"name": "Karen Marie Moning", "values": []},
+    {"name": "Tamora Pierce", "values": []},
+    {"name": "Abby Jimenez", "values": []},
+    {"name": "Hyouta Fujiyama", "values": []},
+    {"name": "Lyssa Kay Adams", "values": []},
+    {"name": "Nora Roberts", "values": []},
+    {"name": "A. N. Roquelaure", "values": []},
+    {"name": "Barbucci", "values": []},
+    {"name": "Cameron Dokey", "values": []},
+    {"name": "Canepa", "values": []},
+    {"name": "Elizabeth Hoyt", "values": []},
+    {"name": "Elle Kennedy", "values": []},
+    {"name": "Emma Ríos", "values": []},
+    {"name": "Hannah Grace", "values": []},
+    {"name": "Heather Fawcett", "values": []},
+    {"name": "Jane Lindskold", "values": []},
+    {"name": "Joss Whedon et al.", "values": []},
+    {"name": "Katee Robert", "values": []},
+    {"name": "Kelly Sue DeConnick", "values": []},
+    {"name": "Larissa Ione", "values": []}
+  ],
+  "characters": []
+}
