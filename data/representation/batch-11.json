@@ -1,0 +1,52 @@
+{
+  "authors": [
+    {"name": "Julie Murphy", "values": [
+      {"category": "lgbtqia", "value": "Bisexual", "url": "https://bi.org/famous/julie-murphy",
+       "quote": "I've always been bisexual or pansexual or queer or whatever label you want to put on it."}
+    ]},
+    {"name": "Kate Stayman-London", "values": [
+      {"category": "lgbtqia", "value": "Bisexual", "url": "https://www.penguinrandomhouse.com/books/567329/one-to-watch-by-kate-stayman-london/9780525510444/",
+       "quote": "Kate Stayman-London is a novelist, screenwriter, political strategist, and bisexual double Libra."}
+    ]},
+    {"name": "Jordan Peele", "values": [
+      {"category": "race_ethnicity", "value": "Black", "url": "https://defendernetwork.com/lead-story/deep-horror-racism-jordan-peele-explains-get-matters/",
+       "quote": "[It’s] my truth as a black man, my perspective that I haven’t seen in film before."},
+      {"category": "gender_identity", "value": "Man", "url": "https://defendernetwork.com/lead-story/deep-horror-racism-jordan-peele-explains-get-matters/",
+       "quote": "[It’s] my truth as a black man, my perspective that I haven’t seen in film before."}
+    ]},
+    {"name": "Jeph Loeb", "values": []},
+    {"name": "Jessica Thorne", "values": []},
+    {"name": "Jim Lee", "values": []},
+    {"name": "Joanna Lowell", "values": []},
+    {"name": "Joanna Shupe", "values": []},
+    {"name": "John Joseph Adams", "values": []},
+    {"name": "John Kotter", "values": []},
+    {"name": "John Warren Stewig", "values": []},
+    {"name": "Jon Cohen", "values": []},
+    {"name": "Jon Scieszka", "values": []},
+    {"name": "Jones et al.", "values": []},
+    {"name": "Kai Cheng Thom", "values": []},
+    {"name": "Karen Hawkins", "values": []},
+    {"name": "Keezy Young", "values": []},
+    {"name": "Kelley Armstrong", "values": []},
+    {"name": "Kelly Thompson", "values": []},
+    {"name": "Kerby Rosanes", "values": []},
+    {"name": "Kim Harrison", "values": []},
+    {"name": "KJ Charles", "values": []},
+    {"name": "Kristin Cashore", "values": []},
+    {"name": "L. Penelope", "values": []},
+    {"name": "Lane Smith", "values": []}
+  ],
+  "characters": [
+    {"title": "Fierce Femmes and Notorious Liars", "values": [
+      {"category": "lgbtqia", "value": "Trans", "character": "The narrator", "url": "https://openlibrary.org/works/OL19759667W",
+       "quote": "…a coming-of-age story about a young Asian trans girl, pathological liar, and kung-fu expert who runs away from her parents' abusive home…"},
+      {"category": "race_ethnicity", "value": "Asian", "character": "The narrator", "url": "https://openlibrary.org/works/OL19759667W",
+       "quote": "…a coming-of-age story about a young Asian trans girl, pathological liar, and kung-fu expert who runs away from her parents' abusive home…"}
+    ]},
+    {"title": "White Witch, Black Curse", "values": [
+      {"category": "lgbtqia", "value": "Bisexual", "character": "Ivy", "url": "https://openlibrary.org/works/OL5888098W",
+       "quote": "…she brings in her PI partners--Ivy, a bisexual vampire, and Jenks, a pixie in existential crisis…"}
+    ]}
+  ]
+}

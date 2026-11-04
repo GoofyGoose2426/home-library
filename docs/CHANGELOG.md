@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 11 (25 read authors)
+
+- **Found in their own words:** Julie Murphy (Bisexual), Kate Stayman-London (Bisexual, from her author bio) and Jordan Peele (Black, Man).
+- **Nothing found:** the other 22 stay unknown. "Jones et al." is a group credit.
+- **Main characters:**
+  - Fierce Femmes and Notorious Liars: the narrator is an Asian trans girl.
+  - White Witch, Black Curse: Ivy is bisexual.
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 10 (25 read authors)
 
 - **Found in their own words:** Gabrielle Zevin (half Jewish and half Korean) and Ijeoma Oluo (Black, Woman).
