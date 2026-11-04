@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 09 (25 read authors)
+
+- **Found in their own words:** Francesca Ekwuyasi (Gay, Nigerian).
+- **Nothing found:** the other 24 stay unknown. Catholic Bible Press and Disney aren't people.
+- **Main characters:** Butter Honey Pig Bread (queer love, from the description).
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 08 (25 read authors)
 
 - **Found in their own words:**
