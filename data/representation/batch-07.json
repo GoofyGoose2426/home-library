@@ -1,0 +1,59 @@
+{
+  "authors": [
+    {"name": "Becky Albertalli", "values": [
+      {"category": "lgbtqia", "value": "Bisexual", "url": "https://medium.com/@rebecca.albertalli/i-know-im-late-9b31de339c62",
+       "quote": "All of this is to say: I'm bi."}
+    ]},
+    {"name": "Becky Chambers", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://bullandbearmcgill.com/?p=48078",
+       "quote": "As a queer writer, I don’t know how I would write anything else."}
+    ]},
+    {"name": "C. L. Polk", "values": [
+      {"category": "gender_identity", "value": "Non-binary", "url": "https://web.archive.org/web/20210318230203/https://twitter.com/clpolk/status/1372684683704635396",
+       "quote": "I caucus with women, but I am nonbinary..."}
+    ]},
+    {"name": "Angie Thomas", "values": [
+      {"category": "race_ethnicity", "value": "Black", "url": "https://therumpus.net/2017/04/19/visible-women-writers-of-color-angie-thomas/",
+       "quote": "And here I was, a black girl in the ‘hood, in Mississippi."}
+    ]},
+    {"name": "Aminder Dhaliwal", "values": []},
+    {"name": "Amy Harmon", "values": []},
+    {"name": "André Alexis", "values": []},
+    {"name": "Anne Brontë", "values": []},
+    {"name": "Anne Gracie", "values": []},
+    {"name": "Anne McCaffrey", "values": []},
+    {"name": "Annette Curtis Klause", "values": []},
+    {"name": "Antoine de Saint-Exupéry", "values": []},
+    {"name": "Ashley Herring Blake", "values": []},
+    {"name": "Audrey Niffenegger", "values": []},
+    {"name": "Aveda Vice", "values": []},
+    {"name": "B.K. Borison", "values": []},
+    {"name": "Barbara Truelove", "values": []},
+    {"name": "Bec McMaster", "values": []},
+    {"name": "Benedict Freedman", "values": []},
+    {"name": "Bernardine Evaristo", "values": []},
+    {"name": "Bolu Babalola", "values": []},
+    {"name": "Box Brown", "values": []},
+    {"name": "Bram Stoker", "values": []},
+    {"name": "Brine", "values": []},
+    {"name": "C. L. Wilson", "values": []}
+  ],
+  "characters": [
+    {"title": "The Hate U Give", "values": [
+      {"category": "race_ethnicity", "value": "Black", "character": "Starr Carter", "url": "https://openlibrary.org/works/OL17714701W",
+       "quote": "The book is narrated by Starr Carter, a 16-year-old black girl from a poor neighborhood who attends an elite private school…"}
+    ]},
+    {"title": "Girl, Woman, Other", "values": [
+      {"category": "race_ethnicity", "value": "Black British", "url": "https://openlibrary.org/works/OL20470196W",
+       "quote": "Mostly women, black and British, they tell the stories of their families, friends and lovers, across the country and through the years."}
+    ]},
+    {"title": "Imogen, Obviously", "values": [
+      {"category": "lgbtqia", "value": "Queer", "character": "Lili", "url": "https://openlibrary.org/works/OL29329345W",
+       "quote": "And then there's Lili—newly out and newly thriving with a cool new squad of queer college friends."}
+    ]},
+    {"title": "Delilah Green Doesn't Care", "values": [
+      {"category": "lgbtqia", "value": "Sapphic", "other": true, "character": "Delilah", "url": "https://openlibrary.org/works/OL25917284W",
+       "quote": "Sure, it’s a different woman every night, but that’s just fine with her."}
+    ]}
+  ]
+}

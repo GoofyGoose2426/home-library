@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 07 (25 read authors)
+
+- **Found in their own words:** Becky Albertalli (Bisexual), Becky Chambers (Queer), C. L. Polk (Non-binary) and Angie Thomas (Black).
+- **Nothing found:** the other 21 stay unknown.
+- **Main characters:**
+  - The Hate U Give: Starr is Black, so it gets an own-voices suggestion.
+  - Girl, Woman, Other: Black British characters.
+  - Imogen, Obviously: Lili is queer.
+  - Delilah Green Doesn't Care: Delilah is sapphic.
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 06 (25 read authors)
 
 - **Found in their own words:**
