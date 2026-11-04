@@ -1,0 +1,61 @@
+{
+  "authors": [
+    {"name": "Casey McQuiston", "values": [
+      {"category": "gender_identity", "value": "Non-binary", "url": "https://ca.rollingstone.com/culture/the-summers-best-romance-novel-is-about-slutty-bisexuals-in-love/",
+       "quote": "So much of being somebody who identifies as nonbinary, as this thing people don’t believe exists or cannot conceptualize"},
+      {"category": "lgbtqia", "value": "Queer", "url": "https://www.understood.org/en/podcasts/adhd-aha/casey-mcquiston-adhd-aha-podcast",
+       "quote": "there are a lot of things that directly relate to my, like, queer and trans identities."},
+      {"category": "lgbtqia", "value": "Trans", "url": "https://www.understood.org/en/podcasts/adhd-aha/casey-mcquiston-adhd-aha-podcast",
+       "quote": "there are a lot of things that directly relate to my, like, queer and trans identities."},
+      {"category": "neurodivergence", "value": "ADHD", "url": "https://www.understood.org/en/podcasts/adhd-aha/casey-mcquiston-adhd-aha-podcast",
+       "quote": "I was diagnosed in first grade and immediately was medicated from an early age."}
+    ]},
+    {"name": "Chloe Liese", "values": [
+      {"category": "neurodivergence", "value": "Neurodivergent", "other": true, "url": "https://jeanbooknerd.com/2022/11/chloe-liese-interview-two-wrongs-make.html",
+       "quote": "As someone who is neurodivergent and who lives with chronic conditions,"},
+      {"category": "disability", "value": "Chronic conditions", "url": "https://jeanbooknerd.com/2022/11/chloe-liese-interview-two-wrongs-make.html",
+       "quote": "As someone who is neurodivergent and who lives with chronic conditions,"}
+    ]},
+    {"name": "Lily Chu", "values": [
+      {"category": "race_ethnicity", "value": "Biracial", "url": "https://deborahkalbbooks.blogspot.com/2022/05/q-with-lily-chu.html",
+       "quote": "I already knew that there weren't a ton of biracial characters in books, but I realized that I'd become so used to it that I didn't even expect to see people like me in stories."}
+    ]},
+    {"name": "Deanne Fitzpatrick", "values": [
+      {"category": "gender_identity", "value": "Woman", "url": "https://hookingrugs.com/pages/deannes-story-3",
+       "quote": "I am a woman who lives on seven acres in an old farm house with wooden clapboard that is lifting in the wind."},
+      {"category": "nationality_region", "value": "Newfoundland", "url": "https://hookingrugs.com/pages/deannes-story-3",
+       "quote": "I grew up in Freshwater, Placentia Bay, Newfoundland, the youngest of seven children."}
+    ]},
+    {"name": "Marie Rutkoski", "values": []},
+    {"name": "Mary E. Pearson", "values": []},
+    {"name": "Maya Banks", "values": []},
+    {"name": "Megan Derr", "values": []},
+    {"name": "Myke Cole", "values": []},
+    {"name": "Philip Pullman", "values": []},
+    {"name": "Alexis Hall", "values": []},
+    {"name": "Alice Clayton", "values": []},
+    {"name": "Alyssa Cole", "values": []},
+    {"name": "Amanda Bouchet", "values": []},
+    {"name": "Amanda Lovelace", "values": []},
+    {"name": "Amanda Quick", "values": []},
+    {"name": "Arthur Conan Doyle", "values": []},
+    {"name": "Ben Templesmith", "values": []},
+    {"name": "Brynne Weaver", "values": []},
+    {"name": "Charlie Adhara", "values": []},
+    {"name": "Chris Van Allsburg", "values": []},
+    {"name": "Debbie Viguié", "values": []},
+    {"name": "Douglas Wood", "values": []},
+    {"name": "Edgar Rice Burroughs", "values": []},
+    {"name": "Emma Chase", "values": []}
+  ],
+  "characters": [
+    {"title": "Boyfriend Material", "values": [
+      {"category": "lgbtqia", "value": "Gay", "character": "Luc and Oliver", "url": "https://openlibrary.org/works/OL20840329W",
+       "quote": "Unfortunately apart from being gay, single, and really, really in need of a date for a big event, Luc and Oliver have nothing in common."}
+    ]},
+    {"title": "A Lady for a Duke", "values": [
+      {"category": "lgbtqia", "value": "Queer", "url": "https://openlibrary.org/works/OL26597291W",
+       "quote": "…a lush, sweeping queer historical romance where sparks fly between childhood friends after a life-changing separation…"}
+    ]}
+  ]
+}

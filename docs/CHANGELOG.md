@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 04 (25 read authors)
+
+- **Found in their own words:**
+  - Casey McQuiston: Non-binary, Queer, Trans, ADHD.
+  - Chloe Liese: Neurodivergent, Chronic conditions.
+  - Lily Chu: Biracial.
+  - Deanne Fitzpatrick: Woman, Newfoundland.
+- **Nothing found:** the other 21 stay unknown.
+- **Main characters:** Boyfriend Material (Luc and Oliver are gay) and A Lady for a Duke (a queer romance).
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 03 (25 read authors)
 
 - **Found in their own words:**
