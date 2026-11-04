@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Author lookups, batch 05 (25 read authors)
+
+- **Found in their own words:** Rupi Kaur (Punjabi Sikh, Woman) and Robin McKinley (ME, from her own blog).
+- **Nothing found:** the other 23 stay unknown. Erin Sterling is Rachel Hawkins' pen name.
+- No new main characters from these descriptions.
+- All are waiting in To check.
+
 ## 2026-11-04 · Author lookups, batch 04 (25 read authors)
 
 - **Found in their own words:**

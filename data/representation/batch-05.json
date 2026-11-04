@@ -1,0 +1,38 @@
+{
+  "authors": [
+    {"name": "Rupi Kaur", "values": [
+      {"category": "race_ethnicity", "value": "Punjabi Sikh", "url": "https://www.dnaindia.com/just-before-monday/interview-tumblr-trauma-and-the-world-of-rupi-kaur-2577017",
+       "quote": "Which is what I am as an immigrant — a diasporic Punjabi Sikh woman."},
+      {"category": "gender_identity", "value": "Woman", "url": "https://www.dnaindia.com/just-before-monday/interview-tumblr-trauma-and-the-world-of-rupi-kaur-2577017",
+       "quote": "Which is what I am as an immigrant — a diasporic Punjabi Sikh woman."}
+    ]},
+    {"name": "Robin McKinley", "values": [
+      {"category": "disability", "value": "ME (myalgic encephalomyelitis)", "url": "https://robinmckinleysblog.com/hiding-from-reality/",
+       "quote": "The ME has been more-than-usually bad since the end of last September."}
+    ]},
+    {"name": "Erin Sterling", "values": []},
+    {"name": "Everina Maxwell", "values": []},
+    {"name": "Frances Hodgson Burnett", "values": []},
+    {"name": "Frank Miller", "values": []},
+    {"name": "Hannah Nicole Maehrer", "values": []},
+    {"name": "J.R.R. Tolkien", "values": []},
+    {"name": "James Patterson", "values": []},
+    {"name": "Kerrigan Byrne", "values": []},
+    {"name": "L.H. Cosway", "values": []},
+    {"name": "Lewis Carroll", "values": []},
+    {"name": "Mariana Zapata", "values": []},
+    {"name": "Mark Helprin", "values": []},
+    {"name": "Megan Bannen", "values": []},
+    {"name": "Mindee Arnett", "values": []},
+    {"name": "Navessa Allen", "values": []},
+    {"name": "Neil Gaiman", "values": []},
+    {"name": "Nicola Davidson", "values": []},
+    {"name": "R. Cooper", "values": []},
+    {"name": "Rebecca Ross", "values": []},
+    {"name": "Rebecca Thorne", "values": []},
+    {"name": "Robyn Carr", "values": []},
+    {"name": "Sangu Mandanna", "values": []},
+    {"name": "Sarah Morgenthaler", "values": []}
+  ],
+  "characters": []
+}
