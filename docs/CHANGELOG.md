@@ -11,6 +11,7 @@ What's been built, in plain language. Newest first.
 - **Claude cost:** $0 against an estimate of $20–40 plus a few dollars a month, because the work ran in our sessions.
 - **The build plan is updated:** Phase 2 is marked done, with what changed from the original plan and what's still open.
 - The review is in `docs/phase-2-review.md`.
+- Deleted the leftover author "Fitzpatrick", who had no books (your OK).
 
 ## 2026-11-04 · Phase 2, step 7: add a book, smarter
 
