@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-04 · Two unnamed books, covers under the cover, a second cover search
+
+- **"romance, far left, blurry" is deleted.** It was a duplicate. Shelf photo Media (19) is blurry, but Media (20) shows the same shelf in focus: that spine is *Honor's Splendour* (Julie Garwood), next to *Outlander*, and both are already in the library.
+- **The small pink "I'm the..." book is now *It's on Me* by Sara Kuburic** (shelf photo Media (27), top shelf of the black bookcase). Its UK/Canadian edition has "I'M THE PROBLEM, IT'S ME." in big type on a hot-pink cover. It's still flagged as a guess until you check the spine. A Nonfiction / Self-help suggestion is in To check.
+- **Cover buttons now sit right under the cover on the book page.** No more scrolling past the description. A best-guess cover also gets a **This cover is right** button: one tap confirms it. Books with several copies still have a cover button on each copy.
+- **A second cover search** (`scripts/covers/find_more_covers.py`) for the books still without a cover. It searches Open Library more loosely, then Apple Books, which covers ebooks, audiobooks and manga well. Title and author still both have to match, and a cover you removed is never suggested again. New covers arrive as best guesses (dashed) for you to keep or change.
+
 ## 2026-11-04 · Phase 2, step 8: wrap-up (Phase 2 done)
 
 - **28 more books classified.** These are the books in "Not classified yet". Most are ones the first pass couldn't identify, and a web search found them. They're in To check as Claude suggestions. 6 are left on purpose (listed in `docs/phase-2-review.md`).
