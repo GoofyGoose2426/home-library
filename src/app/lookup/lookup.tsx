@@ -218,8 +218,8 @@ function SeriesCard({ status: s }: { status: SeriesStatus }) {
         </p>
       )}
       <p className="mt-2 text-xs text-muted">
-        Gaps are counted up to the highest number {w.ownLower}. Later volumes show once series details are filled in
-        (Phase 2).
+        Gaps are counted up to the highest number {w.ownLower}. Volumes after that aren&apos;t known
+        yet.
       </p>
     </section>
   );

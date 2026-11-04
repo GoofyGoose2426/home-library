@@ -4,7 +4,8 @@ What's been built, in plain language. Newest first.
 
 ## 2026-11-04 · Phase 2, step 8: wrap-up (Phase 2 done)
 
-- **27 more books classified.** These are the books in "Not classified yet". Most are ones the first pass couldn't identify, and a web search found them. They're in To check as Claude suggestions. 7 are left on purpose (listed in `docs/phase-2-review.md`).
+- **28 more books classified.** These are the books in "Not classified yet". Most are ones the first pass couldn't identify, and a web search found them. They're in To check as Claude suggestions. 6 are left on purpose (listed in `docs/phase-2-review.md`).
+- **Screen tour, signed in, at phone size in light and dark mode:** library and filters, book page, author page, To check, Fill in and Add a book. Three notes were out of date and are fixed. The book page now says whether dashed values are Claude's suggestions or from your shelf photos. The two series notes no longer promise "missing volumes after Phase 2", which Phase 2 didn't add.
 - **Tested on a throwaway database.** I built a brand-new practice database on my computer from every database change and ran 34 checks. They cover privacy, the view-only link, your edits always winning, and no duplicate authors. All pass. The tests are saved in `scripts/db-tests/` so they can be re-run after any future change.
 - **Checked the real library without changing anything.** No orphaned records and no duplicate authors. The code builds cleanly.
 - **Claude cost:** $0 against an estimate of $20–40 plus a few dollars a month, because the work ran in our sessions.

@@ -308,7 +308,7 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
               </li>
             ))}
           </ol>
-          <p className="mt-2 text-xs text-muted">Missing volumes show up once series details are filled in (Phase 2).</p>
+          <p className="mt-2 text-xs text-muted">Gaps in the numbering show in Do I own it?</p>
         </Section>
       )}
 
@@ -486,7 +486,10 @@ function Classification({ book, readOnly }: { book: Book; readOnly: boolean }) {
   if (book.spice) rows.push(["Spice", labelOf(SPICE, book.spice as Spice)]);
   if (book.storyFocus) rows.push(["Story focus", labelOf(STORY_FOCUS, book.storyFocus as StoryFocus)]);
   const rough = book.tags.filter((t) => t.kind === "rough_genre");
-  const unconfirmed = book.tags.some((t) => t.kind !== "rough_genre" && !t.confirmed);
+  const pending = book.tags.filter((t) => t.kind !== "rough_genre" && !t.confirmed);
+  const unconfirmed = pending.length > 0;
+  const fromClaude = pending.some((t) => t.source === "claude");
+  const fromPhotos = pending.some((t) => t.source !== "claude");
 
   if (!rows.length && (!rough.length || readOnly)) return <p className="text-sm text-muted">Nothing set yet.</p>;
   return (
@@ -502,7 +505,10 @@ function Classification({ book, readOnly }: { book: Book; readOnly: boolean }) {
         </dl>
       )}
       {unconfirmed && !readOnly && (
-        <p className="mt-2 text-xs text-muted">Dashed values came from your shelf photos and aren&apos;t confirmed yet. Saving the classification confirms them.</p>
+        <p className="mt-2 text-xs text-muted">
+          Dashed values are {fromClaude && fromPhotos ? "Claude's suggestions or from your shelf photos" : fromClaude ? "Claude's suggestions" : "from your shelf photos"} and
+          aren&apos;t confirmed yet. Check them in To check, or save the classification to confirm them.
+        </p>
       )}
       {rough.length > 0 && !readOnly && (
         <p className="mt-2 text-xs text-muted">

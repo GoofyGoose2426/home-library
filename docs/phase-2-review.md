@@ -45,21 +45,33 @@ The work ran in Claude Code sessions under your existing Claude plan ("Option A"
 
 ## Classified today
 
-The last 27 books with no genre now have Claude suggestions waiting in **To check** (102 list values, plus audience, vibe and the like). Most were books the first pass couldn't identify; a web search found them. 7 are left, because I couldn't classify them honestly:
+The last 28 books with no genre now have Claude suggestions waiting in **To check**. Most were books the first pass couldn't identify; a web search found them (*Drag Me Up* turned up during the screen tour, from its cover). 6 are left, because I couldn't classify them honestly:
 
 - *Old Turtle*, *Old Turtle: Questions of the Heart*, *The Giving Tree*, *Guess How Much I Love You* (fable-style picture books that don't fit a genre on your list)
 - *Coat of Many Colors* (the song as a picture book)
-- *The Goat in the Bedroom* (Amy Award) and *Drag Me Up* (RM Virtues): I couldn't find these books online. Worth checking the title and author.
+- *The Goat in the Bedroom* (Amy Award): I couldn't find it online. Worth checking the title and author.
 
 The "Not classified yet" filter finds them. Picture books stay out of stats either way.
 
 ## Screens
 
-Every Phase 2 screen was checked at phone size (390px) in light and dark mode as it was built (steps 2–7). The final tour of the live app, signed in, is in progress (see below).
+Toured live, signed in, at phone size (390px) in light and dark mode (2026-11-04):
+- library
+- filters, including "Not classified yet" (6 books)
+- a book page (classification and representation)
+- an author page (TJ Klune, with quotes and links)
+- To check
+- Fill in
+- Add a book
+
+Everything lays out and reads well in both modes. Three notes were out of date and are fixed:
+- The book page said dashed values "came from your shelf photos". It now says when they're Claude's suggestions.
+- The book page and Do I own it? both said later series volumes would appear "after Phase 2". Phase 2 didn't add that, because Open Library doesn't say how many books a series has. The notes are reworded, and it's on the open list.
 
 ## Worth knowing
 
 1. **One author has no books:** "Fitzpatrick", left over from the first import. Nothing shows them, but I can delete the entry if you'd like.
 2. **3 books are still flagged Needs review** from the shelf photos.
+5. **Still in To check:** most of the author identity (66) and character (20) values from the lookups aren't confirmed yet. Confirm them whenever you like.
 3. **Supabase access token** (what lets me run the session scripts) expires around 22 November. I'll walk you through renewing it.
 4. **The view-only link's secret on my computer doesn't match the one in Vercel.** Nothing is broken: your link works and is safe. It only means I can't open your shared view from here, which is fine.

@@ -217,10 +217,11 @@ Fable's warmth with StoryGraph's information.
 
 - [ ] Resolve the seed entries marked `needs_check` (3 left as of 2026-11-04; the Needs review filter finds them)
 - [x] Approve the starter subgenre and trope lists (2026-10-28)
-- [ ] 7 books Claude couldn't classify honestly (four fable-style picture books, *Coat of Many Colors*, and two titles not found online); the "Not classified yet" filter finds them
+- [ ] 6 books Claude couldn't classify honestly (four fable-style picture books, *Coat of Many Colors*, and *The Goat in the Bedroom*, not found online); the "Not classified yet" filter finds them
 - [ ] Look up authors of unread books (only when Alexandra asks)
 - [ ] Renew the Supabase access token used by the session scripts (expires around 2026-11-22)
 - [ ] Phase 3: decide on the in-app Claude API, with a cost estimate first
+- [ ] Series lengths: the app knows only the volumes she owns, so gaps after the highest one aren't shown. Needs a source for how many books a series has
 - [x] Kobo, Audible and Libro.fm books imported from app screenshots (Phase 1)
 - [x] Confirm whether children's/YA novels (e.g. Harry Potter) stay in read/unread stats (only picture books are excluded). Decided 2026-10-23: yes, they stay in stats.
 - [x] Split manga runs (Bastard!!, Mars, Ouran) into one entry per volume (done on import)
