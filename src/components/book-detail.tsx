@@ -4,6 +4,7 @@ import { BookCover } from "@/components/book-cover";
 import { ConfirmCover, CoverPicker } from "@/components/cover-picker";
 import { NeedsReview } from "@/components/needs-review";
 import { BookReviewEditor, BookReviewView } from "@/components/book-review";
+import { BookContents } from "@/components/book-contents";
 import { ClassificationEditor } from "@/components/classification-editor";
 import { EditDetails } from "@/components/edit-details";
 import { MergeEntry } from "@/components/merge-entry";
@@ -252,14 +253,14 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
         const romance = book.romanticSubplot === true || book.tags.some((t) => t.kind === "genre" && t.name.toLowerCase() === "romance");
         if (readOnly) {
           return hasReview ? (
-            <Section title="Alexandra's review">
+            <Section title={book.pieces.length ? "Alexandra's overall review" : "Alexandra's review"}>
               <BookReviewView review={r} />
             </Section>
           ) : null;
         }
         return (
           <section id="review" className="mt-8 scroll-mt-4">
-            <h2 className="mb-3 font-serif text-xl font-semibold">Review</h2>
+            <h2 className="mb-3 font-serif text-xl font-semibold">{book.pieces.length ? "Overall review" : "Review"}</h2>
             <BookReviewEditor
               titleId={book.id}
               review={r}
@@ -270,6 +271,12 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
           </section>
         );
       })()}
+
+      {(book.pieces.length > 0 || (!readOnly && !["picture_book", "manga", "graphic_novel"].includes(book.bookType))) && (
+        <Section title="Contents">
+          <BookContents key={book.pieces.map((p) => p.id).join(",")} titleId={book.id} pieces={book.pieces} readOnly={readOnly} />
+        </Section>
+      )}
 
       <Section
         title={

@@ -244,13 +244,21 @@ export async function setPieceRead(pieceId: string, isRead: boolean) {
     .maybeSingle();
   if (error) throw new Error(error.message);
   check(!!piece, "That piece wasn't found.");
-  const { data: all, error: allError } = await supabase.from("pieces").select("is_read").eq("title_id", piece!.title_id);
-  if (allError) throw new Error(allError.message);
-  const done = (all ?? []).filter((p) => p.is_read).length;
-  const status = done === 0 ? "unread" : done === (all ?? []).length ? "read" : "partly_read";
-  await must(supabase.from("titles").update({ read_status: status }).eq("id", piece!.title_id));
-  await markMine(supabase, "titles", [piece!.title_id], "read_status");
+  const status = await recountPieces(supabase, piece!.title_id);
   refresh(piece!.title_id);
+  return status;
+}
+
+// A collection's status follows its ticked pieces. With no pieces left, the
+// status stays as it was.
+async function recountPieces(supabase: SupabaseClient, titleId: string) {
+  const { data: all, error } = await supabase.from("pieces").select("is_read").eq("title_id", titleId);
+  if (error) throw new Error(error.message);
+  if (!all?.length) return null;
+  const done = all.filter((p) => p.is_read).length;
+  const status = done === 0 ? "unread" : done === all.length ? "read" : "partly_read";
+  await must(supabase.from("titles").update({ read_status: status }).eq("id", titleId));
+  await markMine(supabase, "titles", [titleId], "read_status");
   return status;
 }
 
@@ -803,6 +811,98 @@ export async function setTitleReview(titleId: string, patch: TitleReviewPatch): 
       await markMine(supabase, "titles", [titleId], "spice");
     }
     refresh(titleId);
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// A collection's contents: stories, essays and poems, each with its own
+// author(s) and an optional short review. The collection's own review is the
+// book's Review section.
+
+const PIECE_KINDS = ["story", "essay", "poem", "other"] as const;
+export type PieceInput = { title: string; kind: (typeof PIECE_KINDS)[number]; authors: string[] };
+
+export async function addPieces(titleId: string, pieces: PieceInput[]): Promise<Result> {
+  try {
+    check(
+      UUID.test(titleId) &&
+        Array.isArray(pieces) && pieces.length > 0 && pieces.length <= 300 &&
+        pieces.every(
+          (p) =>
+            typeof p.title === "string" && p.title.trim().length > 0 && p.title.length <= 500 &&
+            PIECE_KINDS.includes(p.kind) &&
+            Array.isArray(p.authors) && p.authors.length <= 10 &&
+            p.authors.every((a) => typeof a === "string" && a.trim().length > 0 && a.length <= 200),
+        ),
+      "Check the contents: each line needs a title.",
+    );
+    const { supabase } = await ownerClient();
+    const { data: title, error } = await supabase.from("titles").select("read_status").eq("id", titleId).maybeSingle();
+    if (error) throw new Error(error.message);
+    check(!!title, "That book wasn't found.");
+    const { data: last } = await supabase.from("pieces").select("position").eq("title_id", titleId).order("position", { ascending: false }).limit(1);
+    const start = (last?.[0]?.position ?? 0) + 1;
+    // A book already marked Read was read cover to cover, so its pieces start ticked.
+    const isRead = title!.read_status === "read";
+    const { data: rows, error: insertError } = await supabase
+      .from("pieces")
+      .insert(pieces.map((p, i) => ({ title_id: titleId, position: start + i, piece_title: p.title.trim(), kind: p.kind, is_read: isRead })))
+      .select("id, position");
+    if (insertError) throw new Error(insertError.message);
+    const credits = [];
+    for (const row of rows ?? []) {
+      const piece = pieces[row.position - start];
+      for (const [i, name] of piece.authors.entries()) {
+        const { data: personId, error: personError } = await supabase.rpc("find_or_add_person", { p_name: name.trim() });
+        if (personError) throw new Error(personError.message);
+        credits.push({ piece_id: row.id, person_id: personId, role: "author", position: i + 1 });
+      }
+    }
+    if (credits.length) await must(supabase.from("credits").insert(credits));
+    await recountPieces(supabase, titleId);
+    refresh(titleId);
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't add those." };
+  }
+}
+
+export async function removePiece(pieceId: string): Promise<Result> {
+  try {
+    check(UUID.test(pieceId));
+    const { supabase } = await ownerClient();
+    const { data, error } = await supabase.from("pieces").delete().eq("id", pieceId).select("title_id").maybeSingle();
+    if (error) throw new Error(error.message);
+    check(!!data, "That piece wasn't found.");
+    await recountPieces(supabase, data!.title_id);
+    refresh(data!.title_id);
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't remove that." };
+  }
+}
+
+export async function setPieceReview(pieceId: string, patch: { rating?: number | null; body?: string | null }): Promise<Result> {
+  try {
+    check(
+      UUID.test(pieceId) &&
+        (patch.rating === undefined || patch.rating === null || isQuarterStar(patch.rating)) &&
+        (patch.body == null || (typeof patch.body === "string" && patch.body.length <= 10000)),
+    );
+    const { supabase } = await ownerClient();
+    const { data: piece, error } = await supabase.from("pieces").select("title_id").eq("id", pieceId).maybeSingle();
+    if (error) throw new Error(error.message);
+    check(!!piece, "That piece wasn't found.");
+    const row: Record<string, unknown> = {};
+    if (patch.rating !== undefined) row.rating = patch.rating;
+    if (patch.body !== undefined) row.body = patch.body?.trim() || null;
+    const { data: existing } = await supabase.from("reviews").select("id").eq("piece_id", pieceId).maybeSingle();
+    if (existing) await must(supabase.from("reviews").update(row).eq("id", existing.id));
+    else await must(supabase.from("reviews").insert({ piece_id: pieceId, ...row }));
+    refresh(piece!.title_id);
     return { ok: true };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };

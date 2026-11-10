@@ -84,7 +84,8 @@ export type Book = {
   recommendation: Recommendation | null;
   // Her written review (Phase 3). Stars, writing and recommendation are above.
   review: TitleReview;
-  pieces: { id: string; title: string; kind: string; isRead: boolean }[];
+  // A collection's contents, in order, each with its own optional review.
+  pieces: { id: string; title: string; kind: string; isRead: boolean; authors: string[]; rating: number | null; note: string | null }[];
   // Every list value on the book (genres, subgenres, tropes…), with its source.
   tags: { id: string; name: string; kind: TagKind; source: string; confirmed: boolean }[];
   audience: Audience | null;
@@ -151,7 +152,7 @@ export async function loadBook(
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
        reviews(rating, writing_quality, recommendation, body, broke_my_brain, mood_reactions, would_reread, favourite_quote, confirmed_spice),
-       pieces(id, position, piece_title, kind, is_read),
+       pieces(id, position, piece_title, kind, is_read, credits(position, people(name)), reviews(rating, body)),
        credits(role, position, people(id, name, identity_checked_at, author_identities(category, value, confirmed))),
        character_representations(id, category, value, character_name, source, source_url, quote, confirmed),
        title_tags(source, confirmed, tags(id, kind, name)),
@@ -338,9 +339,27 @@ export async function loadBook(
       favouriteQuote: review?.favourite_quote ?? null,
       confirmedSpice: review?.confirmed_spice ?? null,
     },
-    pieces: (t.pieces as unknown as { id: string; position: number; piece_title: string; kind: string; is_read: boolean }[])
+    pieces: (
+      t.pieces as unknown as {
+        id: string;
+        position: number;
+        piece_title: string;
+        kind: string;
+        is_read: boolean;
+        credits: { position: number; people: Person }[];
+        reviews: { rating: number | null; body: string | null }[];
+      }[]
+    )
       .sort((a, b) => a.position - b.position)
-      .map((p) => ({ id: p.id, title: p.piece_title, kind: p.kind, isRead: p.is_read })),
+      .map((p) => ({
+        id: p.id,
+        title: p.piece_title,
+        kind: p.kind,
+        isRead: p.is_read,
+        authors: p.credits.sort((a, b) => a.position - b.position).flatMap((c) => (c.people ? [c.people.name] : [])),
+        rating: p.reviews[0]?.rating != null ? Number(p.reviews[0].rating) : null,
+        note: p.reviews[0]?.body ?? null,
+      })),
     tags: (t.title_tags as unknown as { source: string; confirmed: boolean; tags: { id: string; kind: TagKind; name: string } | null }[])
       .flatMap((tt) => (tt.tags ? [{ ...tt.tags, source: tt.source, confirmed: tt.confirmed }] : [])),
     audience: t.audience,
