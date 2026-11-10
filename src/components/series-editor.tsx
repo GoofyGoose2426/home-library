@@ -79,7 +79,7 @@ export function NewSeries() {
 export function SeriesFilter({
   series,
 }: {
-  series: { id: string; name: string; owned: number; read: number; authors: string[] }[];
+  series: { id: string; name: string; owned: number; read: number; authors: string[]; rating: number | null }[];
 }) {
   const [q, setQ] = useState("");
   const words = fold(q).split(/\s+/).filter(Boolean);
@@ -105,6 +105,7 @@ export function SeriesFilter({
               <span className="shrink-0 text-xs text-muted">
                 {s.owned} {s.owned === 1 ? "book" : "books"}
                 {s.owned > 0 && ` · ${s.read} read`}
+                {s.rating != null && <span className="block text-accent">★ {s.rating.toFixed(2)}</span>}
               </span>
             </Link>
           </li>

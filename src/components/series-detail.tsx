@@ -6,6 +6,8 @@ import {
   SeriesSettings,
   VolumeEdit,
 } from "@/components/series-editor";
+import { SeriesReviewEditor, SeriesReviewView } from "@/components/series-review";
+import { STARS, find, starText } from "@/lib/ratings";
 import { copyList } from "@/lib/copy-labels";
 import type { SeriesCandidate, SeriesPage } from "@/lib/series";
 
@@ -37,6 +39,11 @@ export function SeriesDetail({
         {authors.length > 0 && <>{authors.slice(0, 3).join(", ")} · </>}
         {owned.length} {owned.length === 1 ? "book" : "books"}
         {owned.length > 0 && <> · {read} read</>}
+        {series.review?.rating != null && (
+          <>
+            {" "}· <span className="text-accent">★</span> {starText(series.review.rating)} {find(STARS, series.review.rating)?.label}
+          </>
+        )}
       </p>
       {!readOnly && (
         <SeriesSettings
@@ -46,12 +53,15 @@ export function SeriesDetail({
         />
       )}
 
+      {readOnly ? <SeriesReviewView review={series.review} /> : <SeriesReviewEditor seriesId={series.id} review={series.review} />}
+
+      <h2 className="mt-8 font-serif text-xl font-semibold">The books</h2>
       {series.volumes.length === 0 ? (
-        <p className="mt-6 rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
+        <p className="mt-3 rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
           No books in this series yet.{!readOnly && " Add the first one below."}
         </p>
       ) : (
-        <ol className="mt-6 divide-y divide-border rounded-2xl border border-border bg-surface">
+        <ol className="mt-3 divide-y divide-border rounded-2xl border border-border bg-surface">
           {series.volumes.map((v) => (
             <li key={v.id} className="flex items-center gap-3 px-3 py-2.5">
               <span className="w-9 shrink-0 text-right text-sm font-medium text-muted">

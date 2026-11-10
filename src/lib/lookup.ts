@@ -1,5 +1,5 @@
 import type { CopyFormat, LibraryBook } from "./library";
-import { fold } from "./library-filters";
+import { alphaCompare, fold } from "./library-filters";
 
 // Bookstore lookup: "do I own this?", which formats, and how the series
 // stands. Pure functions so the page can answer instantly as she types.
@@ -47,7 +47,7 @@ export function findBooks(books: LibraryBook[], query: string, limit = 12): Matc
     matches.push({ book, score });
   }
   return matches
-    .sort((a, b) => b.score - a.score || (a.book.seriesNumber ?? 0) - (b.book.seriesNumber ?? 0) || a.book.title.localeCompare(b.book.title))
+    .sort((a, b) => b.score - a.score || (a.book.seriesNumber ?? 0) - (b.book.seriesNumber ?? 0) || alphaCompare(a.book.title, b.book.title))
     .slice(0, limit);
 }
 
@@ -102,7 +102,7 @@ export function seriesStatus(books: LibraryBook[], name: string): SeriesStatus {
   return {
     name,
     volumes,
-    unnumbered: inSeries.filter((b) => !numbered.includes(b)).sort((a, b) => a.title.localeCompare(b.title)),
+    unnumbered: inSeries.filter((b) => !numbered.includes(b)).sort((a, b) => alphaCompare(a.title, b.title)),
     missing: volumes.filter((v) => !v.book).map((v) => v.number),
     noPrint: volumes.filter((v) => v.book && !v.printFormat).map((v) => v.number),
     matchFormat,

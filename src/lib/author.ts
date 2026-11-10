@@ -1,6 +1,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
+import { alphaCompare } from "./library-filters";
 import type { CopyFormat, CopySource } from "./library";
 import type { IdentityCategory, IdentityValue } from "./representation";
 
@@ -119,9 +120,10 @@ export async function loadAuthor(
       .sort(
         (a, b) =>
           ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role) ||
-          (a.series ?? "￿").localeCompare(b.series ?? "￿") ||
+          (a.series ? 0 : 1) - (b.series ? 0 : 1) ||
+          (a.series && b.series ? alphaCompare(a.series, b.series) : 0) ||
           (a.seriesNumber ?? 999) - (b.seriesNumber ?? 999) ||
-          a.title.localeCompare(b.title),
+          alphaCompare(a.title, b.title),
       ),
   };
 }

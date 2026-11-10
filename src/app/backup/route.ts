@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "@/lib/classification";
 import { AUDIO, RECOMMEND, WRITING, find, starLabel, type Recommendation } from "@/lib/ratings";
+import { alphaCompare } from "@/lib/library-filters";
 import { ownerClient } from "@/lib/supabase/owner";
 
 // "Download my library": a spreadsheet (one row per copy) or a full backup
@@ -99,7 +100,7 @@ function spreadsheet(t: Record<(typeof TABLES)[number], Row[]>) {
     "Narrators", "Audio performance", "Narration note", "On loan to", "Keepsake notes", "Gone",
   ];
   const lines = [header.map(csvCell).join(",")];
-  const titles = [...t.titles].sort((a, b) => String(a.title).localeCompare(String(b.title)));
+  const titles = [...t.titles].sort((a, b) => alphaCompare(String(a.title), String(b.title)));
   for (const title of titles) {
     const review = reviews.get(title.id);
     for (const c of copies.get(title.id) ?? [{}]) {

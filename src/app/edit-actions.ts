@@ -714,3 +714,45 @@ export async function clearReview(titleId: string, reasons: string[], undo = fal
   refresh(titleId);
   return { ok: true };
 }
+
+// Her review of a whole series: stars, writing, recommendation and notes.
+// Notes can stand alone; clearing the stars clears writing and recommendation,
+// as for a book.
+export async function setSeriesReview(
+  seriesId: string,
+  patch: ReviewPatch & { body?: string | null },
+): Promise<Result> {
+  try {
+    check(
+      UUID.test(seriesId) &&
+        (patch.rating === undefined || patch.rating === null || isQuarterStar(patch.rating)) &&
+        (patch.writingQuality == null || (Number.isInteger(patch.writingQuality) && patch.writingQuality >= 1 && patch.writingQuality <= 5)) &&
+        (patch.recommendation == null || RECOMMENDATIONS.includes(patch.recommendation)) &&
+        (patch.body == null || (typeof patch.body === "string" && patch.body.length <= 20000)),
+    );
+    const { supabase } = await ownerClient();
+    const { data: existing, error } = await supabase
+      .from("reviews")
+      .select("id, rating, writing_quality, recommendation, body")
+      .eq("series_id", seriesId)
+      .maybeSingle();
+    if (error) throw new Error(error.message);
+    const next = {
+      rating: patch.rating !== undefined ? patch.rating : (existing?.rating ?? null),
+      writing_quality: patch.writingQuality !== undefined ? patch.writingQuality : (existing?.writing_quality ?? null),
+      recommendation: patch.recommendation !== undefined ? patch.recommendation : (existing?.recommendation ?? null),
+      body: patch.body !== undefined ? patch.body?.trim() || null : (existing?.body ?? null),
+    };
+    if (next.rating === null) {
+      check(patch.writingQuality == null && patch.recommendation == null, "Choose a star rating first.");
+      next.writing_quality = null;
+      next.recommendation = null;
+    }
+    if (existing) await must(supabase.from("reviews").update(next).eq("id", existing.id));
+    else if (next.rating !== null || next.body !== null) await must(supabase.from("reviews").insert({ series_id: seriesId, ...next }));
+    revalidatePath("/series", "layout");
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
+  }
+}

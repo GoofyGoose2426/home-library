@@ -336,7 +336,7 @@ function Toggle({ on, onClick, children }: { on: boolean; onClick: () => void; c
 // Stars, in two taps: pick 1–5 stars, then the quarter within that star
 // (4.00 Loved it, 4.25 A great book…). Each choice shows her label and
 // description.
-function StarPicker({ value, onChange }: { value: number | null; onChange: (v: number | null) => void }) {
+export function StarPicker({ value, onChange }: { value: number | null; onChange: (v: number | null) => void }) {
   const [star, setStar] = useState<number | null>(value === null ? null : Math.floor(value));
   const current = find(STARS, value);
   const quarters = star === null ? [] : STARS.filter((s) => Math.floor(s.value) === star).reverse();
@@ -418,7 +418,7 @@ function StarPicker({ value, onChange }: { value: number | null; onChange: (v: n
 
 // One-tap scales (writing quality, recommendation, audio). Tapping the chosen
 // value again clears it. The chosen value's description shows underneath.
-function ScalePicker<K extends string | number>({
+export function ScalePicker<K extends string | number>({
   scale,
   value,
   numbered,

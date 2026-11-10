@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { fold } from "@/lib/library-filters";
+import { alphaCompare, fold } from "@/lib/library-filters";
 import { createClient } from "@/lib/supabase/server";
 import { SeriesRow, type SeriesRowBook } from "./series-row";
 
@@ -70,7 +70,7 @@ async function Lists() {
   for (const r of owned) if (r.series) for (const a of authorsOf(r)) seriesOf.set(a, (seriesOf.get(a) ?? new Set()).add(r.series.name));
 
   const toBook = (r: Row, author: string): SeriesRowBook => {
-    const options = [...(seriesOf.get(author) ?? [])].sort((a, b) => a.localeCompare(b));
+    const options = [...(seriesOf.get(author) ?? [])].sort(alphaCompare);
     // "Married By Morning (Hathaways)" names its series; so may "Book 4".
     const paren = r.title.match(/\(([^()]+)\)\s*$/)?.[1] ?? null;
     const suggested = r.series?.name ?? options.find((o) => paren && seriesKey(paren).includes(seriesKey(o))) ?? null;

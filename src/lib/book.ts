@@ -1,6 +1,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
+import { alphaCompare } from "./library-filters";
 import type { CopyFormat, CopySource } from "./library";
 import type { Audience, ListTag, TagKind } from "./classification";
 import type { Recommendation } from "./ratings";
@@ -188,7 +189,7 @@ export async function loadBook(
           readStatus: s.read_status,
           formats: [...new Set(s.copies.map((c) => c.format))],
         }))
-        .sort((a, b) => (a.number ?? 999) - (b.number ?? 999) || a.title.localeCompare(b.title)),
+        .sort((a, b) => (a.number ?? 999) - (b.number ?? 999) || alphaCompare(a.title, b.title)),
     };
   }
 

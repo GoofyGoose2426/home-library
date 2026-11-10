@@ -143,8 +143,14 @@ export function fold(text: string) {
   return text.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 
-function titleKey(title: string) {
-  return fold(title).replace(/^(the|a|an)\s+/, "");
+// A–Z ignores a leading "The", "A" or "An": "The Brown Sisters" sorts as
+// "Brown Sisters, The". The title itself isn't changed.
+export function alphaKey(text: string) {
+  return fold(text).replace(/^(the|a|an)\s+/, "");
+}
+
+export function alphaCompare(a: string, b: string) {
+  return alphaKey(a).localeCompare(alphaKey(b)) || a.localeCompare(b);
 }
 
 function surnameKey(book: LibraryBook) {
@@ -199,7 +205,7 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
     return true;
   };
 
-  const byTitle = (a: LibraryBook, b: LibraryBook) => titleKey(a.title).localeCompare(titleKey(b.title));
+  const byTitle = (a: LibraryBook, b: LibraryBook) => alphaCompare(a.title, b.title);
   const compare: Record<SortKey, (a: LibraryBook, b: LibraryBook) => number> = {
     title: byTitle,
     // Within an author: each series in reading order (series A–Z), then
@@ -207,11 +213,12 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
     author: (a, b) =>
       surnameKey(a).localeCompare(surnameKey(b)) ||
       (a.series ? 0 : 1) - (b.series ? 0 : 1) ||
-      (a.series && b.series ? fold(a.series).localeCompare(fold(b.series)) : 0) ||
+      (a.series && b.series ? alphaCompare(a.series, b.series) : 0) ||
       (a.seriesNumber ?? 999) - (b.seriesNumber ?? 999) ||
       byTitle(a, b),
     series: (a, b) =>
-      (a.series ?? "￿").localeCompare(b.series ?? "￿") ||
+      (a.series ? 0 : 1) - (b.series ? 0 : 1) ||
+      (a.series && b.series ? alphaCompare(a.series, b.series) : 0) ||
       (a.seriesNumber ?? 999) - (b.seriesNumber ?? 999) ||
       byTitle(a, b),
     status: (a, b) => STATUS_ORDER[a.readStatus] - STATUS_ORDER[b.readStatus] || byTitle(a, b),
@@ -230,7 +237,7 @@ export function filterOptions(books: LibraryBook[]) {
   const count = (values: string[]) => {
     const m = new Map<string, number>();
     for (const v of values) m.set(v, (m.get(v) ?? 0) + 1);
-    return [...m.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    return [...m.entries()].sort((a, b) => alphaCompare(a[0], b[0]));
   };
   return {
     tag: Object.fromEntries(
