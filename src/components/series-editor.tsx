@@ -49,6 +49,7 @@ export function NewSeries() {
     start(async () => {
       const r = await createSeries(name);
       if (!r.ok) return setMessage(r.error);
+      setName("");
       router.push(`/series/${r.id}`);
     });
   }
