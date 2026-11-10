@@ -654,8 +654,49 @@ export async function setSeries(
     await must(supabase.rpc("set_series", { p_title_id: titleId, p_series: series, p_number: number, p_new_title: newTitle }));
     refresh(titleId);
     revalidatePath("/series-check");
+    revalidatePath("/series", "layout");
     return { ok: true };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
   }
+}
+
+// Series page: start a new series (with no books yet), rename one, or delete
+// one. Deleting a series keeps its books; they're just no longer in it.
+const seriesName = (name: unknown) =>
+  typeof name === "string" && name.trim().length > 0 && name.length <= 200 ? name.trim().replace(/\s+/g, " ") : null;
+
+function friendlySeriesError(message: string, name: string) {
+  return /series_owner_name_key|duplicate key/.test(message) ? `You already have a series called “${name}”.` : message;
+}
+
+export async function createSeries(name: string): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
+  const clean = seriesName(name);
+  if (!clean) return { ok: false, error: "Give the series a name." };
+  const { supabase } = await ownerClient();
+  const { data: existing } = await supabase.from("series").select("id").ilike("name", clean.replace(/[\\%_]/g, "\\$&")).maybeSingle();
+  if (existing) return { ok: true, id: existing.id };
+  const { data, error } = await supabase.from("series").insert({ name: clean }).select("id").single();
+  if (error) return { ok: false, error: friendlySeriesError(error.message, clean) };
+  revalidatePath("/series");
+  return { ok: true, id: data.id };
+}
+
+export async function renameSeries(id: string, name: string): Promise<Result> {
+  const clean = seriesName(name);
+  if (!UUID.test(id) || !clean) return { ok: false, error: "Give the series a name." };
+  const { supabase } = await ownerClient();
+  const { error } = await supabase.from("series").update({ name: clean }).eq("id", id);
+  if (error) return { ok: false, error: friendlySeriesError(error.message, clean) };
+  revalidatePath("/", "layout");
+  return { ok: true };
+}
+
+export async function deleteSeries(id: string): Promise<Result> {
+  if (!UUID.test(id)) return { ok: false, error: "That request isn't valid." };
+  const { supabase } = await ownerClient();
+  const { error } = await supabase.from("series").delete().eq("id", id);
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/", "layout");
+  return { ok: true };
 }

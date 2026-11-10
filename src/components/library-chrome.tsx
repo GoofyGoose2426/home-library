@@ -12,7 +12,7 @@ import type { Filters } from "@/lib/library-filters";
 // ---------------------------------------------------------------------------
 // Status tags on each book: Read (green), TBR or Partly read (pink), On loan (purple).
 
-export function StatusTags({ book, showLoan }: { book: LibraryBook; showLoan: boolean }) {
+export function StatusTags({ book, showLoan }: { book: Pick<LibraryBook, "readStatus" | "onLoanTo">; showLoan: boolean }) {
   const loan = showLoan && book.onLoanTo.length > 0;
   return (
     <span className="flex flex-wrap gap-1">
@@ -132,6 +132,7 @@ export function OwnerNav() {
 }
 
 const TOOLS: [string, string][] = [
+  ["/series", "Series"],
   ["/check", "To check"],
   ["/gone", "Gone list"],
   ["/fill", "Fill in details"],

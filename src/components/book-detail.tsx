@@ -164,7 +164,7 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
           {book.series && (
             <p className="mt-3">
               <Link
-                href={`${base || "/"}?series=${encodeURIComponent(book.series.name)}&sort=series`}
+                href={`${base}/series/${book.series.id}`}
                 className="text-accent underline-offset-4 hover:underline"
               >
                 {book.series.name} {seriesNumber(book.series.number)}
@@ -328,7 +328,12 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
               </li>
             ))}
           </ol>
-          <p className="mt-2 text-xs text-muted">Gaps in the numbering show in Do I own it?</p>
+          <p className="mt-2 text-xs text-muted">
+            Gaps in the numbering show in Do I own it?{" "}
+            <Link href={`${base}/series/${book.series.id}`} className="text-accent underline-offset-4 hover:underline">
+              Open the series page
+            </Link>
+          </p>
         </Section>
       )}
 
