@@ -125,6 +125,8 @@ export function AddBook({
   const router = useRouter();
   const [picked, setPicked] = useState<Result | null>(null);
   const [manual, setManual] = useState(false);
+  // What she'd typed in the search box, carried into Enter it yourself.
+  const [typed, setTyped] = useState("");
   const [saved, setSaved] = useState<{ titleId: string; title: string; asCopy: boolean } | null>(null);
   // Bumping this starts a fresh, empty form.
   const [round, setRound] = useState(0);
@@ -222,7 +224,10 @@ export function AddBook({
           </button>
           <BookForm
             key={round}
-            result={picked ?? { key: "", title: "", authors: [] }}
+            result={
+              picked ??
+              (toIsbn13(typed) ? { key: "", title: "", authors: [], isbn13: toIsbn13(typed)! } : { key: "", title: typed.trim(), authors: [] })
+            }
             copyOfId={null}
             library={library}
             seriesNames={seriesNames}
@@ -232,7 +237,16 @@ export function AddBook({
           />
         </>
       ) : (
-        <Search key={round} library={library} ownedIsbns={ownedIsbns} onPick={setPicked} onManual={() => setManual(true)} />
+        <Search
+          key={round}
+          library={library}
+          ownedIsbns={ownedIsbns}
+          onPick={setPicked}
+          onManual={(q) => {
+            setTyped(q);
+            setManual(true);
+          }}
+        />
       )}
     </>
   );
@@ -258,7 +272,7 @@ function Search({
   library: OwnedBook[];
   ownedIsbns: OwnedIsbns;
   onPick: (r: Result) => void;
-  onManual: () => void;
+  onManual: (typed: string) => void;
 }) {
   const [query, setQuery] = useState("");
   const [searched, setSearched] = useState("");
@@ -417,7 +431,7 @@ function Search({
           {results.length === 0 && <li className="text-sm text-muted">Nothing found on Open Library.</li>}
         </ul>
       )}
-      <button type="button" onClick={onManual} className="mt-4 text-sm text-accent underline-offset-4 hover:underline">
+      <button type="button" onClick={() => onManual(query)} className="mt-4 text-sm text-accent underline-offset-4 hover:underline">
         Can&apos;t find it? Enter it yourself
       </button>
     </div>

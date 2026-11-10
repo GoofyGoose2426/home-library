@@ -6,8 +6,8 @@ import { AUDIO, RECOMMEND, WRITING, find } from "./ratings";
 // (Romance or Fantasy); across groups, all must match (Unread and Fantasy).
 
 export const SORTS = {
-  title: "Title A–Z",
   author: "Author A–Z, series in order",
+  title: "Title A–Z",
   series: "Series",
   status: "Read status",
   review: "Needs review first",
@@ -17,6 +17,8 @@ export const SORTS = {
   audio: "Audio performance, highest first",
 } as const;
 export type SortKey = keyof typeof SORTS;
+// How the library opens (Alexandra's choice, 2026-11-10).
+export const DEFAULT_SORT: SortKey = "author";
 
 export const FLAGS = {
   loan: "On loan",
@@ -104,7 +106,7 @@ export function readFilters(params: URLSearchParams): Filters {
   const sort = params.get("sort");
   return {
     q: params.get("q") ?? "",
-    sort: sort && sort in SORTS ? (sort as SortKey) : "title",
+    sort: sort && sort in SORTS ? (sort as SortKey) : DEFAULT_SORT,
     status: params.getAll("status") as Filters["status"],
     format: params.getAll("format") as CopyFormat[],
     // Older links used genre=Romance.
@@ -127,7 +129,7 @@ export function readFilters(params: URLSearchParams): Filters {
 export function writeFilters(f: Filters): string {
   const params = new URLSearchParams();
   if (f.q.trim()) params.set("q", f.q);
-  if (f.sort !== "title") params.set("sort", f.sort);
+  if (f.sort !== DEFAULT_SORT) params.set("sort", f.sort);
   for (const key of LIST_KEYS) for (const v of f[key]) params.append(key, v);
   const s = params.toString();
   return s ? `?${s}` : "";
