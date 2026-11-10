@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · Menus always in reach; Read, TBR and On loan tags
+
+- **On a phone, the menus stay put while you scroll.** A compact bar at the top has Do I own it?, + Add, **All / Read / TBR** (with counts), **On loan** and the ⚑ review count. A bar at the bottom has To check, Gone list and **More**, which opens the other tools, the downloads and Sign out.
+- **On a computer, the menus sit in a column on the left** that stays in place while the books scroll in the middle.
+- **New quick buttons:** All (the default), Read, TBR (unread and partly read) and On loan. The view-only link gets All / Read / TBR, but no loans.
+- **"Check covers" is gone from the menu.** The ⚑ review count covers it. The page still exists if you ever need it.
+- **Clearer tags under each book:** **✓ Read** on green, **TBR** (or **Partly read**) on pink, and **On loan** on purple. The table view uses the same tags. The reading counts moved into the All / Read / TBR buttons.
+- Tested on the live app at phone size (390 px) and desktop size (1280 px), in light and dark mode.
+
 ## 2026-11-10 · Library opens by author; search text carries over
 
 - **The library now opens sorted "Author A–Z, series in order"** (it was Title A–Z). It's first in the Sort list, and Title A–Z is still there when you want it.
