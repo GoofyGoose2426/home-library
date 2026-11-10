@@ -2,6 +2,7 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
 import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "./classification";
+import { moodLabel } from "./moods";
 import type { Recommendation } from "./ratings";
 import { AUTHOR_FACET, CATEGORIES, CHARACTER_FACET, UNKNOWN, type IdentityCategory } from "./representation";
 
@@ -75,7 +76,15 @@ type Row = {
   story_focus: StoryFocus | null;
   vibe_main: Vibe | null;
   vibe_second: Vibe | null;
-  reviews: { rating: number | null; writing_quality: number | null; recommendation: Recommendation | null }[];
+  reviews: {
+    rating: number | null;
+    writing_quality: number | null;
+    recommendation: Recommendation | null;
+    body: string | null;
+    broke_my_brain: boolean | null;
+    mood_reactions: string[] | null;
+    would_reread: boolean | null;
+  }[];
   pieces: { count: number }[];
   copies: {
     id: string;
@@ -117,6 +126,12 @@ function facetsOf(t: Row): Record<string, string[]> {
   }
   for (const r of t.character_representations) add(CHARACTER_FACET(r.category), r.value);
   add("own_voices", t.own_voices == null ? null : t.own_voices ? "Yes" : "No");
+  // From her review of the book.
+  const r = t.reviews[0];
+  for (const m of r?.mood_reactions ?? []) add("mood", moodLabel(m));
+  add("broke_my_brain", r?.broke_my_brain ? "Yes" : null);
+  add("would_reread", r?.would_reread == null ? null : r.would_reread ? "Yes" : "No");
+  add("has_review", r?.body?.trim() ? "Yes" : t.read_status === "unread" ? null : "Not yet");
   return f;
 }
 
@@ -147,7 +162,7 @@ export async function loadLibrary(
          credits(role, position, people(name, author_identities(category, value))),
          character_representations(category, value),
          title_tags(tags(kind, name)),
-         reviews(rating, writing_quality, recommendation),
+         reviews(rating, writing_quality, recommendation, body, broke_my_brain, mood_reactions, would_reread),
          pieces(count),
          copies(${copyColumns}, reviews(audio_performance, body))`,
       )

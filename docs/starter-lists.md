@@ -327,9 +327,9 @@ New ones get added as you add books.
 
 ## 8. Mood reactions (Phase 3, step 1)
 
-**Draft, waiting for your OK · 2026-11-10**
+**Approved by Alexandra · 2026-11-10**
 
-How a book made you feel, for your review of it. Tap any that fit; none is required. It's different from **Vibe** (what a book is like) and from **Broke my brain / challenged my worldview**, which keeps its own switch. Later you'll be able to filter by these ("books that made me cry") and see them on the Stats page.
+How a book made you feel, for your review of it. Tap any that fit; none is required. It's different from **Vibe** (what a book is like) and from **Broke my brain / challenged my worldview**, which keeps its own switch. You'll be able to filter by these ("books that made me cry") and see them on the Stats page. The review form shows them under the group headings.
 
 **Feel-good**
 - Laughed out loud
@@ -357,17 +357,19 @@ How a book made you feel, for your review of it. Tap any that fit; none is requi
 - Made me think
 - Slow burn that paid off
 
-**Not for me**
-- Dragged in places
-- Frustrated with a character
-- Disappointed
-- Confused
+**Room for growth**: parts that would have made the book even better had they been different. You don't keep books you don't like, so these mark what could be better, not a verdict on the book.
+- Pacing dragged in places
+- A character frustrated me
+- The ending could have been stronger
+- Hard to follow in places
 
-### Questions for you
+### Your answers (2026-11-10)
 
-1. **Anything to add, remove or reword?** Use your own words; I'll use them exactly.
-2. **Group headings on the review form,** as above, or one plain list?
-3. **"Not for me" reactions:** keep them? They help Ask your library answer "which books disappointed me?", but you may prefer to keep reviews positive.
+| Question | Answer |
+|---|---|
+| Additions or changes | None |
+| Group headings or a plain list | **Group headings** |
+| "Not for me" | Renamed **Room for growth**: what would have made the book better. "Disappointed" (a verdict on the whole book) became "The ending could have been stronger", and the other three were reworded as parts of the book. |
 
 ---
 

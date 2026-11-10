@@ -16,6 +16,7 @@ import {
   type Vibe,
 } from "@/lib/classification";
 import { isQuarterStar, type Recommendation } from "@/lib/ratings";
+import { isMood } from "@/lib/moods";
 
 // Quick edits. Each one records Alexandra as the source of the value, which
 // stops any later prefill from overwriting it (see field_sources_protect).
@@ -751,6 +752,57 @@ export async function setSeriesReview(
     if (existing) await must(supabase.from("reviews").update(next).eq("id", existing.id));
     else if (next.rating !== null || next.body !== null) await must(supabase.from("reviews").insert({ series_id: seriesId, ...next }));
     revalidatePath("/series", "layout");
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
+  }
+}
+
+// Her written review of a book: text, broke my brain, mood reactions, would
+// re-read, favourite quote and confirmed spice. Only the fields in the patch
+// change. Confirmed spice also becomes the book's spice, marked hers, so it
+// replaces any suggested spice everywhere.
+export type TitleReviewPatch = {
+  body?: string | null;
+  brokeMyBrain?: boolean | null;
+  moods?: string[];
+  wouldReread?: boolean | null;
+  favouriteQuote?: string | null;
+  confirmedSpice?: Spice | null;
+};
+
+export async function setTitleReview(titleId: string, patch: TitleReviewPatch): Promise<Result> {
+  try {
+    const text = (v: unknown, max: number) => v === undefined || v === null || (typeof v === "string" && v.length <= max);
+    const yesNo = (v: unknown) => v === undefined || v === null || typeof v === "boolean";
+    check(
+      UUID.test(titleId) &&
+        text(patch.body, 50000) &&
+        text(patch.favouriteQuote, 5000) &&
+        yesNo(patch.brokeMyBrain) &&
+        yesNo(patch.wouldReread) &&
+        (patch.moods === undefined || (Array.isArray(patch.moods) && patch.moods.length <= 40 && patch.moods.every(isMood))) &&
+        (patch.confirmedSpice === undefined || patch.confirmedSpice === null || SPICE.some((x) => x[0] === patch.confirmedSpice)),
+    );
+    const row: Record<string, unknown> = {};
+    if (patch.body !== undefined) row.body = patch.body?.trim() || null;
+    if (patch.favouriteQuote !== undefined) row.favourite_quote = patch.favouriteQuote?.trim() || null;
+    if (patch.brokeMyBrain !== undefined) row.broke_my_brain = patch.brokeMyBrain;
+    if (patch.wouldReread !== undefined) row.would_reread = patch.wouldReread;
+    if (patch.moods !== undefined) row.mood_reactions = [...new Set(patch.moods)];
+    if (patch.confirmedSpice !== undefined) row.confirmed_spice = patch.confirmedSpice;
+
+    const { supabase } = await ownerClient();
+    const { data: existing, error } = await supabase.from("reviews").select("id").eq("title_id", titleId).maybeSingle();
+    if (error) throw new Error(error.message);
+    if (existing) await must(supabase.from("reviews").update(row).eq("id", existing.id));
+    else await must(supabase.from("reviews").insert({ title_id: titleId, ...row }));
+
+    if (patch.confirmedSpice) {
+      await must(supabase.from("titles").update({ spice: patch.confirmedSpice }).eq("id", titleId));
+      await markMine(supabase, "titles", [titleId], "spice");
+    }
+    refresh(titleId);
     return { ok: true };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };

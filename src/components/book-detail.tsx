@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BookCover } from "@/components/book-cover";
 import { ConfirmCover, CoverPicker } from "@/components/cover-picker";
 import { NeedsReview } from "@/components/needs-review";
+import { BookReviewEditor, BookReviewView } from "@/components/book-review";
 import { ClassificationEditor } from "@/components/classification-editor";
 import { EditDetails } from "@/components/edit-details";
 import { MergeEntry } from "@/components/merge-entry";
@@ -244,6 +245,31 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
           )}
         </div>
       </div>
+
+      {(() => {
+        const r = book.review;
+        const hasReview = !!(r.body || r.moods.length || r.favouriteQuote || r.brokeMyBrain != null || r.wouldReread != null || r.confirmedSpice);
+        const romance = book.romanticSubplot === true || book.tags.some((t) => t.kind === "genre" && t.name.toLowerCase() === "romance");
+        if (readOnly) {
+          return hasReview ? (
+            <Section title="Alexandra's review">
+              <BookReviewView review={r} />
+            </Section>
+          ) : null;
+        }
+        return (
+          <section id="review" className="mt-8 scroll-mt-4">
+            <h2 className="mb-3 font-serif text-xl font-semibold">Review</h2>
+            <BookReviewEditor
+              titleId={book.id}
+              review={r}
+              showSpice={romance || !!r.confirmedSpice}
+              suggestedSpice={book.spice && book.sources.spice?.source !== "alexandra" ? book.spice : null}
+              startOpen={hasReview || book.readStatus !== "unread"}
+            />
+          </section>
+        );
+      })()}
 
       <Section
         title={

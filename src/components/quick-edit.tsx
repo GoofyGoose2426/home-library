@@ -1,6 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element -- hotlinked covers, see book-cover.tsx */
+import Link from "next/link";
 import { useRef, useState } from "react";
 import { ConfirmCover, CoverPicker } from "@/components/cover-picker";
 import type { CopyFormat, CopySource } from "@/lib/library";
@@ -188,6 +189,15 @@ export function QuickEdit({
             />
           </Row>
         </>
+      )}
+
+      {book.readStatus !== "unread" && (
+        <Link
+          href={`/books/${book.id}#review`}
+          className="inline-flex min-h-10 items-center rounded-full border border-accent px-4 text-sm font-medium text-accent"
+        >
+          Write a review
+        </Link>
       )}
 
       {book.pieces && book.pieces.length > 0 && (

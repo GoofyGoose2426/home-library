@@ -46,6 +46,15 @@ export type SeriesBook = {
   formats: CopyFormat[];
 };
 
+export type TitleReview = {
+  body: string | null;
+  brokeMyBrain: boolean | null;
+  moods: string[];
+  wouldReread: boolean | null;
+  favouriteQuote: string | null;
+  confirmedSpice: string | null;
+};
+
 export type Book = {
   id: string;
   title: string;
@@ -73,6 +82,8 @@ export type Book = {
   rating: number | null;
   writingQuality: number | null;
   recommendation: Recommendation | null;
+  // Her written review (Phase 3). Stars, writing and recommendation are above.
+  review: TitleReview;
   pieces: { id: string; title: string; kind: string; isRead: boolean }[];
   // Every list value on the book (genres, subgenres, tropes…), with its source.
   tags: { id: string; name: string; kind: TagKind; source: string; confirmed: boolean }[];
@@ -139,7 +150,7 @@ export async function loadBook(
        first_published, typical_pages,
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
-       reviews(rating, writing_quality, recommendation),
+       reviews(rating, writing_quality, recommendation, body, broke_my_brain, mood_reactions, would_reread, favourite_quote, confirmed_spice),
        pieces(id, position, piece_title, kind, is_read),
        credits(role, position, people(id, name, identity_checked_at, author_identities(category, value, confirmed))),
        character_representations(id, category, value, character_name, source, source_url, quote, confirmed),
@@ -255,7 +266,17 @@ export async function loadBook(
     .sort((a, b) => FORMAT_ORDER.indexOf(a.format) - FORMAT_ORDER.indexOf(b.format));
 
   const review = (
-    t.reviews as unknown as { rating: number | null; writing_quality: number | null; recommendation: Recommendation | null }[]
+    t.reviews as unknown as {
+      rating: number | null;
+      writing_quality: number | null;
+      recommendation: Recommendation | null;
+      body: string | null;
+      broke_my_brain: boolean | null;
+      mood_reactions: string[];
+      would_reread: boolean | null;
+      favourite_quote: string | null;
+      confirmed_spice: string | null;
+    }[]
   )[0];
 
   return {
@@ -309,6 +330,14 @@ export async function loadBook(
     rating: review?.rating != null ? Number(review.rating) : null,
     writingQuality: review?.writing_quality ?? null,
     recommendation: review?.recommendation ?? null,
+    review: {
+      body: review?.body ?? null,
+      brokeMyBrain: review?.broke_my_brain ?? null,
+      moods: review?.mood_reactions ?? [],
+      wouldReread: review?.would_reread ?? null,
+      favouriteQuote: review?.favourite_quote ?? null,
+      confirmedSpice: review?.confirmed_spice ?? null,
+    },
     pieces: (t.pieces as unknown as { id: string; position: number; piece_title: string; kind: string; is_read: boolean }[])
       .sort((a, b) => a.position - b.position)
       .map((p) => ({ id: p.id, title: p.piece_title, kind: p.kind, isRead: p.is_read })),
