@@ -4,6 +4,7 @@ import { useDeferredValue, useMemo, useState, useSyncExternalStore } from "react
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { BookCover } from "@/components/book-cover";
+import { BottomTools, OwnerNav, QuickFilters, SideTools, StatusTags } from "@/components/library-chrome";
 import { LibraryFilterBar } from "@/components/library-filter-bar";
 import { QuickEdit, type EditableBook } from "@/components/quick-edit";
 import { useViewMode } from "@/components/view-mode";
@@ -30,12 +31,6 @@ export const FORMAT_LABEL: Record<CopyFormat, string> = {
   print_unknown: "Print",
   ebook: "Ebook",
   audiobook: "Audiobook",
-};
-
-const STATUS_LABEL: Record<LibraryBook["readStatus"], string> = {
-  read: "Read",
-  partly_read: "Partly read",
-  unread: "Unread",
 };
 
 
@@ -110,7 +105,8 @@ const PRINT_TYPES: [CopyFormat, string][] = [
   ["mass_market", "Mass-market"],
 ];
 
-export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
+// owner: Alexandra's own library page, with its menus (see library-chrome.tsx).
+export function LibraryView({ books: loaded, owner = false }: { books: LibraryBook[]; owner?: boolean }) {
   const { readOnly, base } = useViewMode();
   const view = useSyncExternalStore(subscribeView, readView, () => "grid" as View);
   const [edits, setEdits] = useState<Record<string, EditableBook>>({});
@@ -178,51 +174,48 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
   }
 
   return (
-    <>
-      <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
-          <p className="text-muted">
-            {books.filter((b) => b.readStatus === "read").length.toLocaleString()} of{" "}
-            {books.length.toLocaleString()} read
-          </p>
-          {toReview > 0 && !readOnly && (
-            <button
-              type="button"
-              onClick={() =>
-                updateFilters((f) => ({ ...f, review: f.review.includes("any") ? f.review.filter((r) => r !== "any") : [...f.review, "any"] }))
-              }
-              aria-pressed={filters.review.includes("any")}
-              className={`rounded-full px-3 py-1 text-xs font-medium ${filters.review.includes("any") ? "bg-accent text-on-accent" : "bg-accent-soft"}`}
-            >
-              ⚑ {toReview.toLocaleString()} need review
-            </button>
-          )}
-        </div>
-        <div className="flex items-center gap-2">
-          {!readOnly && (
-            <button
-              type="button"
-              onClick={() => (selecting ? stopSelecting() : (setSelecting(true), setBatchMessage(null)))}
-              aria-pressed={selecting}
-              className={`min-h-9 rounded-full border px-4 text-sm ${selecting ? "border-accent bg-accent-soft" : "border-border bg-surface"}`}
-            >
-              {selecting ? "Cancel" : "Select"}
-            </button>
-          )}
-          <div className="flex rounded-full border border-border bg-surface p-1" role="tablist" aria-label="View">
-            {(["grid", "table"] as const).map((v) => (
-              <button
-                key={v}
-                type="button"
-                role="tab"
-                aria-selected={view === v}
-                onClick={() => chooseView(v)}
-                className={`min-h-9 rounded-full px-4 text-sm ${view === v ? "bg-accent text-on-accent" : ""}`}
-              >
-                {v === "grid" ? "Covers" : "Table"}
-              </button>
-            ))}
+    <div className="lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-8">
+      {/* Pinned to the top on a phone; a sticky column on the left on a wide screen. */}
+      <aside className="sticky top-0 z-20 -mx-4 space-y-2 border-b border-border bg-background/95 px-4 py-2 backdrop-blur lg:mx-0 lg:h-dvh lg:space-y-4 lg:self-start lg:overflow-y-auto lg:border-b-0 lg:border-r lg:bg-transparent lg:px-0 lg:py-6 lg:pr-5 lg:backdrop-blur-none">
+        {owner && (
+          <div className="flex items-center justify-between gap-2 lg:flex-col lg:items-stretch lg:gap-4">
+            <h1 className="font-serif text-lg font-semibold leading-none lg:text-2xl">Home Library</h1>
+            <OwnerNav />
           </div>
+        )}
+        <QuickFilters books={books} filters={filters} onChange={updateFilters} owner={owner && !readOnly} toReview={readOnly ? 0 : toReview} />
+        {owner && (
+          <div className="hidden lg:block">
+            <SideTools />
+          </div>
+        )}
+      </aside>
+
+      <div className="min-w-0 lg:pt-6">
+      <div className="mt-3 flex flex-wrap items-center justify-end gap-2 lg:mt-0">
+        {!readOnly && (
+          <button
+            type="button"
+            onClick={() => (selecting ? stopSelecting() : (setSelecting(true), setBatchMessage(null)))}
+            aria-pressed={selecting}
+            className={`min-h-9 rounded-full border px-4 text-sm ${selecting ? "border-accent bg-accent-soft" : "border-border bg-surface"}`}
+          >
+            {selecting ? "Cancel" : "Select"}
+          </button>
+        )}
+        <div className="flex rounded-full border border-border bg-surface p-1" role="tablist" aria-label="View">
+          {(["grid", "table"] as const).map((v) => (
+            <button
+              key={v}
+              type="button"
+              role="tab"
+              aria-selected={view === v}
+              onClick={() => chooseView(v)}
+              className={`min-h-9 rounded-full px-4 text-sm ${view === v ? "bg-accent text-on-accent" : ""}`}
+            >
+              {v === "grid" ? "Covers" : "Table"}
+            </button>
+          ))}
         </div>
       </div>
       {batchMessage && (
@@ -283,6 +276,9 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
         </div>
       )}
 
+      </div>
+      {owner && !selecting && <BottomTools />}
+
       {editingBook && (
         <div className="fixed inset-0 z-30 flex items-end justify-center bg-black/40 sm:items-center" onClick={() => setEditing(null)}>
           <div
@@ -326,7 +322,7 @@ export function LibraryView({ books: loaded }: { books: LibraryBook[] }) {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
@@ -363,15 +359,10 @@ function Grid({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
           <>
             <p className="mt-1.5 line-clamp-2 text-xs font-medium leading-snug">{b.title}</p>
             {b.authors.length > 0 && <p className="line-clamp-1 text-[11px] text-muted">{b.authors.join(", ")}</p>}
-            <p className="line-clamp-1 text-[11px] text-muted">
-              {b.readStatus !== "unread" && (
-                <span className="font-medium text-foreground">
-                  {b.readStatus === "read" ? "✓ Read" : "Partly read"} ·{" "}
-                </span>
-              )}
-              {copyList(b)}
-              {b.onLoanTo.length > 0 && ` · On loan to ${b.onLoanTo.join(", ")}`}
-            </p>
+            <p className="line-clamp-1 text-[11px] text-muted">{copyList(b)}</p>
+            <div className="mt-1">
+              <StatusTags book={b} showLoan />
+            </div>
             {b.rating != null && (
               <p className="line-clamp-1 text-[11px]">
                 ★ {starText(b.rating)} {starLabel(b.rating)}
@@ -465,14 +456,14 @@ function Table({ books, selecting, selected, onSelect, onEdit }: ItemProps) {
                       <p className="text-xs text-muted sm:hidden">{copyList(b)}</p>
                       <ReviewNote book={b} />
                       {b.onLoanTo.length > 0 && (
-                        <p className="text-xs text-accent">On loan to {b.onLoanTo.join(", ")}</p>
+                        <p className="text-xs text-on-tag-loan">On loan to {b.onLoanTo.join(", ")}</p>
                       )}
                     </div>
                   </div>
                 </td>
                 <td className="hidden px-3 py-2 align-top md:table-cell">{b.authors.join(", ")}</td>
                 <td className="px-3 py-2 align-top">
-                  <span className={b.readStatus === "unread" ? "text-muted" : ""}>{STATUS_LABEL[b.readStatus]}</span>
+                  <StatusTags book={b} showLoan />
                   {b.rating != null && (
                     <span className="block text-xs">
                       ★ {starText(b.rating)} · {starLabel(b.rating)}

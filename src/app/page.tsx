@@ -1,74 +1,16 @@
 import { Suspense } from "react";
-import Link from "next/link";
-import { signOut } from "@/app/auth/actions";
 import { LibraryView } from "@/components/library-view";
 import { loadLibrary } from "@/lib/library";
 import { createClient } from "@/lib/supabase/server";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-6">
-      <header className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-        <h1 className="font-serif text-2xl font-semibold">Home Library</h1>
-        <nav className="flex flex-wrap items-center gap-1 text-sm">
-          <Link href="/lookup" className="rounded-full bg-accent px-4 py-2 font-medium text-on-accent">
-            Do I own it?
-          </Link>
-          <Link href="/add" className="rounded-full border border-accent px-4 py-2 font-medium text-accent">
-            + Add
-          </Link>
-          <Link href="/covers" className="rounded-full px-3 py-2 hover:bg-accent-soft">
-            Check covers
-          </Link>
-          <form action={signOut}>
-            <button type="submit" className="rounded-full px-3 py-2 text-muted hover:bg-accent-soft">
-              Sign out
-            </button>
-          </form>
-        </nav>
-      </header>
+    // The menus live in LibraryView (pinned on a phone, down the side on a
+    // wide screen), so the page itself is just the library.
+    <main className="mx-auto w-full max-w-7xl flex-1 px-4 pb-24 lg:pb-10">
       <Suspense fallback={<LibrarySkeleton />}>
         <Library />
       </Suspense>
-      <footer className="mt-12 border-t border-border pt-4 text-sm text-muted">
-        <p>
-          <strong className="font-medium text-foreground">Download my library:</strong>{" "}
-          <a href="/backup" className="text-accent underline-offset-4 hover:underline">
-            spreadsheet (CSV)
-          </a>{" "}
-          ·{" "}
-          <a href="/backup?format=json" className="text-accent underline-offset-4 hover:underline">
-            full backup (JSON)
-          </a>
-        </p>
-        <p className="mt-1 text-xs">Keep a copy somewhere safe now and then. The free database plan has no automatic backups.</p>
-        <p className="mt-3">
-          <strong className="font-medium text-foreground">Tools:</strong>
-        </p>
-        <nav aria-label="Tools" className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
-          <Link href="/check" className="text-accent underline-offset-4 hover:underline">
-            To check
-          </Link>
-          <Link href="/gone" className="text-accent underline-offset-4 hover:underline">
-            Gone list
-          </Link>
-          <Link href="/fill" className="text-accent underline-offset-4 hover:underline">
-            Fill in details
-          </Link>
-          <Link href="/duplicates" className="text-accent underline-offset-4 hover:underline">
-            Possible duplicates
-          </Link>
-          <Link href="/series-check" className="text-accent underline-offset-4 hover:underline">
-            Series check
-          </Link>
-          <Link href="/formats" className="text-accent underline-offset-4 hover:underline">
-            Print formats
-          </Link>
-          <Link href="/sharing" className="text-accent underline-offset-4 hover:underline">
-            Sharing
-          </Link>
-        </nav>
-      </footer>
     </main>
   );
 }
@@ -76,7 +18,7 @@ export default function Home() {
 async function Library() {
   const supabase = await createClient();
   const books = await loadLibrary(supabase);
-  return <LibraryView books={books} />;
+  return <LibraryView books={books} owner />;
 }
 
 function LibrarySkeleton() {
