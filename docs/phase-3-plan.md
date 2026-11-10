@@ -2,7 +2,7 @@
 
 Approved 2026-11-10 with option **A** (Ask your library in our sessions, free). Partly read shows as its own slice; reviews show on the view-only link.
 
-Already built before step 1, at Alexandra's request: a series list, Add series, and a series page with Add book to series (see the changelog, 2026-11-10). Step 3 adds the series review to that page.
+Already built before step 1, at Alexandra's request: a series list, Add series, and a series page with Add book to series (see the changelog, 2026-11-10). The overall series review (stars, writing, recommend, notes) was added on 2026-11-10 too, so step 3 now only needs the collection and per-story reviews.
 
 Phase 3 adds the two things the catalog doesn't do yet: **writing about what you've read**, and **seeing your library as a whole** (charts, and answers to questions). Everything follows the build plan's rules. Stats cover owned books only, and leave out the excluded category (colouring, art/craft reference, picture books, reference books such as cookbooks). Ask your library can only read your data, never change it. The view-only link sees the dashboard and reviews, but never loans, keepsake notes or the Gone list.
 

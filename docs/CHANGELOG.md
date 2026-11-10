@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · A–Z skips "The"; series reviews
+
+- **Alphabetical order now ignores a leading "The", "A" or "An"**, for titles and for series names. "The Brown Sisters" sorts under B, as if it were "Brown Sisters, The". The names themselves don't change. This applies to the library, the Series list, series filters, author pages, Do I own it? and the spreadsheet download.
+- **Review a whole series** on its page: stars on your own quarter-star scale, writing, whether you'd recommend it, and notes and commentary. Stars save as soon as you tap them; notes save with **Save notes**. Each book keeps its own review.
+- The series rating shows under the series name and in the Series list. The view-only link shows the review but can't change it.
+- No database change was needed; reviews already had a place for series.
+- Tested on the live app at phone size in light and dark mode, with a temporary series that was then deleted along with its test review.
+
 ## 2026-11-10 · Needs review: see why, and clear it
 
 - **A book's page now shows a "⚑ Needs review" box** listing exactly what's flagged (no cover, no author, or a title or author that was a guess from the shelf photos), with how to fix each one.
