@@ -2,6 +2,18 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · Series pages: add a series, add books to it
+
+- **New Series page** (bottom bar on a phone, left column on a computer). It lists all 239 of your series with a search box, how many books you own in each and how many you've read.
+- **Add a series:** type its name and tap Add. You land on its page, ready to add books.
+- **Each series has its own page:** the books in order with their number, cover, format and Read / TBR tag. Tap the series name on any book page to get there.
+- **+ Add book to series:** search your library by title or author, tap the book, check the number (it's guessed from titles like "Nancy Drew #12", or the next number after the last one), then Add. The box stays open so you can add the next one straight away. If the book is already in another series, it tells you and moves it.
+- **Books by the same author that aren't in a series yet** are listed under the search, each with a number box and an Add button, so a run of books takes one tap each.
+- **Edit** next to a book changes its number or removes it from the series. **Rename** and **Delete series** are at the top. Deleting a series keeps its books in your library.
+- Everything you set here counts as your own choice, so a later fill-in never changes it. The view-only link can see series pages, but can't change anything.
+- "Gone list" moved into More on a phone to make room for Series in the bottom bar.
+- Tested on the live app at phone and desktop size, in light and dark mode. To test, I added and deleted a temporary series; none of your books were changed.
+
 ## 2026-11-10 · Menus always in reach; Read, TBR and On loan tags
 
 - **On a phone, the menus stay put while you scroll.** A compact bar at the top has Do I own it?, + Add, **All / Read / TBR** (with counts), **On loan** and the ⚑ review count. A bar at the bottom has To check, Gone list and **More**, which opens the other tools, the downloads and Sign out.

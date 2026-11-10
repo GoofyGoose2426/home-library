@@ -1,6 +1,8 @@
 # Phase 3 plan: Reviews and stats
 
-Waiting for Alexandra's OK.
+Approved 2026-11-10 with option **A** (Ask your library in our sessions, free). Partly read shows as its own slice; reviews show on the view-only link.
+
+Already built before step 1, at Alexandra's request: a series list, Add series, and a series page with Add book to series (see the changelog, 2026-11-10). Step 3 adds the series review to that page.
 
 Phase 3 adds the two things the catalog doesn't do yet: **writing about what you've read**, and **seeing your library as a whole** (charts, and answers to questions). Everything follows the build plan's rules. Stats cover owned books only, and leave out the excluded category (colouring, art/craft reference, picture books, reference books such as cookbooks). Ask your library can only read your data, never change it. The view-only link sees the dashboard and reviews, but never loans, keepsake notes or the Gone list.
 
@@ -12,7 +14,7 @@ The database is already ready for most of this. The reviews table has a place fo
 |---|---|---|
 | 1 | **Mood reactions list, no code.** I draft the list (funny, cried, page-turner, cozy, angry, swoony, scared…) in `docs/starter-lists.md`, from your own wording where I can find it. You edit and approve it, as you did the genre lists. | Approve the list |
 | 2 | **Review a book.** A Review section on the book page: your free-text review; broke my brain / challenged my worldview; mood reactions (tap any); would re-read; favourite quote; and **confirmed spice** (the Scoville Smut Scale, for Romance or a romantic subplot), which replaces the suggested spice once set. The stars, writing quality and recommendation stay where they are, next to it. Quick edit gets a "Write a review" shortcut. All new fields become filters. | Review three books you've read |
-| 3 | **Series and collection reviews.** A **series page** (tap a series name): its volumes in order, what you own and in which format, and an overall series review beside each book's own. For anthologies and collections: an overall review, plus an optional short review for each story or essay. | Review one series and one collection |
+| 3 | **Series and collection reviews.** On the series page (already built): an overall series review beside each book's own. For anthologies and collections: an overall review, plus an optional short review for each story or essay. | Review one series and one collection |
 | 4 | **Read vs. unread dashboard** (new **Stats** page, in the menu). The read / partly read / unread split, as colourful charts in the app's palette. Pick any field to break either side down: "of my unread books, 35% are horror", or read vs. unread by genre, format, author identity, decade, stars, spice and more. Tap a slice to open those books in the library. | Look through it on your phone and computer |
 | 5 | **Ask your library.** A question box on the Stats page. The answer comes back as a chart, a table or a sentence, with a **Pin to dashboard** button. How the question gets answered depends on your choice below. Either way, it uses a fixed set of read-only questions the app knows how to ask (filter, group by, count, average, list). It never writes its own database queries, and it never changes anything. | Ask five questions; pin two |
 | 6 | **Wrap-up:** update `docs/build-plan.md`, run the throwaway-database tests (new privacy checks for reviews and reports, including the view-only link), compare cost with the estimate, and demo at phone and desktop size in light and dark mode. | Final run-through |
