@@ -242,7 +242,9 @@ function ownedMatch(library: OwnedBook[], title: string, authors: string[]) {
   if (!title.trim()) return null;
   const names = new Set(authors.map(surname));
   const hit = findBooks(library as LibraryBook[], title, 5).find(
-    (m) => m.score >= 80 && (!names.size || m.book.authors.some((a) => names.has(surname(a)))),
+    // The whole title, not just its start: while she types "B", "A Belated
+    // Bride" isn't the book she means.
+    (m) => m.score === 100 && (!names.size || m.book.authors.some((a) => names.has(surname(a)))),
   );
   return hit ? (hit.book as OwnedBook) : null;
 }
@@ -477,7 +479,10 @@ function BookForm({
   const digital = format === "ebook" || format === "audiobook";
   const authorList = useMemo(() => authors.split(",").map((a) => a.trim()).filter(Boolean), [authors]);
   const owned = copyOfId ? null : ownedMatch(library, title, authorList);
-  const [asCopy, setAsCopy] = useState(true);
+  // A picked search result that she already owns is most likely another
+  // copy; a title she's typing herself stays a new book unless she says so,
+  // so the title box never disappears mid-word.
+  const [asCopy, setAsCopy] = useState(!!result.key);
   const addingCopyTo = copyOfId ?? (owned && asCopy ? owned.id : null);
   const isbn13 = toIsbn13(isbn);
   const haveIsbn = isbn13 ? ownedIsbns[isbn13] : undefined;
