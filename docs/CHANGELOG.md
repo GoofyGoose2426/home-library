@@ -2,6 +2,13 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · Needs review: see why, and clear it
+
+- **A book's page now shows a "⚑ Needs review" box** listing exactly what's flagged (no cover, no author, or a title or author that was a guess from the shelf photos), with how to fix each one.
+- **"It's fine as it is, clear this"** removes a flag without changing the book, for example a colouring book that has no author. "No issues, clear all" clears every flag at once.
+- If you change your mind, **"Flag it again"** puts a cleared flag back.
+- A database change adds a place to remember which flags you cleared. It was tested on a throwaway practice database first (6 checks, including that nobody else can change it).
+
 ## 2026-11-10 · Series pages: add a series, add books to it
 
 - **New Series page** (bottom bar on a phone, left column on a computer). It lists all 239 of your series with a search box, how many books you own in each and how many you've read.

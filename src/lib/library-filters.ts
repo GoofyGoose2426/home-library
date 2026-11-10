@@ -28,7 +28,7 @@ export const FLAGS = {
 export type FlagKey = keyof typeof FLAGS;
 
 // Books with something to fix: no cover, no author, or a title or author that
-// was a guess from the shelf photos.
+// was a guess from the shelf photos. She can clear a flag on the book page.
 export const REVIEW = {
   any: "Anything to review",
   cover: "Missing cover",
@@ -39,8 +39,8 @@ export type ReviewKey = keyof typeof REVIEW;
 
 export function reviewReasons(b: LibraryBook): Exclude<ReviewKey, "any">[] {
   const reasons: Exclude<ReviewKey, "any">[] = [];
-  if (!b.coverUrl) reasons.push("cover");
-  if (!b.authors.length) reasons.push("author");
+  if (!b.coverUrl && !b.reviewCleared.includes("cover")) reasons.push("cover");
+  if (!b.authors.length && !b.reviewCleared.includes("author")) reasons.push("author");
   if (b.needsCheck) reasons.push("guess");
   return reasons;
 }

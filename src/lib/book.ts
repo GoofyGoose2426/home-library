@@ -60,6 +60,7 @@ export type Book = {
   isReference: boolean;
   needsCheck: boolean;
   checkNote: string | null;
+  reviewCleared: ("cover" | "author")[];
   description: string | null;
   firstPublished: number | null;
   typicalPages: number | null;
@@ -133,7 +134,7 @@ export async function loadBook(
   const { data: t, error } = await supabase
     .from("titles")
     .select(
-      `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, description, audience, own_voices,
+      `id, title, subtitle, read_status, book_type, is_reference, needs_check, check_note, review_cleared, description, audience, own_voices,
        first_published, typical_pages,
        romantic_subplot, spice, story_focus, vibe_main, vibe_second, series_id, series_number,
        series(id, name),
@@ -295,6 +296,7 @@ export async function loadBook(
     isReference: t.is_reference,
     needsCheck: t.needs_check,
     checkNote: t.check_note,
+    reviewCleared: (t.review_cleared ?? []) as Book["reviewCleared"],
     description: t.description,
     firstPublished: t.first_published,
     typicalPages: t.typical_pages,

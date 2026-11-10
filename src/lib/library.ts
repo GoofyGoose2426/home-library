@@ -19,6 +19,8 @@ export type LibraryBook = {
   bookType: string;
   isReference: boolean;
   needsCheck: boolean;
+  // Review flags she cleared ("cover", "author") on the book page.
+  reviewCleared: string[];
   formats: CopyFormat[];
   copies: {
     id: string;
@@ -56,6 +58,7 @@ type Row = {
   book_type: string;
   is_reference: boolean;
   needs_check: boolean;
+  review_cleared: string[];
   series_number: number | null;
   series: { name: string } | null;
   credits: {
@@ -137,7 +140,7 @@ export async function loadLibrary(
     const { data, error } = await supabase
       .from("titles")
       .select(
-        `id, title, read_status, book_type, is_reference, needs_check, series_number,
+        `id, title, read_status, book_type, is_reference, needs_check, review_cleared, series_number,
          audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second,
          series(name),
          own_voices,
@@ -170,6 +173,7 @@ export async function loadLibrary(
         bookType: t.book_type,
         isReference: t.is_reference,
         needsCheck: t.needs_check,
+        reviewCleared: t.review_cleared ?? [],
         formats: [...new Set(t.copies.map((c) => c.format))].sort(
           (a, b) => FORMAT_ORDER.indexOf(a) - FORMAT_ORDER.indexOf(b),
         ),

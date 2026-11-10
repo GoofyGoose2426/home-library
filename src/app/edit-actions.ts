@@ -700,3 +700,17 @@ export async function deleteSeries(id: string): Promise<Result> {
   revalidatePath("/", "layout");
   return { ok: true };
 }
+
+// Needs review: Alexandra says a flagged book is fine as it is (or, with
+// undo, puts the flag back).
+const REVIEW_REASONS = ["cover", "author", "guess"] as const;
+
+export async function clearReview(titleId: string, reasons: string[], undo = false): Promise<Result> {
+  if (!UUID.test(titleId) || !reasons.length || !reasons.every((r) => (REVIEW_REASONS as readonly string[]).includes(r)))
+    return { ok: false, error: "That request isn't valid." };
+  const { supabase } = await ownerClient();
+  const { error } = await supabase.rpc("clear_review", { p_title_id: titleId, p_reasons: reasons, p_undo: undo === true });
+  if (error) return { ok: false, error: error.message };
+  refresh(titleId);
+  return { ok: true };
+}

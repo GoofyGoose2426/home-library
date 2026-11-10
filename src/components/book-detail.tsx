@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { BookCover } from "@/components/book-cover";
 import { ConfirmCover, CoverPicker } from "@/components/cover-picker";
+import { NeedsReview } from "@/components/needs-review";
 import { ClassificationEditor } from "@/components/classification-editor";
 import { EditDetails } from "@/components/edit-details";
 import { MergeEntry } from "@/components/merge-entry";
@@ -188,10 +189,17 @@ export function BookDetail({ book, readOnly = false, base = "" }: { book: Book; 
             </p>
           )}
 
-          {book.needsCheck && !readOnly && (
-            <p className="mt-4 rounded-2xl bg-accent-soft px-4 py-3 text-sm">
-              <strong>Needs checking:</strong> {book.checkNote ?? "The title or author was uncertain in the photos."}
-            </p>
+          {!readOnly && book.copies.length > 0 && (
+            <NeedsReview
+              titleId={book.id}
+              reasons={[
+                ...(!cover?.coverUrl && !book.reviewCleared.includes("cover") ? (["cover"] as const) : []),
+                ...(!authors.length && !book.reviewCleared.includes("author") ? (["author"] as const) : []),
+                ...(book.needsCheck ? (["guess"] as const) : []),
+              ]}
+              cleared={book.reviewCleared}
+              checkNote={book.checkNote}
+            />
           )}
 
           <Ratings book={book} />
