@@ -2,6 +2,23 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · Review a book (Phase 3, steps 1 and 2)
+
+- **Mood reactions list approved**, with group headings. "Not for me" became **Room for growth**: parts that would have made a book even better (pacing, a frustrating character, the ending, hard to follow).
+- **Every book page has a Review section** under the copies:
+  - **Your review**: write as much as you like
+  - **Break my brain / challenge my worldview**
+  - **Would you re-read it?** Yes / No
+  - **Mood reactions**, tap any, under their group headings
+  - **Favourite quote**
+  - **Confirmed spice** on the Scoville Smut Scale, for Romance or books with a romantic subplot. It replaces the suggested spice everywhere, and no later suggestion changes it.
+- Taps save straight away; the review and quote save with **Save review and quote**. Unread books show a **Write a review** button instead of the full form.
+- **Quick edit has a "Write a review" shortcut** that opens the book page at its Review section.
+- **New library filters:** Mood reactions, Broke my brain, Would re-read and Written review (Yes, or "Not yet" for books you've read but haven't written about).
+- The view-only link shows your review as written, with no editing.
+- Tested on the live app at phone size in light and dark mode. To test saving, I turned one mood on and off on Pride and Prejudice; it's back exactly as it was.
+- **Waiting for your OK:** a database check that only accepts moods from your list. The app already enforces this, so nothing depends on it yet.
+
 ## 2026-11-10 · A–Z skips "The"; series reviews
 
 - **Alphabetical order now ignores a leading "The", "A" or "An"**, for titles and for series names. "The Brown Sisters" sorts under B, as if it were "Brown Sisters, The". The names themselves don't change. This applies to the library, the Series list, series filters, author pages, Do I own it? and the spreadsheet download.
