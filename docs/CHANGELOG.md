@@ -17,7 +17,7 @@ What's been built, in plain language. Newest first.
 - **New library filters:** Mood reactions, Broke my brain, Would re-read and Written review (Yes, or "Not yet" for books you've read but haven't written about).
 - The view-only link shows your review as written, with no editing.
 - Tested on the live app at phone size in light and dark mode. To test saving, I turned one mood on and off on Pride and Prejudice; it's back exactly as it was.
-- **Waiting for your OK:** a database check that only accepts moods from your list. The app already enforces this, so nothing depends on it yet.
+- A database check now accepts only moods from your list (applied with your OK).
 
 ## 2026-11-10 · A–Z skips "The"; series reviews
 

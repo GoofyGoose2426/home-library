@@ -4,7 +4,7 @@ Approved 2026-11-10 with option **A** (Ask your library in our sessions, free). 
 
 Already built before step 1, at Alexandra's request: a series list, Add series, and a series page with Add book to series (see the changelog, 2026-11-10). The overall series review (stars, writing, recommend, notes) was added on 2026-11-10 too, so step 3 now only needs the collection and per-story reviews.
 
-**Progress:** step 1 (mood list) approved 2026-11-10; step 2 (review a book) built and live 2026-11-10, waiting for Alexandra to review three books. The mood-list database check (migration 20261110100000) needs her OK to apply.
+**Progress:** step 1 (mood list) approved 2026-11-10; step 2 (review a book) built and live 2026-11-10, waiting for Alexandra to review three books. The mood-list database check (migration 20261110100000) was applied with her OK.
 
 Phase 3 adds the two things the catalog doesn't do yet: **writing about what you've read**, and **seeing your library as a whole** (charts, and answers to questions). Everything follows the build plan's rules. Stats cover owned books only, and leave out the excluded category (colouring, art/craft reference, picture books, reference books such as cookbooks). Ask your library can only read your data, never change it. The view-only link sees the dashboard and reviews, but never loans, keepsake notes or the Gone list.
 
