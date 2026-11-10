@@ -74,7 +74,7 @@ export function QuickFilters({
   ];
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5 lg:flex-col lg:items-stretch lg:gap-2">
+    <div className="flex items-center gap-1.5 lg:flex-col lg:items-stretch lg:gap-2">
       <div className="flex rounded-full border border-border bg-surface p-0.5" role="group" aria-label="Show">
         {choices.map(([key, label, n]) => (
           <button
@@ -82,7 +82,7 @@ export function QuickFilters({
             type="button"
             aria-pressed={current === key}
             onClick={() => onChange((f) => ({ ...f, status: key === "all" ? [] : key === "read" ? ["read"] : TBR }))}
-            className={`min-h-8 flex-1 rounded-full px-2.5 text-xs font-medium ${current === key ? "bg-accent text-on-accent" : ""}`}
+            className={`min-h-8 flex-1 whitespace-nowrap rounded-full px-2 text-xs font-medium ${current === key ? "bg-accent text-on-accent" : ""}`}
           >
             {label} <span className="font-normal opacity-80">{n.toLocaleString()}</span>
           </button>
@@ -93,7 +93,7 @@ export function QuickFilters({
           type="button"
           aria-pressed={loanOn}
           onClick={() => onChange((f) => ({ ...f, flag: loanOn ? f.flag.filter((x) => x !== "loan") : [...f.flag, "loan"] }))}
-          className={`min-h-8 rounded-full px-3 text-xs font-medium ${loanOn ? "bg-on-tag-loan text-tag-loan" : "bg-tag-loan text-on-tag-loan"}`}
+          className={`min-h-8 whitespace-nowrap rounded-full px-2.5 text-xs font-medium ${loanOn ? "bg-on-tag-loan text-tag-loan" : "bg-tag-loan text-on-tag-loan"}`}
         >
           On loan {onLoan}
         </button>
@@ -105,9 +105,10 @@ export function QuickFilters({
           onClick={() =>
             onChange((f) => ({ ...f, review: reviewOn ? f.review.filter((r) => r !== "any") : [...f.review, "any"] }))
           }
-          className={`min-h-8 rounded-full px-3 text-xs font-medium ${reviewOn ? "bg-accent text-on-accent" : "bg-accent-soft"}`}
+          aria-label={`${toReview.toLocaleString()} need review`}
+          className={`min-h-8 whitespace-nowrap rounded-full px-2.5 text-xs font-medium ${reviewOn ? "bg-accent text-on-accent" : "bg-accent-soft"}`}
         >
-          ⚑ {toReview.toLocaleString()} need review
+          ⚑ {toReview.toLocaleString()}<span className="hidden lg:inline"> need review</span>
         </button>
       )}
     </div>

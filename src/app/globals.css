@@ -11,8 +11,8 @@
   --accent-soft: #f6e1d6;
   --on-accent: #ffffff;
   /* Status tags on book cards: read, to be read, on loan. */
-  --tag-read: #c8ecc4;
-  --on-tag-read: #1d5a25;
+  --tag-read: #b4e8ad;
+  --on-tag-read: #155b1e;
   --tag-tbr: #fbd3e2;
   --on-tag-tbr: #8c2352;
   --tag-loan: #e3d6f6;
@@ -29,8 +29,8 @@
     --accent: #e48a6f;
     --accent-soft: #3d2a23;
     --on-accent: #1d1916;
-    --tag-read: #24482a;
-    --on-tag-read: #b8ecbf;
+    --tag-read: #22542b;
+    --on-tag-read: #c2f2c6;
     --tag-tbr: #4d2335;
     --on-tag-tbr: #f8bfd5;
     --tag-loan: #372a52;
