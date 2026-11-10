@@ -174,7 +174,7 @@ export function LibraryView({ books: loaded, owner = false }: { books: LibraryBo
   }
 
   return (
-    <div className="lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-8">
+    <div className="lg:grid lg:grid-cols-[14.5rem_minmax(0,1fr)] lg:gap-8">
       {/* Pinned to the top on a phone; a sticky column on the left on a wide screen. */}
       <aside className="sticky top-0 z-20 -mx-4 space-y-2 border-b border-border bg-background/95 px-4 py-2 backdrop-blur lg:mx-0 lg:h-dvh lg:space-y-4 lg:self-start lg:overflow-y-auto lg:border-b-0 lg:border-r lg:bg-transparent lg:px-0 lg:py-6 lg:pr-5 lg:backdrop-blur-none">
         {owner && (
