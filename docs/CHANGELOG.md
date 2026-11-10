@@ -2,6 +2,16 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · Collections: contents and a review for each story (Phase 3, step 3)
+
+- **Every book page has a Contents section** (except picture books, manga and graphic novels). Tap **+ Add contents** and type or paste the stories, essays or poems in order, one per line. To add an author, put it after a dash: "The Lottery — Shirley Jackson". Numbers or bullets at the start of a line are tidied away.
+- **Tick each piece as you read it.** The book becomes **Partly read** when some are ticked and **Read** when all are. Adding contents to a book you've already marked Read starts every piece ticked.
+- **Review it** next to each piece opens stars (your quarter-star scale) and a short note. The book's own Review section becomes its **Overall review**.
+- **Remove from contents** takes a piece off the list (it asks first).
+- The view-only link shows the contents, ticks and your piece reviews, with no editing.
+- No database change was needed. Tested on the live app at phone size in light and dark mode, with two temporary test stories on Burnout that were then removed. Burnout is back exactly as it was.
+- That finishes the review part of Phase 3 (book, series and collection reviews). Next is the Stats dashboard.
+
 ## 2026-11-10 · Review a book (Phase 3, steps 1 and 2)
 
 - **Mood reactions list approved**, with group headings. "Not for me" became **Room for growth**: parts that would have made a book even better (pacing, a frustrating character, the ending, hard to follow).
