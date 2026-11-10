@@ -7,7 +7,7 @@ What's been built, in plain language. Newest first.
 - **A book's page now shows a "⚑ Needs review" box** listing exactly what's flagged (no cover, no author, or a title or author that was a guess from the shelf photos), with how to fix each one.
 - **"It's fine as it is, clear this"** removes a flag without changing the book, for example a colouring book that has no author. "No issues, clear all" clears every flag at once.
 - If you change your mind, **"Flag it again"** puts a cleared flag back.
-- A database change adds a place to remember which flags you cleared. It was tested on a throwaway practice database first (6 checks, including that nobody else can change it).
+- A database change adds a place to remember which flags you cleared. It was tested on a throwaway practice database first (6 checks, including that nobody else can change it), then applied to the live database with your OK. The live library loads normally with it. No book is flagged right now (you gave the colouring book its author), so the box itself will first show on the next flagged book.
 
 ## 2026-11-10 · Series pages: add a series, add books to it
 
