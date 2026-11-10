@@ -2,6 +2,11 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · Library opens by author; search text carries over
+
+- **The library now opens sorted "Author A–Z, series in order"** (it was Title A–Z). It's first in the Sort list, and Title A–Z is still there when you want it.
+- **"Can't find it? Enter it yourself" keeps what you searched for.** The text from the search box goes into the Title field. If you'd typed an ISBN, it goes into the ISBN field instead.
+
 ## 2026-11-10 · Fix: typing a title in "Enter it yourself"
 
 - **Typing a title no longer jumps to "Add a copy".** The "you already have this book" check used the search, which matches any title starting with what you've typed. So "B" matched *A Belated Bride*, the form switched to adding a copy, and the title box disappeared.
