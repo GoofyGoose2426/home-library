@@ -2,6 +2,12 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-10 · Fix: typing a title in "Enter it yourself"
+
+- **Typing a title no longer jumps to "Add a copy".** The "you already have this book" check used the search, which matches any title starting with what you've typed. So "B" matched *A Belated Bride*, the form switched to adding a copy, and the title box disappeared.
+- **It now only speaks up for the whole title by the same author.** Even then, a title you're typing yourself stays a new book (**It's a different book** is selected). Tap **Add as another copy** if it really is the same book. A picked search result you already own still starts as a copy, as before.
+- Tested at phone size in light and dark mode: typing "B", "Belated" and "Belated Bride". Nothing was saved.
+
 ## 2026-11-04 · Two unnamed books, covers under the cover, a second cover search
 
 - **"romance, far left, blurry" is deleted.** It was a duplicate. Shelf photo Media (19) is blurry, but Media (20) shows the same shelf in focus: that spine is *Honor's Splendour* (Julie Garwood), next to *Outlander*, and both are already in the library.
