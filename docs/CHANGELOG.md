@@ -2,6 +2,17 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-13 · Ask your library (Phase 3, step 5)
+
+- **How it works (option A, free):** ask me a question in a Claude session. I turn it into a lookup the app knows how to run, check the answer, and give you a link. The link opens an **answer page** in your app: the answer as a number, bars or a list, plus a line saying exactly how it was worked out.
+- **Pin to dashboard:** on the answer page, name it and tap **Pin to dashboard**. It shows under **Your pinned answers** on the Stats page, worked out again from your books every time you open it, so it's always current. **Unpin** takes it off (it asks first).
+- **Read-only by design:** a lookup can only pick books (by read status and any field on the Stats page) and then count them, group them, average your stars, writing or audio scores, or list them. It can't change anything, and the app refuses any link that isn't exactly that shape. The answer page needs your login.
+- Tap a bar or **See these books in the library** to open those books, when the library's filters can show them exactly.
+- The view-only link shows your pinned answers too, without Unpin.
+- New field for lookups and the library filters: **In more than one format**.
+- A database check that a pinned answer can only hold a lookup (migration `20261113090000`) is written and tested, waiting for your OK to apply. Pinning works without it; it's a second lock.
+- Tested with the five example questions from the build plan at phone size. I pinned one and unpinned it, so nothing is left behind.
+
 ## 2026-11-13 · Stats (Phase 3, step 4)
 
 - **A new Stats page**, first in the menu (bottom bar on your phone, left side on a computer). The view-only link has it too, with a Stats button.

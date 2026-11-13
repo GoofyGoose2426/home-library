@@ -75,7 +75,7 @@ export function StatsView({ data, leftOut, pinned = [] }: { data: StatBook[]; le
               <div className="mb-3 flex items-start justify-between gap-3">
                 <div className="min-w-0">
                   <h3 className="font-serif text-lg font-semibold">{r.name}</h3>
-                  {r.question && r.question !== r.name && <p className="text-sm text-muted">&ldquo;{r.question}&rdquo;</p>}
+                  {r.question && r.question.replace(/\?$/, "") !== r.name && <p className="text-sm text-muted">&ldquo;{r.question}&rdquo;</p>}
                 </div>
                 {!readOnly && <UnpinAnswer id={r.id} name={r.name} />}
               </div>
