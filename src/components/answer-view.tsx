@@ -128,6 +128,8 @@ function Bars({ lookup, answer, base }: { lookup: Lookup; answer: Extract<Answer
   const d = BREAKDOWNS.find((x) => x.key === answer.by)!;
   const rows = answer.rows.slice(0, 30);
   const max = Math.max(1, ...rows.map((r) => r.total));
+  // Only one status picked: show each value's share of those books, not "% read".
+  const one = lookup.status?.length === 1 ? lookup.status[0] : null;
   if (!rows.length) return <p className="text-sm text-muted">No books match.</p>;
   return (
     <>
@@ -147,8 +149,8 @@ function Bars({ lookup, answer, base }: { lookup: Lookup; answer: Extract<Answer
             n={r.total}
             of={answer.of}
             max={max}
-            statuses={ALL}
-            look="all"
+            statuses={one ? [one] : ALL}
+            look={one ?? "all"}
             hrefFor={(s) => lookupHref(base, lookup, { d, value: r.value }, s.length === 3 ? undefined : s)}
             onTip={(e, text) => setTip({ x: e.clientX, y: e.clientY, text })}
             onLeave={() => setTip(null)}

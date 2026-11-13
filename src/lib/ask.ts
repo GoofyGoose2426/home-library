@@ -116,15 +116,22 @@ type Applies = (b: LibraryBook, v: Record<string, string[]>) => boolean;
 const always: Applies = () => true;
 const romance: Applies = (_, v) => (v.genre ?? []).includes("Romance") || (v.romantic_subplot ?? []).includes("Yes");
 const read: Applies = (b) => b.readStatus !== "unread";
+const notRomance: Applies = (_, v) => !(v.genre ?? []).includes("Romance");
+const nonfiction: Applies = (_, v) => (v.genre ?? []).includes("Nonfiction");
+const fiction: Applies = (b, v) => !nonfiction(b, v);
 // The fields "what's missing" checks, and which books each one applies to
-// (spice only to romance or a romantic subplot; your ratings only to books
-// you've read). Format counts print books whose format isn't set.
+// (spice only to romance or a romantic subplot, "romantic subplot" only to
+// books that aren't Romance, tropes only to fiction, subjects only to
+// nonfiction, your ratings only to books you've read). Format counts print
+// books whose format isn't set.
 const MISSING_FIELDS: { key: string; applies: Applies }[] = [
   { key: "genre", applies: always },
   { key: "subgenre", applies: always },
   { key: "audience", applies: always },
   { key: "vibe", applies: always },
-  { key: "romantic_subplot", applies: always },
+  { key: "romantic_subplot", applies: notRomance },
+  { key: "trope", applies: fiction },
+  { key: "subject", applies: nonfiction },
   { key: "spice", applies: romance },
   { key: "story_focus", applies: romance },
   { key: "format", applies: always },
