@@ -62,6 +62,7 @@ export const BREAKDOWN_GROUPS: { title: string; items: Breakdown[] }[] = [
       facet("book_type", "Book type"),
       facet("audience", "Audience", { order: AUDIENCE.map((a) => a[1]) }),
       { key: "format", title: "Format", order: Object.keys(FORMAT_LABEL), label: (v) => FORMAT_LABEL[v as CopyFormat] ?? v, param: (v) => ["format", v] },
+      facet("multi_format", "In more than one format", { order: ["Yes", "No"] }),
       { key: "source", title: "Where it lives", label: (v) => SOURCE_LABEL[v] ?? v, param: (v) => ["source", v] },
       facet("decade", "Decade first published", { order: ["Before 1900", ...Array.from({ length: 21 }, (_, i) => `${1900 + i * 10}s`)] }),
     ],
@@ -111,22 +112,23 @@ export const BREAKDOWNS = BREAKDOWN_GROUPS.flatMap((g) => g.items);
 
 // Server side: the counted books, slimmed to what the charts need.
 export function statBooks(books: LibraryBook[]): StatBook[] {
-  return books
-    .filter((b) => !leftOutOfStats(b))
-    .map((b) => {
-      const v: Record<string, string[]> = {};
-      for (const d of BREAKDOWNS) {
-        const values =
-          d.key === "format" ? b.formats
-          : d.key === "source" ? b.sources
-          : d.key === "stars" || d.key === "writing" || d.key === "recommend"
-            ? // "Not rated" only means something for books she's read.
-              [ratingValue(b, d.key)].filter((r) => r !== "none" || b.readStatus !== "unread")
-          : (b.facets[d.key] ?? []);
-        if (values.length) v[d.key] = [...new Set(values)];
-      }
-      return { s: b.readStatus, v };
-    });
+  return books.filter((b) => !leftOutOfStats(b)).map((b) => ({ s: b.readStatus, v: breakdownValues(b) }));
+}
+
+// A book's values for every breakdown.
+export function breakdownValues(b: LibraryBook): Record<string, string[]> {
+  const v: Record<string, string[]> = {};
+  for (const d of BREAKDOWNS) {
+    const values =
+      d.key === "format" ? b.formats
+      : d.key === "source" ? b.sources
+      : d.key === "stars" || d.key === "writing" || d.key === "recommend"
+        ? // "Not rated" only means something for books she's read.
+          [ratingValue(b, d.key)].filter((r) => r !== "none" || b.readStatus !== "unread")
+      : (b.facets[d.key] ?? []);
+    if (values.length) v[d.key] = [...new Set(values)];
+  }
+  return v;
 }
 
 export type Row = { value: string; label: string; counts: Record<Status, number>; total: number };

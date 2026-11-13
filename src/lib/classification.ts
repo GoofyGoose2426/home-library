@@ -108,6 +108,7 @@ export const FACETS: { key: string; title: string; note?: string }[] = [
   { key: "trope", title: "Tropes" },
   { key: "book_type", title: "Book type" },
   { key: "decade", title: "Decade first published" },
+  { key: "multi_format", title: "In more than one format" },
   { key: "audience", title: "Audience" },
   { key: "vibe", title: "Vibe" },
   { key: "romantic_subplot", title: "Romantic subplot" },

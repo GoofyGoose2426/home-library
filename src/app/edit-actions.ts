@@ -17,6 +17,7 @@ import {
 } from "@/lib/classification";
 import { isQuarterStar, type Recommendation } from "@/lib/ratings";
 import { isMood } from "@/lib/moods";
+import { chartType, parseLookup } from "@/lib/ask";
 
 // Quick edits. Each one records Alexandra as the source of the value, which
 // stops any later prefill from overwriting it (see field_sources_protect).
@@ -907,4 +908,37 @@ export async function setPieceReview(pieceId: string, patch: { rating?: number |
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Couldn't save that." };
   }
+}
+
+// ---------------------------------------------------------------------------
+// Ask your library: pin an answer to the Stats page. Only a checked,
+// read-only lookup is saved (the database checks its shape too).
+
+export async function pinReport(name: string, question: string, lookup: unknown): Promise<Result> {
+  const clean = typeof name === "string" ? name.trim().replace(/\s+/g, " ").slice(0, 120) : "";
+  const spec = parseLookup(lookup);
+  if (!clean) return { ok: false, error: "Give it a name." };
+  if (!spec) return { ok: false, error: "That lookup isn't one the app can run." };
+  const { supabase } = await ownerClient();
+  const { data: last } = await supabase.from("saved_reports").select("position").order("position", { ascending: false, nullsFirst: false }).limit(1).maybeSingle();
+  const { error } = await supabase.from("saved_reports").insert({
+    name: clean,
+    question: typeof question === "string" ? question.trim().slice(0, 1000) || null : null,
+    spec,
+    chart_type: chartType(spec),
+    pinned: true,
+    position: (last?.position ?? 0) + 1,
+  });
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/stats");
+  return { ok: true };
+}
+
+export async function unpinReport(id: string): Promise<Result> {
+  if (!UUID.test(id)) return { ok: false, error: "That request isn't valid." };
+  const { supabase } = await ownerClient();
+  const { error } = await supabase.from("saved_reports").delete().eq("id", id);
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/stats");
+  return { ok: true };
 }

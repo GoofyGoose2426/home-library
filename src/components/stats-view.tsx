@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { AnswerView, UnpinAnswer } from "@/components/answer-view";
 import { useViewMode } from "@/components/view-mode";
+import type { PinnedReport } from "@/lib/reports";
 import { BREAKDOWN_GROUPS, BREAKDOWNS, STATUSES, breakdown, libraryHref, type Row, type StatBook, type Status } from "@/lib/stats";
 
 // Read / partly read / unread as a ring, then any field broken down as bars.
@@ -26,8 +28,8 @@ const pct = (n: number, of: number) => {
 };
 const books = (n: number) => `${n.toLocaleString()} ${n === 1 ? "book" : "books"}`;
 
-export function StatsView({ data, leftOut }: { data: StatBook[]; leftOut: number }) {
-  const { base } = useViewMode();
+export function StatsView({ data, leftOut, pinned = [] }: { data: StatBook[]; leftOut: number; pinned?: PinnedReport[] }) {
+  const { base, readOnly } = useViewMode();
   const params = useSearchParams();
   const [by, setBy] = useState(() => (BREAKDOWNS.some((d) => d.key === params.get("by")) ? params.get("by")! : "genre"));
   const [look, setLook] = useState<Look>(() => (LOOKS.some(([k]) => k === params.get("look")) ? (params.get("look") as Look) : "all"));
@@ -54,6 +56,34 @@ export function StatsView({ data, leftOut }: { data: StatBook[]; leftOut: number
   return (
     <div className="mt-6 space-y-8">
       <Split counts={counts} total={data.length} base={base} leftOut={leftOut} />
+
+      {(pinned.length > 0 || !readOnly) && (
+        <section aria-labelledby="pinned" className="space-y-4">
+          <div>
+            <h2 id="pinned" className="font-serif text-xl font-semibold">
+              {readOnly ? "Pinned answers" : "Your pinned answers"}
+            </h2>
+            {!readOnly && (
+              <p className="mt-1 text-sm text-muted">
+                {pinned.length ? "Answers from Ask your library, worked out again from your books each time you open this page." : "Nothing pinned yet."}{" "}
+                To ask your library a question, ask in a Claude session. You&apos;ll get a link to the answer, with a Pin to dashboard button.
+              </p>
+            )}
+          </div>
+          {pinned.map((r) => (
+            <article key={r.id} className="rounded-3xl border border-border bg-surface p-4 sm:p-6">
+              <div className="mb-3 flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <h3 className="font-serif text-lg font-semibold">{r.name}</h3>
+                  {r.question && r.question !== r.name && <p className="text-sm text-muted">&ldquo;{r.question}&rdquo;</p>}
+                </div>
+                {!readOnly && <UnpinAnswer id={r.id} name={r.name} />}
+              </div>
+              <AnswerView lookup={r.lookup} answer={r.answer} />
+            </article>
+          ))}
+        </section>
+      )}
 
       <section aria-labelledby="breakdown" className="rounded-3xl border border-border bg-surface p-4 sm:p-6">
         <h2 id="breakdown" className="font-serif text-xl font-semibold">
@@ -328,7 +358,7 @@ function Breakdown({
   );
 }
 
-function BarRow({
+export function BarRow({
   row,
   n,
   of,
@@ -344,35 +374,45 @@ function BarRow({
   of: number;
   max: number;
   statuses: Status[];
-  hrefFor: (s: Status[]) => string;
+  // null when the library can't show exactly these books.
+  hrefFor: (s: Status[]) => string | null;
   onTip: (e: React.MouseEvent, text: string) => void;
   onLeave: () => void;
   look: Look;
 }) {
   const parts = statuses.filter((s) => row.counts[s] > 0);
+  const rowHref = hrefFor(statuses);
+  const head = (
+    <>
+      <span className="min-w-0 font-medium">{row.label}</span>
+      <span className="shrink-0 tabular-nums text-muted">
+        {n.toLocaleString()}
+        {look === "all" ? <> · {pct(row.counts.read, n)}% read</> : <> · {pct(n, of)}%</>}
+      </span>
+    </>
+  );
+  const headClass = "flex items-baseline justify-between gap-3 text-sm";
   return (
     <li>
-      <Link href={hrefFor(statuses)} className="flex items-baseline justify-between gap-3 text-sm hover:underline">
-        <span className="min-w-0 font-medium">{row.label}</span>
-        <span className="shrink-0 tabular-nums text-muted">
-          {n.toLocaleString()}
-          {look === "all" ? <> · {pct(row.counts.read, n)}% read</> : <> · {pct(n, of)}%</>}
-        </span>
-      </Link>
+      {rowHref ? (
+        <Link href={rowHref} className={`${headClass} hover:underline`}>
+          {head}
+        </Link>
+      ) : (
+        <p className={headClass}>{head}</p>
+      )}
       <div className="mt-1 flex h-3.5 gap-0.5" style={{ width: `${Math.max((n / max) * 100, 1.5)}%` }}>
         {parts.map((s) => {
           const label = `${row.label} · ${STATUSES.find((x) => x.key === s)!.label}: ${books(row.counts[s])} (${pct(row.counts[s], n)}%)`;
-          return (
-            <Link
-              key={s}
-              href={hrefFor([s])}
-              aria-label={label}
-              onMouseMove={(e) => onTip(e, label)}
-              onMouseLeave={onLeave}
-              className="h-full min-w-1 first:rounded-l last:rounded-r hover:opacity-80"
-              style={{ flexGrow: row.counts[s], flexBasis: 0, background: COLOR[s] }}
-            />
-          );
+          const href = hrefFor([s]);
+          const props = {
+            "aria-label": label,
+            onMouseMove: (e: React.MouseEvent) => onTip(e, label),
+            onMouseLeave: onLeave,
+            className: "h-full min-w-1 first:rounded-l last:rounded-r hover:opacity-80",
+            style: { flexGrow: row.counts[s], flexBasis: 0, background: COLOR[s] },
+          };
+          return href ? <Link key={s} href={href} {...props} /> : <span key={s} role="img" {...props} />;
         })}
       </div>
     </li>

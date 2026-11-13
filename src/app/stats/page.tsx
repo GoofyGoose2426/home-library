@@ -3,6 +3,7 @@ import Link from "next/link";
 import { StatsView } from "@/components/stats-view";
 import { loadLibrary } from "@/lib/library";
 import { leftOutOfStats } from "@/lib/library-filters";
+import { loadPinned } from "@/lib/reports";
 import { statBooks } from "@/lib/stats";
 import { createClient } from "@/lib/supabase/server";
 
@@ -25,5 +26,5 @@ export default function StatsPage() {
 async function Stats() {
   const supabase = await createClient();
   const books = await loadLibrary(supabase);
-  return <StatsView data={statBooks(books)} leftOut={books.filter(leftOutOfStats).length} />;
+  return <StatsView data={statBooks(books)} leftOut={books.filter(leftOutOfStats).length} pinned={await loadPinned(supabase, books)} />;
 }

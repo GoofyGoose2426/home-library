@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { StatsView } from "@/components/stats-view";
 import { loadLibrary } from "@/lib/library";
 import { leftOutOfStats } from "@/lib/library-filters";
+import { loadPinned } from "@/lib/reports";
 import { statBooks } from "@/lib/stats";
 import { sharedClient } from "@/lib/supabase/shared";
 import { LinkOff, SharedFrame, SharedHeader } from "../shared";
@@ -27,7 +28,7 @@ async function SharedStats({ params }: Pick<PageProps<"/s/[code]/stats">, "param
   return (
     <SharedFrame code={code}>
       <SharedHeader code={code} />
-      <StatsView data={statBooks(books)} leftOut={books.filter(leftOutOfStats).length} />
+      <StatsView data={statBooks(books)} leftOut={books.filter(leftOutOfStats).length} pinned={await loadPinned(supabase, books)} />
     </SharedFrame>
   );
 }

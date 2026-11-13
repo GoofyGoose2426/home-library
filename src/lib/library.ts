@@ -115,6 +115,7 @@ function facetsOf(t: Row): Record<string, string[]> {
   add("book_type", BOOK_TYPE[t.book_type] ?? null);
   const year = t.first_published;
   add("decade", !year ? null : year < 1900 ? "Before 1900" : `${Math.floor(year / 10) * 10}s`);
+  add("multi_format", new Set(t.copies.map((c) => c.format)).size > 1 ? "Yes" : "No");
   add("audience", labelOf(AUDIENCE, t.audience));
   add("vibe", labelOf(VIBE, t.vibe_main));
   add("vibe", labelOf(VIBE, t.vibe_second));
