@@ -63,7 +63,7 @@ export const BREAKDOWN_GROUPS: { title: string; items: Breakdown[] }[] = [
       facet("audience", "Audience", { order: AUDIENCE.map((a) => a[1]) }),
       { key: "format", title: "Format", order: Object.keys(FORMAT_LABEL), label: (v) => FORMAT_LABEL[v as CopyFormat] ?? v, param: (v) => ["format", v] },
       { key: "source", title: "Where it lives", label: (v) => SOURCE_LABEL[v] ?? v, param: (v) => ["source", v] },
-      facet("decade", "Decade first published", { order: Array.from({ length: 110 }, (_, i) => `${1000 + i * 10}s`) }),
+      facet("decade", "Decade first published", { order: ["Before 1900", ...Array.from({ length: 21 }, (_, i) => `${1900 + i * 10}s`)] }),
     ],
   },
   {

@@ -113,7 +113,8 @@ function facetsOf(t: Row): Record<string, string[]> {
   // New books wait for genre and the rest until a Claude session classifies them.
   if (!f.genre && !t.is_reference) add("classification", NOT_CLASSIFIED);
   add("book_type", BOOK_TYPE[t.book_type] ?? null);
-  add("decade", t.first_published ? `${Math.floor(t.first_published / 10) * 10}s` : null);
+  const year = t.first_published;
+  add("decade", !year ? null : year < 1900 ? "Before 1900" : `${Math.floor(year / 10) * 10}s`);
   add("audience", labelOf(AUDIENCE, t.audience));
   add("vibe", labelOf(VIBE, t.vibe_main));
   add("vibe", labelOf(VIBE, t.vibe_second));

@@ -19,7 +19,11 @@ const SHORT: Record<Status, string> = { read: "read", partly_read: "partly read"
 type Look = "all" | Status;
 const LOOKS: [Look, string][] = [["all", "All books"], ...STATUSES.map((s) => [s.key, s.label] as [Look, string])];
 
-const pct = (n: number, of: number) => (of ? Math.round((n / of) * 100) : 0);
+// Whole percentages, with "<1" rather than 0 for a book or two.
+const pct = (n: number, of: number) => {
+  const p = of ? Math.round((n / of) * 100) : 0;
+  return p === 0 && n > 0 ? "<1" : String(p);
+};
 const books = (n: number) => `${n.toLocaleString()} ${n === 1 ? "book" : "books"}`;
 
 export function StatsView({ data, leftOut }: { data: StatBook[]; leftOut: number }) {
@@ -211,7 +215,9 @@ function Breakdown({
     .map((r) => ({ ...r, n: look === "all" ? r.total : r.counts[look] }))
     .filter((r) => r.n > 0);
   const expanded = showAll === `${by}:${look}`;
-  const visible = expanded ? rows : rows.slice(0, FIRST);
+  // Lists with their own order (decades, stars, spice) always show in full.
+  const long = !d.order && rows.length > FIRST;
+  const visible = expanded || !long ? rows : rows.slice(0, FIRST);
   const max = Math.max(1, ...rows.map((r) => r.n));
   const sideLabel = look === "all" ? "books" : `${SHORT[look]} books`;
   const statuses: Status[] = look === "all" ? ["read", "partly_read", "unread"] : [look];
@@ -290,7 +296,7 @@ function Breakdown({
         </ul>
       )}
 
-      {rows.length > FIRST && (
+      {long && (
         <button
           type="button"
           onClick={() => setShowAll(expanded ? null : `${by}:${look}`)}

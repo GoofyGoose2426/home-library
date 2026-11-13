@@ -2,6 +2,20 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-13 · Stats (Phase 3, step 4)
+
+- **A new Stats page**, first in the menu (bottom bar on your phone, left side on a computer). The view-only link has it too, with a Stats button.
+- **Read and unread** at the top: a ring with read, partly read and unread as their own slices, plus the numbers and percentages beside it. It counts the books you own, leaving out reference and picture books (it says how many it left out).
+- **Break it down** by any field: genre, subgenre, book type, audience, format, where it lives, decade first published, vibe, spice, tropes, reasons for reading, your stars and writing scores, mood reactions, author and main-character identity, own voices, and more.
+  - **All books** shows read, partly read and unread inside each bar. Switch the bars between **Number of books** and **Share read** to compare, say, how much of your horror you've read against your romance.
+  - **Read**, **Partly read** or **Unread** shows just those books, with a sentence on top, like "Of your 298 unread books, 35% are Horror."
+  - The 12 biggest show first; **Show all** shows the rest.
+- **Tap anything** (a slice, a bar, a part of a bar, a name) to open exactly those books in the library. The library gets a new filter for this, **Counted in stats**.
+- The library also gets two new filters: **Book type** and **Decade first published**.
+- Colours: green for read, violet for partly read, pink for unread, checked with a colour-blindness tool in light and dark mode.
+- Recharts wasn't needed: the charts are drawn directly, which keeps the page quick on your phone.
+- No database change.
+
 ## 2026-11-10 · Collections: contents and a review for each story (Phase 3, step 3)
 
 - **Every book page has a Contents section** (except picture books, manga and graphic novels). Tap **+ Add contents** and type or paste the stories, essays or poems in order, one per line. To add an author, put it after a dash: "The Lottery — Shirley Jackson". Numbers or bullets at the start of a line are tidied away.
