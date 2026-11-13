@@ -8,7 +8,7 @@ What's been built, in plain language. Newest first.
   - **What's inside each one:** for example, each of your top tropes with its genres and subgenres, or each unread genre with its subgenres.
   - **What's missing:** which fields have the most books with no value yet (or only Unknown). Each field is counted only where it applies: spice only for romance, ratings only for books you've read, tropes only for fiction, subjects only for nonfiction.
 - Answers about one status (just unread, say) show each group's share of those books instead of "% read".
-- To pin these new kinds of answer, the database check needs an update (migration `20261113100000`). It's written and tested, waiting for your OK.
+- The database check was updated to allow pinning these (migration `20261113100000`, applied with your OK). A test pin and unpin afterwards worked.
 
 ## 2026-11-13 · Ask your library (Phase 3, step 5)
 
