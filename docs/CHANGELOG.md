@@ -10,7 +10,7 @@ What's been built, in plain language. Newest first.
 - Tap a bar or **See these books in the library** to open those books, when the library's filters can show them exactly.
 - The view-only link shows your pinned answers too, without Unpin.
 - New field for lookups and the library filters: **In more than one format**.
-- A database check that a pinned answer can only hold a lookup (migration `20261113090000`) is written and tested, waiting for your OK to apply. Pinning works without it; it's a second lock.
+- A database check that a pinned answer can only hold a lookup (migration `20261113090000`) was applied to the live database with your OK, as a second lock. A test pin and unpin afterwards worked.
 - Tested with the five example questions from the build plan at phone size. I pinned one and unpinned it, so nothing is left behind.
 
 ## 2026-11-13 · Stats (Phase 3, step 4)
