@@ -227,7 +227,7 @@ Fable's warmth with StoryGraph's information.
 - [ ] Books with no genre yet: 18 counted in stats as of 2026-11-13 (including 6 Claude couldn't classify honestly in Phase 2); the "Not classified yet" filter finds them
 - [ ] Stars: 737 of 758 read books have no star rating yet (Ask your library, "Which fields have the most unknown data?")
 - [ ] Look up authors of unread books (only when Alexandra asks). Author identity is still Unknown for about 96% of counted books, so representation stats are thin until then
-- [ ] Renew the Supabase access token used by the session scripts (expires around 2026-11-22)
+- [x] Renew the Supabase access token used by the session scripts (renewed 2026-11-13, set to never expire)
 - [x] Phase 3: decide on the in-app Claude API. Decided 2026-11-13: stay free; ask in Claude Code sessions. A no-AI question builder in the app is possible later, also free
 - [ ] Series lengths: the app knows only the volumes she owns, so gaps after the highest one aren't shown. Needs a source for how many books a series has
 - [x] Kobo, Audible and Libro.fm books imported from app screenshots (Phase 1)
