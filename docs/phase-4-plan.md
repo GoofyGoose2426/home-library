@@ -1,6 +1,6 @@
 # Phase 4 plan: Keeping it up to date
 
-Draft 2026-11-13, waiting for Alexandra's OK.
+Approved 2026-11-13. Order: **step 2 first** (Rate what you've read), then step 1 when she's at home with her shelves. Her answers: my suggestions (ask each time for a different edition; stars only on the rating screen, with a link to the full review).
 
 Phases 1–3 built the library. Phase 4 keeps it current with as little effort as possible. **Nothing here is required**, it all costs $0, and you choose which steps to do. Each step is small and stands on its own, so we can do one, use it for a while, and come back for the next.
 

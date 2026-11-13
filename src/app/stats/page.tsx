@@ -26,5 +26,18 @@ export default function StatsPage() {
 async function Stats() {
   const supabase = await createClient();
   const books = await loadLibrary(supabase);
-  return <StatsView data={statBooks(books)} leftOut={books.filter(leftOutOfStats).length} pinned={await loadPinned(supabase, books)} />;
+  const unrated = books.filter((b) => b.readStatus === "read" && b.rating === null && !leftOutOfStats(b)).length;
+  return (
+    <>
+      {unrated > 0 && (
+        <p className="mt-2 text-sm text-muted">
+          {unrated.toLocaleString()} of the books you&apos;ve read have no stars yet.{" "}
+          <Link href="/rate" className="font-medium text-accent underline-offset-4 hover:underline">
+            Rate them →
+          </Link>
+        </p>
+      )}
+      <StatsView data={statBooks(books)} leftOut={books.filter(leftOutOfStats).length} pinned={await loadPinned(supabase, books)} />
+    </>
+  );
 }

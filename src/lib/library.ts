@@ -50,6 +50,8 @@ export type LibraryBook = {
   // The owned copy whose cover is shown (or the first copy), for quick edit.
   coverCopyId: string | null;
   coverIsPhoto: boolean;
+  // When the title was added to the catalog.
+  addedAt: string;
 };
 
 type Row = {
@@ -62,6 +64,7 @@ type Row = {
   review_cleared: string[];
   series_number: number | null;
   first_published: number | null;
+  created_at: string;
   series: { name: string } | null;
   credits: {
     role: string;
@@ -160,7 +163,7 @@ export async function loadLibrary(
     const { data, error } = await supabase
       .from("titles")
       .select(
-        `id, title, read_status, book_type, is_reference, needs_check, review_cleared, series_number, first_published,
+        `id, title, read_status, book_type, is_reference, needs_check, review_cleared, series_number, first_published, created_at,
          audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second,
          series(name),
          own_voices,
@@ -223,6 +226,7 @@ export async function loadLibrary(
         coverConfirmed: cover?.cover_path ? true : (cover?.cover_confirmed ?? false),
         coverCopyId: cover?.id ?? t.copies[0]?.id ?? null,
         coverIsPhoto: !!cover?.cover_path,
+        addedAt: t.created_at,
       });
     }
     if ((data ?? []).length < 1000) break;

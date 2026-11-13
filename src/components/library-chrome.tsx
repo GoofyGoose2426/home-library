@@ -135,6 +135,7 @@ const TOOLS: [string, string][] = [
   ["/stats", "Stats"],
   ["/series", "Series"],
   ["/check", "To check"],
+  ["/rate", "Rate what you've read"],
   ["/gone", "Gone list"],
   ["/fill", "Fill in details"],
   ["/duplicates", "Possible duplicates"],
