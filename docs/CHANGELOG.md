@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-13 · Phase 3 wrap-up
+
+- **Phase 3 is done:** reviews (book, series, collection and story), Stats, and Ask your library.
+- You pinned all five of your questions to the Stats page.
+- New privacy checks: the view-only link can read your reviews and pinned answers, but can't change, add or unpin anything. All the database tests pass.
+- Cost: $0. Ask your library stays free, answered in Claude sessions.
+- The build plan is updated (revision 7), including what changed from the plan and what's still open.
+
 ## 2026-11-13 · Ask your library: your first five questions
 
 - Two new kinds of answer, both read-only:

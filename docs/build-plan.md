@@ -1,6 +1,6 @@
 # Home Library Catalog — Build Plan
 
-Owner: Alexandra Theroux · Last updated 2026-11-04 (rev. 6: Phase 2 done; classification and author lookups done in Claude Code sessions, no in-app AI yet)
+Owner: Alexandra Theroux · Last updated 2026-11-13 (rev. 7: Phase 3 done; Ask your library answered in Claude Code sessions, free, no in-app AI)
 
 ## Purpose and principles
 
@@ -187,8 +187,8 @@ Used on a phone in a bookstore, on the couch and at a desk. All adding and editi
 The only fixed report is read vs. unread. All stats cover owned books only and leave out the excluded category.
 
 - **Read vs. unread dashboard:** the split (read / partly read / unread). Either side can be broken down by any field, e.g. "40% unread, and of those, 35% horror." Colourful charts in the style of StoryGraph's stats.
-- **Ask your library:** a question box. Alexandra types a question; the app answers with a chart, table or short answer built from her data. Examples: "Which queer-authored horror haven't I read?", "How do author demographics compare between my read and unread books?", "Which books do I own in more than one format?", "What's my average rating by author representation in fantasy?"
-- **Save a report:** pin any answer to the dashboard.
+- **Ask your library:** Alexandra asks a question; the app answers with a chart, table or short answer built from her data. Since 2026-11-13 she asks in a Claude Code session (free, her choice), which turns the question into a read-only lookup and gives her a link to the answer page in the app. Examples: "Which queer-authored horror haven't I read?", "How do author demographics compare between my read and unread books?", "Which books do I own in more than one format?", "What's my average rating by author representation in fantasy?"
+- **Save a report:** pin any answer to the dashboard. A pinned answer saves the lookup, so it's worked out again from her books each time.
 - **Export:** any list or table as CSV.
 
 ## Look and feel
@@ -210,17 +210,25 @@ Fable's warmth with StoryGraph's information.
    - **Sources live beside each value** (`field_sources`, and a source and `confirmed` flag on each tag), not in a separate suggestions table. Without in-app AI there's no `ai_runs` cost log yet; it comes with the API.
    - **Add a book** looks the book up on Open Library and Google Books as it's added. Values she keeps in the form are saved as confirmed, with their source (her choice, 2026-11-04).
    - **Author representation** covers authors of books she's read (380 looked up). Authors of unread books are looked up only when she asks.
-3. **Reviews and stats:** review prompts (the rating scales shipped in 1b); format, series and collection reviews; read/unread dashboard; Ask your library.
+3. **Reviews and stats:** review prompts (the rating scales shipped in 1b); format, series and collection reviews; read/unread dashboard; Ask your library. Done 2026-11-13 (`docs/phase-3-plan.md`). What changed from the plan:
+   - **Series pages came first**, at her request: a series list, Add series, Add book to series, and an overall series review.
+   - **Needs review box** on the book page says what to check and lets her clear it.
+   - **Collections got a Contents editor** (there was no way to enter stories before), with ticks driving Partly read / Read and a short review per piece.
+   - **Mood reactions** use her approved list with group headings; "Not for me" became **Room for growth**.
+   - **Stats** is drawn without Recharts (lighter on her phone), in colours checked for colour blindness. The library gained filters for Counted in stats, Book type, Decade first published and In more than one format.
+   - **Ask your library stays free** (option A, confirmed 2026-11-13): no in-app Claude API, no `ai_runs` log, $0 spent. Lookups are typed and read-only (`src/lib/ask.ts`: count, group with what's inside each, average, list, what's missing), and the database checks the shape of every pinned answer.
+   - The view-only link shows reviews, the Stats page and pinned answers, never anything to change them.
 4. **Ongoing:** digital library imports, ISBNs and exact editions a shelf at a time.
 
 ## Open items
 
-- [ ] Resolve the seed entries marked `needs_check` (3 left as of 2026-11-04; the Needs review filter finds them)
+- [x] Resolve the seed entries marked `needs_check` (none left as of 2026-11-13)
 - [x] Approve the starter subgenre and trope lists (2026-10-28)
-- [ ] 6 books Claude couldn't classify honestly (four fable-style picture books, *Coat of Many Colors*, and *The Goat in the Bedroom*, not found online); the "Not classified yet" filter finds them
-- [ ] Look up authors of unread books (only when Alexandra asks)
+- [ ] Books with no genre yet: 18 counted in stats as of 2026-11-13 (including 6 Claude couldn't classify honestly in Phase 2); the "Not classified yet" filter finds them
+- [ ] Stars: 737 of 758 read books have no star rating yet (Ask your library, "Which fields have the most unknown data?")
+- [ ] Look up authors of unread books (only when Alexandra asks). Author identity is still Unknown for about 96% of counted books, so representation stats are thin until then
 - [ ] Renew the Supabase access token used by the session scripts (expires around 2026-11-22)
-- [ ] Phase 3: decide on the in-app Claude API, with a cost estimate first
+- [x] Phase 3: decide on the in-app Claude API. Decided 2026-11-13: stay free; ask in Claude Code sessions. A no-AI question builder in the app is possible later, also free
 - [ ] Series lengths: the app knows only the volumes she owns, so gaps after the highest one aren't shown. Needs a source for how many books a series has
 - [x] Kobo, Audible and Libro.fm books imported from app screenshots (Phase 1)
 - [x] Confirm whether children's/YA novels (e.g. Harry Potter) stay in read/unread stats (only picture books are excluded). Decided 2026-10-23: yes, they stay in stats.

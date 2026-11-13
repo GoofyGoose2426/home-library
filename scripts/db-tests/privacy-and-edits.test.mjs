@@ -65,7 +65,17 @@ check(await refused(`insert into public.titles (owner_id, title) values ('${A}',
 const hash = "a".repeat(64);
 await as("authenticated", A);
 await q(`insert into public.share_links (token_hash) values ($1)`, [hash]);
+// Phase 3: a review and a pinned answer, which the link may read but never change.
+await q(`insert into public.reviews (title_id, rating, body, mood_reactions) values ($1, 4.5, 'Loved it', array['swooned'])`, [kept]);
+await q(`insert into public.saved_reports (name, spec, chart_type) values ('Unread by genre', '{"v":1,"status":["unread"],"show":{"kind":"group","by":"genre"}}', 'bars')`);
 await as("anon", null, { "x-share-key": hash });
+check((await q(`select body from public.reviews`))[0]?.body === "Loved it", "link shows her reviews");
+check((await q(`select count(*)::int n from public.saved_reports`))[0].n === 1, "link shows her pinned answers");
+check(await refused(`update public.reviews set body = 'x'`), "link can't change a review");
+check(await refused(`insert into public.reviews (owner_id, title_id, body) values ('${A}', '${kept}', 'x')`), "link can't add a review");
+check(await refused(`update public.saved_reports set name = 'x'`), "link can't rename a pinned answer");
+check(await refused(`delete from public.saved_reports`), "link can't unpin an answer");
+check(await refused(`insert into public.saved_reports (owner_id, name, spec, chart_type) values ('${A}', 'x', '{"v":1,"show":{"kind":"count"}}', 'sentence')`), "link can't pin an answer");
 const vt = await q(`select title from public.titles order by 1`);
 check(vt.length === 1 && vt[0].title === "Wolfsong", `link shows owned books, not the Gone list (${vt.map((r) => r.title)})`);
 check((await q(`select count(*)::int n from public.copies`))[0].n === 1, "link hides gone copies");
