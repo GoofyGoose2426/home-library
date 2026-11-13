@@ -6,6 +6,8 @@ Phases 1–3 built the library. Phase 4 keeps it current with as little effort a
 
 The build plan named two things for this phase: digital library imports, and ISBNs and exact editions a shelf at a time. Doing Phase 3 turned up three more worth offering: rating the books you've read, the authors of your unread books, and a free question box in the app.
 
+**Progress:** step 2 (Rate what you've read, `/rate`) built and live 2026-11-13. Next: she rates about 20 books, then step 1 when she's at home.
+
 ## Where things stand
 
 - **ISBNs:** 567 of 580 print copies, all 511 Kobo copies and all 8 Audible copies have none. Libro.fm's 31 have theirs. Without one, a copy shows a best-guess cover and no exact page count or publisher.

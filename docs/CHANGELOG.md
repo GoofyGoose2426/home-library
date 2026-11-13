@@ -2,6 +2,15 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-13 · Rate what you've read (Phase 4, step 2)
+
+- **A new rating screen** (Stats → "Rate them", or **Rate what you've read** in the menu). It shows one book you've read with no stars yet: its cover, author, series and format.
+- **Tap the stars** (then a quarter if you like); it saves straight away. **Next** moves on. **Skip** sets a book aside, and **Back** returns to the last one.
+- **Order:** by author (series in order), recently added, or random. Random keeps the same order between visits.
+- **Stop any time:** books you rate leave the list for good, and skipped ones are remembered on that device, with **Show them again** to bring them back.
+- **Write a full review** on each card opens the book's Review section.
+- Reference and picture books aren't included. No database change. Tested at phone size in light and dark mode, without rating anything; the ratings are yours to make.
+
 ## 2026-11-13 · Phase 3 wrap-up
 
 - **Phase 3 is done:** reviews (book, series, collection and story), Stats, and Ask your library.
