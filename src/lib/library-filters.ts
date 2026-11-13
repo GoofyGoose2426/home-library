@@ -162,9 +162,13 @@ export function alphaCompare(a: string, b: string) {
 }
 
 function surnameKey(book: LibraryBook) {
-  const first = book.authors[0];
-  if (!first) return "￿";
-  const words = fold(first).replace(/\(.*?\)/g, "").trim().split(/\s+/);
+  return authorSortKey(book.authors[0]);
+}
+
+// "Ursula K. Le Guin" sorts as "guin ursula k. le": by last word, then the rest.
+export function authorSortKey(name: string | undefined) {
+  if (!name) return "￿";
+  const words = fold(name).replace(/\(.*?\)/g, "").trim().split(/\s+/);
   return `${words[words.length - 1]} ${words.slice(0, -1).join(" ")}`;
 }
 

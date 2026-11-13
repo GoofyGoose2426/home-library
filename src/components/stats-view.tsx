@@ -339,7 +339,7 @@ function Breakdown({
       <div className="mt-4 space-y-1 text-xs text-muted">
         {without > 0 && (
           <p>
-            {books(without)} {without === 1 ? "has" : "have"} no {d.title.toLowerCase()} yet.
+            {books(without)} {without === 1 ? "has" : "have"} no {d.title.charAt(0).toLowerCase() + d.title.slice(1)} yet.
           </p>
         )}
         <p>A book with more than one value counts once in each, so the bars can add up to more than your total.</p>

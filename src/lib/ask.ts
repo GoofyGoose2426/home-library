@@ -5,7 +5,7 @@
 // (which status, which values) and says how to show them.
 
 import type { LibraryBook } from "./library";
-import { alphaCompare, leftOutOfStats } from "./library-filters";
+import { alphaCompare, authorSortKey, leftOutOfStats } from "./library-filters";
 import { BREAKDOWNS, STATUSES, breakdown, breakdownValues, type Breakdown, type Row, type Status } from "./stats";
 
 export type Measure = "stars" | "writing" | "audio";
@@ -145,7 +145,7 @@ export function runLookup(all: LibraryBook[], l: Lookup): Answer {
       sort === "stars"
         ? (z.rating ?? -1) - (a.rating ?? -1) || alphaCompare(a.title, z.title)
         : sort === "author"
-          ? alphaCompare(a.authors[0] ?? "￿", z.authors[0] ?? "￿") || alphaCompare(a.title, z.title)
+          ? authorSortKey(a.authors[0]).localeCompare(authorSortKey(z.authors[0])) || alphaCompare(a.title, z.title)
           : alphaCompare(a.title, z.title),
     );
   return { type: "list", books: books.slice(0, show.limit ?? 200), total: books.length };
@@ -167,10 +167,12 @@ export function describe(l: Lookup): string {
     if (w.except) parts.push(`${d.title}: anything but ${w.except.map(name).join(" or ")}`);
   }
   const s = l.show;
+  // "Author 2SLGBTQIA+" stays as it is; other names start lower case.
+  const lower = (t: string) => t.charAt(0).toLowerCase() + t.slice(1);
   const how =
     s.kind === "count" ? "counted"
-    : s.kind === "group" ? `grouped by ${field(s.by)!.title.toLowerCase()}`
-    : s.kind === "average" ? `average ${MEASURES[s.of].toLowerCase()}${s.by ? ` by ${field(s.by)!.title.toLowerCase()}` : ""}`
+    : s.kind === "group" ? `grouped by ${lower(field(s.by)!.title)}`
+    : s.kind === "average" ? `average ${lower(MEASURES[s.of])}${s.by ? ` by ${lower(field(s.by)!.title)}` : ""}`
     : `listed by ${s.sort ?? "title"}`;
   const out = l.show.kind === "list" && l.leftOut ? "including reference and picture books" : "not counting reference and picture books";
   return `${parts.join(" · ")} → ${how} (${out}).`;

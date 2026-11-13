@@ -140,7 +140,7 @@ function Bars({ lookup, answer, base }: { lookup: Lookup; answer: Extract<Answer
       {answer.rows.length > rows.length && <p className="mt-2 text-xs text-muted">Showing the biggest 30 of {answer.rows.length}.</p>}
       {answer.without > 0 && (
         <p className="mt-2 text-xs text-muted">
-          {books(answer.without)} {answer.without === 1 ? "has" : "have"} no {d.title.toLowerCase()} yet.
+          {books(answer.without)} {answer.without === 1 ? "has" : "have"} no {d.title.charAt(0).toLowerCase() + d.title.slice(1)} yet.
         </p>
       )}
       {tip && (
