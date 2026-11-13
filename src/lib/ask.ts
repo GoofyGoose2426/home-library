@@ -22,9 +22,13 @@ export type Lookup = {
   leftOut?: boolean;
   show:
     | { kind: "count" }
-    | { kind: "group"; by: string }
+    // then: for each of the top values, what's inside it (e.g. each trope's
+    // genres). top: how many values to show (all when left out).
+    | { kind: "group"; by: string; then?: string[]; top?: number }
     | { kind: "average"; of: Measure; by?: string }
-    | { kind: "list"; sort?: ListSort; limit?: number };
+    | { kind: "list"; sort?: ListSort; limit?: number }
+    // Which fields have the most books with no value yet, or only Unknown.
+    | { kind: "missing" };
 };
 
 export const MEASURES: Record<Measure, string> = { stars: "Stars", writing: "Writing quality", audio: "Audio performance" };
@@ -62,7 +66,9 @@ export function parseLookup(raw: unknown): Lookup | null {
       if (!only()) return null;
       break;
     case "group":
-      if (!only("by") || !field(show.by as string)) return null;
+      if (!only("by", "then", "top") || !field(show.by as string)) return null;
+      if (show.then !== undefined && !(strings(show.then, 2) && (show.then as string[]).every((k) => field(k) && k !== show.by))) return null;
+      if (show.top !== undefined && !(Number.isInteger(show.top) && (show.top as number) >= 1 && (show.top as number) <= 50)) return null;
       break;
     case "average":
       if (!only("of", "by") || !(show.of as string in MEASURES)) return null;
@@ -73,6 +79,9 @@ export function parseLookup(raw: unknown): Lookup | null {
       if (show.sort !== undefined && !SORTS.includes(show.sort as ListSort)) return null;
       if (show.limit !== undefined && !(Number.isInteger(show.limit) && (show.limit as number) >= 1 && (show.limit as number) <= 500)) return null;
       break;
+    case "missing":
+      if (!only()) return null;
+      break;
     default:
       return null;
   }
@@ -81,18 +90,57 @@ export function parseLookup(raw: unknown): Lookup | null {
 
 // How the answer is drawn (saved beside a pinned report).
 export function chartType(l: Lookup): "sentence" | "bars" | "table" {
-  return l.show.kind === "list" ? "table" : l.show.kind === "group" || (l.show.kind === "average" && l.show.by) ? "bars" : "sentence";
+  return l.show.kind === "list" ? "table"
+    : l.show.kind === "group" || l.show.kind === "missing" || (l.show.kind === "average" && l.show.by) ? "bars"
+    : "sentence";
 }
 
 export type ListBook = { id: string; title: string; authors: string[]; status: Status; rating: number | null };
 export type AvgRow = { value: string; label: string; avg: number; n: number };
 
+export type Inner = { by: string; items: { value: string; label: string; n: number }[] };
+export type MissingRow = { key: string; title: string; missing: number; of: number };
+
 export type Answer =
   | { type: "count"; n: number; of: number; counts: Record<Status, number> }
-  | { type: "bars"; by: string; rows: Row[]; without: number; of: number }
+  // inner: for each shown value, what's inside it (when the lookup asks).
+  | { type: "bars"; by: string; rows: Row[]; without: number; of: number; inner?: Record<string, Inner[]> }
+  | { type: "missing"; rows: MissingRow[] }
   | { type: "average"; of: Measure; avg: number | null; n: number }
   | { type: "average_bars"; of: Measure; by: string; rows: AvgRow[] }
   | { type: "list"; books: ListBook[]; total: number };
+
+// Values that mean "not known yet".
+const GAPS = ["Unknown", "none", "print_unknown"];
+type Applies = (b: LibraryBook, v: Record<string, string[]>) => boolean;
+const always: Applies = () => true;
+const romance: Applies = (_, v) => (v.genre ?? []).includes("Romance") || (v.romantic_subplot ?? []).includes("Yes");
+const read: Applies = (b) => b.readStatus !== "unread";
+// The fields "what's missing" checks, and which books each one applies to
+// (spice only to romance or a romantic subplot; your ratings only to books
+// you've read). Format counts print books whose format isn't set.
+const MISSING_FIELDS: { key: string; applies: Applies }[] = [
+  { key: "genre", applies: always },
+  { key: "subgenre", applies: always },
+  { key: "audience", applies: always },
+  { key: "vibe", applies: always },
+  { key: "romantic_subplot", applies: always },
+  { key: "spice", applies: romance },
+  { key: "story_focus", applies: romance },
+  { key: "format", applies: always },
+  { key: "decade", applies: always },
+  { key: "reason", applies: always },
+  { key: "stars", applies: read },
+  { key: "writing", applies: read },
+  { key: "recommend", applies: read },
+  { key: "author_gender_identity", applies: always },
+  { key: "author_race_ethnicity", applies: always },
+  { key: "author_lgbtqia", applies: always },
+  { key: "author_disability", applies: always },
+  { key: "author_neurodivergence", applies: always },
+  { key: "author_nationality_region", applies: always },
+  { key: "own_voices", applies: always },
+];
 
 const measure = (b: LibraryBook, m: Measure) => (m === "stars" ? b.rating : m === "writing" ? b.writingQuality : b.audioPerformance);
 
@@ -124,7 +172,31 @@ export function runLookup(all: LibraryBook[], l: Lookup): Answer {
       picked.map(({ b, v }) => ({ s: b.readStatus, v })),
       field(show.by)!,
     );
-    return { type: "bars", by: show.by, rows, without, of: picked.length };
+    const shown = show.top ? rows.slice(0, show.top) : rows;
+    if (!show.then?.length) return { type: "bars", by: show.by, rows: shown, without, of: picked.length };
+    const inner: Record<string, Inner[]> = {};
+    for (const row of shown) {
+      const within = picked.filter(({ v }) => (v[show.by] ?? []).includes(row.value)).map(({ b, v }) => ({ s: b.readStatus, v }));
+      inner[row.value] = show.then.map((k) => ({
+        by: k,
+        items: breakdown(within, field(k)!).rows.map((r) => ({ value: r.value, label: r.label, n: r.total })),
+      }));
+    }
+    return { type: "bars", by: show.by, rows: shown, without, of: picked.length, inner };
+  }
+  if (show.kind === "missing") {
+    const rows = MISSING_FIELDS.map(({ key, applies }) => {
+      const d = field(key)!;
+      const fits = picked.filter((p) => applies(p.b, p.v));
+      const missing = fits.filter(({ v }) => {
+        const values = v[key] ?? [];
+        return !values.length || values.every((x) => GAPS.includes(x));
+      }).length;
+      return { key, title: d.title, missing, of: fits.length };
+    })
+      .filter((r) => r.of > 0)
+      .sort((a, b) => b.missing / b.of - a.missing / a.of || b.missing - a.missing);
+    return { type: "missing", rows };
   }
   if (show.kind === "average") {
     const rated = picked.filter(({ b }) => measure(b, show.of) != null);
@@ -171,7 +243,9 @@ export function describe(l: Lookup): string {
   const lower = (t: string) => t.charAt(0).toLowerCase() + t.slice(1);
   const how =
     s.kind === "count" ? "counted"
-    : s.kind === "group" ? `grouped by ${lower(field(s.by)!.title)}`
+    : s.kind === "group"
+      ? `grouped by ${lower(field(s.by)!.title)}${s.top ? ` (top ${s.top})` : ""}${s.then?.length ? `, then by ${s.then.map((k) => lower(field(k)!.title)).join(" and ")} within each` : ""}`
+    : s.kind === "missing" ? "for each field, how many books have no value yet or only Unknown"
     : s.kind === "average" ? `average ${lower(MEASURES[s.of])}${s.by ? ` by ${lower(field(s.by)!.title)}` : ""}`
     : `listed by ${s.sort ?? "title"}`;
   const out = l.show.kind === "list" && l.leftOut ? "including reference and picture books" : "not counting reference and picture books";

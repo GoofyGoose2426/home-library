@@ -49,6 +49,24 @@ export function AnswerView({ lookup, answer }: { lookup: Lookup; answer: Answer 
 
       {answer.type === "bars" && <Bars lookup={lookup} answer={answer} base={base} />}
 
+      {answer.type === "missing" && (
+        <ul className="space-y-3">
+          {answer.rows.map((r) => (
+            <li key={r.key}>
+              <p className="flex items-baseline justify-between gap-3 text-sm">
+                <span className="min-w-0 font-medium">{r.title}</span>
+                <span className="shrink-0 tabular-nums text-muted">
+                  {r.missing.toLocaleString()} of {r.of.toLocaleString()} · {Math.round((r.missing / r.of) * 100)}%
+                </span>
+              </p>
+              <div className="mt-1 h-3.5 rounded-r bg-border">
+                <div className="h-full rounded-r bg-accent" style={{ width: `${(r.missing / r.of) * 100}%` }} />
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+
       {answer.type === "average_bars" &&
         (answer.rows.length === 0 ? (
           <p className="text-sm text-muted">None of these books has a rating yet.</p>
@@ -122,7 +140,7 @@ function Bars({ lookup, answer, base }: { lookup: Lookup; answer: Extract<Answer
         ))}
       </ul>
       <ul className="mt-3 space-y-3">
-        {rows.map((r) => (
+        {rows.map((r) => [
           <BarRow
             key={r.value}
             row={r}
@@ -134,8 +152,19 @@ function Bars({ lookup, answer, base }: { lookup: Lookup; answer: Extract<Answer
             hrefFor={(s) => lookupHref(base, lookup, { d, value: r.value }, s.length === 3 ? undefined : s)}
             onTip={(e, text) => setTip({ x: e.clientX, y: e.clientY, text })}
             onLeave={() => setTip(null)}
-          />
-        ))}
+          />,
+          answer.inner?.[r.value] && (
+            <li key={`${r.value}-inner`} className="-mt-1 space-y-0.5 pl-3 text-xs text-muted">
+              {answer.inner[r.value].map((x) => (
+                <p key={x.by}>
+                  <span className="font-medium text-foreground">{BREAKDOWNS.find((b) => b.key === x.by)!.title}:</span>{" "}
+                  {x.items.length ? x.items.slice(0, 8).map((i) => `${i.label} ${i.n}`).join(" · ") : "none set"}
+                  {x.items.length > 8 && ` · and ${x.items.length - 8} more`}
+                </p>
+              ))}
+            </li>
+          ),
+        ])}
       </ul>
       {answer.rows.length > rows.length && <p className="mt-2 text-xs text-muted">Showing the biggest 30 of {answer.rows.length}.</p>}
       {answer.without > 0 && (

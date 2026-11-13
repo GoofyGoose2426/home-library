@@ -35,6 +35,10 @@ const ins = (spec, chart = "bars") => q(`insert into public.saved_reports (name,
 const refused = async (fn) => { try { await fn(); return false; } catch { return true; } };
 await ins({ v: 1, status: ["unread"], where: [{ field: "genre", any: ["Horror"] }], show: { kind: "group", by: "author_lgbtqia" } });
 check(true, "a read-only lookup saves");
+await ins({ v: 1, show: { kind: "group", by: "trope", top: 10, then: ["genre", "subgenre"] } });
+await ins({ v: 1, show: { kind: "missing" } }, "bars");
+check(true, "a grouped answer with what's inside, and what's missing, save");
+check(await refused(() => ins({ v: 1, show: { kind: "group", by: "trope", then: "delete" } })), "then must be a list");
 check(await refused(() => ins({ v: 1, show: { kind: "sql", query: "delete from titles" } })), "an unknown kind of answer is refused");
 check(await refused(() => ins({ v: 1, sql: "delete from titles", show: { kind: "count" } })), "an extra key is refused");
 check(await refused(() => ins({ v: 2, show: { kind: "count" } })), "an unknown version is refused");
