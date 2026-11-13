@@ -46,6 +46,15 @@ export const AUDIENCE: [Audience, string][] = [
   ["childrens", "Children's"],
 ];
 
+export const BOOK_TYPE: Record<string, string> = {
+  prose: "Prose",
+  graphic_novel: "Graphic novel",
+  manga: "Manga",
+  comic_collection: "Comic collection",
+  picture_book: "Picture book",
+  poetry: "Poetry",
+};
+
 export type Vibe = "cozy" | "light" | "dramatic" | "intense";
 export const VIBE: [Vibe, string][] = [
   ["cozy", "Cozy/feel-good"],
@@ -97,6 +106,8 @@ export const FACETS: { key: string; title: string; note?: string }[] = [
   { key: "queer_romance_type", title: "Queer romance type" },
   { key: "retelling_type", title: "Retelling type" },
   { key: "trope", title: "Tropes" },
+  { key: "book_type", title: "Book type" },
+  { key: "decade", title: "Decade first published" },
   { key: "audience", title: "Audience" },
   { key: "vibe", title: "Vibe" },
   { key: "romantic_subplot", title: "Romantic subplot" },

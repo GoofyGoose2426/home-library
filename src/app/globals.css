@@ -17,6 +17,10 @@
   --on-tag-tbr: #8c2352;
   --tag-loan: #e3d6f6;
   --on-tag-loan: #4c2a80;
+  /* Stats charts: read, partly read, unread (checked for colour blindness). */
+  --stat-read: #2a7d3e;
+  --stat-partly: #7b5cc4;
+  --stat-unread: #e0668f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,6 +39,9 @@
     --on-tag-tbr: #f8bfd5;
     --tag-loan: #372a52;
     --on-tag-loan: #d8c8f7;
+    --stat-read: #3a9a4e;
+    --stat-partly: #8f7ae0;
+    --stat-unread: #de6890;
   }
 }
 

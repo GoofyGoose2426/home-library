@@ -132,6 +132,7 @@ export function OwnerNav() {
 }
 
 const TOOLS: [string, string][] = [
+  ["/stats", "Stats"],
   ["/series", "Series"],
   ["/check", "To check"],
   ["/gone", "Gone list"],
@@ -187,7 +188,7 @@ export function SideTools() {
   );
 }
 
-// Pinned to the bottom on a phone: the two most used, and More for the rest.
+// Pinned to the bottom on a phone: the three most used, and More for the rest.
 export function BottomTools() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -214,7 +215,7 @@ export function BottomTools() {
               </button>
             </div>
             <nav aria-label="Tools" className="grid grid-cols-2 gap-2 text-sm">
-              {TOOLS.slice(2).map(([href, label]) => (
+              {TOOLS.slice(3).map(([href, label]) => (
                 <Link key={href} href={href} className="rounded-xl border border-border px-3 py-2.5">
                   {label}
                 </Link>
@@ -229,7 +230,7 @@ export function BottomTools() {
         aria-label="Tools"
         className="fixed inset-x-0 bottom-0 z-10 flex border-t border-border bg-surface/95 pb-[env(safe-area-inset-bottom)] text-xs backdrop-blur lg:hidden"
       >
-        {TOOLS.slice(0, 2).map(([href, label]) => (
+        {TOOLS.slice(0, 3).map(([href, label]) => (
           <Link key={href} href={href} className="flex min-h-12 flex-1 items-center justify-center font-medium">
             {label}
           </Link>

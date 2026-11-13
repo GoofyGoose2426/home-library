@@ -24,6 +24,7 @@ export const FLAGS = {
   loan: "On loan",
   keepsake: "Keepsake",
   reference: "Reference (left out of stats)",
+  counted: "Counted in stats",
 } as const;
 export type FlagKey = keyof typeof FLAGS;
 
@@ -43,6 +44,13 @@ export function reviewReasons(b: LibraryBook): Exclude<ReviewKey, "any">[] {
   if (!b.authors.length && !b.reviewCleared.includes("author")) reasons.push("author");
   if (b.needsCheck) reasons.push("guess");
   return reasons;
+}
+
+// The excluded category: reference books (cookbooks, colouring, art/craft,
+// set with the reference toggle) and picture books stay in the catalog but
+// aren't counted in stats.
+export function leftOutOfStats(b: Pick<LibraryBook, "isReference" | "bookType">) {
+  return b.isReference || b.bookType === "picture_book";
 }
 
 export type Filters = {
@@ -190,7 +198,8 @@ export function applyFilters(books: LibraryBook[], f: Filters): LibraryBook[] {
     for (const flag of f.flag) {
       if (flag === "loan" && !b.onLoanTo.length) return false;
       if (flag === "keepsake" && !b.hasKeepsake) return false;
-      if (flag === "reference" && !(b.isReference || b.bookType === "picture_book")) return false;
+      if (flag === "reference" && !leftOutOfStats(b)) return false;
+      if (flag === "counted" && leftOutOfStats(b)) return false;
     }
     for (const g of RATING_GROUPS) {
       if (!f[g.key].length) continue;

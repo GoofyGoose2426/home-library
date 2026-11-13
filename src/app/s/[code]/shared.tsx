@@ -17,8 +17,13 @@ export function LinkOff() {
 export function SharedHeader({ code }: { code: string }) {
   return (
     <header className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-      <h1 className="font-serif text-2xl font-semibold">Alexandra&apos;s library</h1>
+      <h1 className="font-serif text-2xl font-semibold">
+        <Link href={`/s/${code}`}>Alexandra&apos;s library</Link>
+      </h1>
       <nav className="flex items-center gap-1 text-sm">
+        <Link href={`/s/${code}/stats`} className="rounded-full border border-accent px-4 py-2 font-medium text-accent">
+          Stats
+        </Link>
         <Link href={`/s/${code}/lookup`} className="rounded-full bg-accent px-4 py-2 font-medium text-on-accent">
           Does she own it?
         </Link>

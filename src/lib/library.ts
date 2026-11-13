@@ -1,7 +1,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { signCoverPaths } from "./covers";
-import { AUDIENCE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "./classification";
+import { AUDIENCE, BOOK_TYPE, SPICE, STORY_FOCUS, VIBE, labelOf, type Audience, type Spice, type StoryFocus, type Vibe } from "./classification";
 import { moodLabel } from "./moods";
 import type { Recommendation } from "./ratings";
 import { AUTHOR_FACET, CATEGORIES, CHARACTER_FACET, UNKNOWN, type IdentityCategory } from "./representation";
@@ -61,6 +61,7 @@ type Row = {
   needs_check: boolean;
   review_cleared: string[];
   series_number: number | null;
+  first_published: number | null;
   series: { name: string } | null;
   credits: {
     role: string;
@@ -111,6 +112,8 @@ function facetsOf(t: Row): Record<string, string[]> {
   for (const tt of t.title_tags) if (tt.tags) add(tt.tags.kind, tt.tags.name);
   // New books wait for genre and the rest until a Claude session classifies them.
   if (!f.genre && !t.is_reference) add("classification", NOT_CLASSIFIED);
+  add("book_type", BOOK_TYPE[t.book_type] ?? null);
+  add("decade", t.first_published ? `${Math.floor(t.first_published / 10) * 10}s` : null);
   add("audience", labelOf(AUDIENCE, t.audience));
   add("vibe", labelOf(VIBE, t.vibe_main));
   add("vibe", labelOf(VIBE, t.vibe_second));
@@ -155,7 +158,7 @@ export async function loadLibrary(
     const { data, error } = await supabase
       .from("titles")
       .select(
-        `id, title, read_status, book_type, is_reference, needs_check, review_cleared, series_number,
+        `id, title, read_status, book_type, is_reference, needs_check, review_cleared, series_number, first_published,
          audience, romantic_subplot, spice, story_focus, vibe_main, vibe_second,
          series(name),
          own_voices,

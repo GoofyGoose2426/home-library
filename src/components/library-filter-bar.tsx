@@ -53,7 +53,7 @@ export function LibraryFilterBar({
   const [open, setOpen] = useState(false);
   // The view-only link has no loans, keepsake notes or review flags.
   const { readOnly } = useViewMode();
-  const flags = (Object.keys(FLAGS) as FlagKey[]).filter((f) => !readOnly || f === "reference");
+  const flags = (Object.keys(FLAGS) as FlagKey[]).filter((f) => !readOnly || f === "reference" || f === "counted");
   const sorts = Object.entries(SORTS).filter(([k]) => !readOnly || k !== "review");
   const active = activeCount(filters);
 
