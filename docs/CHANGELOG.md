@@ -2,6 +2,14 @@
 
 What's been built, in plain language. Newest first.
 
+## 2026-11-13 · Ask your library: your first five questions
+
+- Two new kinds of answer, both read-only:
+  - **What's inside each one:** for example, each of your top tropes with its genres and subgenres, or each unread genre with its subgenres.
+  - **What's missing:** which fields have the most books with no value yet (or only Unknown). Each field is counted only where it applies: spice only for romance, ratings only for books you've read, tropes only for fiction, subjects only for nonfiction.
+- Answers about one status (just unread, say) show each group's share of those books instead of "% read".
+- To pin these new kinds of answer, the database check needs an update (migration `20261113100000`). It's written and tested, waiting for your OK.
+
 ## 2026-11-13 · Ask your library (Phase 3, step 5)
 
 - **How it works (option A, free):** ask me a question in a Claude session. I turn it into a lookup the app knows how to run, check the answer, and give you a link. The link opens an **answer page** in your app: the answer as a number, bars or a list, plus a line saying exactly how it was worked out.
